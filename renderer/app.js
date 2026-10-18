@@ -334,6 +334,7 @@
     if (!btn) return;
     const v = btn.dataset.view;
     if (v === 'program') renderProgram();
+    else if (v === 'formations') renderFormations();
     else if (v === 'home') renderHome();
     else if (v === 'languages') renderLanguages();
     else if (v === 'resources') renderResources();
@@ -541,6 +542,134 @@
       html += '</div>';
     });
     view.innerHTML = html;
+  }
+
+  /* ---------- VUE: Fòmasyon (16 modil langaj, N1 Debitan → N4 Ekspè) ---------- */
+  function renderFormations() {
+    setTab('formations');
+    const p = store.progress;
+    let cards = '';
+    MODULES.forEach(function (m) {
+      if (!m) return;
+      const lessonIds = [];
+      (m.levels || []).forEach(function (lv) {
+        (lv.lessons || []).forEach(function (l) { lessonIds.push(l.id); });
+      });
+      const doneCount = lessonIds.filter(function (id) { return (p.lessonsDone || []).indexOf(id) >= 0; }).length;
+      const pct = lessonIds.length ? Math.round(doneCount / lessonIds.length * 100) : 0;
+      cards += '<div class="lesson-row" data-formation="' + esc(m.id) + '">' +
+        '<div><strong>📚 ' + esc(m.name) + '</strong><br>' +
+        '<small style="color:var(--text-dim)">' + esc(m.description_ht || '') + '</small><br>' +
+        '<small style="color:var(--text-dim)">' + (m.levels || []).length + ' ' + esc(t('levels')) +
+        ' • ' + doneCount + '/' + lessonIds.length + ' leson fini (' + pct + '%)</small>' +
+        '<div class="progress-bar" style="margin-top:6px"><div class="progress-fill" style="width:' + pct + '%"></div></div></div>' +
+        '<div class="status">›</div></div>';
+    });
+    view.innerHTML = '<h1>📚 ' + esc(t('tabFormations')) + '</h1>' +
+      '<p style="color:var(--text-dim)">' + esc(t('formationsSubtitle')) + '</p>' + cards;
+    view.querySelectorAll('[data-formation]').forEach(function (r) {
+      r.addEventListener('click', function () { renderFormationModule(r.dataset.formation); });
+    });
+  }
+
+  function renderFormationModule(mid) {
+    setTab('formations');
+    const m = getModule(mid);
+    if (!m) { renderFormations(); return; }
+    const p = store.progress;
+    let rows = '';
+    (m.levels || []).forEach(function (lv, idx) {
+      const ids = (lv.lessons || []).map(function (l) { return l.id; });
+      const doneCount = ids.filter(function (id) { return (p.lessonsDone || []).indexOf(id) >= 0; }).length;
+      const lvlIcon = ['🌱', '🌿', '🌳', '🏆'][idx] || '📖';
+      rows += '<div class="lesson-row" data-flevel="' + esc(lv.id) + '" data-fmod="' + esc(m.id) + '">' +
+        '<div><strong>' + lvlIcon + ' ' + esc(lv.title_ht || (t('level') + ' ' + (idx + 1))) + '</strong><br>' +
+        '<small style="color:var(--text-dim)">' + doneCount + '/' + ids.length + ' leson fini</small></div>' +
+        '<div class="status">›</div></div>';
+    });
+    view.innerHTML = '<span class="back-link" id="back-formations">← ' + esc(t('back')) + '</span>' +
+      '<h1>📚 ' + esc(m.name) + '</h1>' +
+      '<p style="color:var(--text-dim)">' + esc(m.description_ht || '') + '</p>' +
+      '<div class="card"><div class="body-text">📶 ' + esc(m.category_ht || '') + '</div></div>' + rows;
+    document.getElementById('back-formations').addEventListener('click', renderFormations);
+    view.querySelectorAll('[data-flevel]').forEach(function (r) {
+      r.addEventListener('click', function () { renderFormationLevel(r.dataset.fmod, r.dataset.flevel); });
+    });
+  }
+
+  function renderFormationLevel(mid, lid) {
+    setTab('formations');
+    const f = getModuleLevel(mid, lid);
+    if (!f) { renderFormationModule(mid); return; }
+    const p = store.progress;
+    let rows = '';
+    (f.level.lessons || []).forEach(function (l) {
+      const done = (p.lessonsDone || []).indexOf(l.id) >= 0;
+      rows += '<div class="lesson-row" data-flesson="' + esc(l.id) + '" data-fmod="' + esc(mid) + '" data-flevel="' + esc(lid) + '">' +
+        '<div><strong>' + (done ? '✅ ' : '⭕ ') + esc(l.title_ht || l.id) + '</strong></div>' +
+        '<div class="status">›</div></div>';
+    });
+    view.innerHTML = '<span class="back-link" id="back-fmodule">← ' + esc(t('back')) + '</span>' +
+      '<h1>' + esc(f.module.name) + ' — ' + esc(f.level.title_ht || '') + '</h1>' + rows;
+    document.getElementById('back-fmodule').addEventListener('click', function () { renderFormationModule(mid); });
+    view.querySelectorAll('[data-flesson]').forEach(function (r) {
+      r.addEventListener('click', function () { renderFormationLesson(r.dataset.fmod, r.dataset.flevel, r.dataset.flesson); });
+    });
+  }
+
+  function renderFormationLesson(mid, lid, lessonId) {
+    setTab('formations');
+    const f = getModuleLesson(mid, lid, lessonId);
+    if (!f) { renderFormationLevel(mid, lid); return; }
+    const l = f.lesson;
+    const p = store.progress;
+    const done = (p.lessonsDone || []).indexOf(l.id) >= 0;
+
+    let html = '<span class="back-link" id="back-flevel">← ' + esc(t('back')) + '</span>' +
+      '<h1>' + esc(l.title_ht || l.id) + '</h1>' +
+      '<p style="color:var(--text-dim)">' + esc(f.module.name) + ' • ' + esc(f.level.title_ht || '') + '</p>' +
+      lessonBodyHtml(l);
+
+    if (l.code) {
+      html += '<div class="card"><h2>💻 ' + esc(t('codeExample')) + ' (' + esc(l.code_lang || '') + ')</h2>' +
+        '<pre class="code-block">' + esc(l.code) + '</pre></div>';
+    }
+
+    if (l.expert_note_ht) {
+      html += '<div class="expert-note"><strong>🎓 ' + esc(t('expertNote')) + ':</strong><br>' +
+        esc(l.expert_note_ht) + '</div>';
+    }
+
+    html += '<button class="btn btn-secondary" id="btn-listen">🔊 ' + esc(t('listen')) + '</button>' +
+      (done
+        ? '<button class="btn btn-done" disabled>✅ ' + esc(t('lessonDone')) + '</button>'
+        : '<button class="btn btn-primary" id="btn-done">' + esc(t('markDone')) + '</button>');
+
+    const exs = l.exercises || [];
+    if (exs.length) {
+      html += '<h2 style="margin-top:20px">📝 ' + esc(t('exercise')) + 's (' + exs.length + ')</h2>';
+      exs.forEach(function (e) {
+        const edone = (p.exercisesDone || []).indexOf(e.id) >= 0;
+        html += '<div class="lesson-row" data-fex="' + esc(e.id) + '">' +
+          '<div><strong>' + esc(e.prompt_ht || e.id) + '</strong></div>' +
+          '<div class="status">' + (edone ? '✅' : '⭕') + '</div></div>';
+      });
+    }
+
+    view.innerHTML = html;
+    document.getElementById('back-flevel').addEventListener('click', function () { renderFormationLevel(mid, lid); });
+    const btnListen = document.getElementById('btn-listen');
+    if (btnListen) btnListen.addEventListener('click', function () {
+      speak((l.title_ht || '') + '. ' + stripChecks(l.body_ht || ''));
+    });
+    const btnDone = document.getElementById('btn-done');
+    if (btnDone) btnDone.addEventListener('click', function () {
+      markLessonDone(l.id);
+      renderFormationLesson(mid, lid, lessonId);
+    });
+    view.querySelectorAll('[data-fex]').forEach(function (r) {
+      r.addEventListener('click', function () { renderExercise(r.dataset.fex); });
+    });
   }
 
   /* ---------- VUE: Pwogram (Gid = kolòn vetebral) ---------- */

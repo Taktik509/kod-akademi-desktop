@@ -32,7 +32,15 @@
     "tagline": "Learn programming in Creole, step by step.",
     "wrongRetry": "Wrong. Try again 🔄",
     "xp": "XP",
-    "yourAnswer": "Your answer"
+    "yourAnswer": "Your answer",
+    "tabFormations": "Courses",
+    "formationsSubtitle": "16 complete courses • each with 4 levels: Beginner → Expert",
+    "formations": "Courses",
+    "level": "Level",
+    "levels": "Levels",
+    "modulesCount": "modules",
+    "startFormation": "Start course",
+    "continueFormation": "Continue"
   },
   "es": {
     "alternatives": "Alternativas",
@@ -67,7 +75,15 @@
     "tagline": "Aprende programación en criollo, paso a paso.",
     "wrongRetry": "Mal. Inténtalo de nuevo 🔄",
     "xp": "XP",
-    "yourAnswer": "Tu respuesta"
+    "yourAnswer": "Tu respuesta",
+    "tabFormations": "Formaciones",
+    "formationsSubtitle": "16 formaciones completas • cada una con 4 niveles: Principiante → Experto",
+    "formations": "Formaciones",
+    "level": "Nivel",
+    "levels": "Niveles",
+    "modulesCount": "módulos",
+    "startFormation": "Comenzar formación",
+    "continueFormation": "Continuar"
   },
   "fr": {
     "alternatives": "Alternatives",
@@ -102,7 +118,15 @@
     "tagline": "Apprends la programmation en créole, étape par étape.",
     "wrongRetry": "Raté. Réessaie 🔄",
     "xp": "XP",
-    "yourAnswer": "Ta réponse"
+    "yourAnswer": "Ta réponse",
+    "tabFormations": "Formations",
+    "formationsSubtitle": "16 formations complètes • chacune avec 4 niveaux: Débutant → Expert",
+    "formations": "Formations",
+    "level": "Niveau",
+    "levels": "Niveaux",
+    "modulesCount": "modules",
+    "startFormation": "Commencer la formation",
+    "continueFormation": "Continuer"
   },
   "ht": {
     "alternatives": "Altènativ",
@@ -150,6 +174,14 @@
     "guideLessons": "Leson gid yo",
     "openResource": "Louvri lyen an",
     "programSubtitle": "7 etap • 16 modil • soti nan zewo rive nan pwojè final",
-    "tabRapid": "Rapid"
+    "tabRapid": "Rapid",
+    "tabFormations": "Fòmasyon",
+    "formationsSubtitle": "16 fòmasyon konplè • chak ak 4 nivo: Debitan → Ekspè",
+    "formations": "Fòmasyon",
+    "level": "Nivo",
+    "levels": "Nivo",
+    "modulesCount": "modil",
+    "startFormation": "Kòmanse fòmasyon",
+    "continueFormation": "Kontinye"
   }
 }
