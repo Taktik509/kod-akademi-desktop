@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kòd Akademi</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">💻 <span data-i18n="appName">Kòd Akademi</span></div>
+    <div class="top-right">
+      <div id="xp-badge" title="XP">⭐ <span id="xp-value">0</span> <span data-i18n="xp">XP</span></div>
+      <button id="theme-toggle" title="Mòd klè/fonse">🌙</button>
+    </div>
+  </header>
+
+  <nav id="tabs">
+    <button class="tab active" data-view="home" data-i18n="tabLessons">Leson</button>
+    <button class="tab" data-view="languages" data-i18n="tabLanguages">Langaj</button>
+    <button class="tab" data-view="news" data-i18n="tabNews">Nouvèl</button>
+    <button class="tab" data-view="settings" data-i18n="tabSettings">Paramèt</button>
+  </nav>
+
+  <div id="progress-wrap">
+    <div class="progress-label"><span data-i18n="progress">Pwogrè</span>: <span id="progress-text">0%</span></div>
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+  </div>
+
+  <main id="view"></main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

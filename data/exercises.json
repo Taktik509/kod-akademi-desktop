@@ -1,0 +1,760 @@
+[
+  {
+    "accepted": [
+      "b",
+      "materyèl",
+      "materyel",
+      "hardware"
+    ],
+    "choices": [
+      "A) Lojisyèl (software)",
+      "B) Materyèl (hardware)",
+      "C) Entènèt la",
+      "D) Yon fichye"
+    ],
+    "correct_ht": "B) Materyèl (hardware)",
+    "explanation_ht": "Materyèl se tout pati fizik ou ka manyen: ekran, klavye, sourit.",
+    "id": "E01",
+    "lessonId": "L01",
+    "prompt_ht": "Ki pati nan òdinatè a ou ka manyen ak men w?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "whatsapp",
+      "facebook",
+      "windows",
+      "android",
+      "chrome",
+      "tiktok",
+      "youtube",
+      "instagram",
+      "word",
+      "excel"
+    ],
+    "correct_ht": "WhatsApp, Facebook, Windows, Chrome...",
+    "explanation_ht": "Lojisyèl se pwogram ou pa ka manyen — nenpòt aplikasyon sou telefòn ou se yon egzanp.",
+    "id": "E02",
+    "lessonId": "L01",
+    "prompt_ht": "Bay yon egzanp lojisyèl (pwogram) ou itilize chak jou.",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "b",
+      "tradui non sit an adrès ip",
+      "tradui non an ip",
+      "dns tradui non sit"
+    ],
+    "choices": [
+      "A) Li voye imèl",
+      "B) Li tradui non sit (google.com) an adrès IP",
+      "C) Li fè paj la bèl",
+      "D) Li kenbe modpas yo"
+    ],
+    "correct_ht": "B) Li tradui non sit la an adrès IP",
+    "explanation_ht": "DNS se liv adrès entènèt la: non fasil → nimewo IP.",
+    "id": "E03",
+    "lessonId": "L02",
+    "prompt_ht": "Ki sa DNS fè?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "print"
+    ],
+    "code": "____(\"Bonjou\")",
+    "correct_ht": "print(\"Bonjou\")",
+    "explanation_ht": "'print' se lòd Python pou montre tèks sou ekran.",
+    "id": "E04",
+    "lessonId": "L02",
+    "prompt_ht": "Konplete liy Python sa a pou l montre 'Bonjou' sou ekran:",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "</p>"
+    ],
+    "code": "<p>Bonjou ____",
+    "correct_ht": "</p>",
+    "explanation_ht": "Chak etikèt ou ouvri dwe fèmen ak </ ... >.",
+    "id": "E05",
+    "lessonId": "L03",
+    "prompt_ht": "Fèmen etikèt paragraf la:",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "1",
+      "liy 1",
+      "h1 pa fèmen",
+      "premye liy"
+    ],
+    "code": "1: <h1>Byenveni\n2: <p>Sa a se tèks mwen.</p>",
+    "correct_ht": "Liy 1 — <h1> pa fèmen",
+    "explanation_ht": "Etikèt <h1> la louvri men li pa janm fèmen ak </h1>.",
+    "id": "E06",
+    "lessonId": "L03",
+    "prompt_ht": "Jwenn liy ki gen erè a:",
+    "type": "jwenn-erè"
+  },
+  {
+    "accepted": [
+      "b",
+      "src"
+    ],
+    "choices": [
+      "A) href",
+      "B) src",
+      "C) link",
+      "D) photo"
+    ],
+    "correct_ht": "B) src",
+    "explanation_ht": "'src' (source) gen adrès fichye imaj la.",
+    "id": "E07",
+    "lessonId": "L04",
+    "prompt_ht": "Ki atribi ki di ki imaj pou montre nan <img>?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "href"
+    ],
+    "code": "<a _____=\"https://google.com\">Google</a>",
+    "correct_ht": "href",
+    "explanation_ht": "'href' kenbe adrès destinasyon lyen an.",
+    "id": "E08",
+    "lessonId": "L04",
+    "prompt_ht": "Konplete lyen sa a pou l ale sou google.com:",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "b",
+      "color"
+    ],
+    "choices": [
+      "A) background",
+      "B) color",
+      "C) font",
+      "D) border"
+    ],
+    "correct_ht": "B) color",
+    "explanation_ht": "'color' kontwole koulè tèks la; 'background' kontwole koulè dèyè a.",
+    "id": "E09",
+    "lessonId": "L05",
+    "prompt_ht": "Ki pwopriyete CSS ki chanje koulè tèks la?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "selektè",
+      "selekte",
+      "selector",
+      "yon selektè"
+    ],
+    "correct_ht": "Yon selektè",
+    "explanation_ht": "Selektè a di KI eleman règ la ap abiye — isit la, tout paragraf yo.",
+    "id": "E10",
+    "lessonId": "L05",
+    "prompt_ht": "Nan règ CSS 'p { color: blue; }', ki sa 'p' la ye?",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "b",
+      "column"
+    ],
+    "choices": [
+      "A) row",
+      "B) column",
+      "C) center",
+      "D) wrap"
+    ],
+    "correct_ht": "B) column",
+    "explanation_ht": "'column' = vètikal (youn anba lòt); 'row' = orizontal.",
+    "id": "E11",
+    "lessonId": "L06",
+    "prompt_ht": "Ak flexbox, ki valè 'flex-direction' ki mete bwat yo youn ANBA lòt?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "2",
+      "liy 2",
+      "colr"
+    ],
+    "code": "1: .bwat {\n2:   colr: red;\n3: }",
+    "correct_ht": "Liy 2 — 'colr' ta dwe 'color'",
+    "explanation_ht": "Pwopriyete a mal ekri: se 'color', pa 'colr'. Navigatè a inyore sa l pa konnen.",
+    "id": "E12",
+    "lessonId": "L06",
+    "prompt_ht": "Jwenn erè a nan CSS sa a:",
+    "type": "jwenn-erè"
+  },
+  {
+    "accepted": [
+      "let",
+      "const",
+      "var"
+    ],
+    "code": "___ laj = 25;",
+    "correct_ht": "let laj = 25;",
+    "explanation_ht": "'let' kreye yon varyab; 'const' si valè a pa p janm chanje.",
+    "id": "E13",
+    "lessonId": "L07",
+    "prompt_ht": "Konplete pou varyab 'laj' la vo 25:",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "b",
+      "function"
+    ],
+    "choices": [
+      "A) func",
+      "B) function",
+      "C) def",
+      "D) method"
+    ],
+    "correct_ht": "B) function",
+    "explanation_ht": "'function diBonjou() { ... }' kreye yon fonksyon yo rele diBonjou.",
+    "id": "E14",
+    "lessonId": "L07",
+    "prompt_ht": "Ki mo kle ki kreye yon fonksyon an JavaScript?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "b",
+      "click"
+    ],
+    "choices": [
+      "A) hover",
+      "B) click",
+      "C) load",
+      "D) press"
+    ],
+    "correct_ht": "B) click",
+    "explanation_ht": "addEventListener('click', ...) tande klik sourit la.",
+    "id": "E15",
+    "lessonId": "L08",
+    "prompt_ht": "Ki evènman ki deklanche lè yon moun klike sou yon bouton?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "1",
+      "liy 1",
+      "textcontent"
+    ],
+    "code": "1: document.getElementById('tit').textcontent = 'Alo';",
+    "correct_ht": "Liy 1 — se 'textContent' (ak C majiskil), pa 'textcontent'",
+    "explanation_ht": "JavaScript sansib ak majiskil/miniskil: pwopriyete a ekri textContent.",
+    "id": "E16",
+    "lessonId": "L08",
+    "prompt_ht": "Jwenn erè a:",
+    "type": "jwenn-erè"
+  },
+  {
+    "accepted": [
+      "yon tab se tankou yon fèy excel",
+      "fèy excel",
+      "yon ansanm ranje ak kolòn",
+      "tab done"
+    ],
+    "correct_ht": "Yon tab se tankou yon fèy Excel: kolòn + ranje",
+    "explanation_ht": "Tab la òganize done an kolòn (kalite enfòmasyon) ak ranje (chak bagay).",
+    "id": "E17",
+    "lessonId": "L09",
+    "prompt_ht": "Nan yon baz done, ki sa yon 'tab' ye? Bay yon egzanp.",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "b",
+      "yon itilizatè konplè",
+      "yon itilizate konple"
+    ],
+    "choices": [
+      "A) Yon kalite enfòmasyon",
+      "B) Yon itilizatè konplè",
+      "C) Non tab la",
+      "D) Yon modpas"
+    ],
+    "correct_ht": "B) Yon itilizatè konplè",
+    "explanation_ht": "Chak ranje = yon bagay konplè (yon itilizatè); chak kolòn = yon kalite enfòmasyon.",
+    "id": "E18",
+    "lessonId": "L09",
+    "prompt_ht": "Nan tab 'itilizate' (id, non, imèl), ki sa yon RANJE reprezante?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "*"
+    ],
+    "code": "SELECT ___ FROM itilizate;",
+    "correct_ht": "SELECT * FROM itilizate;",
+    "explanation_ht": "Etwal * la vle di 'tout kolòn yo'.",
+    "id": "E19",
+    "lessonId": "L10",
+    "prompt_ht": "Konplete pou montre TOUT kolòn tab 'itilizate' a:",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "b",
+      "li filtre ranje yo",
+      "filtre"
+    ],
+    "choices": [
+      "A) Li chwazi tab la",
+      "B) Li filtre ranje yo",
+      "C) Li efase done yo",
+      "D) Li kreye yon tab"
+    ],
+    "correct_ht": "B) Li filtre ranje yo",
+    "explanation_ht": "WHERE kenbe sèlman ranje ki satisfè kondisyon an.",
+    "id": "E20",
+    "lessonId": "L10",
+    "prompt_ht": "Ki sa WHERE fè nan yon rechèch SQL?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "b",
+      "yon fòma tèks pou echanje done",
+      "fòma echanj done"
+    ],
+    "choices": [
+      "A) Yon langaj pwogramasyon",
+      "B) Yon fòma tèks pou echanje done",
+      "C) Yon baz done",
+      "D) Yon navigatè"
+    ],
+    "correct_ht": "B) Yon fòma tèks pou echanje done",
+    "explanation_ht": "JSON òganize done ak { } ak : pou frontend ak backend ka konprann youn lòt.",
+    "id": "E21",
+    "lessonId": "L11",
+    "prompt_ht": "Ki sa JSON ye?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "sèvè",
+      "garçon",
+      "serveur",
+      "li pote demann ak repons",
+      "mesaje"
+    ],
+    "correct_ht": "API a se 'garçon' an: li pote demann frontend la bay backend epi pote repons lan tounen",
+    "explanation_ht": "API = entèfas: frontend rele l, backend reponn.",
+    "id": "E22",
+    "lessonId": "L11",
+    "prompt_ht": "Nan egzanp restoran an, ki wòl API a jwe?",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "4",
+      "liy 4"
+    ],
+    "code": "1: const http = require('http');\n2: http.createServer((req, res) => {\n3:   res.end('Bonjou');\n4: }).listen(3000)",
+    "correct_ht": "Liy 4 — manke ) pou fèmen createServer( a",
+    "explanation_ht": "Chak parantèz ou ouvri dwe fèmen: createServer( ... ) bezwen ) nan fen an.",
+    "id": "E23",
+    "lessonId": "L12",
+    "prompt_ht": "Jwenn erè a nan kòd sèvè sa a:",
+    "type": "jwenn-erè"
+  },
+  {
+    "accepted": [
+      "3000"
+    ],
+    "code": "serve.listen(____);",
+    "correct_ht": "serve.listen(3000);",
+    "explanation_ht": "'listen(3000)' di sèvè a: tande demann sou pò 3000.",
+    "id": "E24",
+    "lessonId": "L12",
+    "prompt_ht": "Konplete pou sèvè a koute sou pò 3000:",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "a",
+      "a) enfòmasyon ou pase bay yon konpozan",
+      "enfòmasyon ou pase bay yon konpozan"
+    ],
+    "choices": [
+      "A) Enfòmasyon ou pase bay yon konpozan",
+      "B) Yon kalite baz done",
+      "C) Yon kòmand Git",
+      "D) Yon viris òdinatè"
+    ],
+    "correct_ht": "A) Enfòmasyon ou pase bay yon konpozan",
+    "explanation_ht": "Props se enfòmasyon yon konpozan resevwa, tankou non=\"Mari\" nan <Bonjou non=\"Mari\" />.",
+    "id": "E25",
+    "lessonId": "L13",
+    "prompt_ht": "Nan React, kisa yon 'props' ye?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "props.non",
+      "props['non']"
+    ],
+    "code": "function Bonjou(props) {\n  return <h1>Bonjou, {_____}!</h1>;\n}",
+    "correct_ht": "props.non",
+    "explanation_ht": "Pou li yon props, ou ekri props ki swiv pa non li a: props.non.",
+    "id": "E26",
+    "lessonId": "L13",
+    "prompt_ht": "Konplete kòd la pou konpozan an montre non yo pase l nan props.",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "b",
+      "b) git commit -m",
+      "git commit -m"
+    ],
+    "choices": [
+      "A) git photo",
+      "B) git commit -m \"mesaj\"",
+      "C) git send",
+      "D) git delete"
+    ],
+    "correct_ht": "B) git commit -m \"mesaj la\"",
+    "explanation_ht": "git commit sove yon foto kòd ou a; -m kite ou ajoute yon ti nòt ki eksplike chanjman an.",
+    "id": "E27",
+    "lessonId": "L14",
+    "prompt_ht": "Ki kòmand Git ki pran yon 'foto' kòd ou a ak yon mesaj?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "voye kòd sou github",
+      "voye commit yo sou github",
+      "mete kòd la sou github",
+      "sove kòd la nan nyaj la"
+    ],
+    "correct_ht": "git push voye kòd ou (commit yo) sou GitHub, pou li an sekirite nan nyaj la epi lòt moun ka wè l.",
+    "explanation_ht": "push = voye. San push, kòd ou rete sèlman sou òdinatè w la.",
+    "id": "E28",
+    "lessonId": "L14",
+    "prompt_ht": "Eksplike ak pwòp mo ou: kisa 'git push' fè, epi poukisa li itil?",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "b",
+      "b) yon sèl kòd ki mache sou iphone ak android",
+      "yon sèl kòd ki mache sou iphone ak android"
+    ],
+    "choices": [
+      "A) App lan mache sèlman sou iPhone",
+      "B) Yon sèl kòd ki mache sou iPhone ak Android",
+      "C) Yon app ki pa bezwen entènèt",
+      "D) Yon app gratis"
+    ],
+    "correct_ht": "B) Yon sèl kòd ki mache sou iPhone ak Android",
+    "explanation_ht": "Zouti tankou React Native ak Flutter kite ou ekri yon fwa epi pibliye sou de telefòn yo.",
+    "id": "E29",
+    "lessonId": "L15",
+    "prompt_ht": "Kisa 'kwa-platfòm' vle di pou yon app mobil?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "pi rapid men fòk ekri kòd la de fwa",
+      "rapid men ou ekri de fwa",
+      "avantaj vitès dezavantaj doub travay"
+    ],
+    "correct_ht": "Avantaj: app natif yo pi rapid. Dezavantaj: ou dwe ekri kòd la de fwa (Swift + Kotlin).",
+    "explanation_ht": "Natif = vitès maksimòm, men doub travay.",
+    "id": "E30",
+    "lessonId": "L15",
+    "prompt_ht": "Bay yon avantaj ak yon dezavantaj devlopman 'natif'.",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "text"
+    ],
+    "code": "import { View, Text } from 'react-native';\n\nexport default function App() {\n  return (\n    <View>\n      <_____>Bonjou Ayiti!</_____\n    </View>\n  );\n}",
+    "correct_ht": "Text",
+    "explanation_ht": "Nan React Native, se <Text> ki montre tèks (pa <p> tankou sou wèb).",
+    "id": "E31",
+    "lessonId": "L16",
+    "prompt_ht": "Konplete kòd React Native la: ki eleman pou montre tèks sou yon telefòn?",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "button",
+      "fòk ekri button ak b majiskil",
+      "button se pou html"
+    ],
+    "code": "import { View, Text, Button } from 'react-native';\n\nexport default function App() {\n  return (\n    <View>\n      <Text>Klike bouton an!</Text>\n      <button title=\"Klike m!\" />\n    </View>\n  );\n}",
+    "correct_ht": "Fòk ekri <Button> ak B majiskil — <button> miniskil se HTML, li pa egziste nan React Native.",
+    "explanation_ht": "React Native gen pwòp eleman pa l: View, Text, Button (toujou ak majiskil).",
+    "id": "E32",
+    "lessonId": "L16",
+    "prompt_ht": "Jwenn erè a: poukisa bouton an pa pral mache nan React Native?",
+    "type": "jwenn-erè"
+  },
+  {
+    "accepted": [
+      "c",
+      "c) dart",
+      "dart"
+    ],
+    "choices": [
+      "A) Swift",
+      "B) Kotlin",
+      "C) Dart",
+      "D) Python"
+    ],
+    "correct_ht": "C) Dart",
+    "explanation_ht": "Flutter (zouti Google la) itilize lang Dart; Dart sanble anpil ak JavaScript.",
+    "id": "E33",
+    "lessonId": "L17",
+    "prompt_ht": "Ki lang yo itilize ak Flutter?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "react native",
+      "flutter",
+      "kwa-platfòm",
+      "natif"
+    ],
+    "correct_ht": "Pa gen yon sèl bon repons — egzanp: 'Flutter, paske mwen ekri yon sèl fwa pou de telefòn yo.'",
+    "explanation_ht": "Pou debutan, yon wout kwa-platfòm (React Native oswa Flutter) ekonomize tan.",
+    "id": "E34",
+    "lessonId": "L17",
+    "prompt_ht": "W ap kòmanse premye app mobil ou. Ki wout ou ta chwazi (React Native, Flutter, oswa natif) epi poukisa? (Yon fraz)",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "b",
+      "b) $25 yon sèl fwa",
+      "$25"
+    ],
+    "choices": [
+      "A) Gratis",
+      "B) $25 yon sèl fwa",
+      "C) $99 pa ane",
+      "D) $1000"
+    ],
+    "correct_ht": "B) $25 yon sèl fwa",
+    "explanation_ht": "Google Play: $25 yon sèl fwa. Apple App Store: $99 pa ane.",
+    "id": "E35",
+    "lessonId": "L18",
+    "prompt_ht": "Konbyen yon kont devlopè Google Play koute?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "ikon foto deskripsyon",
+      "ikon screenshots deskripsyon",
+      "ikon foto ekran deskripsyon"
+    ],
+    "correct_ht": "Yon bèl ikon, foto ekran (screenshots), ak yon deskripsyon klè — plis tès konplè.",
+    "explanation_ht": "Magazen yo montre ikon + foto + deskripsyon; se sa itilizatè yo wè anvan yo telechaje.",
+    "id": "E36",
+    "lessonId": "L18",
+    "prompt_ht": "Site 3 bagay ou dwe prepare AVAN ou voye app ou sou yon magazen.",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "a",
+      "a) li chanje non tankou google.com an adrès ip",
+      "chanje non an adrès ip"
+    ],
+    "choices": [
+      "A) Li chanje non tankou google.com an adrès IP",
+      "B) Li fè viris",
+      "C) Li chaje telefòn ou",
+      "D) Li kreye modpas"
+    ],
+    "correct_ht": "A) Li chanje non tankou google.com an adrès IP",
+    "explanation_ht": "DNS se anyè entènèt la: non fasil pou moun → nimewo IP pou òdinatè.",
+    "id": "E37",
+    "lessonId": "L19",
+    "prompt_ht": "Kisa DNS fè?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "nslookup"
+    ],
+    "code": "# Chèche nimewo IP google.com:\n________ google.com",
+    "correct_ht": "nslookup",
+    "explanation_ht": "nslookup google.com mande DNS: ki nimewo IP ki mache ak non sa a?",
+    "id": "E38",
+    "lessonId": "L19",
+    "prompt_ht": "Konplete kòmand lan ki mande DNS nimewo IP yon non domèn.",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "b",
+      "b) post",
+      "post"
+    ],
+    "choices": [
+      "A) GET",
+      "B) POST",
+      "C) DELETE",
+      "D) SMS"
+    ],
+    "correct_ht": "B) POST",
+    "explanation_ht": "POST = 'pran enfòmasyon m ap voye ba ou'. GET = 'ban m enfòmasyon' (louvri yon paj).",
+    "id": "E39",
+    "lessonId": "L20",
+    "prompt_ht": "Lè ou ranpli yon fòmilè epi ou peze 'voye', ki kalite demann HTTP navigatè a voye?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "404",
+      "404 vle di paj la pa jwenn",
+      "404 pa vle di ok"
+    ],
+    "code": "fetch('https://api.monsite.com/atik')\n  .then(repons => {\n    if (repons.status === 404) {\n      console.log(\"Tout bagay OK!\");\n    }\n  });",
+    "correct_ht": "404 vle di 'paj la pa jwenn' — mesaj la ta dwe yon erè, pa 'Tout bagay OK!' (OK se 200).",
+    "explanation_ht": "200 = OK; 404 = pa jwenn; 500 = pwoblèm sèvè.",
+    "id": "E40",
+    "lessonId": "L20",
+    "prompt_ht": "Jwenn erè lojik la: kisa kòd 404 vle di vre, epi kisa mesaj la ta dwe ye?",
+    "type": "jwenn-erè"
+  },
+  {
+    "accepted": [
+      "b",
+      "b) teste pwòp sit ou a pou chèche feblès",
+      "teste pwòp sit ou"
+    ],
+    "choices": [
+      "A) Teste sit yon lòt moun san pèmisyon pou ede yo",
+      "B) Teste pwòp sit ou a pou chèche feblès",
+      "C) Vòlè modpas yon zanmi pou montre l feblès",
+      "D) Kraze sit lekòl ou a pou pwouve ou fò"
+    ],
+    "correct_ht": "B) Teste pwòp sit ou a pou chèche feblès",
+    "explanation_ht": "SÈLMAN sistèm ou posede oswa ou gen pèmisyon ekri pou teste. Tout lòt la se ilegal, menm ak bon entansyon.",
+    "id": "E41",
+    "lessonId": "L21",
+    "prompt_ht": "Kilès nan sa yo ki LEGAL?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "pèmisyon ekri",
+      "jwenn pèmisyon ekri",
+      "dakò sou limit yo"
+    ],
+    "correct_ht": "1) Jwenn pèmisyon EKRI (klè, alekri si posib). 2) Dakò sou limit yo: ki pati ou ka teste, kilè.",
+    "explanation_ht": "San pèmisyon ekri klè, menm yon tès 'zanmitay' ka ilegal.",
+    "id": "E42",
+    "lessonId": "L21",
+    "prompt_ht": "Yon zanmi di w: 'Teste sit boutik mwen an, wè si li an sekirite.' Ki 2 bagay ou dwe fè ANVAN ou kòmanse?",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "a",
+      "a) li mete kòd baz done move nan yon fòmilè pou vòlè done"
+    ],
+    "choices": [
+      "A) Li mete kòd baz done move nan yon fòmilè pou vòlè done",
+      "B) Li fè òdinatè a pi rapid",
+      "C) Li chanje koulè sit la",
+      "D) Li voye imèl bay tout moun"
+    ],
+    "correct_ht": "A) Li mete kòd baz done move nan yon fòmilè pou vòlè done",
+    "explanation_ht": "Pwoteksyon: prepared statements — pa janm kole tèks itilizatè a dirèkteman nan demann SQL.",
+    "id": "E43",
+    "lessonId": "L22",
+    "prompt_ht": "Kisa yon atak 'enjeksyon SQL' fè?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "enjeksyon sql",
+      "sql injection",
+      "prepared statement"
+    ],
+    "code": "// Fòmilè koneksyon\nconst sql = \"SELECT * FROM itilizate WHERE non = '\" + non + \"' AND modpas = '\" + modpas + \"'\";\ndb.query(sql);",
+    "correct_ht": "Enjeksyon SQL: atakè a ka ekri kòd SQL nan fòmilè a pou twonpe baz done a. Olye sa, itilize prepared statements (demann ak ?).",
+    "explanation_ht": "Pa janm kole sa itilizatè a ekri dirèkteman nan SQL — se pòt ki louvri pou atakè.",
+    "id": "E44",
+    "lessonId": "L22",
+    "prompt_ht": "Jwenn gwo danje sekirite nan kòd la. Kisa atakè a ka fè, epi kisa pou itilize olye sa?",
+    "type": "jwenn-erè"
+  },
+  {
+    "accepted": [
+      "===",
+      "=="
+    ],
+    "code": "function adisyone(a, b) {\n  return a + b;\n}\n\n// Tès: èske 2 + 3 bay 5?\nif (adisyone(2, 3) _____ 5) {\n  console.log(\"Tès la pase!\");\n}",
+    "correct_ht": "===",
+    "explanation_ht": "=== verifye si de valè egal. Si wi, tès la pase; si non, gen erè.",
+    "id": "E45",
+    "lessonId": "L23",
+    "prompt_ht": "Konplete tès la: ki operatè pou verifye si de valè egal?",
+    "type": "konplete"
+  },
+  {
+    "accepted": [
+      "b",
+      "b) yo di w touswit si ou kase yon bagay ki te mache"
+    ],
+    "choices": [
+      "A) Yo fè kòd la pi bèl",
+      "B) Yo di w touswit si ou kase yon bagay ki te mache",
+      "C) Yo efase erè yo pou kont yo",
+      "D) Yo pa itil ditou"
+    ],
+    "correct_ht": "B) Yo di w touswit si ou kase yon bagay ki te mache",
+    "explanation_ht": "Tès yo se tankou gad: yo veye pou chanjman nouvo pa kraze ansyen fonksyon yo.",
+    "id": "E46",
+    "lessonId": "L23",
+    "prompt_ht": "Poukisa tès yo itil lè ou CHANJE kòd ou pita?",
+    "type": "qcm"
+  },
+  {
+    "accepted": [
+      "ekran konpozan done",
+      "ekran konpozan tès",
+      "screens components"
+    ],
+    "correct_ht": "Pa egzanp: ekran/ (paj yo), konpozan/ (bouton, kat ki re-itilize), done/ (baz done), tès/.",
+    "explanation_ht": "Chak dosye gen yon sèl wòl — konsa ou jwenn bagay yo fasil lè pwojè a grandi.",
+    "id": "E47",
+    "lessonId": "L24",
+    "prompt_ht": "W ap bati yon app resèt manje ayisyen. Nonmen 3 dosye ou ta kreye pou òganize kòd ou a.",
+    "type": "lib"
+  },
+  {
+    "accepted": [
+      "a",
+      "a) plizyè ekran, yon fòmilè, done ki sove"
+    ],
+    "choices": [
+      "A) Plizyè ekran, yon fòmilè, done ki sove",
+      "B) Yon sèl paj, pa gen bouton",
+      "C) Sèlman bèl koulè",
+      "D) Kòd kopye san konprann"
+    ],
+    "correct_ht": "A) Plizyè ekran, yon fòmilè, done ki sove",
+    "explanation_ht": "Yon app konplè montre ou ka bati yon vre pwodui — se sa w ap montre lè w ap chèche travay.",
+    "id": "E48",
+    "lessonId": "L24",
+    "prompt_ht": "Ki 3 bagay yon bon pwojè final dwe genyen?",
+    "type": "qcm"
+  }
+]

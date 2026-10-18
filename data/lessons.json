@@ -1,0 +1,308 @@
+[
+  {
+    "body_en": "A computer is a machine that follows the instructions people give it. It can calculate, store information, and show it on a screen. But a computer cannot think on its own: it does ONLY what programs tell it to do.\n\nEvery computer has two main parts. First, HARDWARE: everything you can touch with your hands — the screen, the keyboard, the mouse, the case, and all the tiny electronic parts inside. Second, SOFTWARE: the programs, things you cannot touch — like Windows, WhatsApp, games, and the web browser. Without software, hardware is just a box that does nothing; without hardware, software has nowhere to run.\n\nInside the computer, all information is kept in FILES. A file is like a document: a photo is a file, a song is a file, a text you write is a file. And files live in FOLDERS. A folder is like a cardboard box: you put all similar files together inside it so you can find them easily. For example, you can have a 'Photos' folder for all your photos, and a 'Music' folder for all your songs. When you understand hardware, software, files, and folders, you already understand the foundation of all programming.",
+    "body_es": "Una computadora es una máquina que sigue las instrucciones que le dan. Puede calcular, guardar información y mostrarla en la pantalla. Pero una computadora no puede pensar sola: hace SOLAMENTE lo que los programas le dicen.\n\nCada computadora tiene dos grandes partes. Primero el HARDWARE: todo lo que puedes tocar con tus manos — la pantalla, el teclado, el mouse, la caja, y todos los pequeños componentes electrónicos adentro. Segundo el SOFTWARE: los programas, cosas que no puedes tocar — como Windows, WhatsApp, los juegos y el navegador web. Sin software, el hardware es solo una caja que no hace nada; sin hardware, el software no tiene dónde correr.\n\nAdentro de la computadora, toda la información se guarda en ARCHIVOS. Un archivo es como un documento: una foto es un archivo, una canción es un archivo, un texto que escribes es un archivo. Y los archivos viven en CARPETAS. Una carpeta es como una caja de cartón: pones juntos adentro todos los archivos parecidos para encontrarlos fácilmente. Por ejemplo, puedes tener una carpeta «Fotos» para todas tus fotos, y una carpeta «Música» para todas tus canciones. Cuando entiendes el hardware, el software, los archivos y las carpetas, ya entiendes la base de toda la programación.",
+    "body_fr": "Un ordinateur est une machine qui suit les instructions qu'on lui donne. Il peut calculer, stocker des informations et les afficher à l'écran. Mais il ne peut pas réfléchir seul : il fait UNIQUEMENT ce que les programmes lui disent.\n\nChaque ordinateur a deux grandes parties. D'abord le MATÉRIEL (hardware) : tout ce que tu peux toucher avec tes mains — l'écran, le clavier, la souris, le boîtier, et tous les petits composants électroniques à l'intérieur. Ensuite le LOGICIEL (software) : les programmes, que tu ne peux pas toucher — comme Windows, WhatsApp, les jeux, et le navigateur web. Sans logiciel, le matériel n'est qu'une boîte qui ne fait rien ; sans matériel, le logiciel n'a nulle part où tourner.\n\nÀ l'intérieur de l'ordinateur, toutes les informations sont gardées dans des FICHIERS. Un fichier, c'est comme un document : une photo est un fichier, une chanson est un fichier, un texte que tu écris est un fichier. Et les fichiers vivent dans des DOSSIERS. Un dossier, c'est comme une boîte en carton : tu y mets ensemble tous les fichiers qui se ressemblent pour les retrouver facilement. Par exemple, tu peux avoir un dossier « Photos » pour toutes tes photos, et un dossier « Musique » pour toutes tes chansons. Quand tu comprends le matériel, le logiciel, les fichiers et les dossiers, tu comprends déjà la base de toute la programmation.",
+    "body_ht": "Yon òdinatè se yon machin ki swiv enstriksyon moun bay li. Li ka kalkile, kenbe enfòmasyon, epi montre yo sou ekran. Men yon òdinatè pa ka panse poukont li: li fè SÈLMAN sa pwogram yo di l fè.\n\nChak òdinatè gen de gwo pati. Premye a se MATERYÈL la (hardware): se tout bagay ou ka manyen ak men w — ekran an, klavye a, sourit la, bwat la, ak tout ti moso elektwonik andedan l. Dezyèm pati a se LOJISYÈL la (software): se pwogram yo, bagay ou pa ka manyen — tankou Windows, WhatsApp, jwèt yo, ak navigatè entènèt la. San lojisyèl, materyèl la se jis yon bwat ki pa fè anyen; san materyèl, lojisyèl la pa gen kote pou l kouri.\n\nAnndan òdinatè a, tout enfòmasyon yo kenbe nan FICHYE. Yon fichye se tankou yon dokiman: yon foto se yon fichye, yon chante se yon fichye, yon tèks ou ekri se yon fichye. Epi fichye yo rete nan DOSYE. Yon dosye se tankou yon bwat katon: ou mete tout fichye ki sanble ansanm ladann pou w ka jwenn yo fasil. Pa egzanp, ou ka gen yon dosye 'Foto' pou tout foto w, ak yon dosye 'Mizik' pou tout chante w. Lè w konprann materyèl, lojisyèl, fichye ak dosye, ou deja konprann baz tout pwogramasyon.",
+    "code": {
+      "code": "print(\"Òdinatè a ap travay!\")",
+      "lang": "python"
+    },
+    "domain": "Baz",
+    "expert_note_en": "Experts call these two parts 'hardware' and 'software' — remember this distinction well, it will come back throughout your whole career.",
+    "expert_note_es": "Los expertos llaman a estas dos partes «hardware» y «software» — recuerda bien esta distinción, volverá durante toda tu carrera.",
+    "expert_note_fr": "Les experts appellent ces deux parties « hardware » et « software » — retiens bien cette distinction, elle reviendra durant toute ta carrière.",
+    "expert_note_ht": "Ekspè yo rele de pati sa yo 'hardware' ak 'software' — sonje distenksyon sa a, l ap tounen nan tout karyè w.",
+    "id": "L01",
+    "month": 1,
+    "title_en": "What is a computer",
+    "title_es": "Qué es una computadora",
+    "title_fr": "Qu'est-ce qu'un ordinateur",
+    "title_ht": "Ki sa yon òdinatè ye"
+  },
+  {
+    "body_en": "The internet is a giant network connecting millions of computers all around the world. When you open a page on your phone, your phone doesn't have the page inside it: it ASKS a far-away computer for it, and that computer SENDS it back.\n\nYour device is called the CLIENT (it asks for a service), and the big computer that answers is called the SERVER (it provides the service). They speak a language called HTTP: the client sends an 'HTTP request' (like: 'give me the google.com page'), and the server sends back an 'HTTP response' (the page). But how does your phone find the right server? It uses DNS, like a giant address book: you type an easy name like 'google.com', and DNS translates it into a number called an IP address, which is the server's real address. So: you type the name → DNS finds the number → your browser sends the HTTP request → the server answers → the page appears.\n\nNow let's take your first programming step with Python. Python is a very simple programming language, almost like English. First step: go to python.org, download Python, and install it. Then open a terminal and type: print('Hello'). The word 'print' tells the computer: 'show this text on the screen.' Press Enter, and you'll see 'Hello' appear. Congratulations — you just wrote your first program!",
+    "body_es": "Internet es una red gigante que conecta millones de computadoras en todo el mundo. Cuando abres una página en tu teléfono, él no la tiene adentro: la PIDE a otra computadora lejana, y esa computadora se la ENVÍA.\n\nTu aparato se llama CLIENTE (pide un servicio), y la gran computadora que responde se llama SERVIDOR (da el servicio). Hablan un lenguaje llamado HTTP: el cliente envía una «petición HTTP» (como: «dame la página google.com»), y el servidor devuelve una «respuesta HTTP» (la página). ¿Pero cómo encuentra tu teléfono el servidor correcto? Usa el DNS, como un gran libro de direcciones: escribes un nombre fácil como «google.com», y el DNS lo traduce a un número llamado dirección IP, que es la dirección real del servidor. Entonces: escribes el nombre → el DNS encuentra el número → tu navegador envía la petición HTTP → el servidor responde → la página aparece.\n\nAhora demos tu primer paso en programación con Python. Python es un lenguaje de programación muy simple, casi como inglés. Primer paso: ve a python.org, descarga Python e instálalo. Luego abre una terminal y escribe: print('Hola'). La palabra «print» le dice a la computadora: «muestra este texto en la pantalla». Pulsa Enter y verás aparecer «Hola». ¡Felicidades — acabas de escribir tu primer programa!",
+    "body_fr": "Internet est un immense réseau qui relie des millions d'ordinateurs dans le monde entier. Quand tu ouvres une page sur ton téléphone, il ne l'a pas en lui : il la DEMANDE à un autre ordinateur lointain, et cet ordinateur la lui ENVOIE.\n\nTon appareil s'appelle le CLIENT (il demande un service), et le gros ordinateur qui répond s'appelle le SERVEUR (il rend le service). Ils parlent un langage appelé HTTP : le client envoie une « requête HTTP » (comme : « donne-moi la page google.com »), et le serveur renvoie une « réponse HTTP » (la page). Mais comment ton téléphone trouve-t-il le bon serveur ? Il utilise le DNS, comme un grand livre d'adresses : tu écris un nom facile comme « google.com », et le DNS le traduit en un numéro appelé adresse IP, qui est la vraie adresse du serveur. Donc : tu écris le nom → le DNS trouve le numéro → ton navigateur envoie la requête HTTP → le serveur répond → la page s'affiche.\n\nFaisons maintenant ton premier pas en programmation avec Python. Python est un langage de programmation très simple, presque comme de l'anglais. Première étape : va sur python.org, télécharge Python et installe-le. Ensuite, ouvre un terminal et écris : print('Bonjour'). Le mot « print » dit à l'ordinateur : « montre ce texte à l'écran ». Appuie sur Entrée, et tu verras « Bonjour » apparaître. Félicitations — tu viens d'écrire ton premier programme !",
+    "body_ht": "Entènèt la se yon gwo rezo ki konekte dè milyon òdinatè nan tout mond lan ansanm. Lè w ouvri yon paj sou telefòn ou, telefòn ou pa gen paj la andedan l: li MANDE l bay yon lòt òdinatè ki lwen, epi òdinatè sa a VOYE l ba li.\n\nÒdinatè w rele KLIYAN (li mande sèvis), epi gwo òdinatè ki reponn lan rele SÈVÈ (li bay sèvis). Yo pale ak yon langaj yo rele HTTP: kliyan an voye yon 'demann HTTP' (tankou: 'banm paj google.com'), epi sèvè a voye yon 'repons HTTP' (paj la). Men kijan telefòn ou jwenn bon sèvè a? Li itilize DNS, ki se tankou yon gwo liv adrès: ou ekri yon non fasil tankou 'google.com', epi DNS tradui l an yon nimewo yo rele adrès IP, ki se vrè adrès sèvè a. Donk: ou ekri non an → DNS jwenn nimewo a → navigatè w voye demann HTTP → sèvè a reponn → paj la parèt.\n\nKounye a, ann fè premye pa w nan pwogramasyon ak Python. Python se yon langaj pwogramasyon ki senp anpil, prèske tankou anglè. Premye etap la: ale sou python.org, telechaje Python, epi enstale l. Apre sa, ouvri yon tèminal epi ekri: print('Bonjou'). Mo 'print' la di òdinatè a: 'montre tèks sa a sou ekran'. Peze Antre, epi w ap wè 'Bonjou' parèt. Felisitasyon — ou sot ekri premye pwogram ou!",
+    "code": {
+      "code": "print(\"Bonjou, entènèt!\")",
+      "lang": "python"
+    },
+    "domain": "Baz",
+    "expert_note_en": "HTTP is by far the most important protocol on the internet; every API you build later will speak HTTP.",
+    "expert_note_es": "HTTP es por lejos el protocolo más importante de internet; todas las API que construyas después hablarán HTTP.",
+    "expert_note_fr": "HTTP est de loin le protocole le plus important d'Internet ; toutes les API que tu construiras plus tard parleront HTTP.",
+    "expert_note_ht": "HTTP se san tranchman pwotokòl ki pi enpòtan sou entènèt la; tout API w ap bati pita ap pale HTTP.",
+    "id": "L02",
+    "month": 1,
+    "title_en": "How the internet works",
+    "title_es": "Cómo funciona internet",
+    "title_fr": "Comment fonctionne Internet",
+    "title_ht": "Kijan entènèt la mache"
+  },
+  {
+    "body_ht": "HTML se zo bwa tout paj web. Zo bwa w kenbe kò w kanpe; HTML kenbe paj la kanpe: li di ki kote tit la ye, ki kote paragraf la ye, ki kote imaj la ye.\n\nHTML ekri ak 'etikèt' (tags). Yon etikèt ouvri ak < epi fèmen ak >, epi pifò gen yon fèmen ki sanble ak </ >. Pa egzanp: <p>Bonjou</p> — <p> di 'isit la yon paragraf kòmanse', </p> di 'paragraf la fini'. <h1> se pou gwo tit, <p> se pou paragraf.\n\nYon paj HTML gen yon estrikti obligatwa: <html> vlope tout paj la; andedan l gen <head> (enfòmasyon kache: tit paj la, elatriye) ak <body> (tout sa vizitè a wè: tèks, imaj, bouton). Donk lòd la se: html → head + body. Sonje byen: chak etikèt ou ouvri, ou dwe fèmen l. Si w bliye fèmen yon etikèt, paj la ka parèt defòme. Egzanp konplè nan bwat kòd la montre yon ti paj: yon tit 'Byenveni' ak yon paragraf. Kopye l, ouvri l nan navigatè w, epi w ap wè premye paj web ou!",
+    "code": {
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Premye paj mwen</title>\n</head>\n<body>\n  <h1>Byenveni!</h1>\n  <p>Sa a se premye paj web mwen.</p>\n</body>\n</html>",
+      "lang": "html"
+    },
+    "domain": "Web",
+    "expert_note_ht": "Navige tout paj web: klike dwa → 'Enspekte' pou wè HTML nenpòt sit — se pi bon fason pou aprann.",
+    "id": "L03",
+    "month": 2,
+    "title_ht": "HTML: zo bwa paj web"
+  },
+  {
+    "body_ht": "Kounye a paj ou gen zo bwa, ann mete l an mouvman: lyen, imaj, ak fòm.\n\nYon LYEN fè w sote soti nan yon paj ale nan yon lòt. Nan HTML, lyen ekri ak etikèt <a>, epi adrès destinasyon an mete nan yon 'atribi' yo rele href: <a href='https://google.com'>Ale sou Google</a>. Tèks ant de etikèt yo se sa moun nan klike.\n\nYon IMAJ mete ak <img>: <img src='chat.png'>. Atribi src la di ki fichye imaj la. Remake byen: <img> pa gen fèmen — li fèmen poukont li.\n\nYon FÒM se kote vizitè a ekri enfòmasyon: non l, imèl li, elatriye. Ou kreye l ak <form>, epi andedan l ou mete <input>, ki se ti bwat kote moun ekri. Chak input gen yon 'type': type='text' pou tèks, type='password' pou modpas (li kache sa w ekri). Epi yon <button> voye fòm nan. Egzanp nan kòd la montre yon ti fòm enskripsyon: yon bwat pou non, yon bwat pou imèl, ak yon bouton 'Voye'. Twa zouti sa yo — a, img, form — se baz tout entèraksyon sou entènèt la.",
+    "code": {
+      "code": "<form>\n  <p>Non: <input type=\"text\"></p>\n  <p>Imèl: <input type=\"email\"></p>\n  <button>Voye</button>\n</form>",
+      "lang": "html"
+    },
+    "domain": "Web",
+    "expert_note_ht": "Atribi href la dwe yon URL konplè; lyen relatif (tankou 'paj2.html') mache sèlman andedan menm sit la.",
+    "id": "L04",
+    "month": 2,
+    "title_ht": "Fòm ak lyen"
+  },
+  {
+    "body_ht": "Si HTML se zo bwa paj la, CSS se BÈL RAD li mete sou li. CSS di: tit la dwe wouj, paragraf la dwe ble, bouton an dwe gwo epi won. San CSS, tout paj web ta sanble ak yon dokiman blan ki raz anpil.\n\nCSS ekri ak 'règ'. Yon règ gen de pati: yon SELEKTÈ (ki di KI eleman pou abiye) ak deklarasyon yo (ki di KIJAN pou abiye l). Pa egzanp: p { color: blue; } — selektè a se 'p' (tout paragraf yo), epi deklarasyon an di koulè tèks la dwe ble. 'color' se yon PWOPRIYETE, 'blue' se VALÈ a. Ou ka mete plizyè deklarasyon: h1 { color: red; font-size: 40px; } — tit la wouj epi gwo.\n\nGen twa fason pou chwazi eleman: pa non etikèt (p), pa klas (.bouton — ak yon pwen devan), pa id (#tit — ak dyèz devan). Ou ka ekri CSS andedan paj la nan yon etikèt <style>, oswa nan yon fichye apa yo rele style.css. Egzanp nan kòd la abiye ti paj nou an: tit ble, paragraf gri, bouton vèt. Eseye chanje koulè yo epi gade paj la chanje — se konsa w aprann!",
+    "code": {
+      "code": "h1 {\n  color: blue;\n  font-size: 40px;\n}\np {\n  color: gray;\n}\n.bouton {\n  background-color: green;\n  color: white;\n}",
+      "lang": "css"
+    },
+    "domain": "Web",
+    "expert_note_ht": "Klas (.non) sèvi pou stili plizyè eleman; id (#non) dwe inik — yon sèl eleman pa paj.",
+    "id": "L05",
+    "month": 3,
+    "title_ht": "CSS: bèl rad paj la"
+  },
+  {
+    "body_ht": "Chak bagay sou yon paj web chita andedan yon BWAT envizib. Konprann bwat sa yo se kle pou fè bèl paj. Yo rele sa 'box model', epi chak bwat gen kat kouch: 1) KONTNI an (tèks oswa imaj la li menm); 2) PADDING — espas VID ant kontni an ak bò bwat la (tankou matla andedan yon bwat katon); 3) BORDER — liy ki fè won bwat la (ou ka wè l oswa kache l); 4) MARGIN — espas VID deyò bwat la, ant bwat sa a ak vwazen l yo.\n\nPa egzanp: padding: 20px mete 20 piksèl espas andedan; margin: 10px mete 10 piksèl espas deyò.\n\nKounye a, kijan pou mete plizyè bwat youn bò kote lòt? Repons lan se FLEXBOX. Ou di paran an: display: flex; — epi tout pitit li yo aliyen otomatikman sou yon liy. Ou ka chwazi direksyon an: flex-direction: row (orizontal, youn bò kote lòt) oswa column (vètikal, youn anba lòt). Ak justify-content ou santre yo. Egzanp nan kòd la montre twa bwat koulè ki chita youn bò kote lòt grasa flexbox. Box model + flexbox = 90% nan tout layout w ap janm fè.",
+    "code": {
+      "code": ".kontene {\n  display: flex;\n  flex-direction: row;\n}\n.bwat {\n  padding: 20px;\n  margin: 10px;\n  border: 2px solid black;\n}",
+      "lang": "css"
+    },
+    "domain": "Web",
+    "expert_note_ht": "90% pwoblèm layout se box model: lè yon bagay debòde, tcheke padding ak margin anvan tout.",
+    "id": "L06",
+    "month": 3,
+    "title_ht": "Bwat ak pozisyon"
+  },
+  {
+    "body_ht": "HTML se zo bwa a, CSS se rad la — men JavaScript se SÈVO paj la. Se li ki fè paj la panse epi reyaji: lè w klike yon bouton epi yon mesaj parèt, se JavaScript.\n\nPremye zouti a se VARYAB: yon varyab se tankou yon ti bwat ki gen yon non epi ki kenbe yon valè. Ou kreye l ak 'let': let non = 'Garry'; — kounye a bwat 'non' la kenbe tèks 'Garry'. Ou ka chanje valè a pita: non = 'Marie'. Gen 'const' tou, pou valè ki pa janm chanje: const laj = 25;.\n\nDezyèm zouti a se FONKSYON: yon fonksyon se yon resèt — yon seri enstriksyon ou bay yon non, epi ou ka kouri l nenpòt ki lè. Ou ekri l konsa: function diBonjou() { alert('Bonjou!'); } — epi ou rele l konsa: diBonjou();. Fonksyon ka resevwa 'paramèt' tou: function diBonjou(non) { alert('Bonjou ' + non); } — epi diBonjou('Garry') ap montre 'Bonjou Garry'. Varyab kenbe done, fonksyon fè aksyon: ak de zouti sa yo, ou ka deja ekri pwogram ki reyaji ak moun.",
+    "code": {
+      "code": "let non = \"Garry\";\nconst laj = 25;\nfunction diBonjou(non) {\n  alert(\"Bonjou \" + non);\n}\ndiBonjou(\"Garry\");",
+      "lang": "javascript"
+    },
+    "domain": "Web",
+    "expert_note_ht": "Prefere 'const' pa defo; itilize 'let' sèlman si valè a ap chanje — sa evite anpil erè.",
+    "id": "L07",
+    "month": 4,
+    "title_ht": "JavaScript: sèvo paj la"
+  },
+  {
+    "body_ht": "Lè navigatè a li HTML ou, li bati yon pyebwa envizib yo rele DOM (Document Object Model). Chak etikèt vin yon 'ne' nan pyebwa a: body se paran, h1 ak p se pitit li, elatriye. JavaScript ka monte pyebwa sa a, jwenn nenpòt eleman, epi CHANJE l — san rechaje paj la!\n\nPou jwenn yon eleman, ou itilize: document.getElementById('tit') — li chèche eleman ki gen id='tit'. Pou chanje tèks li: document.getElementById('tit').textContent = 'Nouvo tit!'.\n\nDezyèm moso a se EVÈNMAN: yon evènman se yon bagay ki RIVE — yon klik, yon touch klavye, paj la fin chaje. Ou di JavaScript: 'lè evènman sa a rive sou bouton sa a, kouri fonksyon sa a'. Ou ekri l konsa: bouton.addEventListener('click', function() { ... }); — 'click' se evènman an. Egzanp nan kòd la: yon bouton, epi chak fwa ou klike l, tèks tit la chanje. Se konsa tout bouton sou entènèt la mache: DOM pou jwenn eleman an, evènman pou tande aksyon an, JavaScript pou reyaji. Ou sot aprann kè tout paj entèraktif!",
+    "code": {
+      "code": "bouton.addEventListener(\"click\", function() {\n  document.getElementById(\"tit\").textContent = \"Ou klike!\";\n});",
+      "lang": "javascript"
+    },
+    "domain": "Web",
+    "expert_note_ht": "addEventListener pi bon pase onclick paske ou ka tache plizyè fonksyon sou menm evènman an.",
+    "id": "L08",
+    "month": 4,
+    "title_ht": "DOM ak evènman"
+  },
+  {
+    "body_ht": "Jouk koulye a, done nou yo te rete nan tèt paj la. Men kote Facebook kenbe dè milya non itilizatè? Nan yon BAZ DONE. Yon baz done se yon gwo depo enfòmasyon ki òganize anpil, ki ka kenbe dè milyon done epi jwenn nenpòt ladan yo nan yon segonn.\n\nPi fò baz done yo òganize an TAB. Yon tab se tankou yon fèy Excel: li gen KOLÒN (kalite enfòmasyon: non, laj, imèl) epi RANJE (chak moun oswa bagay: yon ranje = yon itilizatè). Pa egzanp, tab 'itilizate' ka gen kolòn id, non, imèl — epi ranje 1 se (1, 'Garry', 'garry@egzanp.com'), ranje 2 se (2, 'Marie', 'marie@egzanp.com'). Chak ranje gen yon id INIK — yon nimewo ki pa janm repete, tankou nimewo paspò w. Sa pèmèt baz la distenge de moun ki rele menm non.\n\nPoukisa pa jis mete tout nan fichye tèks? Paske baz done a rapid anpil, li pwoteje done yo, epi plizyè moun ka li/ekri ladan l an menm tan san dezòd. Egzanp nan kòd la kreye yon tab 'itilizate' ak twa kolòn. Nan pwochen leson an, w ap aprann LI done ki ladan l.",
+    "code": {
+      "code": "CREATE TABLE itilizate (\n  id INT,\n  non TEXT,\n  imel TEXT\n);",
+      "lang": "sql"
+    },
+    "domain": "Baz done",
+    "expert_note_ht": "Toujou bay chak tab yon kolòn id inik (primary key) — se règ nimewo 1 nan konsepsyon baz done.",
+    "id": "L09",
+    "month": 5,
+    "title_ht": "Ki sa yon baz done ye"
+  },
+  {
+    "body_ht": "Kounye a tab nou an plen ak done. Kijan pou nou LI yo? Ak langaj SQL, epi premye mo w ap aprann se SELECT — li vle di 'montre m'.\n\nSELECT non FROM itilizate; — sa di baz la: 'montre m kolòn non an, nan tab itilizate a'. Ou vle tout kolòn yo? Itilize etwal: SELECT * FROM itilizate; — etwal la vle di 'tout'.\n\nMen si tab la gen yon milyon ranje, ou pa vle tout! Se la WHERE antre: li FILTRE. SELECT non FROM itilizate WHERE laj > 18; — 'montre m non yo, SÈLMAN pou ranje kote laj la pi gran pase 18'. WHERE mache ak kondisyon: = (egal), > (pi gran), < (pi piti), LIKE pou chèche tèks. Pa egzanp: WHERE non LIKE 'G%' — tout non ki kòmanse ak G.\n\nLòd mo yo TOUJOU menm: SELECT (kisa) → FROM (ki tab) → WHERE (ki kondisyon). Egzanp nan kòd la montre twa rechèch: tout itilizatè yo, sèlman non yo, epi sèlman moun ki gen plis pase 18 an. SELECT + WHERE = 80% nan sa w ap fè ak baz done chak jou.",
+    "code": {
+      "code": "SELECT non FROM itilizate WHERE laj > 18;",
+      "lang": "sql"
+    },
+    "domain": "Baz done",
+    "expert_note_ht": "Nan pwodiksyon, evite SELECT * sou gwo tab: chwazi sèlman kolòn ou bezwen pou ekonomize vitès.",
+    "id": "L10",
+    "month": 5,
+    "title_ht": "SELECT ak WHERE"
+  },
+  {
+    "body_ht": "Jouk koulye a, tout bagay te pase nan navigatè a — yo rele sa FRONTEND (devan). Men kote modpas ou verifye lè w konekte? Sou BACKEND (dèyè) a.\n\nImajine yon restoran: ou (kliyan) chita nan sal la (frontend, bèl), men manje a kwit nan KWIZIN nan (backend, kache). Ou pa antre nan kwizin nan — ou pale ak SÈVÈ a (garçon). Nan pwogramasyon, 'garçon' sa a rele yon API (Application Programming Interface): se yon lis adrès (URL) frontend la ka rele pou mande sèvis. Pa egzanp, aplikasyon an rele /api/itilizate epi backend la voye lis itilizatè yo.\n\nEpi kijan yo voye done yo? Nan yon fòma yo rele JSON — yon fason senp pou ekri done: { 'non': 'Garry', 'laj': 25 }. JSON se jis tèks òganize ak accolades { } ak de pwen : — tout langaj pwogramasyon konprann li.\n\nDonk sik la se: frontend rele API a → backend travay (li baz done, verifye modpas) → backend voye repons JSON → frontend montre l bèl. Egzanp nan kòd la montre yon repons JSON pou yon itilizatè. Lè w konprann frontend → API → backend → JSON, ou konprann achitekti tout aplikasyon modèn.",
+    "code": {
+      "code": "{\n  \"non\": \"Garry\",\n  \"laj\": 25,\n  \"imel\": \"garry@egzanp.com\"\n}",
+      "lang": "json"
+    },
+    "domain": "Backend",
+    "expert_note_ht": "JSON se fòma echanj inivèsèl: frontend, backend, ak aplikasyon mobil tout pale JSON.",
+    "id": "L11",
+    "month": 6,
+    "title_ht": "Ki sa yon backend ye"
+  },
+  {
+    "body_ht": "Kounye a ann bati yon backend VRE — ak Node.js. Node.js pèmèt ou kouri JavaScript DEYÒ navigatè a, sou yon sèvè.\n\nPremye etap: enstale Node.js sou nodejs.org (pran vèsyon LTS la). Verifye l nan tèminal: node --version — si w wè yon nimewo vèsyon, li pare.\n\nKounye a kreye yon fichye serve.js epi mete kòd ki nan bwat la ladan l. Kòd la fè twa bagay: 1) li chaje modil 'http' (zouti entènèt Node.js); 2) li kreye yon sèvè ki reponn 'Bonjou soti nan sèvè mwen!' ak chak demann; 3) li koute sou pò 3000 (pò se tankou nimewo pòt sèvè a).\n\nKouri l: node serve.js — tèminal la ap di 'Sèvè ap koute sou pò 3000'. Kounye a ouvri navigatè w epi ale sou localhost:3000 — localhost vle di 'òdinatè pa mwen', 3000 se pòt la. W ap wè mesaj ou a! Ou sot kreye yon VRE sèvè backend. Nan mwa 7-12, w ap aprann konekte sèvè sa a ak yon baz done epi bati API konplè.",
+    "code": {
+      "code": "const http = require(\"http\");\nhttp.createServer((req, res) => {\n  res.end(\"Bonjou soti nan sèvè mwen!\");\n}).listen(3000);\nconsole.log(\"Sèvè ap koute sou pò 3000\");",
+      "lang": "javascript"
+    },
+    "domain": "Backend",
+    "expert_note_ht": "Pa janm mete modpas oswa kle sekrè nan kòd sèvè w dirèkteman — itilize fichye .env.",
+    "id": "L12",
+    "month": 6,
+    "title_ht": "Node.js: premye sèvè w"
+  },
+  {
+    "body_ht": "Imajine w ap bati yon kay ak brik LEGO: ou pran ti moso ki pare epi ou mete yo ansanm. React mache menm jan an! React se yon bibliyotèk JavaScript ki kite ou bati paj wèb ak ti moso ou ka re-itilize yo rele konpozan. Chak konpozan se yon ti fonksyon ki di: men sa pou montre sou ekran an. Olye ou ekri menm kòd bouton an dis fwa pou dis bouton, ou ekri konpozan Bouton an yon sèl fwa epi ou re-itilize l dis fwa. Konpozan yo ka resevwa enfòmasyon yo rele props. Se tankou ou bay yon machin yon lèt: konpozan Bonjou a resevwa props non epi li montre Bonjou, Mari! Lè props yo chanje, React mete ekran an ajou pou kont li, san ou pa bezwen fè anyen. Se tankou yon resèt gato: ou ekri resèt la yon fwa, epi ou ka fè gato a ak diferan gou chak fwa ou vle. Facebook, Instagram ak anpil gwo sit sèvi ak React. Lè ou konprann konpozan ak props, ou konprann kè React la.",
+    "code": {
+      "code": "function Bonjou(props) {\n  return <h1>Bonjou, {props.non}!</h1>;\n}\n\n// Itilize l 2 fwa ak 2 non diferan:\n<Bonjou non=\"Mari\" />\n<Bonjou non=\"Jan\" />",
+      "lang": "jsx"
+    },
+    "domain": "Full Stack",
+    "expert_note_ht": "Nan React, non konpozan yo toujou kòmanse ak yon lèt majiskil (Bonjou, pa bonjou) — se konsa React fè diferans ant yon konpozan ak yon baliz HTML.",
+    "id": "L13",
+    "month": 7,
+    "title_ht": "React: bati ak konpozan"
+  },
+  {
+    "body_ht": "Git se tankou yon machin tan pou kòd ou. Imajine ou ap ekri yon redaksyon: chak fwa ou fini yon bon pati, ou sove yon kopi. Si ou efase yon bagay pa erè demen, ou ka tounen nan kopi a. Se egzakteman sa Git fè! Chak fwa ou fè yon chanjman enpòtan, ou fè yon commit: se tankou ou pran yon foto kòd ou a nan moman sa a, ak yon ti nòt ki eksplike sa ou fè. Twa kòmand ou dwe konnen: git add mete chanjman ou yo pare; git commit pran foto a; git push voye tout foto yo sou GitHub. GitHub se yon sit entènèt kote kòd ou rete an sekirite nan nyaj la, menm si òdinatè w la kraze. Se tou tankou yon pòtfòy: lè ou chèche travay, ou montre moun GitHub ou a pou yo wè sa ou ka fè. Lè ou travay ak lòt moun, chak moun travay sou pwòp kopi pa l, epi Git ede nou mete tout chanjman yo ansanm san pwoblèm. Aprann Git bonè: se zouti tout devlopè pwofesyonèl itilize chak jou.",
+    "code": {
+      "code": "git add .\ngit commit -m \"Ajoute paj akey la\"\ngit push origin main",
+      "lang": "bash"
+    },
+    "domain": "Full Stack",
+    "expert_note_ht": "Ekri mesaj commit ki klè tankou 'Ranje bouton koneksyon an' olye 'ok' — nan sis mwa, w ap remèsye tèt ou lè w ap chèche yon ansyen chanjman.",
+    "id": "L14",
+    "month": 7,
+    "title_ht": "Git: sove kòd ou"
+  },
+  {
+    "body_ht": "Gen de fason pou fè yon app mobil. Premye fason an rele natif: ou bati app iPhone nan ak lang Apple la ki rele Swift, epi ou bati app Android lan ak lang Google la ki rele Kotlin. Avantaj: app lan rapid anpil epi li ka itilize tout bagay telefòn nan, tankou kamera a ak GPS la. Dezavantaj: ou dwe ekri tout kòd la de fwa, yon fwa pou chak telefòn! Dezyèm fason an rele kwa-platfòm: ou ekri kòd la yon sèl fwa ak zouti tankou React Native oswa Flutter, epi menm kòd sa a mache sou iPhone ak sou Android. Avantaj: ou ekonomize anpil tan, ou aprann yon sèl bagay. Dezavantaj: pafwa app lan yon ti jan pi dousman pase yon app natif. Ki chwa pou ou? Si ou debutan, kwa-platfòm se pi bon chwa: ou ekri yon fwa, ou pibliye de fwa. Anpil gwo app tankou Instagram itilize apwòch sa a. Ou ka toujou aprann natif pita, lè ou bezwen plis vitès.",
+    "code": {
+      "code": "import { Platform } from 'react-native';\n\n// Menm kòd la, de telefòn diferan:\nconst mesaj = Platform.OS === 'ios' ? 'Bonjou iPhone!' : 'Bonjou Android!';\nconsole.log(mesaj);",
+      "lang": "javascript"
+    },
+    "domain": "Mobil",
+    "expert_note_ht": "Instagram, WhatsApp ak anpil gwo app itilize apwòch kwa-platfòm pou anpil pati — ou pa bezwen kòd natif pou bati yon app ki reyisi.",
+    "id": "L15",
+    "month": 8,
+    "title_ht": "Ki jan app mobil yo mache"
+  },
+  {
+    "body_ht": "React Native se kouzen React ki fèt pou telefòn! Si ou konnen React pou sit wèb, ou deja konnen mwatye React Native. Diferans lan: olye ou itilize baliz HTML tankou div ak button, ou itilize View (yon bwat), Text (pou ekri tèks) ak Button (yon vre bouton telefòn). Men pi bèl pati a: Expo! Expo se yon zouti gratis ki retire tout tèt chaje. Ou pa bezwen enstale pakèt bagay konplike sou òdinatè w. Ou ekri kòd ou, ou enstale app Expo Go sou telefòn ou, ou eskane yon kòd QR, epi app ou a parèt sou telefòn ou tout suite! Lè ou chanje kòd la, telefòn nan mete l ajou an dirèk, tankou maji. Nan egzanp lan, nou bati yon ekran senp: yon tèks ki di konbyen fwa ou klike, ak yon bouton ki konte chak klik. Se premye app ou — li piti, men li mache sou yon vre telefòn!",
+    "code": {
+      "code": "import { View, Text, Button } from 'react-native';\nimport { useState } from 'react';\n\nexport default function App() {\n  const [konte, meteKonte] = useState(0);\n\n  return (\n    <View>\n      <Text>Ou klike {konte} fwa!</Text>\n      <Button title=\"Klike m!\" onPress={() => meteKonte(konte + 1)} />\n    </View>\n  );\n}",
+      "lang": "jsx"
+    },
+    "domain": "Mobil",
+    "expert_note_ht": "Enstale app gratis Expo Go sou telefòn ou: ou eskane yon kòd QR epi ou wè app ou a an dirèk, san ou pa pibliye anyen.",
+    "id": "L16",
+    "month": 8,
+    "title_ht": "React Native + Expo: premye app ou"
+  },
+  {
+    "body_ht": "React Native pa sèl wout pou ale nan vil app mobil! Flutter se zouti Google la: ou ekri kòd ou nan yon lang yo rele Dart, epi Flutter bati app pou iPhone ak Android an menm tan. Anpil moun renmen Flutter paske li fè bèl desen fasil epi app yo rapid. Dart sanble anpil ak JavaScript, kidonk ou pa pèdi. Lòt chwa a se wout natif la: aprann Kotlin pou bati app Android (se lang ofisyèl Google) oswa Swift pou bati app iPhone (se lang ofisyèl Apple). Wout natif la pi difisil: ou dwe aprann de lang epi ekri app lan de fwa. Men app natif yo pi rapid epi yo ka fè tout sa telefòn nan ka fè, san limit. Konsèy nou: chwazi YON sèl wout pou kòmanse — React Native oswa Flutter. Lide yo sanble anpil: konpozan, ekran, bouton. Lè ou fin konprann youn byen, aprann lòt la ap pi fasil, tankou aprann kondwi yon nouvo machin lè ou deja konn kondwi.",
+    "code": {
+      "code": "import 'package:flutter/material.dart';\n\nvoid main() {\n  runApp(\n    MaterialApp(\n      home: Center(\n        child: Text('Bonjou Ayiti!'),\n      ),\n    ),\n  );\n}",
+      "lang": "dart"
+    },
+    "domain": "Mobil",
+    "expert_note_ht": "Dart sanble anpil ak JavaScript — si ou konnen JavaScript, ou ka deja li kòd Dart san pwoblèm.",
+    "id": "L17",
+    "month": 9,
+    "title_ht": "Flutter ak Kotlin/Swift"
+  },
+  {
+    "body_ht": "Ou fin bati app ou — bravo! Kounye a, kijan tout moun ka telechaje l? Ou dwe mete l sou magazen app yo: Play Store pou Android ak App Store pou iPhone. Men etap yo, youn pa youn. Premye: kreye yon kont devlopè. Google mande vennsenk dola yon sèl fwa; Apple mande katrevendiznèf dola pa ane. Dezyèm: prepare app lan tankou yon pwodui nan yon boutik — yon bèl ikon, kèk foto ekran ki montre sa l fè, ak yon deskripsyon klè. Twazyèm: teste tout bagay! Peze chak bouton, eseye kraze l: pi bon se ou jwenn pwoblèm nan pase se itilizatè yo. Katriyèm: voye app lan sou magazen an. Senkyèm: tann apwobasyon. Google pran kèk èdtan a kèk jou; Apple ka pran youn a de jou paske yon moun verifye chak app ak je l. Sizyèm: app ou a VIV! Tout moun nan mond lan ka telechaje l. Apre sa, li kòmantè moun yo epi fè mizajou pou amelyore l. Sonje: premye vèsyon an pa bezwen pafè.",
+    "code": {
+      "code": "{\n  \"name\": \"AppMwen\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Premye app mwen an!\"\n}",
+      "lang": "json"
+    },
+    "domain": "Mobil",
+    "expert_note_ht": "Pa tann pèfeksyon: pibliye yon ti app senp ki mache byen vo plis pase yon gwo app ki pa janm fini.",
+    "id": "L18",
+    "month": 9,
+    "title_ht": "Pibliye app ou"
+  },
+  {
+    "body_ht": "Chak aparèy ki konekte sou entènèt la gen yon adrès yo rele adrès IP. Se tankou nimewo telefòn òdinatè w la: pa egzanp, 142.250.80.14. Òdinatè yo renmen nimewo, men moun pa renmen sonje nimewo! Èske ou ta sonje 142.250.80.14 chak fwa ou vle ale sou Google? Non. Se pou sa nou itilize non fasil tankou google.com. Men kijan non an vin nimewo? Se travay DNS, ki vle di Domain Name System. DNS se tankou yon gwo anyè telefòn pou entènèt la: lè ou tape google.com nan navigatè w, òdinatè w la mande DNS: ki nimewo IP ki mache ak non sa a? DNS gade nan anyè a, li jwenn nimewo a, epi òdinatè w la konekte sou nimewo sa a. Tout sa rive nan mwens pase yon segonn, san ou pa remake anyen! San DNS, entènèt la ta difisil anpil pou moun itilize. Lè ou achte yon non tankou monsite.com, se nan DNS ou ekri: non sa a mennen nan nimewo IP sèvè mwen an.",
+    "code": {
+      "code": "# Mande DNS: ki nimewo IP google.com?\nnslookup google.com\n# Repons: yon nimewo tankou 142.250.80.14",
+      "lang": "bash"
+    },
+    "domain": "Rezo",
+    "expert_note_ht": "Lè ou achte yon non domèn tankou monsite.com, se nan DNS ou di: non sa a mennen nan nimewo IP sèvè mwen an.",
+    "id": "L19",
+    "month": 10,
+    "title_ht": "Adrès IP ak DNS"
+  },
+  {
+    "body_ht": "HTTP se lang òdinatè yo pale sou entènèt la. Imajine ou nan yon restoran: ou di sèvè a sa ou vle (demann), epi li pote manje a ba ou (repons). Sou entènèt la, navigatè w la se kliyan an, epi òdinatè ki gen sit wèb la se sèvè a. Gen de kalite demann ou dwe konnen byen. GET vle di ban m enfòmasyon: lè ou louvri yon paj wèb, navigatè w la voye yon demann GET. POST vle di pran enfòmasyon m ap voye ba ou: lè ou ranpli yon fòmilè epi ou peze voye, se yon demann POST. Chak repons sèvè a voye vini ak yon nimewo yo rele kòd estati. Twa ou dwe konnen: 200 vle di tout bagay mache byen; 404 vle di paj la pa jwenn — se erè ki pi popilè sou entènèt la!; 500 vle di sèvè a gen yon pwoblèm. Lè ou konprann demann, repons, GET, POST ak kòd estati yo, ou konprann kijan tout sit wèb ak tout app sou entènèt la kominike. Se fondasyon tout bagay.",
+    "code": {
+      "code": "// Voye yon demann GET ak JavaScript\nfetch('https://api.monsite.com/atik')\n  .then(repons => repons.json())\n  .then(donne => console.log(donne));",
+      "lang": "javascript"
+    },
+    "domain": "Rezo",
+    "expert_note_ht": "HTTPS (ak S la) se menm lang HTTP a, men tout mesaj yo chifre: pèsonn pa ka li yo sou wout la.",
+    "id": "L20",
+    "month": 10,
+    "title_ht": "HTTP: lang entènèt la"
+  },
+  {
+    "body_ht": "Mo hacker fè anpil moun pè, men tande byen: yon hacker pa oblije yon kriminèl! Yon hacker etik se yon ekspè sekirite konpayi yo PEYE pou chèche feblès nan sistèm yo, anvan move moun yo jwenn yo. Se tankou yo peye yon moun pou eseye kraze kadna a, pou yo ka repare l. Men gen yon règ ki pi enpòtan pase tout lòt: ou gen dwa teste SÈLMAN sistèm ou posede, oswa sistèm ou gen PÈMISYON EKRI pou teste. Pèmisyon ekri vle di pwopriyetè a di w klèman, ak bouch li oswa alekri: wi, ou ka teste sistèm mwen an. Si ou teste sit yon lòt moun san pèmisyon — menm si ou te vle ede, menm si ou pa vòlè anyen — se ILEGAL. Ou ka peye amann, ou ka ale nan prizon. Gen gwo konpayi tankou Google ki gen pwogram yo rele bug bounty: yo peye w pou jwenn feblès, men ou dwe swiv règ yo a la lèt. Hacking etik se yon bèl metye ki peye byen, men li kòmanse ak yon sèl bagay: respekte lalwa, toujou.",
+    "code": {
+      "code": "// Hacking ETIK: teste SÈLMAN sa ou gen dwa teste\nconst sib = \"https://monsite-pam.com\"; // ✅ ou posede sit sa a\n// const sib = \"https://sit-yon-lot-moun.com\"; // ❌ san pèmisyon = ILEGAL",
+      "lang": "javascript"
+    },
+    "domain": "Sekirite",
+    "expert_note_ht": "Anvan ou touche nenpòt sistèm, mande tèt ou: èske mwen gen pèmisyon EKRI? Si repons lan pa yon WI klè, pa fè l.",
+    "id": "L21",
+    "month": 11,
+    "title_ht": "Hacking etik: sa ki legal"
+  },
+  {
+    "body_ht": "OWASP se yon gwoup ekspè nan tout mond lan ki pibliye lis dis pi gwo danje pou sit wèb yo. Ann gade twa ladan yo. Premye danje: enjeksyon SQL. Imajine yon fòmilè rechèch sou yon sit: yon atakè ekri kòd baz done move ladan l olye yon mo rechèch, epi sit la egzekite kòd la pa erè — konsa atakè a ka vòlè tout enfòmasyon nan baz done a! Pwoteksyon: pa janm kole sa itilizatè a ekri dirèkteman nan demann baz done; itilize prepared statements. Dezyèm danje: XSS, ki vle di script move. Atakè a kache kòd JavaScript move nan sit ou a — pa egzanp nan yon kòmantè — epi lè lòt moun vizite paj la, kòd la egzekite nan navigatè yo epi li ka vòlè kont yo. Pwoteksyon: netwaye tout tèks itilizatè yo ekri anvan ou montre l sou sit la. Twazyèm danje: modpas fèb. Modpas tankou 123456 oswa password, atakè yo devine yo nan kèk segonn ak pwogram otomatik. Pwoteksyon: mande modpas long, omwen douz karaktè, epi pa janm sere modpas jan yo ye — transfòme yo ak hash. Sonje règ an lò a: pa janm fè konfyans sa itilizatè a voye ba ou!",
+    "code": {
+      "code": "// ❌ DANJERE: itilizatè a ka ekri kòd SQL move nan fòmilè a\nconst demann = \"SELECT * FROM itilizate WHERE non = '\" + nonItilizate + \"'\";\n\n// ✅ AN SEKIRITE: prepared statement (pa kole tèks la dirèkteman)\nconst demannBon = \"SELECT * FROM itilizate WHERE non = ?\";\ndb.query(demannBon, [nonItilizate]);",
+      "lang": "javascript"
+    },
+    "domain": "Sekirite",
+    "expert_note_ht": "Règ an lò sekirite a: pa janm fè konfyans sa itilizatè a voye ba ou — verifye epi netwaye tout antre anvan ou itilize yo.",
+    "id": "L22",
+    "month": 11,
+    "title_ht": "OWASP: 3 gwo danje"
+  },
+  {
+    "body_ht": "Èske ou ta achte yon machin pèsonn pa janm teste? Non! Epi èske ou ta pran yon avyon mekanisyen an pa verifye? Non plis! Se menm bagay pou kòd: anvan ou bay li bay moun, ou dwe teste l. Yon tès se yon ti pwogram ki poze yon kesyon: èske kòd mwen an fè sa li dwe fè? Pa egzanp, si ou ekri yon fonksyon ki adisyone de nimewo, tès la mande: èske de plis twa bay senk vre? Si wi, tès la pase; si non, gen yon erè pou ranje. Poukisa tès yo enpòtan anpil? Premye: yo kenbe erè yo anvan itilizatè yo wè yo — pi bon ou wè pwoblèm nan pase yon kliyan fache. Dezyèm: lè ou chanje kòd la pita, ou lanse tès yo epi yo di w touswit si ou kase yon bagay ki te mache. Twazyèm: yo ba ou konfyans pou chanje kòd san pè. Tout devlopè pwofesyonèl ekri tès. Kòmanse piti: teste fonksyon ki pi enpòtan yo, epi ajoute plis tès chak semèn.",
+    "code": {
+      "code": "// Fonksyon pou teste\nfunction adisyone(a, b) {\n  return a + b;\n}\n\n// Tès senp: èske 2 + 3 = 5?\nif (adisyone(2, 3) === 5) {\n  console.log(\"✅ Tès la pase!\");\n} else {\n  console.log(\"❌ Tès la echwe!\");\n}",
+      "lang": "javascript"
+    },
+    "domain": "Ekspè",
+    "expert_note_ht": "Nan vrè pwojè yo yo itilize zouti tankou Jest oswa Vitest, men lide a rete menm: ekri sa ou atann, epi verifye.",
+    "id": "L23",
+    "month": 12,
+    "title_ht": "Tès ak kalite kòd"
+  },
+  {
+    "body_ht": "Lè pwojè w la vin gwo — mil liy kòd oswa plis — ou pa ka kite tout bagay nan yon sèl fichye. Se tankou mete tout rad ou, tout soulye ou ak tout liv ou nan yon sèl tiwa: ou p ap janm jwenn anyen! Achitekti se atizay òganize kòd ou: ou separe l an ti moso ki gen sans. Yon dosye pou ekran yo, yon dosye pou ti konpozan ki re-itilize yo, yon dosye pou pale ak baz done a, yon dosye pou tès yo. Chak moso fè yon sèl travay, epi li fè l byen. Kounye a, dènye defi a — pwojè final ou! Chwazi yon app konplè ou renmen: yon app lis komisyon, yon app resèt manje ayisyen, oswa yon ti boutik sou entènèt. App lan dwe gen plizyè ekran, omwen yon fòmilè, done ki sove menm lè ou fèmen app lan, epi yon bèl desen. Sèvi ak tout sa ou aprann nan douz mwa yo: konpozan, Git pou sove travay ou, tès pou verifye, sekirite pou pwoteje. Lè ou fini, mete kòd la sou GitHub epi montre l ak fyète. Ou te kòmanse ak zewo — gade kote ou rive! Ou se yon devlopè kounye a.",
+    "code": {
+      "code": "app-mwen/\n├── ekran/      # tout ekran yo (Akey, Pwofil...)\n├── konpozan/   # bouton, kat ki re-itilize\n├── done/       # koneksyon baz done\n└── tes/        # tès yo",
+      "lang": "text"
+    },
+    "domain": "Ekspè",
+    "expert_note_ht": "Yon bon pwojè final vo plis pase dis sètifika: se li w ap montre lè w ap chèche travay.",
+    "id": "L24",
+    "month": 12,
+    "title_ht": "Achitekti ak pwojè final"
+  }
+]
