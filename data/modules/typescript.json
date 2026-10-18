@@ -1,0 +1,874 @@
+{
+  "category_ht": "Web (devan)",
+  "description_ht": "TypeScript se JavaScript ak kalite estatik: li detekte erè anvan kòd la egzekite epi rann gwo pwojè pi solid. Se chwa pwofesyonèl yo.",
+  "id": "typescript",
+  "name": "TypeScript",
+  "levels": [
+    {
+      "id": "n1",
+      "lessons": [
+        {
+          "body_ht": "Nan lekòl gen elèv, pwofesè, liv — chak kategori gen règ pa yo. Tip done yo se kategori pou valè yo: tèks, nonb, vre/fo — chak ak règ pa yo.\n\n [[CHECK:ts-n1-l01-c1]]\n\nTypeScript (TS) se JavaScript + kalite: Microsoft kreye l, epi li konpile an JavaScript nòmal pou navigatè a egzekite. Lide santral la se kalite estatik: ou deklare ki kalite chak varyab ye (tèks, chif, vre/fo), epi KONPILATÈ a tcheke kòd ou ANVAN li egzekite. Li kenbe erè tankou rele yon fonksyon ak move kalite agiman pandan w ap ekri, pa lè itilizatè a klike! Nan JavaScript pi, erè sa yo parèt sèlman nan ekzekisyon. Yon fichye TypeScript fini ak .ts epi w konpile l ak tsc (TypeScript Compiler): tsc app.ts pwodui app.js. Tout JavaScript valid se TypeScript valid tou — ou ka migre piti piti. Editè tankou VS Code bay otokonplesyon majik ak TS paske li konnen kalite tout bagay. Gwo konpayi yo (Google, Microsoft, Airbnb) itilize l pou gwo aplikasyon paske kalite yo se dokimantasyon vivan: w li siyati yon fonksyon epi w konnen egzakteman sa l pran ak sa l bay. Aprann TS se aprann ekri kòd ki pwoteje tèt li. [[CHECK:ts-n1-l01-c2]]",
+          "code": "// app.ts — TypeScript\nconst non: string = \"Mariz\";\nconst laj: number = 28;\n// Konpilatè a bloke sa a AVAN ekzekisyon:\n// laj = \"ventan\"; // Erè: kalite 'string' pa ka ale nan 'number'\nconsole.log(\"Bonjou, \" + non);",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "a",
+                "li detekte erè kalite anvan kòd la egzekite"
+              ],
+              "choices": [
+                "A) Li detekte erè kalite anvan kòd la egzekite",
+                "B) Li fè paj yo chaje pi vit",
+                "C) Li ranplase HTML",
+                "D) Li pa bezwen konpile"
+              ],
+              "correct_ht": "A) Li detekte erè kalite anvan kòd la egzekite",
+              "explanation_ht": "Konpilatè TS la tcheke kalite yo pandan w ap ekri — erè kenbe bonè, pa nan pwodiksyon.",
+              "id": "ts-n1-l01-e1",
+              "prompt_ht": "Ki pi gwo avantaj TypeScript sou JavaScript?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "tsc app.ts",
+                "tsc"
+              ],
+              "correct_ht": "tsc app.ts",
+              "explanation_ht": "tsc (TypeScript Compiler) tradui fichye .ts an JavaScript .js navigatè a konprann.",
+              "id": "ts-n1-l01-e2",
+              "prompt_ht": "Ki kòmand ki konpile app.ts an JavaScript?",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Aktive strict: true nan tsconfig.json depi premye pwojè w — se mòd strik la ki bay tout valè TS la.",
+          "id": "ts-n1-l01",
+          "title_ht": "Poukisa TypeScript",
+          "checkpoints": [
+            {
+              "id": "ts-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            },
+            {
+              "id": "ts-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon interface (kontra tip) di:",
+              "accepted": [
+                "a",
+                "ki fòm yon objè dwe genyen (ki pwopriyete)"
+              ],
+              "correct_ht": "A) Ki fòm yon objè dwe genyen (ki pwopriyete)",
+              "explanation_ht": "Kontra a garanti: objè sa a ap gen non, laj, elatriye.",
+              "choices": [
+                "A) Ki fòm yon objè dwe genyen (ki pwopriyete)",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki manje pou kwit"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Nan TypeScript, ou ajoute kalite ak de pwen apre non an: const non: string = \"Mariz\";. Twa kalite primitif debaz: string (tèks), number (tout chif: antye ak desimal), boolean (true/false). Lòt itil: any (nenpòt kalite — evite l, li touye avantaj TS la), unknown (pi sekirite pase any: ou dwe verifye anvan w itilize), void (fonksyon ki pa retounen anyen), null ak undefined. Si w pa ekri kalite a, TypeScript DEVINE l (inference): const laj = 28; otomatikman number — ou pa oblije anote tout bagay! Men anotasyon eksplisit pi klè pou paramèt fonksyon ak API piblik. Kalite a tcheke nan konpilasyon, pa nan ekzekisyon: apre konpilasyon an JS, kalite yo disparèt (type erasure). Erè klasik: eseye mete yon string nan yon number — konpilatè a refize. Abitid: panse an kalite anvan w ekri kòd; poze tèt ou \"kisa fonksyon sa pran, kisa l bay?\" — repons lan se siyati kalite a. [[CHECK:ts-n1-l02-c1]] [[CHECK:ts-n1-l02-c2]]",
+          "code": "const non: string = \"Mariz\";\nconst laj: number = 28;\nconst marye: boolean = false;\nconst anyen: null = null;\n// Inference: TS devine 'string' pou kont li\nconst vil = \"Pòtoprens\";\nfunction salye(n: string): void {\n  console.log(\"Bonjou, \" + n);\n}",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "string"
+              ],
+              "choices": [
+                "A) text",
+                "B) string",
+                "C) str",
+                "D) char"
+              ],
+              "correct_ht": "B) string",
+              "explanation_ht": "string se kalite tèks la nan TypeScript (pa gen char apa tankou nan lòt langaj).",
+              "id": "ts-n1-l02-e1",
+              "prompt_ht": "Ki kalite pou tèks nan TypeScript?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "const laj: number = 28;",
+                "const laj:number=28;",
+                "let laj: number = 28;"
+              ],
+              "correct_ht": "const laj: number = 28;",
+              "explanation_ht": "De pwen apre non an deklare kalite a: const laj: number = 28;.",
+              "id": "ts-n1-l02-e2",
+              "prompt_ht": "Deklere yon konstan 'laj' kalite number ak valè 28:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Evite any tankou lapès: chak any se yon twou nan pwoteksyon kalite w la — prefere unknown ak tès kalite.",
+          "id": "ts-n1-l02",
+          "title_ht": "Kalite debaz",
+          "checkpoints": [
+            {
+              "id": "ts-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "salye"
+              ],
+              "correct_ht": "salye",
+              "explanation_ht": "Fonksyon an rele « salye » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "ts-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon resèt kwizin se yon lis etap ou swiv chak fwa ou vle fè diri kole. Yon fonksyon se yon resèt pou òdinatè a: ou ekri etap yo yon fwa, epi ou rele l chak fwa ou bezwen l.\n\n [[CHECK:ts-n1-l03-c1]]\n\nFonksyon se kote kalite yo pi itil: ou anote chak paramèt ak kalite retou a. Sintaks: function adisyone(a: number, b: number): number { return a + b; }. Apre sa, adisyone(\"5\", 3) REFIZE nan konpilasyon — pa gen plis \"53\" sipriz! Kalite retou a apre de pwen anvan akolad la; void vle di pa gen retou, never vle di fonksyon an pa janm retounen (toujou lanse erè). Paramèt opsyonèl ak ?: function salye(non: string, tit?: string) — tit ka absan. Valè default mache tou: function salye(non = \"zanmi\": string). Fonksyon flèch menm jan: const double = (n: number): number => n * 2;. Kalite fonksyon kòm kalite apa: type Operasyon = (a: number, b: number) => number; — itil pou callback. Règ: anote TOUJOU paramèt fonksyon piblik yo (se kontra w ak lòt devlopè), kite inference pou varyab lokal senp yo. Lè w li yon erè TS sou fonksyon, li siyati a: li di w egzakteman ki agiman ki pa matche. [[CHECK:ts-n1-l03-c2]]",
+          "code": "function kalkilePri(pri: number, kantite: number): number {\n  return pri * kantite;\n}\nconst total: number = kalkilePri(250, 4);\n// kalkilePri(\"250\", 4); // ERÈ konpilasyon!\nconst salye = (non: string): string => \"Bonjou, \" + non;",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "konpilatè a refize l anvan ekzekisyon"
+              ],
+              "choices": [
+                "A) Li bay \"53\"",
+                "B) Konpilatè a refize l anvan ekzekisyon",
+                "C) Li bay 8",
+                "D) Li ignore kalite yo"
+              ],
+              "correct_ht": "B) Konpilatè a refize l anvan ekzekisyon",
+              "explanation_ht": "Ak (a: number, b: number), pase yon string se erè KONPILASYON — kenbe bonè.",
+              "id": "ts-n1-l03-e1",
+              "prompt_ht": "Kisa k ap pase si w rele adisyone(\"5\", 3) ak paramèt number?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "(a: number, b: number): number",
+                "(a:number,b:number):number"
+              ],
+              "correct_ht": "(a: number, b: number): number",
+              "explanation_ht": "Chak paramèt anote ak : number, epi : number apre parantez yo bay kalite retou a.",
+              "id": "ts-n1-l03-e2",
+              "prompt_ht": "Ekri siyati yon fonksyon adisyone ki pran de number epi retounen yon number (san kò a):",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Kite kalite retou a eksplisit sou fonksyon piblik yo — se dokimantasyon gratis pou tout moun k ap li kòd ou.",
+          "id": "ts-n1-l03",
+          "title_ht": "Fonksyon ak kalite",
+          "checkpoints": [
+            {
+              "id": "ts-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "kalkilepri"
+              ],
+              "correct_ht": "kalkilePri",
+              "explanation_ht": "Fonksyon an rele « kalkilePri » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "ts-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 1 — Debitan"
+    },
+    {
+      "id": "n2",
+      "lessons": [
+        {
+          "body_ht": "Lè w dekri fòm yon objè, ou gen de zouti: interface ak type (alyas). interface Itilizatè { non: string; laj: number; } — apre, const m: Itilizatè = { non: \"Mariz\", laj: 28 }; dwe gen EGZAKTEMAN fòm sa a, sinon erè! interface se chwa tradisyonèl pou fòm objè, epi li ka pwolonje: interface Anplwaye extends Itilizatè { salè: number; }. type ka fè menm bagay la (type Itilizatè = { non: string; laj: number };) PLIS union, tuple ak kalite primitif — li pi fleksib. Diferans pratik: interface ka deklare plizyè fwa epi fizyone (declaration merging — itil pou bibliotèk), type pa ka. Pou pwòp kòd ou: interface pou fòm objè/klas, type pou union ak konpozisyon. Pwopriyete opsyonèl ak ?: laj?: number — ka absan. readonly non: string — pa ka chanje apre kreyasyon. Lè w modèl done API w (Itilizatè, Pwodwi, Kòmann) ak interface, tout kòd ki manyen done sa yo pwoteje otomatikman. [[CHECK:ts-n2-l01-c1]] [[CHECK:ts-n2-l01-c2]]",
+          "code": "interface Pwodwi {\n  id: number;\n  non: string;\n  pri: number;\n  anStòk?: boolean;\n}\nconst mango: Pwodwi = {\n  id: 1,\n  non: \"Mango\",\n  pri: 150\n};\ntype ID = number | string;",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "ak mo kle extends"
+              ],
+              "choices": [
+                "A) Ak +",
+                "B) Ak mo kle extends",
+                "C) Ak import",
+                "D) Interface pa ka eritye"
+              ],
+              "correct_ht": "B) Ak mo kle extends",
+              "explanation_ht": "interface Anplwaye extends Itilizatè ajoute pwopriyete sou fòm paran an.",
+              "id": "ts-n2-l01-e1",
+              "prompt_ht": "Kijan yon interface eritye yon lòt?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "anStòk?: boolean;",
+                "anstok?: boolean;",
+                "anStok?: boolean;"
+              ],
+              "correct_ht": "anStòk?: boolean;",
+              "explanation_ht": "? apre non pwopriyete a fè l opsyonèl — objè a valid avè l oswa san li.",
+              "id": "ts-n2-l01-e2",
+              "prompt_ht": "Ekri yon pwopriyete opsyonèl 'anStòk' kalite boolean nan yon interface:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nonmen interface yo san prefix I (Itilizatè, pa IUtilisateur) — se konvansyon modèn TypeScript la.",
+          "id": "ts-n2-l01",
+          "title_ht": "Entèfas ak alyas kalite",
+          "checkpoints": [
+            {
+              "id": "ts-n2-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "ts-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Union types di \"valè a ka youn OSWA lòt\": let id: number | string; — aksepte 42 oswa \"A-42\". Sa pafè pou ID, eta (\"chaje\" | \"pare\" | \"erè\"), ak rezilta API. Lè w gen yon union, TypeScript fòse w verifye anvan w itilize metòd espesifik: if (typeof id === \"string\") { id.toUpperCase(). } — andedan blok la, TS KONNEN se yon string (narrowing)! Literal types restrenn plis: let direksyon: \"nò\" | \"sid\" | \"lès\" | \"lwès\"; — sèlman kat valè sa yo aksepte, pa nenpòt string. Sa ranplase enum pou ka senp epi dokimante tèt yo. Konbine ak ?: type Repons = { siksè: boolean; done?: string; erè?: string };. Fonksyon ki retounen union: function divize(a: number, b: number): number | null — null si divizyon pa zero! Moun k ap rele l DWE jere ka null la — konpilatè a fòse l. Union + narrowing se fason TS elimine tout yon klas erè \"undefined is not a function\" nan ekzekisyon. [[CHECK:ts-n2-l02-c1]] [[CHECK:ts-n2-l02-c2]]",
+          "code": "type Eta = \"chaje\" | \"pare\" | \"erè\";\nlet eta: Eta = \"chaje\";\n// eta = \"dòmi\"; // ERÈ!\nfunction premye(t: string | null): string {\n  if (t === null) {\n    return \"vid\";\n  }\n  return t.toUpperCase(); // isit la TS konnen t se string\n}",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "sèlman kat valè literal sa yo"
+              ],
+              "choices": [
+                "A) Nenpòt string",
+                "B) Sèlman kat valè literal sa yo",
+                "C) Nenpòt kalite",
+                "D) Sèlman chif"
+              ],
+              "correct_ht": "B) Sèlman kat valè literal sa yo",
+              "explanation_ht": "Literal union restrenn a valè egzak yo — pi strik pase string jeneral.",
+              "id": "ts-n2-l02-e1",
+              "prompt_ht": "Kisa let d: \"nò\" | \"sid\" aksepte?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "let id: number | string;",
+                "let id:number|string;"
+              ],
+              "correct_ht": "let id: number | string;",
+              "explanation_ht": "Ba vètikal | a kreye union: valè a ka youn oswa lòt kalite a.",
+              "id": "ts-n2-l02-e2",
+              "prompt_ht": "Deklere yon varyab 'id' ki ka number oswa string:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Itilize union literal olye boolean pou eta (\"chaje\"|\"pare\"|\"erè\" olye de isLoading) — eta enposib disparèt.",
+          "id": "ts-n2-l02",
+          "title_ht": "Union ak kalite literal",
+          "checkpoints": [
+            {
+              "id": "ts-n2-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "premye"
+              ],
+              "correct_ht": "premye",
+              "explanation_ht": "Fonksyon an rele « premye » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "ts-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Lis komisyon manman w: diri, pwa, lwil — plizyè bagay ekri nan lòd sou yon sèl papye. Nan pwogramasyon, yon lis se menm lide a: plizyè valè sere ansanm nan lòd.\n\n [[CHECK:ts-n2-l03-c1]]\n\nTablo an TypeScript gen kalite atik yo: const nòt: number[] = [85, 90, 78]; oswa sintaks altènatif Array<number>. Konpilatè a anpeche w mete yon string ladan! Metòd yo (map, filter) eritye kalite: nòt.map(n => n * 2) — TS konnen n se number epi rezilta a se number[]. Tuple se tablo ak LONGÈ ak KALITE fiks pa pozisyon: let koòdone: [number, number] = [18.5, -72.3]. — premye a latitid, dezyèm lonjitid; mete yon twazyèm oswa yon string = erè. Tuple pafè pou retounen plizyè valè: function divMod(a: number, b: number): [number, number] { return [Math.floor(a/b), a % b]; }. readonly number[] fè yon tablo lekti-sèlman (push entèdi). Pou tablo objè: const itilizatè: Itilizatè[] = [...]. Diferans ak JS pi: nan TS, tablo etewojèn san kontwòl se erè — ou deklare (number | string)[] si w vre bezwen melanj. Kalite tablo yo pwopaje nan tout chenn map/filter — yon erè kalite nan done sous la parèt egzakteman kote l ye. [[CHECK:ts-n2-l03-c2]]",
+          "code": "const nòt: number[] = [85, 90, 78];\nconst non: string[] = [\"Mariz\", \"Jan\"];\nconst koòdone: [number, number] = [18.54, -72.34];\nconst admisyon: number[] = nòt.filter(n => n >= 70);\n// nòt.push(\"kat\"); // ERÈ: string pa ka antre nan number[]",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "erè konpilasyon"
+              ],
+              "choices": [
+                "A) Li mache san pwoblèm",
+                "B) Erè konpilasyon",
+                "C) Li konvèti otomatikman",
+                "D) Li bay avètisman sèlman"
+              ],
+              "correct_ht": "B) Erè konpilasyon",
+              "explanation_ht": "number[] aksepte sèlman chif — konpilatè a bloke string la anvan ekzekisyon.",
+              "id": "ts-n2-l03-e1",
+              "prompt_ht": "Kisa k ap pase si w fè nòt.push(\"kat\") sou number[]?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "[number, number]",
+                "[number,number]"
+              ],
+              "correct_ht": "[number, number]",
+              "explanation_ht": "Tuple [number, number] fikse: de atik, tou de number, nan lòd sa a.",
+              "id": "ts-n2-l03-e2",
+              "prompt_ht": "Ekri kalite tuple pou yon pè kowòdone (de number):",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pou done ki pa chanje, deklare as const (const n = [1,2] as const) — TS fè l literal readonly otomatikman.",
+          "id": "ts-n2-l03",
+          "title_ht": "Tablo ak tuple",
+          "checkpoints": [
+            {
+              "id": "ts-n2-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "ts-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 2 — Entèmedyè"
+    },
+    {
+      "id": "n3",
+      "lessons": [
+        {
+          "body_ht": "Generics pèmèt ekri fonksyon ak kalite ki travay ak NENPÒT kalite tout pandan y ap kenbe sekirite kalite a. Pwoblèm: function premye(tablo: any[]) bay any — ou pèdi kalite a. Solisyon: function premye<T>(tablo: T[]): T { return tablo[0]; } — T se yon paramèt KALITE: moun k ap rele a chwazi l. premye([1, 2, 3]) bay number (T devine kòm number), premye([\"a\", \"b\"]) bay string — menm fonksyon, kalite presi chak fwa! Ou ka mete plizyè: function pè<K, V>(kle: K, valè: V): [K, V]. Generics mache ak interface tou: interface Repons<T> { done: T; erè?: string; } — Repons<Itilizatè> ak Repons<Pwodwi[]> ak menm fòm nan. Sa se fondasyon tout bibliotèk modèn: Promise<T>, Array<T>, Map<K, V> se generics! Kontrent (constraints) limite T: function longè<T extends { longè: number }>(x: T) — T dwe gen pwopriyete longè. San generics, w ap ekri menm fonksyon an 10 fwa pou 10 kalite, oswa itilize any epi pèdi pwoteksyon an. [[CHECK:ts-n3-l01-c1]] [[CHECK:ts-n3-l01-c2]]",
+          "code": "function premye<T>(tablo: T[]): T {\n  return tablo[0];\n}\nconst n = premye([10, 20, 30]); // n: number\nconst m = premye([\"a\", \"b\"]); // m: string\ninterface Bwat<T> {\n  kontni: T;\n}\nconst bwatChif: Bwat<number> = { kontni: 42 };",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon paramèt kalite moun k ap rele a bay/fè devine"
+              ],
+              "choices": [
+                "A) Yon kalite espesyal pou tèks",
+                "B) Yon paramèt kalite moun k ap rele a bay/fè devine",
+                "C) Yon erè konpilasyon",
+                "D) Yon mo kle obligatwa"
+              ],
+              "correct_ht": "B) Yon paramèt kalite moun k ap rele a bay/fè devine",
+              "explanation_ht": "T se yon varyab pou KALITE: chak apèl fikse l, epi kalite retou a swiv.",
+              "id": "ts-n3-l01-e1",
+              "prompt_ht": "Kisa <T> vle di nan function premye<T>(tablo: T[]): T?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "premye([10, 20, 30])",
+                "premye([10,20,30])"
+              ],
+              "correct_ht": "premye([10, 20, 30])",
+              "explanation_ht": "TS devine T = number otomatikman dapre agiman an — pa bezwen ekri <number>.",
+              "id": "ts-n3-l01-e2",
+              "prompt_ht": "Ekri apèl premye ak yon tablo chif (kite TS devine T):",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nonmen paramèt kalite yo ak yon lèt majiskil (T, K, V) oswa yon non deskriptif (TItliz) — konvansyon inivèsèl la.",
+          "id": "ts-n3-l01",
+          "title_ht": "Generics",
+          "checkpoints": [
+            {
+              "id": "ts-n3-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "premye"
+              ],
+              "correct_ht": "premye",
+              "explanation_ht": "Fonksyon an rele « premye » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "ts-n3-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Generics pèmèt ou:",
+              "accepted": [
+                "a",
+                "ekri yon fonksyon ki mache ak plizyè tip done san repete kòd"
+              ],
+              "correct_ht": "A) Ekri yon fonksyon ki mache ak plizyè tip done san repete kòd",
+              "explanation_ht": "Yon sèl fonksyon pou lis nonb OSWA lis tèks.",
+              "choices": [
+                "A) Ekri yon fonksyon ki mache ak plizyè tip done san repete kòd",
+                "B) Ekri powèm",
+                "C) Desine",
+                "D) Chante"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Enum (enòm) defini yon seri nonmen konstan: enum Direksyon { Nò, Sid, Lès, Lwès } — Direksyon.Nò vo 0 pa default. String enum pi lizib: enum Eta { Chaje = \"CHAJE\", Pare = \"PARE\" }. Men atansyon: pou ka senp, union literal (\"nò\" | \"sid\") souvan pi lejè pase enum. Asèsyon kalite (type assertion) di konpilatè a \"fè m konfyans, m konnen kalite a\": const valè = done as string. — itil lè w resevwa done ki soti deyò (API, JSON.parse ki bay any). De fòm: as string oswa <string>done (evite dezyèm nan fichye .tsx). Non-null assertion (!) di \"valè sa pa janm null\": bouton!.addEventListener — itil men DANJERE: si w twonpe w, erè nan ekzekisyon! Règ: itilize ! sèlman lè w SÈTEN (pa egzanp getElementById yon id ki egziste nan HTML ou). Type guards se fason sekirite a: if (typeof x === \"string\") olye as. Sonje: as pa KONVÈTI valè a nan ekzekisyon — se sèlman yon deklarasyon pou konpilatè a; \"123\" as number pa fè l tounen chif vre! [[CHECK:ts-n3-l02-c1]] [[CHECK:ts-n3-l02-c2]]",
+          "code": "enum Wòl {\n  Admin = \"ADMIN\",\n  Itilizatè = \"ITILIZATÈ\",\n  Vizitè = \"VIZITÈ\"\n}\nconst wòl: Wòl = Wòl.Admin;\nconst done: unknown = JSON.parse(\"{\\\"n\\\":1}\");\nconst n = (done as { n: number }).n;\nconst bouton = document.getElementById(\"voye\")!;",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li di konpilatè a fè konfyans sou kalite a, san konvèti valè a"
+              ],
+              "choices": [
+                "A) Li konvèti valè a an string",
+                "B) Li di konpilatè a fè konfyans sou kalite a, san konvèti valè a",
+                "C) Li verifye nan ekzekisyon",
+                "D) Li kreye yon nouvo kalite"
+              ],
+              "correct_ht": "B) Li di konpilatè a fè konfyans sou kalite a, san konvèti valè a",
+              "explanation_ht": "as se yon deklarasyon konpilasyon sèlman — valè ekzekisyon an pa chanje.",
+              "id": "ts-n3-l02-e1",
+              "prompt_ht": "Kisa 'done as string' fè egzakteman?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "const bouton = document.getelementbyid(\"voye\")!;",
+                "!"
+              ],
+              "correct_ht": "...getElementById(\"voye\")!",
+              "explanation_ht": "! apre ekspresyon an afime li pa null/undefined — itilize ak prekosyon.",
+              "id": "ts-n3-l02-e2",
+              "prompt_ht": "Ki senbòl ki fè yon non-null assertion nan TypeScript?",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Chak '!' nan kòd ou se yon parye — dokimante POUKISA w sèten, sinon se yon erè k ap tann rive.",
+          "id": "ts-n3-l02",
+          "title_ht": "Enòm ak asèsyon kalite",
+          "checkpoints": [
+            {
+              "id": "ts-n3-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « Admin » genyen? (ekri valè a)",
+              "accepted": [
+                "admin\",",
+                "\"admin\","
+              ],
+              "correct_ht": "ADMIN\",",
+              "explanation_ht": "Nan egzanp lan, liy « Admin = \"ADMIN\", » mete valè « ADMIN\", » nan bwat « Admin » a."
+            },
+            {
+              "id": "ts-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "TypeScript ajoute modifikatè aksè sou klas JavaScript: private (sèlman andedan klas la), protected (klas la + pitit li yo), public (tout moun — default). Chan prive modèn ak # se vre prive nan ekzekisyon tou. readonly fè yon pwopriyete lekti-sèlman apre constructor: readonly id: number — asiyen yon fwa, pa janm chanje. Raccourci constructor: constructor(private non: string, readonly id: number) {} kreye AK asiyen pwopriyete yo otomatikman — mwens kòd boilerplate! implements fòse yon klas swiv yon interface: class Magazen implements IVandè { ... } — si w bliye yon metòd, erè konpilasyon. abstract kreye klas paran ki pa ka enstansye dirèkteman (sèlman eritye). Getters/setters: get nonKonplè() kalkile yon valè, set laj(v) valide anvan asiyen. Konbinezon klas + interface + modifikatè se fason pwofesyonèl yo modèl domèn metye a: chak règ biznis vin yon kalite konpilatè a verifye. Egzanp: yon klas Kòmann ki garanti total la toujou kalkile, pa janm mete alamen. [[CHECK:ts-n3-l03-c1]] [[CHECK:ts-n3-l03-c2]]",
+          "code": "class Kont {\n  readonly id: number;\n  private sòld: number = 0;\n  constructor(id: number) {\n    this.id = id;\n  }\n  depoze(montan: number): void {\n    if (montan > 0) this.sòld += montan;\n  }\n  getSòld(): number {\n    return this.sòld;\n  }\n}\nconst k = new Kont(1);\n// k.sòld = 999; // ERÈ: private!",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "sèlman kòd andedan klas la ka wè/manyen l"
+              ],
+              "choices": [
+                "A) Tout moun ka wè l",
+                "B) Sèlman kòd andedan klas la ka wè/manyen l",
+                "C) Pitit klas yo sèlman",
+                "D) Li efase nan konpilasyon"
+              ],
+              "correct_ht": "B) Sèlman kòd andedan klas la ka wè/manyen l",
+              "explanation_ht": "private ankapsile: deyò a dwe pase pa metòd piblik (depoze, getSòld).",
+              "id": "ts-n3-l03-e1",
+              "prompt_ht": "Kisa modifikatè private vle di?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "readonly id: number;",
+                "readonly id:number;"
+              ],
+              "correct_ht": "readonly id: number;",
+              "explanation_ht": "readonly anpeche re-asignasyon apre inisyalizasyon — id enmiab.",
+              "id": "ts-n3-l03-e2",
+              "prompt_ht": "Ekri yon pwopriyete 'id' kalite number ki lekti-sèlman:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "constructor(private x: string) se fason idiomatik TS la — adopte l, kòd ou ap 40% pi kout.",
+          "id": "ts-n3-l03",
+          "title_ht": "Klas TypeScript",
+          "checkpoints": [
+            {
+              "id": "ts-n3-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            },
+            {
+              "id": "ts-n3-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 3 — Avanse"
+    },
+    {
+      "id": "n4",
+      "lessons": [
+        {
+          "body_ht": "Generics avanse pèmèt kalite ki kalkile selon lòt kalite. Kontrent ak extends: function jwenn<T, K extends keyof T>(obj: T, kle: K): T[K] — K dwe yon kle objè a! jwenn(itilizatè, \"non\") mache, jwenn(itilizatè, \"adres\") REFIZE si adres pa egziste — sekirite total sou aksè pwopriyete dinamik. keyof T bay union kle yo: keyof Itilizatè = \"non\" | \"laj\". T[K] (indexed access) bay kalite pwopriyete a: Itilizatè[\"laj\"] = number. Kalite kondisyonèl: type NonNil<T> = T extends null | undefined ? never : T; — kalite ki deside selon yon tès! infer ekstrè kalite: type Eleman<T> = T extends (infer E)[] ? E : never — Eleman<string[]> = string. Sa se baz utility types yo (Partial, Pick) ak tout ORM modèn yo. Ka itil: yon fonksyon meteAjou<T>(id: string, chanjman: Partial<T>) aksepte nenpòt sou-ansanm pwopriyete. Lè w konprann keyof + indexed access + kondisyonèl, ou ka ekri API ki enposib pou mal itilize — konpilatè a vin patnè w, pa lènmi w. [[CHECK:ts-n4-l01-c1]] [[CHECK:ts-n4-l01-c2]]",
+          "code": "function jwenn<T, K extends keyof T>(obj: T, kle: K): T[K] {\n  return obj[kle];\n}\nconst itilizatè = { non: \"Mariz\", laj: 28 };\nconst non = jwenn(itilizatè, \"non\"); // string\n// jwenn(itilizatè, \"adrès\"); // ERÈ: \"adrès\" pa yon kle!\ntype KleItilizatè = keyof typeof itilizatè;",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "union tout non kle kalite T a"
+              ],
+              "choices": [
+                "A) Tout valè yo",
+                "B) Union tout non kle kalite T a",
+                "C) Kantite pwopriyete",
+                "D) Premye kle a"
+              ],
+              "correct_ht": "B) Union tout non kle kalite T a",
+              "explanation_ht": "keyof Itilizatè = \"non\" | \"laj\" — kalite ki reprezante non pwopriyete yo.",
+              "id": "ts-n4-l01-e1",
+              "prompt_ht": "Kisa keyof T bay?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "k extends keyof t",
+                "k extends keyof t,"
+              ],
+              "correct_ht": "K extends keyof T",
+              "explanation_ht": "K extends keyof T kontrent K pou l se yon kle valid objè T a — aksè dinamik sekirize.",
+              "id": "ts-n4-l01-e2",
+              "prompt_ht": "Ekri kontrent ki fòse K se yon kle nan T:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "keyof + generics se teknik dèyè Prisma ak tRPC: API ki konnen fòm baz done w san w ekri anyen.",
+          "id": "ts-n4-l01",
+          "title_ht": "Generics avanse",
+          "checkpoints": [
+            {
+              "id": "ts-n4-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "jwenn"
+              ],
+              "correct_ht": "jwenn",
+              "explanation_ht": "Fonksyon an rele « jwenn » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "ts-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Generics pèmèt ou:",
+              "accepted": [
+                "a",
+                "ekri yon fonksyon ki mache ak plizyè tip done san repete kòd"
+              ],
+              "correct_ht": "A) Ekri yon fonksyon ki mache ak plizyè tip done san repete kòd",
+              "explanation_ht": "Yon sèl fonksyon pou lis nonb OSWA lis tèks.",
+              "choices": [
+                "A) Ekri yon fonksyon ki mache ak plizyè tip done san repete kòd",
+                "B) Ekri powèm",
+                "C) Desine",
+                "D) Chante"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Mapped types transfòme chak pwopriyete yon kalite: type Opsyonèl<T> = { [K in keyof T]?: T[K] }; — pran T epi fè tout pwopriyete l opsyonèl! Se egzakteman sa Partial<T> ye anndan. Bibliyotèk estanda a bay utility types pwisan: Partial<T> (tout opsyonèl. Pafè pou mizajou), Required<T> (tout obligatwa), Pick<T, \"non\" | \"laj\"> (kenbe sèlman kèk kle), Omit<T, \"modpas\"> (retire kle sansib anvan w voye bay kliyan!), Record<string, number> (diksyonè: kle string → valè number), Readonly<T>. Ou ka konbine: Omit<Itilizatè, \"modpas\"> pou repons API. Mapped types ak modifikatè: { -readonly [K in keyof T]: T[K] } retire readonly! Template literal types: type Evènman = `kli-${string}` — kalite string ki dwe kòmanse ak \"kli-\"! Sa yo pèmèt w ekri transfòmasyon kalite ki te mande jeneratè kòd anvan. Prensip: pa repete fòm done — derive yo. Yon sèl interface Itilizatè bay nesans a ItilizatèPiblik, FòmEnskripsyon, MizajouPasyèl — tout senkronize otomatikman lè w chanje orijinal la. [[CHECK:ts-n4-l02-c1]] [[CHECK:ts-n4-l02-c2]]",
+          "code": "interface Itilizatè {\n  id: number;\n  non: string;\n  modpas: string;\n}\ntype Piblik = Omit<Itilizatè, \"modpas\">;\n// Piblik = { id: number; non: string }\ntype Mizajou = Partial<Itilizatè>;\nconst chanjman: Mizajou = { non: \"Jan\" };\ntype Nòt = Record<string, number>;\nconst nòt: Nòt = { mat: 90, syans: 85 };",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon kalite ak tout pwopriyete T yo vin opsyonèl"
+              ],
+              "choices": [
+                "A) Yon kopi egzak T",
+                "B) Yon kalite ak tout pwopriyete T yo vin opsyonèl",
+                "C) Yon kalite vid",
+                "D) Yon tablo T"
+              ],
+              "correct_ht": "B) Yon kalite ak tout pwopriyete T yo vin opsyonèl",
+              "explanation_ht": "Partial mapped chak kle ak ? — ideal pou objè mizajou pasyèl.",
+              "id": "ts-n4-l02-e1",
+              "prompt_ht": "Kisa Partial<T> pwodui?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "omit<itilizatè, \"modpas\">",
+                "omit<itilizate, 'modpas'>"
+              ],
+              "correct_ht": "Omit<Itilizatè, \"modpas\">",
+              "explanation_ht": "Omit retire kle sansib yo nan kalite a — modpas pa janm kite sèvè a.",
+              "id": "ts-n4-l02-e2",
+              "prompt_ht": "Ekri kalite ki retire 'modpas' nan Itilizatè:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Omit pou sekirite done se pratik ekspè: kalite a GARANTI modpas la pa ka voye bay kliyan pa erè.",
+          "id": "ts-n4-l02",
+          "title_ht": "Mapped types ak utility types",
+          "checkpoints": [
+            {
+              "id": "ts-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon diksyonè (dict/map) mache tankou:",
+              "accepted": [
+                "a",
+                "yon diksyonè mo: ou bay yon kle, ou resevwa valè a"
+              ],
+              "correct_ht": "A) Yon diksyonè mo: ou bay yon kle, ou resevwa valè a",
+              "explanation_ht": "Kle → valè. Ou pa chèche pa pozisyon, ou chèche pa non (kle a).",
+              "choices": [
+                "A) Yon diksyonè mo: ou bay yon kle, ou resevwa valè a",
+                "B) Yon lis san lòd",
+                "C) Yon foto",
+                "D) Yon chante"
+              ]
+            },
+            {
+              "id": "ts-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Fichye deklarasyon (.d.ts) dekri fòm kòd JavaScript san enplemantasyon — se kontra kalite pou kòd ki pa ekri an TS. Lè w enstale yon bibliotèk JS san kalite, ou ekri (oubyen DefinitelyTyped bay) yon fichye .d.ts: declare module \"ma-bib\" { export function salye(n: string): string. } — apre sa, enpòt la gen otokonplesyon ak tès kalite! declare di konpilatè a \"sa egziste yon lòt kote, fè m konfyans\". Pou varyab global (yon script CDN): declare const MA_KONFIG: { apiUrl: string };. Ou ka deklare modil pou fichye non-kòd: declare module \"*.css\"; pèmèt enpòte CSS san erè. Triple-slash /// <reference types=\"node\" /> enpòte deklarasyon. Lè w pibliye yon bibliotèk TS, konpilatè a jenere .d.ts otomatikman (declaration: true nan tsconfig) — itilizatè JS yo jwenn dokimantasyon, itilizatè TS yo jwenn kalite. Konprann .d.ts vle di w ka bay kalite a NENPÒT kòd JS — ou pa janm bloke devan yon bibliotèk san kalite ankò. Se dènye moso ekspètiz TS la. [[CHECK:ts-n4-l03-c1]] [[CHECK:ts-n4-l03-c2]]",
+          "code": "// lodash.d.ts (egzanp)\ndeclare module \"lodash\" {\n  export function chunk<T>(tablo: T[], gwosè: number): T[][];\n  export function premye<T>(tablo: T[]): T | undefined;\n}\n// itilizasyon — ak tout kalite!\nimport { chunk } from \"lodash\";\nconst gwoup: number[][] = chunk([1, 2, 3, 4], 2);",
+          "code_lang": "typescript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "dekri fòm (kalite) kòd JS san enplemantasyon, pou TS ka tcheke l"
+              ],
+              "choices": [
+                "A) Yo egzekite kòd",
+                "B) Dekri fòm (kalite) kòd JS san enplemantasyon, pou TS ka tcheke l",
+                "C) Yo ranplase .ts",
+                "D) Yo konpile an .js"
+              ],
+              "correct_ht": "B) Dekri fòm (kalite) kòd JS san enplemantasyon, pou TS ka tcheke l",
+              "explanation_ht": ".d.ts se kontra kalite sèlman — pa gen kòd ekzekite, jis deklarasyon pou konpilatè a.",
+              "id": "ts-n4-l03-e1",
+              "prompt_ht": "Kisa yon fichye .d.ts fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "declare module \"lodash\" {",
+                "declare module 'lodash' {"
+              ],
+              "correct_ht": "declare module \"lodash\"",
+              "explanation_ht": "declare module bay kalite a yon modil JS ki egziste — pon ant JS san kalite ak TS.",
+              "id": "ts-n4-l03-e2",
+              "prompt_ht": "Ekri deklarasyon modil pou \"lodash\" (liy declare a sèlman):",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Anvan w ekri pwòp .d.ts ou, chèche @types/non-bib la — kominote DefinitelyTyped la pwobableman deja fè l.",
+          "id": "ts-n4-l03",
+          "title_ht": "Fichye deklarasyon (.d.ts)",
+          "checkpoints": [
+            {
+              "id": "ts-n4-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "chunk"
+              ],
+              "correct_ht": "chunk",
+              "explanation_ht": "Fonksyon an rele « chunk » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "ts-n4-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 4 — Ekspè"
+    }
+  ]
+}

@@ -1,0 +1,833 @@
+{
+  "id": "nodejs",
+  "name": "Node.js",
+  "category_ht": "Web (dèyè)",
+  "description_ht": "Node.js pèmèt ou itilize JavaScript sou sèvè a pou kreye API rapid ak aplikasyon wèb konplè. Se baz Express, NestJS, ak anpil zouti modèn.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "nodejs-n1-l01",
+          "title_ht": "Ki sa Node.js ye",
+          "body_ht": "Node.js se yon anviwònman ki pèmèt ou kouri JavaScript deyò navigatè a, sou sèvè a. Li bati sou motè V8 Google Chrome a, kidonk li rapid anpil. Anvan Node.js, JavaScript te sèlman pou fè paj wèb yo entèraktif; kounye a ou ka kreye sèvè konplè, API, ak zouti liy kòmand avè l. Ou enstale l sou nodejs.org, apre ou verifye ak node --version nan tèminal la. Pou kouri yon pwogram ou ekri node app.js. Fonksyon console.log() la afiche tèks nan tèminal la, tankou print nan Python. Node.js travay ak yon modèl ki pa blokan: li ka jere anpil demann an menm tan san li pa tann chak youn fini. Sa fè l ideyal pou aplikasyon wèb ki gen anpil itilizatè. Nan kou sa a ou pral aprann JavaScript sèvè a depi zewo jous ou ka bati API reyèl. [[CHECK:nodejs-n1-l01-c1]] [[CHECK:nodejs-n1-l01-c2]]",
+          "code": "console.log(\"Bonjou Node.js!\");\nconst non = \"Marie\";\nconsole.log(\"Bonjou \" + non + \"!\");",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo toujou fikse vèsyon Node.js pwojè a (via .nvmrc) pou tout ekip la kouri menm vèsyon an.",
+          "exercises": [
+            {
+              "id": "nodejs-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kòmand ki kouri yon fichye JavaScript ak Node.js?",
+              "choices": [
+                "A) run app.js",
+                "B) node app.js",
+                "C) js app.js",
+                "D) start app.js"
+              ],
+              "accepted": [
+                "b",
+                "node app.js",
+                "node"
+              ],
+              "correct_ht": "B) node app.js",
+              "explanation_ht": "Kòmand node ki swiv pa non fichye a kouri pwogram nan."
+            },
+            {
+              "id": "nodejs-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou afiche tèks la: ________.log(\"Bonjou\")",
+              "accepted": [
+                "console"
+              ],
+              "correct_ht": "console",
+              "explanation_ht": "Se console.log() ki afiche nan tèminal la ak Node.js."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n1-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou node.js!",
+                "\"bonjou node.js!\""
+              ],
+              "correct_ht": "Bonjou Node.js!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou Node.js! »."
+            },
+            {
+              "id": "nodejs-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JavaScript nan yon paj web sèvi pou:",
+              "accepted": [
+                "a",
+                "fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni"
+              ],
+              "correct_ht": "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+              "explanation_ht": "JS = sèvo/konpòtman paj la.",
+              "choices": [
+                "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+                "B) Ekri tèks la",
+                "C) Bay koulè yo",
+                "D) Sere modpas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n1-l02",
+          "title_ht": "Varyab: const ak let",
+          "body_ht": "Nan JavaScript modèn ou deklare varyab ak const oswa let — bliye var ki ansyen an. const se pou valè ki pa chanje: const PI = 3.14. let se pou valè ki ka chanje: let konte = 0; konte = 1. Si ou eseye chanje yon const, ou jwenn yon erè — sa pwoteje ou kont erè. Tip done yo sanble ak Python: string ('tèks'), number (25 oswa 19.99 — yon sèl tip pou tout nonb), boolean (true/false ak miniskil). Avèk template literals (aksan grav `) ou ka mete varyab andedan tèks: `Bonjou ${non}!` — pi pwòp pase konkatene ak +. Operatè yo menm jan: + - * /, epi == konpare (=== konpare tip la tou, pi strik). Pratike const pa defo epi itilize let sèlman lè valè a dwe chanje vre — se abitid pwofesyonèl. [[CHECK:nodejs-n1-l02-c1]] [[CHECK:nodejs-n1-l02-c2]]",
+          "code": "const non = \"Jean\";\nlet laj = 25;\nlaj = 26;\nconsole.log(`Bonjou ${non}, ou gen ${laj} an`);",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo itilize const pa defo epi === olye == pou evite konvèsyon tip sipriz.",
+          "exercises": [
+            {
+              "id": "nodejs-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle pou yon varyab ki pa dwe chanje?",
+              "choices": [
+                "A) let",
+                "B) var",
+                "C) const",
+                "D) final"
+              ],
+              "accepted": [
+                "c",
+                "const"
+              ],
+              "correct_ht": "C) const",
+              "explanation_ht": "const deklare yon konstan: ou pa ka re-asigne l apre."
+            },
+            {
+              "id": "nodejs-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete template literal la: `Bonjou ${____}!`",
+              "accepted": [
+                "non"
+              ],
+              "correct_ht": "non",
+              "explanation_ht": "Andedan ${} ou mete non varyab la: ${non}."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « laj » genyen? (ekri valè a)",
+              "accepted": [
+                "26"
+              ],
+              "correct_ht": "26",
+              "explanation_ht": "Nan egzanp lan, liy « laj = 26 » mete valè « 26 » nan bwat « laj » a."
+            },
+            {
+              "id": "nodejs-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon varyab se tankou…",
+              "accepted": [
+                "a",
+                "yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "bwat"
+              ],
+              "correct_ht": "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+              "explanation_ht": "Varyab = bwat + etikèt (non). Ou mete yon valè andedan, epi ou repran l nenpòt ki lè ak non an.",
+              "choices": [
+                "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "B) Yon foto sou ekran an",
+                "C) Yon chante",
+                "D) Yon bouton ou peze"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n1-l03",
+          "title_ht": "Fonksyon ak callback",
+          "body_ht": "Yon fonksyon nan JavaScript se yon blok kòd ou ka rele plizyè fwa. Fòm klasik la: function salye(non) { return 'Bonjou ' + non; }. Fòm modèn lan se arrow function: const salye = (non) => 'Bonjou ' + non; — pi kout, epi ou pral wè l toupatou nan kòd Node.js. Yon konsèp kle nan Node.js se callback: yon fonksyon ou pase kòm agiman bay yon lòt fonksyon pou li rele l pita, lè travay la fini. Pa egzanp, lè ou li yon dosye, ou pa vle bloke pwogram nan pandan lekti a; ou bay yon callback ki kouri lè done yo pare. Modèl sa a (pa blokan) se kè vitès Node.js la. Konprann byen ki jan fonksyon yo pase kòm valè — paske nan JavaScript, fonksyon se valè tankou nenpòt lòt bagay — epi ou pral konprann tout bibliyotèk Node.js yo. [[CHECK:nodejs-n1-l03-c1]] [[CHECK:nodejs-n1-l03-c2]]",
+          "code": "const double = (n) => n * 2;\nconsole.log(double(5));\n\nfunction trete(non, callback) {\n  const rezilta = \"Bonjou \" + non;\n  callback(rezilta);\n}\ntrete(\"Marie\", (msg) => console.log(msg));",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo evite callback hell (callback andedan callback) — yo itilize promises oswa async/await.",
+          "exercises": [
+            {
+              "id": "nodejs-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki sa yon callback ye?",
+              "choices": [
+                "A) Yon erè fonksyon",
+                "B) Yon fonksyon pase kòm agiman pou rele pita",
+                "C) Yon bouk enfini",
+                "D) Yon tip varyab"
+              ],
+              "accepted": [
+                "b",
+                "yon fonksyon pase kom agiman pou rele pita",
+                "fonksyon"
+              ],
+              "correct_ht": "B) Yon fonksyon pase kòm agiman pou rele pita",
+              "explanation_ht": "Yon callback se yon fonksyon ou bay yon lòt fonksyon pou li egzekite l lè travay la fini."
+            },
+            {
+              "id": "nodejs-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete arrow function lan: const kare = (n) => ____ * n;",
+              "accepted": [
+                "n"
+              ],
+              "correct_ht": "n",
+              "explanation_ht": "Kò arrow function lan se n * n pou kare yon nonb."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "double(5)"
+              ],
+              "correct_ht": "double(5)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « double(5) »."
+            },
+            {
+              "id": "nodejs-n1-l03-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "trete"
+              ],
+              "correct_ht": "trete",
+              "explanation_ht": "Fonksyon an rele « trete » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "nodejs-n2-l04",
+          "title_ht": "Modil: require ak exports",
+          "body_ht": "Yon gwo aplikasyon pa rete nan yon sèl fichye. Node.js divize kòd an modil: chak fichye se yon modil ki ka ekspòte fonksyon pou lòt fichye itilize. Sistèm klasik la rele CommonJS: nan fichye zouti.js ou ekri module.exports = { double }; epi nan app.js ou ekri const zouti = require('./zouti');. Sistèm modèn lan se ES modules: export function double(n) { ... } epi import { double } from './zouti.js';. Pou itilize ES modules, ou mete \"type\": \"module\" nan package.json ou. Chak modil gen pwòp espas non li — varyab yon modil pa polye lòt modil yo. Sa fè kòd la òganize epi fasil pou teste: ou ka teste chak modil separeman. Tout bibliyotèk Node.js yo (Express, elatriye) se modil ou enpòte konsa. Aprann byen ekspòte epi enpòte, epi pwojè ou yo pral rete pwòp menm lè yo grandi. [[CHECK:nodejs-n2-l04-c1]] [[CHECK:nodejs-n2-l04-c2]]",
+          "code": "// zouti.js\nfunction double(n) { return n * 2; }\nmodule.exports = { double };\n\n// app.js\nconst zouti = require(\"./zouti\");\nconsole.log(zouti.double(7));",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo prefere ES modules (import/export) nan nouvo pwojè epi yo evite sikilè require ant modil.",
+          "exercises": [
+            {
+              "id": "nodejs-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon ki enpòte yon modil nan sistèm CommonJS?",
+              "choices": [
+                "A) import()",
+                "B) require()",
+                "C) load()",
+                "D) include()"
+              ],
+              "accepted": [
+                "b",
+                "require",
+                "require()"
+              ],
+              "correct_ht": "B) require()",
+              "explanation_ht": "require('./fichye') chaje yon modil CommonJS."
+            },
+            {
+              "id": "nodejs-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou ekspòte fonksyon an: module.______ = { double };",
+              "accepted": [
+                "exports"
+              ],
+              "correct_ht": "exports",
+              "explanation_ht": "module.exports se objè a lòt fichye yo resevwa lè yo require modil la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n2-l04-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "zouti.double(7)"
+              ],
+              "correct_ht": "zouti.double(7)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « zouti.double(7) »."
+            },
+            {
+              "id": "nodejs-n2-l04-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "double"
+              ],
+              "correct_ht": "double",
+              "explanation_ht": "Fonksyon an rele « double » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n2-l05",
+          "title_ht": "npm: jere pakè yo",
+          "body_ht": "npm se jerè pakè Node.js la, epi li vini otomatikman ak Node.js. Li bay aksè a plis pase 2 milyon bibliyotèk gratis. Ou kòmanse yon pwojè ak npm init -y ki kreye fichye package.json — kat idantite pwojè ou a: non, vèsyon, depandans. Pou enstale yon bibliyotèk: npm install express. Sa telechaje l nan dosye node_modules epi ajoute l nan package.json. Ou pa janm voye node_modules bay lòt moun (li twò gwo); yo jis fè npm install pou re-telechaje tout depandans yo. Seksyon scripts nan package.json pèmèt ou defini rakousi: \"start\": \"node app.js\" apre ou lanse ak npm start. Fichye package-lock.json fèmen vèsyon egzak yo pou tout moun enstale menm bagay la. Konprann npm se obligatwa: chak pwojè Node.js pwofesyonèl sèvi avè l. [[CHECK:nodejs-n2-l05-c1]] [[CHECK:nodejs-n2-l05-c2]]",
+          "code": "{\n  \"name\": \"mon-api\",\n  \"version\": \"1.0.0\",\n  \"scripts\": {\n    \"start\": \"node app.js\"\n  },\n  \"dependencies\": {\n    \"express\": \"^4.18.0\"\n  }\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo verifye depandans yo (npm audit) epi yo pa enstale pakè yo pa konnen sous yo.",
+          "exercises": [
+            {
+              "id": "nodejs-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fichye ki liste depandans yon pwojè Node.js?",
+              "choices": [
+                "A) node_modules",
+                "B) package.json",
+                "C) config.js",
+                "D) deps.txt"
+              ],
+              "accepted": [
+                "b",
+                "package.json"
+              ],
+              "correct_ht": "B) package.json",
+              "explanation_ht": "package.json dekri pwojè a ak tout bibliyotèk li bezwen."
+            },
+            {
+              "id": "nodejs-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kòmand enstalasyon an: npm _______ express",
+              "accepted": [
+                "install",
+                "i"
+              ],
+              "correct_ht": "install",
+              "explanation_ht": "npm install non_pake a telechaje epi ajoute bibliyotèk la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n2-l05-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — npm/pip/composer sèvi pou:",
+              "accepted": [
+                "a",
+                "enstale pakè (kòd pare) lòt moun ekri pou ou itilize"
+              ],
+              "correct_ht": "A) Enstale pakè (kòd pare) lòt moun ekri pou ou itilize",
+              "explanation_ht": "Pa re-envante wou a: itilize travay kominote a.",
+              "choices": [
+                "A) Enstale pakè (kòd pare) lòt moun ekri pou ou itilize",
+                "B) Kwit manje",
+                "C) Lave rad",
+                "D) Kondwi"
+              ]
+            },
+            {
+              "id": "nodejs-n2-l05-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n2-l06",
+          "title_ht": "File system: li epi ekri dosye",
+          "body_ht": "Kaye lekòl ou: chak paj kenbe enfòmasyon, epi ou fèmen kaye a san pèdi anyen. Yon fichye se kaye òdinatè a: pwogram nan ekri ladan l epi li ka reli l pita.\n\n [[CHECK:nodejs-n2-l06-c1]]\n\nModil fs (file system) nan Node.js pèmèt ou travay ak dosye sou òdinatè a. Vèsyon modèn lan se fs/promises ak async/await: const fs = require('fs/promises'); apre const kontni = await fs.readFile('nòt.txt', 'utf8');. Pou ekri: await fs.writeFile('sòti.txt', 'Bonjou!');. Operasyon sa yo pa blokan: pandan disk la ap travay, Node.js kontinye sèvi lòt demann. Toujou mete operasyon dosye nan try/catch paske dosye a ka pa egziste oswa ou ka pa gen pèmisyon. Lòt fonksyon itil: fs.readdir() liste yon dosye, fs.mkdir() kreye l, fs.unlink() efase yon fichye. Nan aplikasyon wèb, ou itilize fs pou li modèl paj, ekri log, jere upload imaj, epi li fichye konfigirasyon. Sonje mete encodaj 'utf8' lè w ap li tèks, sinon ou jwenn done brit (buffer). [[CHECK:nodejs-n2-l06-c2]]",
+          "code": "const fs = require(\"fs/promises\");\n\nasync function li() {\n  try {\n    const kontni = await fs.readFile(\"not.txt\", \"utf8\");\n    console.log(kontni);\n  } catch (erè) {\n    console.log(\"Dosye a pa egziste\");\n  }\n}\nli();",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo itilize fs/promises ak async/await, epi yo pa janm itilize vèsyon Sync yo nan kòd sèvè.",
+          "exercises": [
+            {
+              "id": "nodejs-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki modil Node.js ki jere dosye yo?",
+              "choices": [
+                "A) http",
+                "B) path",
+                "C) fs",
+                "D) file"
+              ],
+              "accepted": [
+                "c",
+                "fs"
+              ],
+              "correct_ht": "C) fs",
+              "explanation_ht": "Modil fs (file system) la bay fonksyon pou li, ekri, epi jere dosye."
+            },
+            {
+              "id": "nodejs-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou li dosye a: const t = await fs.________(\"not.txt\", \"utf8\");",
+              "accepted": [
+                "readfile",
+                "readFile"
+              ],
+              "correct_ht": "readFile",
+              "explanation_ht": "fs.readFile() li kontni yon dosye; ak 'utf8' ou jwenn tèks dirèkteman."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n2-l06-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "kontni"
+              ],
+              "correct_ht": "kontni",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « kontni »."
+            },
+            {
+              "id": "nodejs-n2-l06-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "li"
+              ],
+              "correct_ht": "li",
+              "explanation_ht": "Fonksyon an rele « li » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "nodejs-n3-l07",
+          "title_ht": "Kreye yon sèvè HTTP",
+          "body_ht": "Lè ou kòmande nan restoran, ou pale ak garçon an, li pote manje a soti nan kwizin nan. Yon API se garçon entènèt la: app ou a mande, sèvè a pote done yo.\n\n [[CHECK:nodejs-n3-l07-c1]]\n\nModil http ki vini ak Node.js pèmèt ou kreye yon sèvè wèb san okenn bibliyotèk ekstèn. Ou ekri const http = require('http'); apre http.createServer((req, res) => { ... }). Fonksyon an resevwa de objè: req (demann lan — URL, metòd, headers) ak res (repons ou pral voye). Ou defini repons lan: res.writeHead(200, {'Content-Type': 'text/html'}); res.end('<h1>Bonjou!</h1>');. Kòd 200 vle di tout bagay OK. Apre ou mete sèvè a sou yon pò: server.listen(3000); epi ou louvri localhost:3000 nan navigatè a. Ou ka li req.url pou voye diferan paj selon adrès la — se baz routing la. Sèvè http brit la se fondasyon tout framework yo; lè ou konprann li, ou konprann sa Express fè pou ou an kachèt. Nan pratik ou pral itilize framework, men konnen baz la fè ou pi fò nan debogaj. [[CHECK:nodejs-n3-l07-c2]]",
+          "code": "const http = require(\"http\");\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { \"Content-Type\": \"text/plain\" });\n  res.end(\"Bonjou soti nan Node.js!\");\n});\n\nserver.listen(3000);\nconsole.log(\"Seve ap koute sou po 3000\");",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo mete sèvè a dèyè yon reverse proxy (Nginx) epi yo jere fèmen pwòp (graceful shutdown) sou siyal.",
+          "exercises": [
+            {
+              "id": "nodejs-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki metòd ki voye repons final bay navigatè a?",
+              "choices": [
+                "A) res.send()",
+                "B) res.end()",
+                "C) res.finish()",
+                "D) res.close()"
+              ],
+              "accepted": [
+                "b",
+                "res.end",
+                "res.end()"
+              ],
+              "correct_ht": "B) res.end()",
+              "explanation_ht": "res.end() voye kò repons lan epi fèmen koneksyon an."
+            },
+            {
+              "id": "nodejs-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou sèvè a koute sou pò 3000: server.______(3000);",
+              "accepted": [
+                "listen"
+              ],
+              "correct_ht": "listen",
+              "explanation_ht": "server.listen(pò) demare sèvè a sou pò a."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n3-l07-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "seve ap koute sou po 3000",
+                "\"seve ap koute sou po 3000\""
+              ],
+              "correct_ht": "Seve ap koute sou po 3000",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Seve ap koute sou po 3000 »."
+            },
+            {
+              "id": "nodejs-n3-l07-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Pou LI done nan yon API, ou itilize metòd:",
+              "accepted": [
+                "a",
+                "get"
+              ],
+              "correct_ht": "A) GET",
+              "explanation_ht": "GET = li; POST = kreye; PUT = modifye; DELETE = efase.",
+              "choices": [
+                "A) GET",
+                "B) POST",
+                "C) DELETE",
+                "D) PUT"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n3-l08",
+          "title_ht": "Express: framework wèb la",
+          "body_ht": "Olye ou fè chak epis soti nan zewo, ou achte epis ki deja pare nan mache. Pakè yo se epis pare pou kòd: ou enstale, ou itilize.\n\n [[CHECK:nodejs-n3-l08-c1]]\n\nExpress se framework wèb ki pi popilè pou Node.js. Li chita sou modil http men li rann tout bagay pi senp. Ou enstale l ak npm install express, apre const app = express();. Wout yo defini fasilman: app.get('/akèy', (req, res) => res.send('Byenveni!')); — chak metòd HTTP (get, post, put, delete) gen pwòp fonksyon li. Paramèt URL yo aksesib: app.get('/itilizate/:id', ...) epi req.params.id bay valè a. Middleware se fonksyon ki kouri anvan wout la: app.use(express.json()) pèmèt sèvè a li kò JSON demann yo — esansyèl pou API. Lòd middleware yo enpòtan: yo kouri nan lòd ou dekri yo, epi next() pase bay pwochen an. Avèk Express ou ka bati yon API REST konplè nan kèk douzèn liy: wout pou lis pwodwi, ajoute pwodwi, modifye, efase — tout sa yon aplikasyon modèn bezwen. [[CHECK:nodejs-n3-l08-c2]]",
+          "code": "const express = require(\"express\");\nconst app = express();\napp.use(express.json());\n\napp.get(\"/bonjou/:non\", (req, res) => {\n  res.json({ mesaj: \"Bonjou \" + req.params.non });\n});\n\napp.listen(3000);",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo separe wout, kontwolè, ak middleware nan diferan modil epi yo valide tout antre ak yon bibliyotèk tankou zod.",
+          "exercises": [
+            {
+              "id": "nodejs-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki middleware ki pèmèt Express li kò JSON?",
+              "choices": [
+                "A) express.json()",
+                "B) express.body()",
+                "C) express.parse()",
+                "D) express.data()"
+              ],
+              "accepted": [
+                "a",
+                "express.json()",
+                "express.json"
+              ],
+              "correct_ht": "A) express.json()",
+              "explanation_ht": "app.use(express.json()) aktive lekti kò JSON nan demann yo."
+            },
+            {
+              "id": "nodejs-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete wout la: app.____(\"/akey\", (req, res) => res.send(\"OK\"));",
+              "accepted": [
+                "get"
+              ],
+              "correct_ht": "get",
+              "explanation_ht": "app.get() defini yon wout pou demann HTTP GET."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n3-l08-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon framework se tankou:",
+              "accepted": [
+                "a",
+                "brik pare pou bati kay: estrikti a deja la, ou monte mi yo"
+              ],
+              "correct_ht": "A) Brik pare pou bati kay: estrikti a deja la, ou monte mi yo",
+              "explanation_ht": "Framework = fondasyon + règ; ou ranpli vid yo.",
+              "choices": [
+                "A) Brik pare pou bati kay: estrikti a deja la, ou monte mi yo",
+                "B) Yon tablo",
+                "C) Yon penti",
+                "D) Yon jaden"
+              ]
+            },
+            {
+              "id": "nodejs-n3-l08-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon API se tankou:",
+              "accepted": [
+                "a",
+                "yon garçon restoran: ou mande, li pote done soti nan sèvè a"
+              ],
+              "correct_ht": "A) Yon garçon restoran: ou mande, li pote done soti nan sèvè a",
+              "explanation_ht": "App ou a = kliyan; API a = garçon; sèvè a = kwizin.",
+              "choices": [
+                "A) Yon garçon restoran: ou mande, li pote done soti nan sèvè a",
+                "B) Yon plat manje",
+                "C) Yon tab",
+                "D) Yon kizin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n3-l09",
+          "title_ht": "Promises ak async/await",
+          "body_ht": "Lè manman w voye w achte pen, ou pa kanpe devan fou a ap tann li kwit — ou fè lòt bagay epi ou tounen. Kòd asenkron fè menm jan: li lanse yon travay epi li kontinye.\n\n [[CHECK:nodejs-n3-l09-c1]]\n\nAnpil operasyon Node.js (lekti dosye, apèl API, rekèt baz done) pran tan. Yon Promise se yon objè ki reprezante yon valè k ap vini pita: li ka pending (ap tann), fulfilled (reyisi), oswa rejected (echwe). Olye callback, ou ekri chenn .then(): chacheDone().then(d => console.log(d)).catch(e => console.log(e));. Men fòm modèn lan se async/await, ki fè kòd asynchrone sanble ak kòd nòmal: async function prensipal() { const d = await chacheDone(); console.log(d); }. Mo await kanpe fonksyon an jous Promise la rezoud, san bloke tout pwogram nan. Toujou antoure await ak try/catch pou kenbe erè yo. Promise.all([p1, p2]) lanse plizyè operasyon an paralèl epi tann tout. Metrize async/await se obligatwa: 90% kòd Node.js pwofesyonèl ekri konsa. [[CHECK:nodejs-n3-l09-c2]]",
+          "code": "function tann(ms) {\n  return new Promise((resolve) => setTimeout(resolve, ms));\n}\n\nasync function prensipal() {\n  console.log(\"Komanse...\");\n  await tann(1000);\n  console.log(\"1 segonn pase!\");\n}\nprensipal();",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo pa bliye catch sou Promise yo epi yo itilize Promise.allSettled lè yon echèk pa dwe bloke lòt yo.",
+          "exercises": [
+            {
+              "id": "nodejs-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ki kanpe yon fonksyon async jous yon Promise rezoud?",
+              "choices": [
+                "A) wait",
+                "B) pause",
+                "C) await",
+                "D) hold"
+              ],
+              "accepted": [
+                "c",
+                "await"
+              ],
+              "correct_ht": "C) await",
+              "explanation_ht": "await devan yon Promise kanpe egzekisyon an jous valè a pare."
+            },
+            {
+              "id": "nodejs-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon fonksyon asynchrone lan: _____ function chaje() {",
+              "accepted": [
+                "async"
+              ],
+              "correct_ht": "async",
+              "explanation_ht": "Ou ekri async function pou kreye yon fonksyon ki ka itilize await."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n3-l09-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "komanse...",
+                "\"komanse...\""
+              ],
+              "correct_ht": "Komanse...",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Komanse... »."
+            },
+            {
+              "id": "nodejs-n3-l09-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "tann"
+              ],
+              "correct_ht": "tann",
+              "explanation_ht": "Fonksyon an rele « tann » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "nodejs-n4-l10",
+          "title_ht": "Streams: trete gwo done",
+          "body_ht": "Lè ou li yon fichye 5 GB ak fs.readFile, Node.js chaje tout nan memwa anvan li kontinye — sa ka kraze sèvè a. Streams rezoud sa: yo trete done yo an ti moso (chunks) youn apre lòt. Gen kat tip: Readable (pwodui done), Writable (resevwa done), Duplex (tou de), Transform (modifye done pandan y ap pase). Egzanp klasik: fs.createReadStream('gwo.log').pipe(fs.createWriteStream('kopi.log')) — kopi yon fichye gwo san li pa janm plen memwa. Metòd pipe() konekte yon stream sòti nan yon stream antre. Ou ka kreye pwòp Transform ou pou chifre, konprese, oswa filtre done pandan y ap koule. Nan sèvè wèb, streams sèvi pou voye gwo fichye bay itilizatè (videyo, telechajman), trete upload, epi li log an tan reyèl. Konprann streams separe enjenyè Node.js nivo ekspè yo. [[CHECK:nodejs-n4-l10-c1]] [[CHECK:nodejs-n4-l10-c2]]",
+          "code": "const fs = require(\"fs\");\n\nconst lekti = fs.createReadStream(\"gwo.txt\", \"utf8\");\nlekti.on(\"data\", (moso) => {\n  console.log(\"Moso resevwa:\", moso.length, \"karakte\");\n});\nlekti.on(\"end\", () => console.log(\"Fini!\"));",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo itilize pipeline() olye pipe() pou jere erè byen, epi async iterators (for await) pou li streams.",
+          "exercises": [
+            {
+              "id": "nodejs-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Poukisa streams pi bon pase readFile pou gwo fichye?",
+              "choices": [
+                "A) Yo pi rapid toujou",
+                "B) Yo trete done an ti moso san plen memwa",
+                "C) Yo pa bezwen disk",
+                "D) Yo otomatikman chifre"
+              ],
+              "accepted": [
+                "b",
+                "yo trete done an ti moso san plen memwa"
+              ],
+              "correct_ht": "B) Yo trete done an ti moso san plen memwa",
+              "explanation_ht": "Streams li done yo moso pa moso, kidonk memwa a rete ba menm pou fichye gwo."
+            },
+            {
+              "id": "nodejs-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou kreye yon stream lekti: fs.________________(\"gwo.txt\");",
+              "accepted": [
+                "createreadstream",
+                "createReadStream"
+              ],
+              "correct_ht": "createReadStream",
+              "explanation_ht": "fs.createReadStream() kreye yon Readable stream sou yon dosye."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n4-l10-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "moso resevwa:\", moso.length, \"karakte",
+                "\"moso resevwa:\", moso.length, \"karakte\""
+              ],
+              "correct_ht": "Moso resevwa:\", moso.length, \"karakte",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Moso resevwa:\", moso.length, \"karakte »."
+            },
+            {
+              "id": "nodejs-n4-l10-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon stream (kouran done) se tankou:",
+              "accepted": [
+                "a",
+                "dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo"
+              ],
+              "correct_ht": "A) Dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo",
+              "explanation_ht": "Itil pou gwo fichye: ou trete pandan w ap li, san chaje tout nan memwa.",
+              "choices": [
+                "A) Dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo",
+                "B) Yon letan",
+                "C) Yon lanmè",
+                "D) Yon dlo ki kanpe"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n4-l11",
+          "title_ht": "Clustering: itilize tout CPU a",
+          "body_ht": "Node.js kouri sou yon sèl fil (thread) pa defo: sou yon sèvè 8 kè, 7 kè rete san itilize. Modil cluster la pèmèt ou lanse yon pwosesis travayè pa kè CPU, tout k ap koute sou menm pò a. Pwosesis mèt la (primary) divize travay la; si yon travayè kraze, mèt la kreye yon lòt otomatikman — sa bay tolerans pann. Kòd la: const cluster = require('cluster'); si cluster.isPrimary, ou fè fork() pou chak kè (os.cpus().length); sinon, chak travayè lanse sèvè Express ou a. Sistèm operasyon an distribye demann yo ant travayè yo. Pou travay ki mande anpil kalkil (chifreman, tretman imaj), worker_threads se altènatif lejè andedan menm pwosesis la. Nan pwodiksyon, pifò ekip itilize yon jerè pwosesis tankou PM2 ki fè clustering otomatikman ak redemaraj. Konprann sa pèmèt ou monte yon API ki sèvi dè milye itilizatè. [[CHECK:nodejs-n4-l11-c1]] [[CHECK:nodejs-n4-l11-c2]]",
+          "code": "const cluster = require(\"cluster\");\nconst os = require(\"os\");\n\nif (cluster.isPrimary) {\n  const n = os.cpus().length;\n  console.log(`Met la lanse ${n} travaye`);\n  for (let i = 0; i < n; i++) cluster.fork();\n} else {\n  require(\"./seve\");\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo pa pataje eta an memwa ant travayè yo — yo itilize Redis oswa baz done pou eta pataje.",
+          "exercises": [
+            {
+              "id": "nodejs-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki pwoblèm clustering rezoud?",
+              "choices": [
+                "A) Node.js pa kouri sou Windows",
+                "B) Node.js itilize yon sèl kè CPU pa defo",
+                "C) JavaScript twò lant",
+                "D) npm twò gwo"
+              ],
+              "accepted": [
+                "b",
+                "node.js itilize yon sel ke cpu pa defo"
+              ],
+              "correct_ht": "B) Node.js itilize yon sèl kè CPU pa defo",
+              "explanation_ht": "Cluster lanse yon travayè pa kè pou itilize tout puisans machin nan."
+            },
+            {
+              "id": "nodejs-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou kreye yon travayè: cluster.______();",
+              "accepted": [
+                "fork"
+              ],
+              "correct_ht": "fork",
+              "explanation_ht": "cluster.fork() kreye yon nouvo pwosesis travayè."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n4-l11-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "nodejs-n4-l11-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon pil (stack) mache:",
+              "accepted": [
+                "a",
+                "dènye antre, premye sòti — tankou yon pil asyèt"
+              ],
+              "correct_ht": "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+              "explanation_ht": "Ou pran toujou asyèt ki anwo a.",
+              "choices": [
+                "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                "B) Premye antre, premye sòti",
+                "C) O aza",
+                "D) Pa lòd alfabetik"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nodejs-n4-l12",
+          "title_ht": "Native addons ak pèfòmans",
+          "body_ht": "Nan fen yon gwo liv gen yon endèks: ou jwenn paj yon sijè san li tout liv la. Yon index bazdone se menm bagay la pou done.\n\n [[CHECK:nodejs-n4-l12-c1]]\n\nPafwa JavaScript pa ase rapid: tretman videyo, kalkil syantifik, chifreman lou. Native addons pèmèt ou ekri pati kritik yo nan C/C++ epi rele yo depi JavaScript. API ofisyèl la rele N-API: li estab atravè vèsyon Node.js yo, kidonk yon addon ou konpile yon fwa kontinye mache. Ou ekri fonksyon C++ a, ou konpile l ak node-gyp, epi ou require() fichye .node ki pwodui a tankou yon modil nòmal. Ou pa bezwen ekri C++ chak jou pou w ekspè, men ou dwe konprann konsèp la: idantifye blokaj la ak profiler (node --prof), deplase bouk lou yo nan kod natif oswa worker threads, epi mezire anvan/apre. Lòt levye pèfòmans: kach rezilta chè yo nan Redis, itilize streams pou gwo done, evite JSON.parse sou gwo objè nan wout cho yo. Ekspè a mezire, li pa devine. [[CHECK:nodejs-n4-l12-c2]]",
+          "code": "// addon.cc (C++) — konpile ak node-gyp\n// #include <node_api.h>\n// N-API ekspoze fonksyon rapid la\n\n// Itilizasyon depi JavaScript:\n// const rapid = require(\"./build/Release/rapid.node\");\n// console.log(rapid.kalkilLou(1000000));\nconsole.log(\"Addon natif chaje: kalkil 10x pi rapid\");",
+          "code_lang": "javascript",
+          "expert_note_ht": "Ekspè yo profile anvan yo optimize (node --prof, clinic.js) epi yo dokimante poukisa chak addon egziste.",
+          "exercises": [
+            {
+              "id": "nodejs-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki API ofisyèl pou ekri native addons nan Node.js?",
+              "choices": [
+                "A) NativeJS",
+                "B) N-API",
+                "C) CppBridge",
+                "D) FastCall"
+              ],
+              "accepted": [
+                "b",
+                "n-api"
+              ],
+              "correct_ht": "B) N-API",
+              "explanation_ht": "N-API se API estab pou ekri addons C/C++ ki mache atravè vèsyon Node.js yo."
+            },
+            {
+              "id": "nodejs-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete premye etap optimize pèfòmans lan: ______ anvan ou chanje kòd la.",
+              "accepted": [
+                "mezire",
+                "profile",
+                "mezire pèfòmans lan"
+              ],
+              "correct_ht": "mezire",
+              "explanation_ht": "Toujou mezire (profile) anvan ou optimize pou ou konnen kote blokaj la ye vre."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "nodejs-n4-l12-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "addon natif chaje: kalkil 10x pi rapid",
+                "\"addon natif chaje: kalkil 10x pi rapid\""
+              ],
+              "correct_ht": "Addon natif chaje: kalkil 10x pi rapid",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Addon natif chaje: kalkil 10x pi rapid »."
+            },
+            {
+              "id": "nodejs-n4-l12-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Notasyon Big O mezire:",
+              "accepted": [
+                "a",
+                "kijan tan yon algoritm grandi lè done yo grandi"
+              ],
+              "correct_ht": "A) Kijan tan yon algoritm grandi lè done yo grandi",
+              "explanation_ht": "O(n) = lineyè; O(n²) = bouk anndan bouk — evite!",
+              "choices": [
+                "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                "B) Gwosè ekran an",
+                "C) Pri òdinatè a",
+                "D) Kantite koulè"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

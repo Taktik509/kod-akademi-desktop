@@ -1,0 +1,908 @@
+{
+  "id": "flutter",
+  "name": "Flutter",
+  "category_ht": "Mobil",
+  "description_ht": "Flutter se twous Google la pou bati bèl aplikasyon rapid sou Android, iOS, web ak desktop ak yon sèl kòd Dart. Li pi popilè pou vitès devlopman li ak entèfas ki sanble natif.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "flutter-n1-l01",
+          "title_ht": "Enstale Flutter",
+          "body_ht": "Lego: ti brik ou anpile pou bati nenpòt bagay — kay, machin, robo. Nan Flutter, chak bagay sou ekran an (bouton, tèks, imaj) se yon brik yo rele widget.\n\n [[CHECK:flutter-n1-l01-c1]]\n\nFlutter se twous devlopman (SDK) Google kreye, epi Dart se langaj pwogramasyon li itilize — ou aprann tou de ansanm. Pou enstale: telechaje Flutter SDK sou flutter.dev, dekonprese l, epi ajoute l nan \"PATH\" òdinatè w. Apre, kòmand majik la se flutter doctor: li tcheke tout bagay (SDK, Android Studio, aparèy) epi li di w sa ki manke ak kijan pou ranje l — kouri l an premye! Pou kreye yon pwojè: flutter create mon_app (non an miniskil ak souliye). Pou lanse l: konekte yon telefòn oswa demare yon emilatè, antre nan dosye pwojè a, epi kouri flutter run. \"Hot reload\" se bèl bagay Flutter: ou sove fichye a epi chanjman yo parèt sou telefòn nan mwens pase yon segonn, san pèdi eta app lan. Editè rekòmande: VS Code ak ekstansyon Flutter/Dart yo. Si flutter doctor rapòte pwoblèm, li bay lyen ak enstriksyon pou chak youn — swiv yo youn pa youn jous tout siy yo vèt. Pa sote etap sa a: yon anviwònman pwòp evite èdtan fristrasyon pita. [[CHECK:flutter-n1-l01-c2]]",
+          "code": "flutter doctor\nflutter create mon_app\ncd mon_app\nflutter run",
+          "code_lang": "dart",
+          "expert_note_ht": "Fikse vèsyon Flutter/Dart nan chak pwojè (fichye .fvmrc ak FVM) — ekip ki pa fè sa pèdi jounen antye sou \"li mache sou machin mwen\".",
+          "exercises": [
+            {
+              "id": "flutter-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kòmand verifye si enstalasyon Flutter ou konplè?",
+              "choices": [
+                "A) flutter check",
+                "B) flutter doctor",
+                "C) flutter verify",
+                "D) dart test"
+              ],
+              "accepted": [
+                "b",
+                "flutter doctor"
+              ],
+              "correct_ht": "B) flutter doctor",
+              "explanation_ht": "flutter doctor dyagnostike anviwònman an epi li di w egzakteman sa pou ranje."
+            },
+            {
+              "id": "flutter-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kòmand dyagnostik la: ___ doctor",
+              "accepted": [
+                "flutter"
+              ],
+              "correct_ht": "flutter",
+              "explanation_ht": "flutter doctor se premye kòmand pou kouri apre enstalasyon."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Nan Flutter, yon widget se:",
+              "accepted": [
+                "a",
+                "yon brik lego ekran an: bouton, tèks, imaj — tout bagay se widget"
+              ],
+              "correct_ht": "A) Yon brik Lego ekran an: bouton, tèks, imaj — tout bagay se widget",
+              "explanation_ht": "Ou anpile widget pou bati ekran an.",
+              "choices": [
+                "A) Yon brik Lego ekran an: bouton, tèks, imaj — tout bagay se widget",
+                "B) Yon jwèt",
+                "C) Yon erè",
+                "D) Yon viris"
+              ]
+            },
+            {
+              "id": "flutter-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n1-l02",
+          "title_ht": "Widgets: tout bagay se widget",
+          "body_ht": "Nan Flutter, TOUT se widget: tèks, bouton, ekran, menm app lan li menm! Yon widget se yon deskripsyon ki di \"montre sa a sou ekran\". Gen de fanmi: StatelessWidget pou UI ki pa chanje (yon tit, yon logo), ak StatefulWidget pou UI ki chanje (yon kontè, yon fòm). Chak widget gen yon metòd build ki retoune pyebwa widget timoun yo. Egzanp lan: MonApp (stateless) retoune yon MaterialApp. Li bay app lan stil Android (\"Material Design\") — ki gen yon Scaffold (estrikti ekran: ba anwo, kò) ak yon Center ki santre tèks la. Lè ou konprann ke ekran se jis widget andedan widget, ou konprann Flutter. Nan pwochen leson an, nou pral ranje widget yo youn akote lòt ak Row ak Column. Metòd build la dwe \"pi\" — pa fè apèl rezo ni modifye eta ladan l, paske Flutter ka rele l nenpòt ki lè, menm plizyè fwa pa segonn. Se jis yon deskripsyon UI kòm fonksyon eta aktyèl la. [[CHECK:flutter-n1-l02-c1]] [[CHECK:flutter-n1-l02-c2]]",
+          "code": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(MonApp());\n\nclass MonApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: Text('Mon App')),\n        body: Center(child: Text('Bonjou, Ayiti!')),\n      ),\n    );\n  }\n}",
+          "code_lang": "dart",
+          "expert_note_ht": "Pa mete lojik biznis nan build() — metòd sa a ka kouri anpil fwa; kenbe l pi pou UI sèlman.",
+          "exercises": [
+            {
+              "id": "flutter-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki widget ou itilize pou yon UI ki PA chanje?",
+              "choices": [
+                "A) StatefulWidget",
+                "B) StatelessWidget",
+                "C) DynamicWidget",
+                "D) FixedWidget"
+              ],
+              "accepted": [
+                "b",
+                "statelesswidget",
+                "stateless"
+              ],
+              "correct_ht": "B) StatelessWidget",
+              "explanation_ht": "StatelessWidget se pou UI estatik; StatefulWidget se pou UI ki gen eta k ap chanje."
+            },
+            {
+              "id": "flutter-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon an: class Kay extends ___ { ... }",
+              "accepted": [
+                "statelesswidget"
+              ],
+              "correct_ht": "StatelessWidget",
+              "explanation_ht": "Ou etann StatelessWidget pou kreye pwòp widget estatik ou."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n1-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Nan Flutter, yon widget se:",
+              "accepted": [
+                "a",
+                "yon brik lego ekran an: bouton, tèks, imaj — tout bagay se widget"
+              ],
+              "correct_ht": "A) Yon brik Lego ekran an: bouton, tèks, imaj — tout bagay se widget",
+              "explanation_ht": "Ou anpile widget pou bati ekran an.",
+              "choices": [
+                "A) Yon brik Lego ekran an: bouton, tèks, imaj — tout bagay se widget",
+                "B) Yon jwèt",
+                "C) Yon erè",
+                "D) Yon viris"
+              ]
+            },
+            {
+              "id": "flutter-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n1-l03",
+          "title_ht": "Layout: Row, Column ak Container",
+          "body_ht": "Pou ranje widget yo sou ekran, Flutter itilize \"layout widgets\". Column anpile timoun yo VÈTIKAL (youn anba lòt), Row ranje yo ORIZONTAL (youn akote lòt) — tou de pran yon lis children. Container se bwat inivèsèl: li ka gen koulè (color), espas anndan (padding), maj (margin), gwosè (width/height), ak fòm (decoration). Egzanp lan: yon Column ak de Container koulè wouj ak ble. Pou kontwole espasman: mainAxisAlignment (sou aks prensipal: center, spaceBetween, spaceEvenly) ak crossAxisAlignment. Pou fè yon timoun pran tout espas ki rete, anvlòp li nan Expanded. Erè klasik debutan: mete yon Column andedan yon lòt san wotè limite — ou jwenn \"overflow\" jòn! Sonje: nan Flutter, ou pa pozisyone ak kowòdone; ou konbine widget layout jous ou jwenn fòm ou vle a. Stack se twazyèm layout enpòtan: li anpile timoun youn SOU lòt (tankou kouch), itil pou mete tèks sou yon imaj. Konbine Row, Column ak Stack, epi ou ka bati prèske nenpòt ekran. [[CHECK:flutter-n1-l03-c1]] [[CHECK:flutter-n1-l03-c2]]",
+          "code": "Column(\n  mainAxisAlignment: MainAxisAlignment.center,\n  children: [\n    Container(\n      color: Colors.red,\n      padding: EdgeInsets.all(16),\n      child: Text('Wouj'),\n    ),\n    Container(\n      color: Colors.blue,\n      padding: EdgeInsets.all(16),\n      child: Text('Ble'),\n    ),\n  ],\n)",
+          "code_lang": "dart",
+          "expert_note_ht": "Lè ou wè bann jòn \"overflow\", se yon kontrent layout ki vyole — anvlòp nan Expanded/Flexible oswa SingleChildScrollView selon ka a.",
+          "exercises": [
+            {
+              "id": "flutter-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki widget anpile timoun yo youn ANBA lòt (vètikal)?",
+              "choices": [
+                "A) Row",
+                "B) Column",
+                "C) Stack",
+                "D) List"
+              ],
+              "accepted": [
+                "b",
+                "column"
+              ],
+              "correct_ht": "B) Column",
+              "explanation_ht": "Column = vètikal; Row = orizontal; Stack = youn sou lòt."
+            },
+            {
+              "id": "flutter-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou anpile de tèks vètikalman: ___( children: [ Text('A'), Text('B') ] )",
+              "accepted": [
+                "column"
+              ],
+              "correct_ht": "Column",
+              "explanation_ht": "Column pran yon lis children epi li anpile yo vètikalman."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Docker pèmèt ou:",
+              "accepted": [
+                "a",
+                "anbale app ou ak tout zafè l nan yon container ki mache toupatou"
+              ],
+              "correct_ht": "A) Anbale app ou ak tout zafè l nan yon container ki mache toupatou",
+              "explanation_ht": "Fini ak 'li te mache sou machin mwen'!",
+              "choices": [
+                "A) Anbale app ou ak tout zafè l nan yon container ki mache toupatou",
+                "B) Desine logo",
+                "C) Ekri tèks",
+                "D) Jwe jwèt"
+              ]
+            },
+            {
+              "id": "flutter-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Pou LI done nan yon API, ou itilize metòd:",
+              "accepted": [
+                "a",
+                "get"
+              ],
+              "correct_ht": "A) GET",
+              "explanation_ht": "GET = li; POST = kreye; PUT = modifye; DELETE = efase.",
+              "choices": [
+                "A) GET",
+                "B) POST",
+                "C) DELETE",
+                "D) PUT"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "flutter-n2-l04",
+          "title_ht": "setState: fè ekran an reyaji",
+          "body_ht": "Yon StatefulWidget gen yon objè State ki kenbe done k ap chanje yo. Lè ou modifye done sa yo, ou DWE rele setState(() { ... }) — se siyal ou voye bay Flutter: \"eta a chanje, rebati UI a!\". Egzanp: _kontè++ andedan setState, epi Text('Kontè: $_kontè') mete ajou otomatikman. San setState, varyab la chanje men ekran an rete menm — erè klasik debutan! Règ: mete SÈLMAN chanjman eta a andedan setState, pa kalkil lou. Epi pa janm rele setState apre widget la fin detwi (tcheke mounted). Modèl la senp: eta → build() → UI; eta chanje → setState → build() rekouri → UI mete ajou. Avèk StatefulWidget + setState, ou ka bati kontè, fòm, ak nenpòt ekran entèraktif. Nan pwochen nivo a, n ap wè solisyon pou eta ki pataje ant plizyè ekran. Klas State a gen yon sik lavi: initState() kouri yon sèl fwa nan kòmansman (bon pou inisyalizasyon), dispose() nan fen (pou netwaye). Konnen sik lavi sa a evite pinèz eta. [[CHECK:flutter-n2-l04-c1]] [[CHECK:flutter-n2-l04-c2]]",
+          "code": "class KontèPaj extends StatefulWidget {\n  @override\n  _KontèPajState createState() => _KontèPajState();\n}\n\nclass _KontèPajState extends State<KontèPaj> {\n  int _kontè = 0;\n\n  void _metePlis() {\n    setState(() { _kontè++; });\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      body: Center(child: Text('Kontè: $_kontè')),\n      floatingActionButton: FloatingActionButton(\n        onPressed: _metePlis,\n        child: Icon(Icons.add),\n      ),\n    );\n  }\n}",
+          "code_lang": "dart",
+          "expert_note_ht": "setState rebati TOUT widget la — pou pyebwa gwo, desann eta a nan ti widget timoun pou rebati a rete lokal epi rapid.",
+          "exercises": [
+            {
+              "id": "flutter-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa setState() fè?",
+              "choices": [
+                "A) Li sove done sou disk",
+                "B) Li di Flutter eta a chanje epi UI a dwe rebati",
+                "C) Li fèmen app lan",
+                "D) Li kreye yon nouvo ekran"
+              ],
+              "accepted": [
+                "b",
+                "rebati ui",
+                "di flutter eta a chanje"
+              ],
+              "correct_ht": "B) Li di Flutter eta a chanje epi UI a dwe rebati",
+              "explanation_ht": "setState make eta a sal epi pwovoke yon nouvo apèl build() ak nouvo valè yo."
+            },
+            {
+              "id": "flutter-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou ogmante kontè a: setState(() { kontè___; });",
+              "accepted": [
+                "++"
+              ],
+              "correct_ht": "++",
+              "explanation_ht": "kontè++ ogmante valè a; setState asire UI a mete ajou."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n2-l04-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            },
+            {
+              "id": "flutter-n2-l04-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n2-l05",
+          "title_ht": "ListView: lis ki defile",
+          "body_ht": "Pou lis long (kontak, pwodwi, mesaj), itilize ListView.builder — li bati sèlman atik ki vizib sou ekran (\"lazy\"), kidonk menm 10,000 atik pa ralanti app lan. De pwop obligatwa: itemCount (konbyen atik total) ak itemBuilder (yon fonksyon ki resevwa kontèks ak endèks i, epi ki retoune widget pou atik i a). Egzanp lan montre yon lis fwi ak ListTile (liy estanda ak tit). Pou separe atik yo ak liy, gen ListView.separated. Pou lis orizontal: scrollDirection: Axis.horizontal. Atansyon: pa mete ListView andedan yon Column san wotè limite — ou jwenn erè \"unbounded height\"; anvlòp li nan Expanded. Chak atik lis ou wè nan app reyèl (fil nouvèl, katalòg) se ListView.builder dèyè. ListTile gen pwop itil: leading (ikon agoch), title (tèks prensipal), subtitle (ti tèks anba), trailing (adwat, tankou yon flèch), ak onTap pou klike. Avèk onTap, chak liy vin yon bouton ki mennen nan yon ekran detay — se modèl navigasyon lis klasik la. [[CHECK:flutter-n2-l05-c1]] [[CHECK:flutter-n2-l05-c2]]",
+          "code": "final fwi = ['Mango', 'Bannann', 'Zoranji'];\n\nListView.builder(\n  itemCount: fwi.length,\n  itemBuilder: (context, i) {\n    return ListTile(\n      leading: Icon(Icons.restaurant),\n      title: Text(fwi[i]),\n    );\n  },\n)",
+          "code_lang": "dart",
+          "expert_note_ht": "Bay chak atik yon Key inik lè lis la ka chanje lòd oswa efase — sinon eta atik yo (case, seleksyon) mele.",
+          "exercises": [
+            {
+              "id": "flutter-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki pwop ListView.builder di konbyen atik pou montre?",
+              "choices": [
+                "A) itemBuilder",
+                "B) itemCount",
+                "C) length",
+                "D) total"
+              ],
+              "accepted": [
+                "b",
+                "itemcount",
+                "itemCount"
+              ],
+              "correct_ht": "B) itemCount",
+              "explanation_ht": "itemCount fikse kantite atik; itemBuilder bati widget chak atik la."
+            },
+            {
+              "id": "flutter-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete: ListView.builder( itemCount: lis.length, ___: (ctx, i) => Text(lis[i]) )",
+              "accepted": [
+                "itembuilder"
+              ],
+              "correct_ht": "itemBuilder",
+              "explanation_ht": "itemBuilder se fonksyon ki bati widget pou chak endèks i."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n2-l05-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "flutter-n2-l05-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n2-l06",
+          "title_ht": "Navigasyon: ale soti yon ekran nan yon lòt",
+          "body_ht": "Flutter jere ekran ak yon \"pil\" (stack): nouvo ekran an pouse sou pil la, bouton retounen an retire l. Pou ale nan yon nouvo ekran: Navigator.push(context, MaterialPageRoute(builder: (context) => PajDetay())) — push mete PajDetay sou pil la ak yon animasyon. Pou tounen: Navigator.pop(context) — li retire ekran aktyèl la. Ou ka voye done nan konstrukteur a: PajDetay(non: 'Ana') — ekran an deklare final String non. Pou ranplase ekran aktyèl la (tankou apre koneksyon, pou itilizatè pa ka tounen): pushReplacement. Pou efase tout pil la epi rekòmanse (dekooneksyon): pushAndRemoveUntil. Navigator 1.0 sa a sifi pou pifò app; nan nivo ekspè n ap wè go_router ki pi pwisan. Sonje: context se \"adrès\" ou nan pyebwa widget la — se li ki di Navigator ki pil pou itilize. Wout yo ka gen non tou ak Navigator.pushNamed si ou deklare yo nan MaterialApp(routes: {...}) — pratik pou app gwo. Men pou kòmanse, push ak MaterialPageRoute dirèk pi senp epi pi klè. [[CHECK:flutter-n2-l06-c1]] [[CHECK:flutter-n2-l06-c2]]",
+          "code": "ElevatedButton(\n  onPressed: () {\n    Navigator.push(\n      context,\n      MaterialPageRoute(builder: (context) => PajDetay(non: 'Ana')),\n    );\n  },\n  child: Text('Wè detay'),\n)",
+          "code_lang": "dart",
+          "expert_note_ht": "Pa kenbe BuildContext apre yon await san tcheke mounted — widget la ka detwi pandan tann lan, epi Navigator ap kraze.",
+          "exercises": [
+            {
+              "id": "flutter-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki metòd Navigator ale sou yon nouvo ekran?",
+              "choices": [
+                "A) pop",
+                "B) push",
+                "C) go",
+                "D) open"
+              ],
+              "accepted": [
+                "b",
+                "push"
+              ],
+              "correct_ht": "B) push",
+              "explanation_ht": "push mete nouvo wout la sou pil navigasyon an; pop retire l pou tounen."
+            },
+            {
+              "id": "flutter-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou ale sou nouvo ekran an: Navigator.___(context, MaterialPageRoute(builder: (c) => PajDetay()));",
+              "accepted": [
+                "push"
+              ],
+              "correct_ht": "push",
+              "explanation_ht": "Navigator.push pouse PajDetay sou pil la ak animasyon tranzisyon."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n2-l06-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Navigasyon nan yon app se:",
+              "accepted": [
+                "a",
+                "pase soti nan yon ekran nan yon lòt"
+              ],
+              "correct_ht": "A) Pase soti nan yon ekran nan yon lòt",
+              "explanation_ht": "Chak ekran se yon chanm; navigasyon se pòt yo.",
+              "choices": [
+                "A) Pase soti nan yon ekran nan yon lòt",
+                "B) Kondwi yon machin",
+                "C) Vole yon avyon",
+                "D) Naje"
+              ]
+            },
+            {
+              "id": "flutter-n2-l06-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon pil (stack) mache:",
+              "accepted": [
+                "a",
+                "dènye antre, premye sòti — tankou yon pil asyèt"
+              ],
+              "correct_ht": "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+              "explanation_ht": "Ou pran toujou asyèt ki anwo a.",
+              "choices": [
+                "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                "B) Premye antre, premye sòti",
+                "C) O aza",
+                "D) Pa lòd alfabetik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "flutter-n3-l07",
+          "title_ht": "Future ak apèl API",
+          "body_ht": "Pifò app pale ak yon sèvè. Nan Dart, yon operasyon ki pran tan retoune yon Future — yon pwomès yon valè ap vini pita. Ou make fonksyon an async epi ou tann ak await: final r = await http.get(url). Pwogram nan sispann la san bloke UI a, epi li reprann lè repons lan rive. Pou montre Future nan UI, gen FutureBuilder: ou bay li future a, epi builder li resevwa yon \"snapshot\" ki di eta a. ConnectionState.waiting (montre CircularProgressIndicator), hasError (montre erè), hasData (montre done). Egzanp lan chaje yon itilizatè. Bon pratik: pa kreye Future a andedan build() (li ta re-kouri chak rebati!) — kreye l nan initState epi sere l nan yon varyab. Avèk Future + FutureBuilder, app ou a konekte ak API reyèl yo. Pou POST done (voye fòm bay sèvè), itilize http.post ak headers {'Content-Type': 'application/json'} ak body: jsonEncode(mapa). Toujou anvlòp apèl rezo nan try/catch pou jere pèt koneksyon san kraze app lan. [[CHECK:flutter-n3-l07-c1]] [[CHECK:flutter-n3-l07-c2]]",
+          "code": "import 'package:http/http.dart' as http;\n\nFuture<String> chajeNon() async {\n  final r = await http.get(Uri.parse('https://api.example.com/yo'));\n  return r.body;\n}\n\nFutureBuilder<String>(\n  future: chajeNon(),\n  builder: (context, snapshot) {\n    if (snapshot.connectionState == ConnectionState.waiting)\n      return CircularProgressIndicator();\n    if (snapshot.hasError) return Text('Erè!');\n    return Text('Non: ${snapshot.data}');\n  },\n)",
+          "code_lang": "dart",
+          "expert_note_ht": "Dekode JSON ak jsonDecode epi konvèti nan klas tip-ansekirite (fromJson) — pa pwonmennen Map<String, dynamic> toupatou nan UI a.",
+          "exercises": [
+            {
+              "id": "flutter-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki widget Flutter jere afichaj yon Future (chajman / erè / done)?",
+              "choices": [
+                "A) StreamBuilder",
+                "B) FutureBuilder",
+                "C) AsyncView",
+                "D) LoaderWidget"
+              ],
+              "accepted": [
+                "b",
+                "futurebuilder"
+              ],
+              "correct_ht": "B) FutureBuilder",
+              "explanation_ht": "FutureBuilder koute Future a epi rebati UI selon eta snapshot la."
+            },
+            {
+              "id": "flutter-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete apèl HTTP a: final r = await http.___(Uri.parse(url));",
+              "accepted": [
+                "get"
+              ],
+              "correct_ht": "get",
+              "explanation_ht": "http.get voye yon rekèt GET epi retoune yon Future<Response>."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n3-l07-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            },
+            {
+              "id": "flutter-n3-l07-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon Promise se tankou:",
+              "accepted": [
+                "a",
+                "yon tikè: 'm ap pote rezilta a ba ou pita'"
+              ],
+              "correct_ht": "A) Yon tikè: 'm ap pote rezilta a ba ou pita'",
+              "explanation_ht": "Ou pa bloke ap tann; ou kontinye, epi rezilta a ap vini.",
+              "choices": [
+                "A) Yon tikè: 'm ap pote rezilta a ba ou pita'",
+                "B) Yon manti",
+                "C) Yon erè",
+                "D) Yon fichye"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n3-l08",
+          "title_ht": "Fòm ak validasyon",
+          "body_ht": "Anvan pwofesè a aksepte devwa w, li verifye ou reponn tout kesyon yo. Validasyon se verifye enfòmasyon yo kòrèk anvan ou aksepte yo.\n\n [[CHECK:flutter-n3-l08-c1]]\n\nFòm yo toupatou: enskripsyon, koneksyon, pèman. Nan Flutter, ou anvlòp chan yo nan yon widget Form ak yon kle global: final kle = GlobalKey<FormState>(). Chak chan se yon TextFormField ak yon fonksyon validator: (valè) { if (valè == null || valè.isEmpty) return 'Chan obligatwa'. Return null; } — si validator retoune yon tèks, se yon ERÈ ki montre an wouj; si li retoune null, chan an VALID. Pou valide tout fòm nan: if (kle.currentState!.validate()) { ...voye... }. Pwop itil: obscureText: true pou modpas, keyboardType: TextInputType.emailAddress pou bon klavye, decoration: InputDecoration(labelText: 'Imèl'). Bon UX: valide lè itilizatè a peze \"Voye\" (pa pandan l ap tape), epi konsantre premye chan ki gen erè. Yon fòm byen valide se premye liy defans kont move done. Pou konsantre otomatikman sou premye chan an lè ekran an ouvri, bay TextFormField yon autofocus: true. Epi pou fèmen klavye a lè itilizatè a peze \"Voye\", rele FocusScope.of(context).unfocus() — ti detay ki fè app lan santi poli. [[CHECK:flutter-n3-l08-c2]]",
+          "code": "final kle = GlobalKey<FormState>();\n\nForm(\n  key: kle,\n  child: Column(\n    children: [\n      TextFormField(\n        decoration: InputDecoration(labelText: 'Imèl'),\n        keyboardType: TextInputType.emailAddress,\n        validator: (v) {\n          if (v == null || v.isEmpty) return 'Imèl obligatwa';\n          if (!v.contains('@')) return 'Imèl pa valid';\n          return null;\n        },\n      ),\n      ElevatedButton(\n        onPressed: () { if (kle.currentState!.validate()) print('OK'); },\n        child: Text('Voye'),\n      ),\n    ],\n  ),\n)",
+          "code_lang": "dart",
+          "expert_note_ht": "Pou fòm konplèks (plizyè etap, règ kwaze), konsidere pakè tankou reactive_forms olye valide manyèlman — mwens kòd, mwens pinèz.",
+          "exercises": [
+            {
+              "id": "flutter-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa yon validator dwe retoune lè chan an VALID?",
+              "choices": [
+                "A) true",
+                "B) null",
+                "C) 'OK'",
+                "D) Yon tèks vid"
+              ],
+              "accepted": [
+                "b",
+                "null"
+              ],
+              "correct_ht": "B) null",
+              "explanation_ht": "Konvansyon Flutter: retoune yon String = erè; retoune null = chan valid."
+            },
+            {
+              "id": "flutter-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou valide tout fòm nan: if (kle.currentState!.___()) { voye(); }",
+              "accepted": [
+                "validate"
+              ],
+              "correct_ht": "validate",
+              "explanation_ht": "validate() kouri tout validator chan yo epi retoune true si tout valid."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n3-l08-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Validasyon fòmilè sèvi pou:",
+              "accepted": [
+                "a",
+                "verifye enfòmasyon yo kòrèk anvan ou aksepte yo"
+              ],
+              "correct_ht": "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+              "explanation_ht": "Imèl vid? Modpas twò kout? Refize anvan ou sere.",
+              "choices": [
+                "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+                "B) Fè paj la bèl",
+                "C) Jwe mizik",
+                "D) Voye spam"
+              ]
+            },
+            {
+              "id": "flutter-n3-l08-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n3-l09",
+          "title_ht": "Jesyon eta ak Provider",
+          "body_ht": "Sonje ki paj ou te ye nan liv ou a: ou mete yon makè ladan l pou ou pa pèdi plas ou. 'Eta' yon app se makè sa a — li sonje kote itilizatè a ye ak sa l ap fè.\n\n [[CHECK:flutter-n3-l09-c1]]\n\nsetState sifi pou yon ekran, men lè eta a pataje ant plizyè ekran (panye acha, itilizatè konekte), ou bezwen jesyon eta global. Provider (pake provider) se solisyon ofisyèl ki pi senp. Twa etap: 1) Kreye yon klas ki etann ChangeNotifier epi kenbe eta a; lè eta chanje, rele notifyListeners(). 2) Bay li nan rasin app lan: ChangeNotifierProvider(create: (_) => Magazen()). 3) Koute l nan UI: Consumer<Magazen>(builder: (context, magazen, _) => Text('${magazen.total}')) — chak fwa notifyListeners rele, Consumer rebati. Oswa li san koute: context.read<Magazen>().ajoute() andedan yon onPressed. Egzanp lan montre yon kontè pataje. Règ: separe eta pa sijè (yon Provider pa modèl), epi pa mete lojik UI nan ChangeNotifier — li se pou done sèlman. Provider se pòt antre nan achitekti pwòp. MultiProvider pèmèt ou deklare plizyè Provider youn anba lòt pwòpman nan rasin app lan san piramid. Lè app lan grandi, separe chak modèl nan pwòp fichye pa l — achitekti pwòp kòmanse ak òganizasyon fichye. [[CHECK:flutter-n3-l09-c2]]",
+          "code": "class KontèModèl extends ChangeNotifier {\n  int _valè = 0;\n  int get valè => _valè;\n  void metePlis() { _valè++; notifyListeners(); }\n}\n\n// nan main:\n// ChangeNotifierProvider(create: (_) => KontèModèl(), child: MonApp())\n\nConsumer<KontèModèl>(\n  builder: (context, modèl, _) => Text('Valè: ${modèl.valè}'),\n)",
+          "code_lang": "dart",
+          "expert_note_ht": "Itilize context.read pou aksyon (andedan onPressed) ak context.watch/Consumer pou lekti nan build — melanje yo lakoz rebati initil.",
+          "exercises": [
+            {
+              "id": "flutter-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa notifyListeners() fè nan yon ChangeNotifier?",
+              "choices": [
+                "A) Li sove sou disk",
+                "B) Li avèti tout widget k ap koute yo pou yo rebati",
+                "C) Li fèmen app lan",
+                "D) Li voye yon notifikasyon telefòn"
+              ],
+              "accepted": [
+                "b",
+                "aveti widget",
+                "avèti widget"
+              ],
+              "correct_ht": "B) Li avèti tout widget k ap koute yo pou yo rebati",
+              "explanation_ht": "notifyListeners deklanche rebati tout Consumer/watch k ap obsève modèl la."
+            },
+            {
+              "id": "flutter-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon modèl la: class Magazen extends ___ { ... }",
+              "accepted": [
+                "changenotifier"
+              ],
+              "correct_ht": "ChangeNotifier",
+              "explanation_ht": "ChangeNotifier bay mekanis notifyListeners pou jesyon eta."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n3-l09-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            },
+            {
+              "id": "flutter-n3-l09-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "flutter-n4-l10",
+          "title_ht": "Isolates: kalkil lou san bloke UI",
+          "body_ht": "Dart se \"single-threaded\": tout kòd ou kouri sou yon sèl thread. Si ou fè yon kalkil lou (trete yon gwo imaj, analize 100,000 liy) sou thread sa a, UI a JELE — itilizatè a pa ka menm defile. Solisyon: isolates, ki se tankou thread separe ak pwòp memwa yo. Fason pi senp pou itilize yo: fonksyon compute(). Ou bay li yon fonksyon TOP-LEVEL (pa metòd klas!) ak yon agiman: final rezilta = await compute(kalkileLou, done). Flutter kouri kalkileLou sou yon isolate an background, epi li retoune rezilta a san UI pa janm sote. Règ enpòtan: fonksyon an dwe top-level oswa static (isolate pa ka wè eta klas ou), epi done yo vwayaje pa kopi (pa referans). Pou kominikasyon kontinyèl ant isolates, gen Isolate.spawn ak SendPort/ReceivePort — men compute sifi pou 95% ka yo. Metrize sa a, epi app ou yo ap rete flid menm ak travay lou. Sonje: done yo voye bay isolate a dwe senp (nonm, tèks, lis) — yo kopye, pa pataje; epi fonksyon an dwe top-level. [[CHECK:flutter-n4-l10-c1]] [[CHECK:flutter-n4-l10-c2]]",
+          "code": "// Fonksyon TOP-LEVEL (deyò tout klas!)\nint kalkileLou(int n) {\n  int total = 0;\n  for (int i = 0; i < n; i++) total += i;\n  return total;\n}\n\n// Andedan widget la:\nElevatedButton(\n  onPressed: () async {\n    final rezilta = await compute(kalkileLou, 100000000);\n    print('Rezilta: $rezilta');\n  },\n  child: Text('Kalkile'),\n)",
+          "code_lang": "dart",
+          "expert_note_ht": "Mezire anvan ou optimize: DevTools montre si se vre UI thread ki bloke; anpil \"lentè\" se rebati initil, pa kalkil.",
+          "exercises": [
+            {
+              "id": "flutter-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Poukisa ou itilize yon isolate (compute) pou yon kalkil lou?",
+              "choices": [
+                "A) Pou ekonomize batri",
+                "B) Pou kalkil la pa bloke UI thread epi ekran an rete flid",
+                "C) Pou kòd la pi kout",
+                "D) Pou aksè entènèt"
+              ],
+              "accepted": [
+                "b",
+                "pa bloke ui",
+                "ui rete flid"
+              ],
+              "correct_ht": "B) Pou kalkil la pa bloke UI thread epi ekran an rete flid",
+              "explanation_ht": "compute deplase travay lou sou yon isolate separe; UI thread rete lib pou rann."
+            },
+            {
+              "id": "flutter-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou kouri sou isolate: final r = await ___(kalkileLou, done);",
+              "accepted": [
+                "compute"
+              ],
+              "correct_ht": "compute",
+              "explanation_ht": "compute(fonksyon, agiman) egzekite fonksyon an sou yon isolate background."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n4-l10-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "rezilta: $rezilta",
+                "'rezilta: $rezilta'"
+              ],
+              "correct_ht": "Rezilta: $rezilta",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Rezilta: $rezilta »."
+            },
+            {
+              "id": "flutter-n4-l10-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n4-l11",
+          "title_ht": "Custom painters: desine lib",
+          "body_ht": "Lè widget estanda yo pa sifi (grafik, jwèt 2D, vizyalizasyon done), ou desine dirèkteman ak CustomPainter. Ou kreye yon klas ki etann CustomPainter epi ou aplike metòd paint(Canvas canvas, Size size): canvas la se \"papye\" ou, epi ou desine ak objè Paint (koulè, stil). Egzanp: canvas.drawCircle(pwen sant, reyon, penti) desine yon sèk. Ou montre painter a ak widget CustomPaint(painter: MonDesen()). Dezyèm metòd obligatwa: shouldRepaint — li di Flutter si li dwe re-desine (retoune true si done chanje, false sinon pou ekonomize). Ou ka desine liy (drawLine), rektang (drawRect), chemen konplèks (Path), tèks, ak imaj. Avèk CustomPainter + animasyon, ou ka bati tablo bous, jwèt, endikatè pwogrè inik — bagay ki fè app ou diferan de tout lòt. Path pèmèt ou desine fòm konplèks: moveTo, lineTo, quadraticBezierTo pou koub lis. Avèk sa ou ka desine logo, ikon koutim, ak grafik nenpòt fòm. Konbine ak AnimationController, fòm ou yo ka deplase epi reyaji ak touche itilizatè a — se baz jwèt 2D ak vizyalizasyon done entèraktif. [[CHECK:flutter-n4-l11-c1]] [[CHECK:flutter-n4-l11-c2]]",
+          "code": "class SèkDesen extends CustomPainter {\n  @override\n  void paint(Canvas canvas, Size size) {\n    final penti = Paint()..color = Colors.blue;\n    final sant = Offset(size.width / 2, size.height / 2);\n    canvas.drawCircle(sant, 50, penti);\n  }\n\n  @override\n  bool shouldRepaint(covariant CustomPainter old) => false;\n}\n\n// Itilizasyon:\n// CustomPaint(size: Size(200, 200), painter: SèkDesen())",
+          "code_lang": "dart",
+          "expert_note_ht": "Kache objè Paint kòm final nan konstrukteur a olye kreye yo nan paint() — paint ka kouri 60 fwa pa segonn.",
+          "exercises": [
+            {
+              "id": "flutter-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki metòd CustomPainter egzekite desen an vre?",
+              "choices": [
+                "A) draw()",
+                "B) paint()",
+                "C) render()",
+                "D) build()"
+              ],
+              "accepted": [
+                "b",
+                "paint"
+              ],
+              "correct_ht": "B) paint()",
+              "explanation_ht": "paint(Canvas, Size) se kote ou rele drawCircle, drawLine, elatriye."
+            },
+            {
+              "id": "flutter-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon an: class Desen extends ___ { ... }",
+              "accepted": [
+                "custompainter"
+              ],
+              "correct_ht": "CustomPainter",
+              "explanation_ht": "Ou etann CustomPainter epi ou aplike paint ak shouldRepaint."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n4-l11-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "flutter-n4-l11-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flutter-n4-l12",
+          "title_ht": "go_router ak piblikasyon",
+          "body_ht": "Pou navigasyon nivo ekspè, pake go_router ranplase Navigator manyèl: ou deklare tout wout yo yon sèl kote kòm chemen URL: GoRouter(routes: [GoRoute(path: '/', builder: ...Akeyi), GoRoute(path: '/detay/:id', builder: ...)]). Pou navige: context.go('/detay/5') — epi ekran an li paramèt la: state.pathParameters['id']. Avantaj: lyen pwofon (deep links) mache otomatikman, bouton \"retounen\" navigatè web la mache sou Flutter web, epi wout yo tip-ansekirite. Pou PIBLIYE: sou Android, kouri flutter build apk --release (fichye enstalab) oswa flutter build appbundle (pou Play Store — fòma rekòmande). Sou iOS, flutter build ipa (bezwen Mac + kont Apple Developer $99/ane). Anvan ou bati: mete non, ikon (flutter_launcher_icons), ak nimewo vèsyon nan pubspec.yaml; teste an mòd release (flutter run --release) paske pinèz kache parèt sèlman la. Pibliye se dènye etap vwayaj la — apre sa, ou se yon devlopè Flutter konplè! Pou web, flutter build web bay fichye pou mete sou nenpòt sèvè — menm kòd Dart la kouri nan navigatè! Se pwomès \"ekri yon fwa, kouri tout kote\" Flutter la. [[CHECK:flutter-n4-l12-c1]] [[CHECK:flutter-n4-l12-c2]]",
+          "code": "flutter build apk --release\nflutter build appbundle --release\n# iOS (sou Mac):\nflutter build ipa --release",
+          "code_lang": "dart",
+          "expert_note_ht": "Siyen AAB ou ak pwòp kle ou epi sove keystore la byen lwen — pèdi kle siyati a vle di ou pa ka janm mete app lan ajou ankò.",
+          "exercises": [
+            {
+              "id": "flutter-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kòmand bati yon APK Android pare pou distribisyon?",
+              "choices": [
+                "A) flutter run apk",
+                "B) flutter build apk --release",
+                "C) dart compile apk",
+                "D) flutter make apk"
+              ],
+              "accepted": [
+                "b",
+                "flutter build apk",
+                "flutter build apk --release"
+              ],
+              "correct_ht": "B) flutter build apk --release",
+              "explanation_ht": "flutter build apk --release konpile vèsyon optimize siyab pou distribisyon."
+            },
+            {
+              "id": "flutter-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kòmand bati a: ___ build apk --release",
+              "accepted": [
+                "flutter"
+              ],
+              "correct_ht": "flutter",
+              "explanation_ht": "Se zouti flutter CLI ki òkestre tout pwosesis bati a."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "flutter-n4-l12-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Anvan ou pibliye yon app sou yon Store, ou dwe:",
+              "accepted": [
+                "a",
+                "teste l byen, siyen l, epi respekte règ boutik la"
+              ],
+              "correct_ht": "A) Teste l byen, siyen l, epi respekte règ boutik la",
+              "explanation_ht": "Chak Store gen pwosesis review: prepare w depi premye jou.",
+              "choices": [
+                "A) Teste l byen, siyen l, epi respekte règ boutik la",
+                "B) Efase kòd la",
+                "C) Vann telefòn ou",
+                "D) Chanje non w"
+              ]
+            },
+            {
+              "id": "flutter-n4-l12-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Navigasyon nan yon app se:",
+              "accepted": [
+                "a",
+                "pase soti nan yon ekran nan yon lòt"
+              ],
+              "correct_ht": "A) Pase soti nan yon ekran nan yon lòt",
+              "explanation_ht": "Chak ekran se yon chanm; navigasyon se pòt yo.",
+              "choices": [
+                "A) Pase soti nan yon ekran nan yon lòt",
+                "B) Kondwi yon machin",
+                "C) Vole yon avyon",
+                "D) Naje"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,931 @@
+{
+  "id": "html",
+  "name": "HTML",
+  "category_ht": "Web (devan)",
+  "description_ht": "HTML se langaj ki bay estrikti a tout paj entènèt: tit, paragraf, imaj, lyen ak fòmilè. Se fondasyon tout sit wèb.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "html-n1-l01",
+          "title_ht": "Premye paj HTML ou",
+          "body_ht": "HTML (HyperText Markup Language) se langaj ki bay estrikti a tout paj entènèt. Se li ki di navigatè a: isit la se yon tit, isit la se yon paragraf, isit la se yon imaj. San HTML, pa gen paj ditou — se fondasyon an. Yon dokiman HTML kòmanse ak <!DOCTYPE html> ki anonse se HTML5 n ap itilize. Apre sa, tout bagay chita andedan eleman <html>. Eleman sa a gen de pati: <head> pou enfòmasyon sou paj la (tit la, kalite karaktè yo), ak <body> pou tout sa vizitè a wè. Eleman yo ekri ak baliz: yon baliz ouvè tankou <p> ak yon baliz fèmen tankou </p>, epi kontni an chita nan mitan. Eleman <title> ki nan <head> la se tèks ki parèt nan onglè navigatè a. Lè w konprann estrikti debaz sa a. Dokiman, tèt, kò — ou ka bati nenpòt paj, paske tout paj konplèks yo se menm brik senp sa yo ki anpile youn sou lòt. [[CHECK:html-n1-l01-c1]] [[CHECK:html-n1-l01-c2]]",
+          "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Premye paj mwen</title>\n</head>\n<body>\n  <p>Bonjou, mond lan!</p>\n</body>\n</html>",
+          "code_lang": "html",
+          "expert_note_ht": "Toujou mete lang paj la ak <html lang=\"ht\"> — sa ede lektè ekran ak motè rechèch konprann kontni w la.",
+          "exercises": [
+            {
+              "id": "html-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki eleman ki gen tout kontni vizitè a wè sou paj la?",
+              "choices": [
+                "A) <head>",
+                "B) <body>",
+                "C) <title>",
+                "D) <meta>"
+              ],
+              "accepted": [
+                "b",
+                "<body>",
+                "body"
+              ],
+              "correct_ht": "B) <body>",
+              "explanation_ht": "Se <body> ki gen tout sa ki parèt sou ekran an. <head> se pou enfòmasyon kache, <title> se tit onglè a sèlman."
+            },
+            {
+              "id": "html-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Ekri baliz ki fèmen yon paragraf ki ouvè ak <p>:",
+              "accepted": [
+                "</p>",
+                "p"
+              ],
+              "correct_ht": "</p>",
+              "explanation_ht": "Chak eleman ki ouvè ak <p> dwe fèmen ak </p> — ti ba oblik la di navigatè a eleman an fini."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML sèvi pou:",
+              "accepted": [
+                "a",
+                "bay estrikti paj web la: tit, paragraf, lyen, imaj"
+              ],
+              "correct_ht": "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+              "explanation_ht": "HTML = zo bwa paj la; CSS = rad la; JS = sèvo a.",
+              "choices": [
+                "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+                "B) Bay koulè yo",
+                "C) Fè kalkil konplike",
+                "D) Jere bazdone"
+              ]
+            },
+            {
+              "id": "html-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n1-l02",
+          "title_ht": "Tit ak paragraf",
+          "body_ht": "Pou òganize tèks sou yon paj, HTML ban nou sis nivo tit: <h1> pou tit prensipal la, apre <h2>, <h3>, jous <h6> pou sou-tit ki pi piti yo. Règ enpòtan: yon paj dwe gen yon sèl <h1>, tankou tit yon liv. Pa sote nivo (pa egzanp pa ale soti <h1> dirèkteman nan <h4>) paske sa konfonn moun ki itilize lektè ekran. Pou paragraf nòmal yo, nou itilize <p>. Chak <p> kòmanse sou yon nouvo liy ak yon ti espas anvan l. Si w vle kase liy andedan yon paragraf san kòmanse yon nouvo paragraf, itilize <br> — li pa bezwen baliz fèmen. Eleman <hr> trase yon liy orizontal pou separe seksyon yo. Tèks ou ka mete an gra ak <strong> (ki vle di enpòtan tou) epi an italik ak <em> (ki vle di anfaz). Pa itilize <b> ak <i> pou dekorasyon sèlman — <strong> ak <em> bay sans tou, pa jis aparans. [[CHECK:html-n1-l02-c1]] [[CHECK:html-n1-l02-c2]]",
+          "code": "<h1>Resèt diri kole</h1>\n<h2>Engredyan yo</h2>\n<p>Ou bezwen <strong>diri</strong>, <em>pwa</em> ak epis.</p>\n<hr>\n<h2>Preparasyon</h2>\n<p>Mete dlo sou dife.<br>Ajoute diri a.</p>",
+          "code_lang": "html",
+          "expert_note_ht": "Yerachi tit yo (h1 → h2 → h3) se youn nan siyal SEO ki pi fò: motè rechèch li yo pou konprann sijè paj la.",
+          "exercises": [
+            {
+              "id": "html-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Konbyen <h1> yon paj ta dwe genyen?",
+              "choices": [
+                "A) Otank ou vle",
+                "B) Yon sèl",
+                "C) Sis",
+                "D) Okenn — se <title> ki konte"
+              ],
+              "accepted": [
+                "b",
+                "yon sèl",
+                "yon sel"
+              ],
+              "correct_ht": "B) Yon sèl",
+              "explanation_ht": "Yon paj dwe gen yon sèl <h1> tankou tit prensipal la; sa ede SEO ak aksesibilite."
+            },
+            {
+              "id": "html-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Ekri yon tit nivo 2 ki di \"Byenveni\":",
+              "accepted": [
+                "<h2>byenveni</h2>",
+                "<h2>Byenveni</h2>"
+              ],
+              "correct_ht": "<h2>Byenveni</h2>",
+              "explanation_ht": "Tit nivo 2 ekri <h2>Byenveni</h2> — baliz ouvè, tèks la, baliz fèmen."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n1-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML sèvi pou:",
+              "accepted": [
+                "a",
+                "bay estrikti paj web la: tit, paragraf, lyen, imaj"
+              ],
+              "correct_ht": "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+              "explanation_ht": "HTML = zo bwa paj la; CSS = rad la; JS = sèvo a.",
+              "choices": [
+                "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+                "B) Bay koulè yo",
+                "C) Fè kalkil konplike",
+                "D) Jere bazdone"
+              ]
+            },
+            {
+              "id": "html-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n1-l03",
+          "title_ht": "Lyen ak imaj",
+          "body_ht": "Entènèt la rele \"wèb\" paske paj yo konekte youn ak lòt tankou fil arenye — epi se eleman <a> (anchor) ki fè koneksyon sa yo. Atribi href la di ki kote lyen an mennen: <a href=\"https://medya360.info\">Vizite sit la</a>. Tèks ki nan mitan an se sa vizitè a klike. Pou lyen andedan pwòp sit ou a, itilize chemen relatif tankou href=\"/kontak.html\". Pou louvri lyen an nan yon nouvo onglè, ajoute target=\"_blank\". Pou imaj, nou itilize <img> ki pa gen baliz fèmen. De atribi obligatwa: src (chemen imaj la) ak alt (deskripsyon tèks imaj la). Atribi alt la esansyèl: lektè ekran li l pou moun ki pa ka wè, epi li parèt si imaj la pa chaje. Pa janm kite alt vid sou yon imaj ki gen sans — ekri sa imaj la montre vre. Ou ka mete dimansyon ak width ak height pou paj la pa sote pandan imaj la ap chaje, sa amelyore vitès afichaj la anpil. [[CHECK:html-n1-l03-c1]] [[CHECK:html-n1-l03-c2]]",
+          "code": "<a href=\"https://medya360.info\" target=\"_blank\">Vizite Medya 360</a>\n<img src=\"chat.jpg\" alt=\"Yon ti chat blan k ap dòmi\" width=\"400\" height=\"300\">",
+          "code_lang": "html",
+          "expert_note_ht": "Lè w itilize target=\"_blank\", ajoute rel=\"noopener\" tou — sa pwoteje paj ou kont atak sekirite via onglè a.",
+          "exercises": [
+            {
+              "id": "html-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki atribi ki di ki kote yon lyen <a> mennen?",
+              "choices": [
+                "A) src",
+                "B) link",
+                "C) href",
+                "D) url"
+              ],
+              "accepted": [
+                "c",
+                "href"
+              ],
+              "correct_ht": "C) href",
+              "explanation_ht": "href (hypertext reference) se atribi ki gen adrès destinasyon lyen an. src se pou imaj ak script."
+            },
+            {
+              "id": "html-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Ekri atribi alt pou yon imaj ki montre yon plaj: alt=\"...\" (bay valè a sèlman)",
+              "accepted": [
+                "yon plaj",
+                "plaj",
+                "yon bel plaj",
+                "bèl plaj"
+              ],
+              "correct_ht": "alt=\"yon plaj\"",
+              "explanation_ht": "Atribi alt la dwe dekri sa imaj la montre, pa egzanp alt=\"yon plaj\"."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "html-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML sèvi pou:",
+              "accepted": [
+                "a",
+                "bay estrikti paj web la: tit, paragraf, lyen, imaj"
+              ],
+              "correct_ht": "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+              "explanation_ht": "HTML = zo bwa paj la; CSS = rad la; JS = sèvo a.",
+              "choices": [
+                "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+                "B) Bay koulè yo",
+                "C) Fè kalkil konplike",
+                "D) Jere bazdone"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "html-n2-l01",
+          "title_ht": "Lis ak tablo",
+          "body_ht": "Lè w gen plizyè bagay ki fè pati yon menm gwoup, HTML gen eleman espesyal pou lis. <ul> (unordered list) fè yon lis ak pwen won, <ol> (ordered list) fè yon lis ak nimewo, epi chak atik chita nan yon <li>. Itilize <ul> pou bagay ki pa gen lòd (engredyan) ak <ol> pou etap ki dwe swiv yon lòd (resèt). Ou ka mete lis andedan lis pou sou-kategori. Pou done ki gen ranje ak kolòn — pri, orè, estatistik — itilize <table>. Yon tablo gen <tr> pou chak ranje, <th> pou selil tèt kolòn yo (an gra otomatikman) ak <td> pou done nòmal yo. Mete tit tablo a nan <caption> anwo a. Pou aksesibilite, ajoute scope=\"col\" sou <th> yo pou lektè ekran konnen ki kolòn chak done ye. Pa itilize tablo pou fè layout paj la — se pou done vre sèlman; layout fèt ak CSS. Egzèsis: kreye yon lis makèt ak pri chak atik nan yon tablo pou dwèt ou abitye ak baliz yo. [[CHECK:html-n2-l01-c1]] [[CHECK:html-n2-l01-c2]]",
+          "code": "<h2>Engredyan</h2>\n<ul>\n  <li>Diri</li>\n  <li>Pwa wouj</li>\n  <li>Epis</li>\n</ul>\n<table>\n  <caption>Pri mache</caption>\n  <tr><th scope=\"col\">Pwodwi</th><th scope=\"col\">Pri</th></tr>\n  <tr><td>Diri (mamit)</td><td>350 Gdes</td></tr>\n</table>",
+          "code_lang": "html",
+          "expert_note_ht": "Pou gwo tablo, separe tèt la nan <thead> ak kò a nan <tbody> — sa ede enpresyon ak lektè ekran.",
+          "exercises": [
+            {
+              "id": "html-n2-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki eleman ki fè yon lis ak nimewo (1, 2, 3)?",
+              "choices": [
+                "A) <ul>",
+                "B) <list>",
+                "C) <ol>",
+                "D) <nl>"
+              ],
+              "accepted": [
+                "c",
+                "<ol>",
+                "ol"
+              ],
+              "correct_ht": "C) <ol>",
+              "explanation_ht": "<ol> (ordered list) nimewote atik yo otomatikman; <ul> mete pwen won san lòd."
+            },
+            {
+              "id": "html-n2-l01-e2",
+              "type": "code",
+              "prompt_ht": "Ekri baliz pou yon atik nan yon lis:",
+              "accepted": [
+                "<li></li>",
+                "<li>",
+                "li"
+              ],
+              "correct_ht": "<li></li>",
+              "explanation_ht": "Chak atik nan yon lis chita nan yon eleman <li> (list item)."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n2-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "html-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML sèvi pou:",
+              "accepted": [
+                "a",
+                "bay estrikti paj web la: tit, paragraf, lyen, imaj"
+              ],
+              "correct_ht": "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+              "explanation_ht": "HTML = zo bwa paj la; CSS = rad la; JS = sèvo a.",
+              "choices": [
+                "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+                "B) Bay koulè yo",
+                "C) Fè kalkil konplike",
+                "D) Jere bazdone"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n2-l02",
+          "title_ht": "Fòmilè debaz",
+          "body_ht": "Yon jounal gen tit, soutit, paragraf ak foto — chak ak plas pa yo. HTML se fason ou di navigatè a: sa a se yon tit, sa a se yon paragraf, mete foto a isit la.\n\n [[CHECK:html-n2-l02-c1]]\n\nFòmilè se fason sit yo kolekte enfòmasyon: enskripsyon, kontak, kòmann. Tout kòmanse ak eleman <form>. Andedan l, <label> dekri chak chan, epi atribi for li dwe matche ak id chan an. Konsa lè w klike sou etikèt la, kisè a ale nan chan an, epi lektè ekran konnen ki chan ki pou ki sa. Eleman <input> chanje fòm selon atribi type li: text pou tèks lib, email pou imèl (navigatè a verifye fòma a), password pou modpas (kache karaktè yo), number pou chif, tel pou telefòn, date pou dat. Atribi name la enpòtan: se non sa a sèvè a ap resevwa ak valè a. Atribi placeholder montre yon egzanp andedan chan an. Bouton voye a se <button type=\"submit\">Voye</button>. Atribi action sou <form> di ki kote done yo voye, ak method=\"post\" pou done sansib. San <label> ki byen konekte, fòmilè w la pa aksesib. Bon abitid: teste fòmilè w ak klavye sèlman — si w ka ranpli l san sourit, li aksesib. [[CHECK:html-n2-l02-c2]]",
+          "code": "<form action=\"/enskri\" method=\"post\">\n  <label for=\"non\">Non konplè:</label>\n  <input type=\"text\" id=\"non\" name=\"non\" placeholder=\"Jan Pierre\">\n  <label for=\"imel\">Imèl:</label>\n  <input type=\"email\" id=\"imel\" name=\"imel\">\n  <button type=\"submit\">Enskri</button>\n</form>",
+          "code_lang": "html",
+          "expert_note_ht": "Pa janm konte sèlman sou validasyon navigatè a — toujou re-validate done yo sou sèvè a, paske validasyon bò kliyan fasil pou kontoune.",
+          "exercises": [
+            {
+              "id": "html-n2-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Poukisa atribi for sou <label> dwe matche ak id chan an?",
+              "choices": [
+                "A) Pou fè l bèl",
+                "B) Pou klike sou etikèt la mete fokis nan chan an epi ede lektè ekran",
+                "C) Se obligatwa pou fòmilè a voye",
+                "D) Pou navigatè a chaje pi vit"
+              ],
+              "accepted": [
+                "b",
+                "pou klike sou etikèt la mete fokis nan chan an epi ede lektè ekran"
+              ],
+              "correct_ht": "B) Pou klike sou etikèt la mete fokis nan chan an epi ede lektè ekran",
+              "explanation_ht": "Koneksyon label-for/id amelyore aksesibilite ak eksperyans: klike sou etikèt la aktive chan an."
+            },
+            {
+              "id": "html-n2-l02-e2",
+              "type": "code",
+              "prompt_ht": "Ekri yon chan imèl konplè (input ak type email):",
+              "accepted": [
+                "<input type=\"email\">",
+                "<input type=\"email\" />",
+                "input type=\"email\""
+              ],
+              "correct_ht": "<input type=\"email\">",
+              "explanation_ht": "type=\"email\" di navigatè a verifye fòma imèl la otomatikman."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n2-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fòmilè web se tankou:",
+              "accepted": [
+                "a",
+                "yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l"
+              ],
+              "correct_ht": "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+              "explanation_ht": "Non, imèl, modpas: ou ranpli, ou soumèt.",
+              "choices": [
+                "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+                "B) Yon jwèt",
+                "C) Yon film",
+                "D) Yon chante"
+              ]
+            },
+            {
+              "id": "html-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n2-l03",
+          "title_ht": "Eleman semantik",
+          "body_ht": "Anvan HTML5, tout moun te fè layout ak <div> sèlman — navigatè ak lektè ekran pa t konnen ki pati se tèt paj la, ki pati se kontni prensipal la. Eleman semantik yo rezoud pwoblèm sa a paske non yo di sans yo. <header> se tèt paj la oswa tèt yon seksyon (logo, tit). <nav> gen lyen navigasyon yo. <main> se kontni prensipal la — yon sèl pa paj. <section> se yon gwoup kontni ki gen yon tit, <article> se yon kontni endepandan (yon atik nouvèl, yon pòs blog) ki ta gen sans poukont li, <aside> se kontni sou kote (piblisite, lyen), epi <footer> se pye paj la (dwa otè, kontak). Lè w itilize yo, lektè ekran ka sote dirèkteman nan <main> oswa nan <nav>, epi motè rechèch konprann estrikti paj la pi byen. Ou ka toujou mete <div> andedan yo pou style, men zo paj la dwe semantik. Egzèsis: pran yon paj ou renmen epi idantifye header, nav, main ak footer li. [[CHECK:html-n2-l03-c1]] [[CHECK:html-n2-l03-c2]]",
+          "code": "<header>\n  <h1>Medya 360</h1>\n  <nav><a href=\"/\">Akèy</a> <a href=\"/blog\">Blog</a></nav>\n</header>\n<main>\n  <article>\n    <h2>Dènye nouvèl</h2>\n    <p>Kontni atik la...</p>\n  </article>\n</main>\n<footer>© 2026 Medya 360</footer>",
+          "code_lang": "html",
+          "expert_note_ht": "Yon <article> dwe gen pwòp tit li (<h2>) — si yon seksyon pa gen tit, se pwobableman yon <div> li ye, pa yon <section>.",
+          "exercises": [
+            {
+              "id": "html-n2-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki eleman ki dwe gen kontni prensipal yon paj, yon sèl fwa pa paj?",
+              "choices": [
+                "A) <section>",
+                "B) <div>",
+                "C) <main>",
+                "D) <article>"
+              ],
+              "accepted": [
+                "c",
+                "<main>",
+                "main"
+              ],
+              "correct_ht": "C) <main>",
+              "explanation_ht": "<main> make kontni prensipal la epi li parèt yon sèl fwa pa paj; lektè ekran ka sote dirèkteman ladan l."
+            },
+            {
+              "id": "html-n2-l03-e2",
+              "type": "code",
+              "prompt_ht": "Ekri baliz ouvè pou pye paj la:",
+              "accepted": [
+                "<footer>",
+                "footer"
+              ],
+              "correct_ht": "<footer>",
+              "explanation_ht": "<footer> se eleman semantik pou pye paj la (dwa otè, lyen kontak)."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n2-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML semantik (header, nav, article) ede:",
+              "accepted": [
+                "a",
+                "moun ak google konprann sans chak pati paj la"
+              ],
+              "correct_ht": "A) Moun ak Google konprann sans chak pati paj la",
+              "explanation_ht": "Yon <nav> di 'sa a se navigasyon' — pi klè pase yon <div> vid.",
+              "choices": [
+                "A) Moun ak Google konprann sans chak pati paj la",
+                "B) Fè paj la pi rapid sèlman",
+                "C) Chanje koulè yo",
+                "D) Kache tèks la"
+              ]
+            },
+            {
+              "id": "html-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Nan vèsyon 2.4.1, chif '4' la vle di:",
+              "accepted": [
+                "a",
+                "nouvo fonksyonalite (konpatib ak anvan)"
+              ],
+              "correct_ht": "A) Nouvo fonksyonalite (konpatib ak anvan)",
+              "explanation_ht": "MAJEUR.mineur.patch: mineur = nouvo fonksyon san kraze.",
+              "choices": [
+                "A) Nouvo fonksyonalite (konpatib ak anvan)",
+                "B) Chanjman ki kraze tout",
+                "C) Ti koreksyon",
+                "D) Vèsyon tès"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "html-n3-l01",
+          "title_ht": "Fòmilè avanse ak validasyon",
+          "body_ht": "Yon jounal gen tit, soutit, paragraf ak foto — chak ak plas pa yo. HTML se fason ou di navigatè a: sa a se yon tit, sa a se yon paragraf, mete foto a isit la.\n\n [[CHECK:html-n3-l01-c1]]\n\nNavigatè modèn yo ka valide fòmilè pou ou, san yon liy JavaScript. Atribi required fòse vizitè a ranpli chan an anvan l voye. Atribi minlength ak maxlength kontwole longè tèks la, min ak max pou chif ak dat. Atribi pattern pran yon ekspresyon regilye: pattern=\"[0-9]{8}\" fòse egzakteman 8 chif. Pou chwa nan yon lis, <select> ak <option> yo pi bon pase tèks lib — mwens erè. Eleman <datalist> se yon konpwomi entelijan: li pwopoze sijesyon men kite vizitè a ekri lib. <textarea> se pou long tèks (kòmantè, mesaj) ak rows ak cols pou gwosè. Atribi autocomplete=\"email\" ede navigatè a ranpli otomatikman, sa akselere fòmilè a. Gwoup bouton radyo ki gen menm name pèmèt yon sèl chwa; checkbox pèmèt plizyè. Eleman <fieldset> ak <legend> gwoupe chan ki gen rapò — lektè ekran anonse gwoup la, sa rann long fòmilè konprann pi fasil. Konsèy: mwens chan = plis konvèsyon; mande sèlman sa w bezwen vre. [[CHECK:html-n3-l01-c2]]",
+          "code": "<form>\n  <fieldset>\n    <legend>Enfòmasyon kontak</legend>\n    <label for=\"tel\">Telefòn (8 chif):</label>\n    <input type=\"tel\" id=\"tel\" name=\"tel\" pattern=\"[0-9]{8}\" required>\n    <label for=\"vil\">Vil:</label>\n    <input list=\"vil-lis\" id=\"vil\" name=\"vil\">\n    <datalist id=\"vil-lis\">\n      <option value=\"Pòtoprens\">\n      <option value=\"Kap Ayisyen\">\n    </datalist>\n  </fieldset>\n  <button type=\"submit\">Voye</button>\n</form>",
+          "code_lang": "html",
+          "expert_note_ht": "Validasyon HTML se premye liy defans sèlman — yon atakè ka retire required nan zouti devlopè a; sèvè a dwe toujou re-validate.",
+          "exercises": [
+            {
+              "id": "html-n3-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki atribi ki fòse yon chan dwe ranpli anvan fòmilè a voye?",
+              "choices": [
+                "A) validate",
+                "B) mandatory",
+                "C) required",
+                "D) force"
+              ],
+              "accepted": [
+                "c",
+                "required"
+              ],
+              "correct_ht": "C) required",
+              "explanation_ht": "required bloke voye fòmilè a jous chan an gen yon valè — validasyon natif natal navigatè a."
+            },
+            {
+              "id": "html-n3-l01-e2",
+              "type": "code",
+              "prompt_ht": "Ekri atribi ki limite yon chan tèks a 10 karaktè maksimòm:",
+              "accepted": [
+                "maxlength=\"10\"",
+                "maxlength='10'",
+                "maxlength=10"
+              ],
+              "correct_ht": "maxlength=\"10\"",
+              "explanation_ht": "maxlength=\"10\" anpeche vizitè a ekri plis pase 10 karaktè nan chan an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n3-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fòmilè web se tankou:",
+              "accepted": [
+                "a",
+                "yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l"
+              ],
+              "correct_ht": "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+              "explanation_ht": "Non, imèl, modpas: ou ranpli, ou soumèt.",
+              "choices": [
+                "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+                "B) Yon jwèt",
+                "C) Yon film",
+                "D) Yon chante"
+              ]
+            },
+            {
+              "id": "html-n3-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Validasyon fòmilè sèvi pou:",
+              "accepted": [
+                "a",
+                "verifye enfòmasyon yo kòrèk anvan ou aksepte yo"
+              ],
+              "correct_ht": "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+              "explanation_ht": "Imèl vid? Modpas twò kout? Refize anvan ou sere.",
+              "choices": [
+                "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+                "B) Fè paj la bèl",
+                "C) Jwe mizik",
+                "D) Voye spam"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n3-l02",
+          "title_ht": "Miltimedya ak kontni entegre",
+          "body_ht": "Yon jounal gen tit, soutit, paragraf ak foto — chak ak plas pa yo. HTML se fason ou di navigatè a: sa a se yon tit, sa a se yon paragraf, mete foto a isit la.\n\n [[CHECK:html-n3-l02-c1]]\n\nHTML5 pote eleman natif natal pou odyo ak videyo — fini tan Flash. Eleman <video> ak atribi controls montre bouton lekti natif natal navigatè a; ajoute poster pou yon imaj kouvèti anvan lekti a. Andedan <video>, mete plizyè <source> ak diferan fòma (mp4, webm) pou maksimòm konpatibilite — navigatè a pran premye l li konprann. Menm prensip pou <audio>. Eleman <track> ajoute soutit (subtitles) ak kind=\"subtitles\" — esansyèl pou aksesibilite. Pou kontni ki soti yon lòt sit (kat Google, videyo YouTube), <iframe> entegre l. Atribi title li obligatwa pou lektè ekran, epi loading=\"lazy\" retade chajman l jous vizitè a pwoche — gwo genyen vitès. Eleman <figure> gwoupe yon imaj ak lejann li nan <figcaption>. Atribi srcset sou <img> bay plizyè gwosè imaj pou navigatè a chwazi selon ekran an — mobil pa bezwen telechaje imaj 4K. Sonje: chak mega w ekonomize se vizitè mobil ki rete sou sit ou. Teste vitès paj ou ak zouti gratis PageSpeed Insights la. [[CHECK:html-n3-l02-c2]]",
+          "code": "<video controls poster=\"kouvri.jpg\" width=\"640\">\n  <source src=\"videyo.mp4\" type=\"video/mp4\">\n  <source src=\"videyo.webm\" type=\"video/webm\">\n  <track kind=\"subtitles\" src=\"soutit_ht.vtt\" srclang=\"ht\" label=\"Kreyòl\">\n</video>\n<iframe title=\"Kat biwo nou\" src=\"https://maps...\" loading=\"lazy\"></iframe>",
+          "code_lang": "html",
+          "expert_note_ht": "Toujou bay dimansyon (width/height) sou video ak iframe pou evite 'layout shift' — paj la pa dwe sote pandan medya yo ap chaje.",
+          "exercises": [
+            {
+              "id": "html-n3-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki atribi sou <iframe> ki retade chajman l pou amelyore vitès paj la?",
+              "choices": [
+                "A) defer",
+                "B) loading=\"lazy\"",
+                "C) async",
+                "D) delay"
+              ],
+              "accepted": [
+                "b",
+                "loading=\"lazy\"",
+                "loading=lazy"
+              ],
+              "correct_ht": "B) loading=\"lazy\"",
+              "explanation_ht": "loading=\"lazy\" di navigatè a tann jous iframe a pwoche ekran an anvan l chaje l."
+            },
+            {
+              "id": "html-n3-l02-e2",
+              "type": "code",
+              "prompt_ht": "Ekri baliz ki ajoute soutit kreyòl nan yon videyo (itilize kind subtitles ak srclang ht):",
+              "accepted": [
+                "<track kind=\"subtitles\" srclang=\"ht\">",
+                "<track kind=\"subtitles\" src=\"soutit_ht.vtt\" srclang=\"ht\" label=\"kreyòl\">"
+              ],
+              "correct_ht": "<track kind=\"subtitles\" srclang=\"ht\">",
+              "explanation_ht": "<track kind=\"subtitles\" srclang=\"ht\"> konekte fichye soutit la ak videyo a pou moun ki bezwen li tèks la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n3-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "html-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon tès se tankou:",
+              "accepted": [
+                "a",
+                "goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l"
+              ],
+              "correct_ht": "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+              "explanation_ht": "Tès = prèv kòd la fè sa li pwomèt.",
+              "choices": [
+                "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+                "B) Yon egzamen lekòl sèlman",
+                "C) Yon jwèt",
+                "D) Yon film"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n3-l03",
+          "title_ht": "Tèt paj la: meta, favicon ak pèfòmans",
+          "body_ht": "Sonje ki paj ou te ye nan liv ou a: ou mete yon makè ladan l pou ou pa pèdi plas ou. 'Eta' yon app se makè sa a — li sonje kote itilizatè a ye ak sa l ap fè.\n\n [[CHECK:html-n3-l03-c1]]\n\nTout sa ki nan <head> pa parèt sou ekran, men li deside kijan paj la konpòte l. <meta charset=\"UTF-8\"> dwe premye: li di navigatè a ki kodaj karaktè pou l itilize, sinon aksan kreyòl yo (è, ò, à) ka parèt kòm senbòl dwòl. <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> esansyèl pou mobil — san li, telefòn yo montre paj la tankou sou òdinatè epi tèks la vin tou piti. <meta name=\"description\"> se rezime 150 karaktè Google montre nan rezilta rechèch yo — se piblisite gratis ou. <link rel=\"icon\" href=\"favicon.ico\"> mete ti ikon nan onglè a. Pou vitès, <link rel=\"preconnect\" href=\"https://fonts...\"> ouvri koneksyon an davans ak sèvè ekstèn yo. Atribi defer sou <script> kite HTML a chaje anvan JavaScript la egzekite. Lòd la enpòtan: charset premye, apre viewport, tit, deskripsyon. Verifye tèt paj ou ak zouti View Source navigatè a apre chak chanjman. Erè klasik: bliye viewport meta a — tout sit mobil ou ap kraze san li. [[CHECK:html-n3-l03-c2]]",
+          "code": "<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Kòd Akademi — Aprann pwogramasyon</title>\n  <meta name=\"description\" content=\"Aprann HTML, CSS ak JavaScript an kreyòl, etap pa etap.\">\n  <link rel=\"icon\" href=\"favicon.ico\">\n</head>",
+          "code_lang": "html",
+          "expert_note_ht": "Deskripsyon meta a pa afekte klasman dirèkteman, men yon bon deskripsyon ogmante pousantaj klik — epi klik yo, se yo ki konte.",
+          "exercises": [
+            {
+              "id": "html-n3-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Poukisa <meta charset=\"UTF-8\"> dwe premye nan <head>?",
+              "choices": [
+                "A) Se yon règ Google",
+                "B) Pou navigatè a konnen kodaj karaktè a anvan l li rès paj la",
+                "C) Pou paj la chaje pi vit",
+                "D) Pou favicon an parèt"
+              ],
+              "accepted": [
+                "b",
+                "pou navigatè a konnen kodaj karaktè a anvan l li rès paj la"
+              ],
+              "correct_ht": "B) Pou navigatè a konnen kodaj karaktè a anvan l li rès paj la",
+              "explanation_ht": "Si navigatè a li tèks la ak move kodaj, aksan yo parèt kòm karaktè dwòl; charset premye anpeche sa."
+            },
+            {
+              "id": "html-n3-l03-e2",
+              "type": "code",
+              "prompt_ht": "Ekri baliz meta viewport konplè pou mobil:",
+              "accepted": [
+                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+              ],
+              "correct_ht": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+              "explanation_ht": "Viewport meta a di telefòn yo itilize lajè ekran reyèl la olye yo simile yon ekran òdinatè."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n3-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Notasyon Big O mezire:",
+              "accepted": [
+                "a",
+                "kijan tan yon algoritm grandi lè done yo grandi"
+              ],
+              "correct_ht": "A) Kijan tan yon algoritm grandi lè done yo grandi",
+              "explanation_ht": "O(n) = lineyè; O(n²) = bouk anndan bouk — evite!",
+              "choices": [
+                "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                "B) Gwosè ekran an",
+                "C) Pri òdinatè a",
+                "D) Kantite koulè"
+              ]
+            },
+            {
+              "id": "html-n3-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "html-n4-l01",
+          "title_ht": "Aksesibilite ak ARIA",
+          "body_ht": "Yon sit ekspè dwe itilizab pa tout moun, ki gen ladan moun ki navige ak klavye sèlman oswa ak lektè ekran. Premye règ: itilize bon eleman semantik la. Yon <button> reyèl pi bon pase yon <div> ki fè tankou bouton, paske bouton an deja fokisab ak klavye epi lektè ekran konnen l. ARIA (Accessible Rich Internet Applications) se yon kouch atribi ki dekri wòl ak eta eleman yo lè HTML poukont li pa sifi. role=\"dialog\" di se yon fenèt dyalòg, aria-label bay yon non aksesib lè pa gen tèks vizib (pa egzanp yon bouton fèmen ki se jis \"×\"), aria-expanded=\"true/false\" di si yon meni dewoule louvri. Men atansyon ak premye règ ARIA: pa itilize ARIA si yon eleman HTML natif natal fè travay la — move ARIA pi mal pase pa gen ARIA. Tout eleman entèraktif dwe aksesib ak klavye (tab, antre, espas), epi fokis la dwe vizib. Tès ak yon lektè ekran (NVDA gratis) se sèl fason pou verifye vre. [[CHECK:html-n4-l01-c1]] [[CHECK:html-n4-l01-c2]]",
+          "code": "<button aria-label=\"Fèmen fenèt la\" aria-expanded=\"false\" aria-controls=\"meni\">\n  ×\n</button>\n<nav id=\"meni\" aria-label=\"Navigasyon prensipal\" hidden>\n  <a href=\"/kou\">Kou yo</a>\n</nav>",
+          "code_lang": "html",
+          "expert_note_ht": "Atribi hidden retire eleman an nèt (vizyèl + lektè ekran); pa itilize display:none nan CSS pou kache bagay ou pral montre ak JavaScript si w bezwen tranzisyon.",
+          "exercises": [
+            {
+              "id": "html-n4-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki premye règ ARIA a?",
+              "choices": [
+                "A) Toujou mete role sou tout div",
+                "B) Pa itilize ARIA si yon eleman HTML natif natal fè travay la",
+                "C) Mete aria-label sou chak paragraf",
+                "D) ARIA ranplase HTML semantik"
+              ],
+              "accepted": [
+                "b",
+                "pa itilize aria si yon eleman html natif natal fè travay la"
+              ],
+              "correct_ht": "B) Pa itilize ARIA si yon eleman HTML natif natal fè travay la",
+              "explanation_ht": "HTML natif natal (button, nav) deja aksesib; move ARIA ka kraze aksesibilite a olye l ede."
+            },
+            {
+              "id": "html-n4-l01-e2",
+              "type": "code",
+              "prompt_ht": "Ekri atribi ki bay yon bouton \"×\" yon non aksesib \"Fèmen\":",
+              "accepted": [
+                "aria-label=\"fèmen\"",
+                "aria-label=\"femen\"",
+                "aria-label=\"Fèmen\""
+              ],
+              "correct_ht": "aria-label=\"Fèmen\"",
+              "explanation_ht": "aria-label=\"Fèmen\" di lektè ekran sa bouton an fè lè pa gen tèks vizib ki eksplike l."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n4-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Aksesibilite nan app vle di:",
+              "accepted": [
+                "a",
+                "tout moun ka itilize l, menm moun ki pa wè oswa tande byen"
+              ],
+              "correct_ht": "A) Tout moun ka itilize l, menm moun ki pa wè oswa tande byen",
+              "explanation_ht": "Lektè ekran, kontras, navigasyon klavye: se pou tout moun.",
+              "choices": [
+                "A) Tout moun ka itilize l, menm moun ki pa wè oswa tande byen",
+                "B) Li bèl sèlman",
+                "C) Li rapid sèlman",
+                "D) Li chè"
+              ]
+            },
+            {
+              "id": "html-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n4-l02",
+          "title_ht": "SEO teknik",
+          "body_ht": "SEO (Search Engine Optimization) se atizay fè paj ou parèt byen nan Google. Baz teknik la kòmanse nan HTML. Yerachi tit pwòp (yon sèl h1, apre h2, h3 nan lòd) ede Google konprann sijè a. URL pwòp ak deskriptif pi bon pase chif. Eleman <link rel=\"canonical\" href=\"...\"> di Google ki vèsyon paj la se orijinal la lè gen doublon — sa evite penalite kontni duble. Meta Open Graph (og:title, og:description, og:image) kontwole kijan lyen ou parèt lè yo pataje l sou Facebook ak WhatsApp: yon bèl imaj ogmante klik anpil. Done estriktire ak JSON-LD (<script type=\"application/ld+json\">) dekri kontni an pou Google (atik, resèt, evènman) epi ka bay \"rich snippets\" ak zetwal nan rezilta yo. Vitès chajman se yon faktè klasman: imaj optimize, lazy loading, mwens script. Finalman, sit la dwe mache sou mobil anvan tout — Google endekse vèsyon mobil lan an premye (mobile-first indexing). Aksyon: chèche paj ou sou telefòn ou anvan w pibliye — se konsa pifò vizitè ap wè l. [[CHECK:html-n4-l02-c1]] [[CHECK:html-n4-l02-c2]]",
+          "code": "<link rel=\"canonical\" href=\"https://site.com/kou/html\">\n<meta property=\"og:title\" content=\"Aprann HTML an kreyòl\">\n<meta property=\"og:image\" content=\"https://site.com/kouvri.jpg\">\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\n \"headline\":\"Gid HTML konplè\"}\n</script>",
+          "code_lang": "html",
+          "expert_note_ht": "Teste aperçu pataj ou ak Facebook Sharing Debugger anvan w pibliye — imaj Open Graph yo bezwen omwen 1200×630 px.",
+          "exercises": [
+            {
+              "id": "html-n4-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki sa baliz canonical fè?",
+              "choices": [
+                "A) Li akselere sit la",
+                "B) Li di Google ki vèsyon yon paj se orijinal la pou evite kontni duble",
+                "C) Li tradui paj la",
+                "D) Li kache paj la nan Google"
+              ],
+              "accepted": [
+                "b",
+                "li di google ki vèsyon yon paj se orijinal la pou evite kontni duble"
+              ],
+              "correct_ht": "B) Li di Google ki vèsyon yon paj se orijinal la pou evite kontni duble",
+              "explanation_ht": "Canonical endike URL referans lan lè menm kontni a egziste sou plizyè adrès — sa pwoteje klasman an."
+            },
+            {
+              "id": "html-n4-l02-e2",
+              "type": "code",
+              "prompt_ht": "Ekri meta Open Graph pou tit pataj la (property og:title, content \"Bonjou\"):",
+              "accepted": [
+                "<meta property=\"og:title\" content=\"bonjou\">",
+                "<meta property=\"og:title\" content=\"Bonjou\">"
+              ],
+              "correct_ht": "<meta property=\"og:title\" content=\"Bonjou\">",
+              "explanation_ht": "og:title kontwole tit ki parèt lè yo pataje paj la sou rezo sosyal yo."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — SEO ede:",
+              "accepted": [
+                "a",
+                "google jwenn epi montre sit ou a lè moun chèche"
+              ],
+              "correct_ht": "A) Google jwenn epi montre sit ou a lè moun chèche",
+              "explanation_ht": "Bon tit, bon deskripsyon, sit rapid = pi byen klase.",
+              "choices": [
+                "A) Google jwenn epi montre sit ou a lè moun chèche",
+                "B) Fè gato",
+                "C) Lave machin",
+                "D) Koud rad"
+              ]
+            },
+            {
+              "id": "html-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "html-n4-l03",
+          "title_ht": "Web Components",
+          "body_ht": "Yon machin fèt ak pyès: motè, wou, volan — chak fè yon travay. Yon app fèt ak konpozan: bouton, fòmilè, menu — chak fè yon travay.\n\n [[CHECK:html-n4-l03-c1]]\n\nWeb Components se estanda navigatè a pou kreye pwòp baliz HTML ou — eleman reyitilizab ak konpòtman pwòp yo, san framework. Twa teknoloji konbine: Custom Elements (defini yon nouvo baliz ak customElements.define), Shadow DOM (enkapsile style ak estrikti eleman an pou CSS deyò a pa antre ladan l), ak <template> (modèl HTML ki pa afiche jous ou klone l). Non eleman pèsonalize yo dwe gen yon tirè ladan yo (pa egzanp <kat-pwodwi>) pou pa konfonn ak baliz HTML lavni yo. Andedan klas eleman an, connectedCallback egzekite lè eleman an antre nan paj la — se la w tache shadow DOM nan ak this.attachShadow({mode:'open'}). Sa pèmèt desine \"design system\" pwòp konpayi an: bouton, kat, fòmilè ki mache toupatou. Limit: SEO ka pi difisil si kontni an jenere sèlman ak JavaScript, epi sipò vye navigatè mande polyfill. Kòmanse piti: kreye yon eleman <badj-pri> ki afiche pri ak yon ti stil pwòp li. [[CHECK:html-n4-l03-c2]]",
+          "code": "<template id=\"mod-kat\">\n  <style>h3{color:green}</style>\n  <h3><slot></slot></h3>\n</template>\n<script>\nclass KatPwodwi extends HTMLElement {\n  connectedCallback() {\n    const s = this.attachShadow({mode:'open'});\n    s.append(document.getElementById('mod-kat').content.cloneNode(true));\n  }\n}\ncustomElements.define('kat-pwodwi', KatPwodwi);\n</script>\n<kat-pwodwi>Mango</kat-pwodwi>",
+          "code_lang": "html",
+          "expert_note_ht": "<slot> pèmèt itilizatè eleman an mete pwòp kontni yo andedan — se sa ki rann component lan vrèman reyitilizab.",
+          "exercises": [
+            {
+              "id": "html-n4-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki règ non yon custom element dwe swiv?",
+              "choices": [
+                "A) Li dwe kòmanse ak yon majiskil",
+                "B) Li dwe gen yon tirè (-) ladan l",
+                "C) Li dwe fini ak yon chif",
+                "D) Pa gen règ"
+              ],
+              "accepted": [
+                "b",
+                "li dwe gen yon tirè (-) ladan l"
+              ],
+              "correct_ht": "B) Li dwe gen yon tirè (-) ladan l",
+              "explanation_ht": "Tirè a distenge eleman pèsonalize yo ak baliz HTML ofisyèl yo, prezan ak lavni."
+            },
+            {
+              "id": "html-n4-l03-e2",
+              "type": "code",
+              "prompt_ht": "Ekri apèl ki anrejistre eleman <kat-pwodwi> ak klas KatPwodwi:",
+              "accepted": [
+                "customelements.define('kat-pwodwi', katpwodwi)",
+                "customelements.define(\"kat-pwodwi\", katpwodwi)"
+              ],
+              "correct_ht": "customElements.define('kat-pwodwi', KatPwodwi)",
+              "explanation_ht": "customElements.define konekte non baliz la ak klas JavaScript ki defini konpòtman l."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "html-n4-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon konpozan se:",
+              "accepted": [
+                "a",
+                "yon pyès app: bouton, fòmilè, menu — chak fè yon travay"
+              ],
+              "correct_ht": "A) Yon pyès app: bouton, fòmilè, menu — chak fè yon travay",
+              "explanation_ht": "Ou konbine konpozan pou bati ekran konplè.",
+              "choices": [
+                "A) Yon pyès app: bouton, fòmilè, menu — chak fè yon travay",
+                "B) Yon machin antye",
+                "C) Yon kay antye",
+                "D) Yon pyebwa"
+              ]
+            },
+            {
+              "id": "html-n4-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML sèvi pou:",
+              "accepted": [
+                "a",
+                "bay estrikti paj web la: tit, paragraf, lyen, imaj"
+              ],
+              "correct_ht": "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+              "explanation_ht": "HTML = zo bwa paj la; CSS = rad la; JS = sèvo a.",
+              "choices": [
+                "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+                "B) Bay koulè yo",
+                "C) Fè kalkil konplike",
+                "D) Jere bazdone"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

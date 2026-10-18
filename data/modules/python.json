@@ -1,0 +1,761 @@
+{
+  "id": "python",
+  "name": "Python",
+  "category_ht": "Web (dèyè)",
+  "description_ht": "Python se yon langaj senp epi pwisan anpil. Ou itilize l pou kreye sit wèb (Django, Flask), otomatize travay, analize done, epi fè entèlijans atifisyèl.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "python-n1-l01",
+          "title_ht": "Premye pwogram Python ou",
+          "body_ht": "Python se youn nan langaj ki pi fasil pou aprann paske li ekri preske tankou angle senp. Ou pa bezwen deklare tip varyab, epi kòd la lizib anpil. Pou kòmanse, ou enstale Python sou sit python.org la, epi ou ka ekri kòd dirèkteman nan yon fichye .py. Fonksyon print() la sèvi pou afiche tèks sou ekran an. Pa egzanp, print('Bonjou Ayiti!') afiche fraz Bonjou Ayiti! Varyab yo se bwat kote ou sere enfòmasyon: non = 'Marie' sere tèks Marie nan varyab non. Ou pa mete pwen-virgil nan fen liy yo, epi endantasyon (espas nan kòmansman liy) trè enpòtan paske se li ki di Python ki liy ki antre nan yon blok. Sa fè kòd la toujou pwòp. Python kouri liy pa liy, soti anwo desann. Nan kou sa a ou pral aprann baz yo etap pa etap, apre ou pral kapab kreye pwogram reyèl pou wèb la. [[CHECK:python-n1-l01-c1]] [[CHECK:python-n1-l01-c2]]",
+          "code": "print(\"Bonjou Ayiti!\")\nnon = \"Marie\"\nlaj = 25\nprint(\"Non mwen se\", non, \"mwen gen\", laj, \"an\")",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè Python yo respekte PEP 8 (gid fòm kòd la) epi yo ekri kòd lizib olye yo chèche rakousi entelijan.",
+          "exercises": [
+            {
+              "id": "python-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon Python itilize pou afiche tèks sou ekran an?",
+              "choices": [
+                "A) echo()",
+                "B) print()",
+                "C) show()",
+                "D) display()"
+              ],
+              "accepted": [
+                "b",
+                "print",
+                "print()"
+              ],
+              "correct_ht": "B) print()",
+              "explanation_ht": "Se print() ki afiche tèks sou ekran an nan Python. echo() se pou PHP."
+            },
+            {
+              "id": "python-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Konplete liy lan pou li afiche Bonjou: ____(\"Bonjou\")",
+              "accepted": [
+                "print",
+                "print()"
+              ],
+              "correct_ht": "print",
+              "explanation_ht": "Ou ekri print('Bonjou') pou afiche mo Bonjou a."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n1-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « non » genyen? (ekri valè a)",
+              "accepted": [
+                "marie",
+                "\"marie\""
+              ],
+              "correct_ht": "Marie",
+              "explanation_ht": "Nan egzanp lan, liy « non = \"Marie\" » mete valè « Marie » nan bwat « non » a."
+            },
+            {
+              "id": "python-n1-l01-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou ayiti!",
+                "\"bonjou ayiti!\""
+              ],
+              "correct_ht": "Bonjou Ayiti!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou Ayiti! »."
+            }
+          ]
+        },
+        {
+          "id": "python-n1-l02",
+          "title_ht": "Varyab ak tip done",
+          "body_ht": "Yon varyab se yon non ou bay yon valè pou ou ka itilize l pita. Nan Python ou jis ekri non = valè, san okenn mo kle espesyal. Gen plizyè tip done de baz. Tèks yo rele string epi yo toujou antre nan gimè: non = 'Jean'. Nonb antye yo rele int: laj = 25. Nonb ak desimal yo rele float: pri = 19.99. Vrè oswa fo yo rele bool: marye = True — note majiskil nan True ak False. Ou ka konvèti yon tip nan yon lòt: str(25) bay tèks '25', int('25') bay nonb 25. Fonksyon input() la mande itilizatè a tape yon bagay: non = input('Ki non ou?'). Atansyon, input() toujou bay yon string, kidonk pou yon laj ou dwe ekri laj = int(input('Ki laj ou?')). Avèk f-string ou ka mete varyab andedan tèks fasilman: print(f'Bonjou {non}!'). Pratike tip sa yo byen paske tout pwogram w ap ekri ap itilize yo. [[CHECK:python-n1-l02-c1]] [[CHECK:python-n1-l02-c2]]",
+          "code": "non = \"Jean\"\nlaj = 25\npri = 19.99\nmarye = True\nprint(f\"{non} gen {laj} an\")\nlaj_koum = str(laj)\nprint(type(laj_koum))",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo sèvi ak type hints (pa egzanp def f(laj: int)) pou kòd la pi klè ak pi fasil pou debogaj.",
+          "exercises": [
+            {
+              "id": "python-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki tip done valè 19.99 la ye nan Python?",
+              "choices": [
+                "A) int",
+                "B) float",
+                "C) string",
+                "D) bool"
+              ],
+              "accepted": [
+                "b",
+                "float"
+              ],
+              "correct_ht": "B) float",
+              "explanation_ht": "Yon nonb ak desimal se yon float. int se pou nonb antye sèlman."
+            },
+            {
+              "id": "python-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou konvèti tèks '25' an nonb: laj = ____(\"25\")",
+              "accepted": [
+                "int"
+              ],
+              "correct_ht": "int",
+              "explanation_ht": "Fonksyon int() la konvèti yon tèks an nonb antye."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « non » genyen? (ekri valè a)",
+              "accepted": [
+                "jean",
+                "\"jean\""
+              ],
+              "correct_ht": "Jean",
+              "explanation_ht": "Nan egzanp lan, liy « non = \"Jean\" » mete valè « Jean » nan bwat « non » a."
+            },
+            {
+              "id": "python-n1-l02-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "type(laj_koum)"
+              ],
+              "correct_ht": "type(laj_koum)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « type(laj_koum) »."
+            }
+          ]
+        },
+        {
+          "id": "python-n1-l03",
+          "title_ht": "Kondisyon: if, elif, else",
+          "body_ht": "Yon pwogram vin entelijan lè li ka pran desizyon. Nan Python ou itilize if pou teste yon kondisyon. Si kondisyon an vre, blok kòd ki anba l la kouri. Ou ekri if laj >= 18: epi tout liy ki endante apre de pwen yo fè pati blok la. Pou plizyè chwa ou ajoute elif (kout pou else if) ak else pou ka pa defo a. Operatè konparezon yo se == (egal), != (pa egal), > (pi gran), < (pi piti), >= ak <=. Atansyon: yon sèl = se pou bay valè, de == se pou konpare — se erè ki pi komen debutan yo fè! Ou ka konbine kondisyon ak and (tou de dwe vre), or (youn dwe vre), ak not (ranvèse). Pa egzanp: if laj >= 18 and gen_kat == True: vle di moun nan dwe gen 18 an EPI gen kat idantite. Kondisyon yo se baz tout lojik pwogramasyon: fòm enskripsyon, verifikasyon modpas, sistèm peman — tout sèvi ak yo. [[CHECK:python-n1-l03-c1]] [[CHECK:python-n1-l03-c2]]",
+          "code": "laj = 20\nif laj >= 18:\n    print(\"Ou majè\")\nelif laj >= 13:\n    print(\"Ou adolesan\")\nelse:\n    print(\"Ou timoun\")",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo evite if ki twò fon (nested) — yo itilize early return oswa diksyonè pou rann lojik la pi lizib.",
+          "exercises": [
+            {
+              "id": "python-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki operatè ki konpare si de valè egal nan Python?",
+              "choices": [
+                "A) =",
+                "B) ==",
+                "C) ===",
+                "D) equals"
+              ],
+              "accepted": [
+                "b",
+                "=="
+              ],
+              "correct_ht": "B) ==",
+              "explanation_ht": "De siy egal == konpare, yon sèl = bay valè a yon varyab."
+            },
+            {
+              "id": "python-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kondisyon an: si nòt pi gran pase 10: if nòt ____ 10:",
+              "accepted": [
+                ">"
+              ],
+              "correct_ht": ">",
+              "explanation_ht": "Siy > a vle di pi gran pase, kidonk if nòt > 10:."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « laj » genyen? (ekri valè a)",
+              "accepted": [
+                "20"
+              ],
+              "correct_ht": "20",
+              "explanation_ht": "Nan egzanp lan, liy « laj = 20 » mete valè « 20 » nan bwat « laj » a."
+            },
+            {
+              "id": "python-n1-l03-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "ou majè",
+                "\"ou majè\""
+              ],
+              "correct_ht": "Ou majè",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Ou majè »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "python-n2-l04",
+          "title_ht": "Lis ak bouk for",
+          "body_ht": "Yon lis se yon koleksyon valè ki nan yon sèl varyab, epi lòd yo konsève. Ou kreye l ak kwòchè: fwi = ['mango', 'bannann', 'zoranj']. Chak eleman gen yon pozisyon ki kòmanse nan 0: fwi[0] se 'mango'. Ou ajoute ak append(): fwi.append('pòm'). Fonksyon len() bay kantite eleman. Bouk for la pèmèt ou pase sou chak eleman san ou pa ekri menm kòd la plizyè fwa: for f in fwi: print(f). Fonksyon range() la jenere yon seri nonb: range(5) bay 0 rive 4, itil pou repete yon aksyon yon kantite fwa. Ou ka sote ak break (sispann bouk la) oswa kontinye ak continue (sote rès tou a). Lis yo toupatou nan devlopman wèb: lis pwodwi nan yon boutik, lis itilizatè, lis kòmantè. Aprann manipile yo byen — ajoute, retire ak remove(), chanje valè pa pozisyon — epi ou pral kapab trete gwo kantite done fasilman. [[CHECK:python-n2-l04-c1]] [[CHECK:python-n2-l04-c2]]",
+          "code": "fwi = [\"mango\", \"bannann\", \"zoranj\"]\nfwi.append(\"pom\")\nprint(len(fwi))\nfor f in fwi:\n    print(\"Mwen renmen\", f)",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo itilize list comprehensions (pa egzanp [x*2 for x in lis]) pou kòd ki pi kout ak pi rapid.",
+          "exercises": [
+            {
+              "id": "python-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki endèks premye eleman yon lis Python?",
+              "choices": [
+                "A) 1",
+                "B) 0",
+                "C) -1",
+                "D) premye"
+              ],
+              "accepted": [
+                "b",
+                "0"
+              ],
+              "correct_ht": "B) 0",
+              "explanation_ht": "Lis Python yo kòmanse nan endèks 0, kidonk premye eleman an se lis[0]."
+            },
+            {
+              "id": "python-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou ajoute 'pòm' nan lis fwi a: fwi.______(\"pòm\")",
+              "accepted": [
+                "append"
+              ],
+              "correct_ht": "append",
+              "explanation_ht": "Metòd append() la ajoute yon eleman nan fen lis la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n2-l04-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « fwi » genyen? (ekri valè a)",
+              "accepted": [
+                "[\"mango\", \"bannann\", \"zoranj\"]"
+              ],
+              "correct_ht": "[\"mango\", \"bannann\", \"zoranj\"]",
+              "explanation_ht": "Nan egzanp lan, liy « fwi = [\"mango\", \"bannann\", \"zoranj\"] » mete valè « [\"mango\", \"bannann\", \"zoranj\"] » nan bwat « fwi » a."
+            },
+            {
+              "id": "python-n2-l04-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "len(fwi)"
+              ],
+              "correct_ht": "len(fwi)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « len(fwi) »."
+            }
+          ]
+        },
+        {
+          "id": "python-n2-l05",
+          "title_ht": "Fonksyon: òganize kòd ou",
+          "body_ht": "Yon fonksyon se yon blok kòd ou bay yon non pou ou ka rele l plizyè fwa san ou pa repete l. Ou kreye l ak mo kle def: def salye(non): apre ou ekri kòd la endante. Paramèt yo se valè fonksyon an resevwa: salye('Marie') pase 'Marie' kòm non. Mo kle return voye yon rezilta tounen bay moun ki rele fonksyon an: def double(n): return n * 2. San return, fonksyon an bay None. Ou ka bay paramèt valè pa defo: def salye(non='zanmi'): — si ou pa bay non, li itilize 'zanmi'. Fonksyon yo se fondasyon kòd pwòp: olye ou ekri 200 liy melanje, ou divize travay la an ti fonksyon klè, chak ak yon sèl responsablite. Sa fè kòd la pi fasil pou li, teste, epi korije. Nan devlopman wèb, chak wout (route) yon aplikasyon Django oswa Flask se yon fonksyon ki resevwa yon demann epi retounen yon repons. [[CHECK:python-n2-l05-c1]] [[CHECK:python-n2-l05-c2]]",
+          "code": "def salye(non=\"zanmi\"):\n    return f\"Bonjou {non}!\"\n\nprint(salye(\"Marie\"))\nprint(salye())",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo ekri ti fonksyon ki fè yon sèl bagay, ak docstring ki eksplike sa fonksyon an fè.",
+          "exercises": [
+            {
+              "id": "python-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ki kreye yon fonksyon nan Python?",
+              "choices": [
+                "A) function",
+                "B) def",
+                "C) func",
+                "D) define"
+              ],
+              "accepted": [
+                "b",
+                "def"
+              ],
+              "correct_ht": "B) def",
+              "explanation_ht": "Se mo kle def ki kreye yon fonksyon: def non_fonksyon():"
+            },
+            {
+              "id": "python-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou fonksyon an voye rezilta a tounen: def double(n): ____ n * 2",
+              "accepted": [
+                "return"
+              ],
+              "correct_ht": "return",
+              "explanation_ht": "Mo kle return voye valè a tounen bay moun ki rele fonksyon an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n2-l05-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "salye(\"marie\")"
+              ],
+              "correct_ht": "salye(\"Marie\")",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « salye(\"Marie\") »."
+            },
+            {
+              "id": "python-n2-l05-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "salye"
+              ],
+              "correct_ht": "salye",
+              "explanation_ht": "Fonksyon an rele « salye » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "python-n2-l06",
+          "title_ht": "Diksyonè: done ak kle",
+          "body_ht": "Yon diksyonè sere done pa pè kle-valè, tankou yon diksyonè reyèl kote ou chèche yon mo pou jwenn definisyon l. Ou kreye l ak akolad: etidyan = {'non': 'Marie', 'laj': 22, 'vil': 'Pòtoprens'}. Ou jwenn yon valè ak kle li: etidyan['non'] bay 'Marie'. Pou evite erè lè kle a pa egziste, itilize .get(): etidyan.get('telefòn', 'pa gen') bay 'pa gen' olye li kraze pwogram nan. Ou ajoute oswa chanje ak etidyan['laj'] = 23. Metòd .keys() bay tout kle yo, .values() tout valè yo, .items() tou de ansanm. Bouk for sou yon diksyonè pase sou kle yo. Diksyonè yo esansyèl nan wèb: repons API yo souvan nan fòma JSON ki sanble ak diksyonè, fòm yo vin diksyonè, konfigirasyon aplikasyon yo se diksyonè. Aprann byen chèche, ajoute, epi mete ajou valè nan yo. [[CHECK:python-n2-l06-c1]] [[CHECK:python-n2-l06-c2]]",
+          "code": "etidyan = {\"non\": \"Marie\", \"laj\": 22}\netidyan[\"vil\"] = \"Potoprens\"\nprint(etidyan[\"non\"])\nprint(etidyan.get(\"telefon\", \"pa gen\"))\nfor kle, vale in etidyan.items():\n    print(kle, \":\", vale)",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo itilize .get() ak defaultdict pou evite KeyError, epi yo pa janm modifye yon diksyonè pandan y ap boukle sou li.",
+          "exercises": [
+            {
+              "id": "python-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki metòd ki pi an sekirite pou li yon kle ki ka pa egziste?",
+              "choices": [
+                "A) d[kle]",
+                "B) d.get(kle)",
+                "C) d.find(kle)",
+                "D) d.read(kle)"
+              ],
+              "accepted": [
+                "b",
+                "get",
+                "d.get",
+                ".get()"
+              ],
+              "correct_ht": "B) d.get(kle)",
+              "explanation_ht": ".get() retounen None oswa yon valè pa defo olye li leve yon erè KeyError."
+            },
+            {
+              "id": "python-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou jwenn valè kle 'non' la: non = etidyan____\"non\"____",
+              "accepted": [
+                "[\"non\"]",
+                "['non']"
+              ],
+              "correct_ht": "[\"non\"]",
+              "explanation_ht": "Ou ekri etidyan['non'] pou jwenn valè kle non an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n2-l06-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « etidyan » genyen? (ekri valè a)",
+              "accepted": [
+                "{\"non\": \"marie\", \"laj\": 22}"
+              ],
+              "correct_ht": "{\"non\": \"Marie\", \"laj\": 22}",
+              "explanation_ht": "Nan egzanp lan, liy « etidyan = {\"non\": \"Marie\", \"laj\": 22} » mete valè « {\"non\": \"Marie\", \"laj\": 22} » nan bwat « etidyan » a."
+            },
+            {
+              "id": "python-n2-l06-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "etidyan[\"non\"]"
+              ],
+              "correct_ht": "etidyan[\"non\"]",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « etidyan[\"non\"] »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "python-n3-l07",
+          "title_ht": "Klas ak objè (OOP)",
+          "body_ht": "Pwogramasyon oryante objè (OOP) pèmèt ou modle konsèp reyèl kòm objè ki gen done (atribi) ak konpòtman (metòd). Ou kreye yon modèl ak mo kle class: class Machin:. Metòd espesyal __init__ la kouri lè ou kreye yon objè epi li inisyalize atribi yo: def __init__(self, mak): self.mak = mak. Mo self la reprezante objè a li menm — se premye paramèt tout metòd. Ou kreye yon objè konsa: m = Machin('Toyota'), epi ou rele metòd li: m.demare(). Eritaj pèmèt yon klas pran tout kapasite yon lòt klas epi ajoute pa li: class MachinElektrik(Machin): — sa evite repete kòd. OOP fè gwo pwojè yo pi fasil pou òganize: nan Django, chak modèl baz done se yon klas; nan Flask, ekstansyon yo se klas. Lè ou konprann klas, objè, metòd, ak eritaj, ou ka li epi ekri kòd pwofesyonèl nan nenpòt bibliyotèk Python. [[CHECK:python-n3-l07-c1]] [[CHECK:python-n3-l07-c2]]",
+          "code": "class Machin:\n    def __init__(self, mak):\n        self.mak = mak\n\n    def demare(self):\n        return f\"{self.mak} ap demare\"\n\nm = Machin(\"Toyota\")\nprint(m.demare())",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo prefere konpozisyon pase eritaj twò fon, epi yo itilize dataclasses pou klas senp ki jis kenbe done.",
+          "exercises": [
+            {
+              "id": "python-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki non metòd espesyal ki kouri lè ou kreye yon objè?",
+              "choices": [
+                "A) __start__",
+                "B) __init__",
+                "C) __new_obj__",
+                "D) constructor()"
+              ],
+              "accepted": [
+                "b",
+                "__init__"
+              ],
+              "correct_ht": "B) __init__",
+              "explanation_ht": "__init__ se konstrukè a: li inisyalize atribi objè a nan kreyasyon an."
+            },
+            {
+              "id": "python-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete premye paramèt yon metòd klas: def demare(____):",
+              "accepted": [
+                "self"
+              ],
+              "correct_ht": "self",
+              "explanation_ht": "Premye paramèt yon metòd se toujou self, ki reprezante objè a li menm."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n3-l07-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « m » genyen? (ekri valè a)",
+              "accepted": [
+                "machin(\"toyota\")"
+              ],
+              "correct_ht": "Machin(\"Toyota\")",
+              "explanation_ht": "Nan egzanp lan, liy « m = Machin(\"Toyota\") » mete valè « Machin(\"Toyota\") » nan bwat « m » a."
+            },
+            {
+              "id": "python-n3-l07-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "m.demare()"
+              ],
+              "correct_ht": "m.demare()",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « m.demare() »."
+            }
+          ]
+        },
+        {
+          "id": "python-n3-l08",
+          "title_ht": "Tretman erè: try / except",
+          "body_ht": "Erè rive nan tout pwogram reyèl: itilizatè tape yon lèt olye yon chif, yon dosye pa egziste, rezo a koupe. San tretman erè, pwogram nan kraze devan itilizatè a. Python pèmèt ou kenbe erè yo ak try/except: ou mete kòd ki riske a nan blok try, epi si yon erè leve, Python sote nan blok except olye li kraze. Ou ka kenbe tip erè espesifik: except ValueError: pou konvèsyon ki echwe, except FileNotFoundError: pou dosye ki manke. Blok else kouri si pa gen erè, epi finally toujou kouri — itil pou fèmen dosye oswa koneksyon. Ou ka leve pwòp erè ou ak raise ValueError('laj la pa valid'). Nan aplikasyon wèb, tretman erè se sa ki fè diferans ant yon sit ki montre yon paj erè pwòp ak yon sit ki kraze nèt. Aprann prevwa sa ki ka mal pase epi reponn ak diyite. [[CHECK:python-n3-l08-c1]] [[CHECK:python-n3-l08-c2]]",
+          "code": "try:\n    laj = int(input(\"Ki laj ou? \"))\n    print(f\"Ou gen {laj} an\")\nexcept ValueError:\n    print(\"Tanpri tape yon chif!\")\nfinally:\n    print(\"Mesi!\")",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo kenbe eksepsyon espesifik, pa janm bare except:, epi yo log erè yo pou yo ka analize yo pita.",
+          "exercises": [
+            {
+              "id": "python-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki blok ki toujou kouri, kit gen erè kit pa gen erè?",
+              "choices": [
+                "A) else",
+                "B) except",
+                "C) finally",
+                "D) try"
+              ],
+              "accepted": [
+                "c",
+                "finally"
+              ],
+              "correct_ht": "C) finally",
+              "explanation_ht": "Blok finally a toujou kouri — pafè pou fèmen dosye ak koneksyon."
+            },
+            {
+              "id": "python-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou kenbe erè a: ____ ValueError:",
+              "accepted": [
+                "except"
+              ],
+              "correct_ht": "except",
+              "explanation_ht": "Ou ekri except ValueError: pou kenbe erè konvèsyon an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n3-l08-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « laj » genyen? (ekri valè a)",
+              "accepted": [
+                "int(input(\"ki laj ou? \"))"
+              ],
+              "correct_ht": "int(input(\"Ki laj ou? \"))",
+              "explanation_ht": "Nan egzanp lan, liy « laj = int(input(\"Ki laj ou? \")) » mete valè « int(input(\"Ki laj ou? \")) » nan bwat « laj » a."
+            },
+            {
+              "id": "python-n3-l08-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "tanpri tape yon chif!",
+                "\"tanpri tape yon chif!\""
+              ],
+              "correct_ht": "Tanpri tape yon chif!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Tanpri tape yon chif! »."
+            }
+          ]
+        },
+        {
+          "id": "python-n3-l09",
+          "title_ht": "Dosye, modil ak pip",
+          "body_ht": "Pwogram reyèl yo li epi ekri dosye. Fonksyon open() la louvri yon dosye: open('nòt.txt', 'r') pou li, 'w' pou ekri (efase ansyen kontni an), 'a' pou ajoute nan fen an. Pi bon pratik se itilize with: with open('nòt.txt', 'r') as f: kontni = f.read() — dosye a fèmen otomatikman menm si gen erè. Yon modil se yon fichye Python ou ka reitilize: ou kreye zouti.py ak fonksyon ladan l, apre ou ekri import zouti nan yon lòt fichye. Python vini ak yon bibliyotèk estanda rich: math, datetime, json, os. Pou bibliyotèk ekstèn, ou itilize pip, jerè pakè Python an: pip install requests enstale bibliyotèk requests la. Chak pwojè serye gen yon fichye requirements.txt ki liste tout depandans yo. Konbinezon dosye + modil + pip se sa ki pèmèt ou bati aplikasyon konplè olye ti script izole. [[CHECK:python-n3-l09-c1]] [[CHECK:python-n3-l09-c2]]",
+          "code": "with open(\"not.txt\", \"w\") as f:\n    f.write(\"Bonjou!\")\n\nwith open(\"not.txt\", \"r\") as f:\n    print(f.read())",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo itilize anviwònman vityèl (venv) pou chak pwojè pou depandans yo pa melanje.",
+          "exercises": [
+            {
+              "id": "python-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kòmand ki enstale yon bibliyotèk Python ekstèn?",
+              "choices": [
+                "A) python get requests",
+                "B) pip install requests",
+                "C) install requests",
+                "D) npm install requests"
+              ],
+              "accepted": [
+                "b",
+                "pip install requests",
+                "pip install"
+              ],
+              "correct_ht": "B) pip install requests",
+              "explanation_ht": "pip se jerè pakè Python an: pip install non_pake a enstale l."
+            },
+            {
+              "id": "python-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou louvri dosye a an mòd lekti: f = open(\"not.txt\", ____)",
+              "accepted": [
+                "\"r\"",
+                "'r'",
+                "r"
+              ],
+              "correct_ht": "\"r\"",
+              "explanation_ht": "Mòd 'r' vle di read (li), 'w' pou ekri, 'a' pou ajoute."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n3-l09-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "f.read()"
+              ],
+              "correct_ht": "f.read()",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « f.read() »."
+            },
+            {
+              "id": "python-n3-l09-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "python-n4-l10",
+          "title_ht": "Generators ak iteratè",
+          "body_ht": "Yon lis nòmal sere tout eleman l yo nan memwa an menm tan. Si ou gen 10 milyon liy pou trete, sa ka plen memwa òdinatè a. Yon generator rezoud pwoblèm sa a: li pwodui yon valè alafwa, sèlman lè ou mande l. Olye return, ou itilize mo kle yield andedan yon fonksyon: def konte(): n = 0; while True: yield n; n += 1. Chak fwa ou mande pwochen valè a ak next(), fonksyon an reprann egzakteman kote li te kanpe. Sa rele evalyasyon parese (lazy evaluation). Generator expressions yo menm pi kout: (x*2 for x in range(1000000)) pa pran memwa ditou jous ou itilize l. Nan tretman gwo fichye, ou ekri for liy in open('gwo.csv'): olye ou chaje tout fichye a — chak liy li youn pa youn. Sa se teknik ekspè pou trete done ki pi gwo pase memwa ou. [[CHECK:python-n4-l10-c1]] [[CHECK:python-n4-l10-c2]]",
+          "code": "def konte_enfini():\n    n = 0\n    while True:\n        yield n\n        n += 1\n\ngen = konte_enfini()\nprint(next(gen))\nprint(next(gen))\nprint(next(gen))",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo konpoze generators an chèn (pipeline) pou trete gwo done etap pa etap san yo pa janm chaje tout nan memwa.",
+          "exercises": [
+            {
+              "id": "python-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ki fè yon fonksyon tounen yon generator?",
+              "choices": [
+                "A) return",
+                "B) yield",
+                "C) generate",
+                "D) lazy"
+              ],
+              "accepted": [
+                "b",
+                "yield"
+              ],
+              "correct_ht": "B) yield",
+              "explanation_ht": "yield pwodui yon valè epi kanpe fonksyon an jous pwochen apèl next() la."
+            },
+            {
+              "id": "python-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou jwenn pwochen valè generator a: val = ____(gen)",
+              "accepted": [
+                "next"
+              ],
+              "correct_ht": "next",
+              "explanation_ht": "Fonksyon next() la mande generator a pwochen valè li."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n4-l10-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « n » genyen? (ekri valè a)",
+              "accepted": [
+                "0"
+              ],
+              "correct_ht": "0",
+              "explanation_ht": "Nan egzanp lan, liy « n = 0 » mete valè « 0 » nan bwat « n » a."
+            },
+            {
+              "id": "python-n4-l10-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "next(gen)"
+              ],
+              "correct_ht": "next(gen)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « next(gen) »."
+            }
+          ]
+        },
+        {
+          "id": "python-n4-l11",
+          "title_ht": "Decorators: modifye fonksyon",
+          "body_ht": "Yon decorator se yon fonksyon ki pran yon lòt fonksyon kòm antre epi retounen yon vèsyon modifye li. Se yon fason elegan pou ajoute konpòtman (log, verifikasyon, mezi tan) san ou pa touche kòd orijinal la. Sentaks la se yon @ anlè definisyon fonksyon an: @kronometre anlè def kalkile():. Anndan decorator a, ou defini yon fonksyon wrapper ki fè travay siplemantè anvan/apre li rele fonksyon orijinal la, epi ou retounen wrapper la. Paramèt *args ak **kwargs pèmèt wrapper la aksepte nenpòt agiman. Li enpòtan pou mete @functools.wraps(fonksyon) sou wrapper la pou non ak dokimantasyon fonksyon orijinal la pa pèdi. Decorators yo toupatou nan framework wèb: @app.route('/akèy') nan Flask, @login_required nan Django — tout se decorators k ap ajoute konpòtman san modifye fonksyon an. [[CHECK:python-n4-l11-c1]] [[CHECK:python-n4-l11-c2]]",
+          "code": "import functools, time\n\ndef kronometre(fonksyon):\n    @functools.wraps(fonksyon)\n    def wrapper(*args, **kwargs):\n        depa = time.time()\n        rezilta = fonksyon(*args, **kwargs)\n        print(f\"Dire: {time.time() - depa:.2f}s\")\n        return rezilta\n    return wrapper\n\n@kronometre\ndef kalkile():\n    return sum(range(1000000))",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo ekri decorators ak paramèt (factory) epi yo toujou konsève metadata ak functools.wraps.",
+          "exercises": [
+            {
+              "id": "python-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki sentaks ki aplike yon decorator sou yon fonksyon?",
+              "choices": [
+                "A) #decorator",
+                "B) @decorator anlè def la",
+                "C) decorator: def",
+                "D) apply(decorator)"
+              ],
+              "accepted": [
+                "b",
+                "@",
+                "@decorator"
+              ],
+              "correct_ht": "B) @decorator anlè def la",
+              "explanation_ht": "Ou mete @non_decorator sou liy anwo def fonksyon an."
+            },
+            {
+              "id": "python-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou konsève non fonksyon orijinal la: @functools.______(fonksyon)",
+              "accepted": [
+                "wraps"
+              ],
+              "correct_ht": "wraps",
+              "explanation_ht": "functools.wraps konsève non ak docstring fonksyon orijinal la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n4-l11-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « depa » genyen? (ekri valè a)",
+              "accepted": [
+                "time.time()"
+              ],
+              "correct_ht": "time.time()",
+              "explanation_ht": "Nan egzanp lan, liy « depa = time.time() » mete valè « time.time() » nan bwat « depa » a."
+            },
+            {
+              "id": "python-n4-l11-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "kronometre"
+              ],
+              "correct_ht": "kronometre",
+              "explanation_ht": "Fonksyon an rele « kronometre » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "python-n4-l12",
+          "title_ht": "Asyncio ak packaging",
+          "body_ht": "Pwogram nòmal yo kouri yon sèl travay alafwa: lè yo tann rezo a, yo bloke. Avèk asyncio, yon sèl pwogram ka jere dè milye koneksyon an menm tan san bloke. Ou make yon fonksyon ak async def, epi andedan ou ekri await devan operasyon ki pran tan (apèl rezo, lekti baz done): done = await chache_api(). Pandan await la ap tann, Python kouri lòt travay. Fonksyon asyncio.gather() lanse plizyè travay an paralèl. Sa se baz sèvè wèb modèn ki rapid (FastAPI, aiohttp). Dezyèm pati leson an se packaging: pou pataje kòd ou, ou òganize l kòm yon pakè ak yon fichye pyproject.toml ki dekri non, vèsyon, ak depandans yo. Ou kreye yon anviwònman vityèl ak python -m venv env pou izole depandans chak pwojè. Konbinezon asyncio + packaging se sa ki fè ou pase de script debutan a lojisyèl pwofesyonèl. [[CHECK:python-n4-l12-c1]] [[CHECK:python-n4-l12-c2]]",
+          "code": "import asyncio\n\nasync def chache(non):\n    await asyncio.sleep(1)\n    return f\"Done {non}\"\n\nasync def prensipal():\n    rezilta = await asyncio.gather(\n        chache(\"A\"), chache(\"B\"), chache(\"C\"))\n    print(rezilta)\n\nasyncio.run(prensipal())",
+          "code_lang": "python",
+          "expert_note_ht": "Ekspè yo pa melanje kòd senkron blokan andedan fonksyon async — yo sèvi ak asyncio.to_thread pou operasyon blokan yo.",
+          "exercises": [
+            {
+              "id": "python-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ki make yon fonksyon asynchrone nan Python?",
+              "choices": [
+                "A) async def",
+                "B) def async",
+                "C) await def",
+                "D) parallel def"
+              ],
+              "accepted": [
+                "a",
+                "async def"
+              ],
+              "correct_ht": "A) async def",
+              "explanation_ht": "Ou ekri async def non(): pou deklare yon coroutine, epi await andedan l."
+            },
+            {
+              "id": "python-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou tann rezilta a san bloke: done = ____ chache_api()",
+              "accepted": [
+                "await"
+              ],
+              "correct_ht": "await",
+              "explanation_ht": "await kanpe coroutine a jous operasyon an fini, pandan lòt travay yo kontinye."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "python-n4-l12-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « rezilta » genyen? (ekri valè a)",
+              "accepted": [
+                "await asyncio.gather("
+              ],
+              "correct_ht": "await asyncio.gather(",
+              "explanation_ht": "Nan egzanp lan, liy « rezilta = await asyncio.gather( » mete valè « await asyncio.gather( » nan bwat « rezilta » a."
+            },
+            {
+              "id": "python-n4-l12-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "rezilta"
+              ],
+              "correct_ht": "rezilta",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « rezilta »."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

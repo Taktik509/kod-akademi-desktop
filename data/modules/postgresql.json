@@ -1,0 +1,908 @@
+{
+  "category_ht": "Baz done",
+  "description_ht": "PostgreSQL se baz done relasyonèl open-source ki pi pwisan nan mond lan — sèvè solid pou aplikasyon reyèl, ak JSON, rechèch full-text ak replikasyon entegre.",
+  "id": "postgresql",
+  "levels": [
+    {
+      "id": "n1",
+      "lessons": [
+        {
+          "body_ht": "Bibliyotèk lekol la: dè milye liv ranje sou etajè pa kategori, ak yon kat pou jwenn chak liv vit. Yon bazdone se bibliyotèk enfòmasyon yo.\n\n [[CHECK:postgresql-n1-l01-c1]]\n\nPostgreSQL (yo rele li 'Postgres' tou) se yon sistèm jesyon baz done relasyonèl open-source, gratis, epi li konsidere kòm pi avanse nan kategori li. Kontrèman ak SQLite ki se yon fichye, PostgreSQL se yon SÈVÈ: li kouri an pèmanans sou yon machin epi plizyè aplikasyon konekte sou li an menm tan atravè rezo. Se chwa estanda pou aplikasyon web ak antrepriz ki bezwen fyab, sekirite ak pèfòmans. Pou enstale li: sou Ubuntu, sudo apt install postgresql; sou Windows/Mac, telechaje enstalatè a sou postgresql.org. Apre enstalasyon, ou konekte ak zouti liy kòmand psql: psql -U postgres. Kòmand \\l liste baz yo, \\c non_baz chanje baz, \\dt liste tab yo, epi \\q soti. Premye baz ou: CREATE DATABASE magazen;. Chak baz gen pwòp tab, itilizatè ak dwa pa li. Konprann achitekti sèvè a enpòtan: aplikasyon ou a pa janm manyen fichye yo dirèkteman — li voye rekèt SQL bay sèvè a, sèvè a reponn. [[CHECK:postgresql-n1-l01-c2]]",
+          "code": "-- Konekte: psql -U postgres\nCREATE DATABASE magazen;\n\\c magazen\n\\l",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon seve ke plizye aplikasyon konekte sou li an menm tan"
+              ],
+              "choices": [
+                "A) Yon sèl fichye sou disk",
+                "B) Yon sèvè ke plizyè aplikasyon konekte sou li an menm tan",
+                "C) Yon bibliyotèk JavaScript",
+                "D) Yon sèvis nwaj sèlman"
+              ],
+              "correct_ht": "B) Yon sèvè ke plizyè aplikasyon konekte sou li an menm tan",
+              "explanation_ht": "PostgreSQL se yon sèvè baz done: li kouri an pèmanans epi sèvi plizyè kliyan konkiran atravè rezo, ak jesyon itilizatè ak dwa.",
+              "id": "postgresql-n1-l01-e1",
+              "prompt_ht": "Ki diferans achitekti prensipal ant PostgreSQL ak SQLite?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "psql"
+              ],
+              "correct_ht": "psql",
+              "explanation_ht": "psql se zouti liy kòmand ofisyèl PostgreSQL pou konekte, egzekite SQL epi administre sèvè a.",
+              "id": "postgresql-n1-l01-e2",
+              "prompt_ht": "Ki zouti liy kòmand ou itilize pou konekte sou PostgreSQL? _____ -U postgres",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pa janm ekspoze PostgreSQL dirèkteman sou entènèt: kenbe li dèyè yon pare-feu, itilize koneksyon SSL, epi bay chak aplikasyon pwòp itilizatè li ak dwa minimòm.",
+          "id": "postgresql-n1-l01",
+          "title_ht": "Entwodiksyon ak enstalasyon",
+          "checkpoints": [
+            {
+              "id": "postgresql-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "postgresql-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Bibliyotèk lekol la: dè milye liv ranje sou etajè pa kategori, ak yon kat pou jwenn chak liv vit. Yon bazdone se bibliyotèk enfòmasyon yo.\n\n [[CHECK:postgresql-n1-l02-c1]]\n\nTab PostgreSQL yo pi rich pase SQLite paske tip done yo pi varye. Tip esansyèl yo: SERIAL (antye ki ogmante otomatikman. Pafè pou id), INTEGER, NUMERIC(p,s) pou lajan egzak (NUMERIC(10,2): 10 chif total, 2 apre vigil), VARCHAR(n) pou tèks limite, TEXT pou tèks san limit, BOOLEAN, DATE, TIMESTAMP pou dat ak lè. Egzanp: CREATE TABLE pwodwi (id SERIAL PRIMARY KEY, non VARCHAR(100) NOT NULL, pri NUMERIC(10,2) NOT NULL CHECK (pri >= 0), an_stok BOOLEAN DEFAULT true, kreye_le TIMESTAMP DEFAULT NOW());. CHECK se yon kontrent pwisan: baz la refize nenpòt pri negatif otomatikman. DEFAULT NOW() mete dat kreyasyon an pou kont li. Pou lajan, TOUJOU itilize NUMERIC olye REAL/DOUBLE: tip flotan yo gen erè awondi (0.1 + 0.2 ≠ 0.3) ki inakseptab pou kontablite. PostgreSQL gen plis pase 40 tip natif — chwazi tip ki pi presi a pou chak kolòn se mak yon bon konsepsyon. [[CHECK:postgresql-n1-l02-c2]]",
+          "code": "CREATE TABLE pwodwi (\n  id SERIAL PRIMARY KEY,\n  non VARCHAR(100) NOT NULL,\n  pri NUMERIC(10,2) NOT NULL CHECK (pri >= 0),\n  an_stok BOOLEAN DEFAULT true,\n  kreye_le TIMESTAMP DEFAULT NOW()\n);",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "numeric"
+              ],
+              "choices": [
+                "A) REAL",
+                "B) NUMERIC",
+                "C) FLOAT",
+                "D) DOUBLE"
+              ],
+              "correct_ht": "B) NUMERIC",
+              "explanation_ht": "NUMERIC estoke desimal yo egzakteman san erè awondi binaire — obligatwa pou lajan. REAL/FLOAT ka bay 19.9999998 olye 20.00.",
+              "id": "postgresql-n1-l02-e1",
+              "prompt_ht": "Ki tip done ou dwe itilize pou kolòn pri lajan?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "serial"
+              ],
+              "correct_ht": "SERIAL",
+              "explanation_ht": "SERIAL kreye yon antye ak yon sekans otomatik: chak INSERT resevwa pwochen nimewo a san ou bezwen presize li.",
+              "id": "postgresql-n1-l02-e2",
+              "prompt_ht": "Konplete pou id a ogmante otomatikman: id _____ PRIMARY KEY,",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan PostgreSQL modèn, GENERATED ALWAYS AS IDENTITY se ranplasan SERIAL rekòmande a (pi konfòm ak estanda SQL). Men SERIAL rete toupatou nan kòd ki egziste.",
+          "id": "postgresql-n1-l02",
+          "title_ht": "Kreye tab ak tip done",
+          "checkpoints": [
+            {
+              "id": "postgresql-n1-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "postgresql-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Lè ou mande bibliyotekè a: ban m tout liv istwa ki pale de Ayiti — ou fè yon rekèt. SQL se lang ou pale ak bazdone a pou mande l enfòmasyon.\n\n [[CHECK:postgresql-n1-l03-c1]]\n\nINSERT INTO ak SELECT nan PostgreSQL sanble ak SQLite, ak kèk sipriz agreyab. INSERT: INSERT INTO pwodwi (non, pri) VALUES ('Diri', 250.50) RETURNING id; — klòz RETURNING a tounen id ki fèk kreye a san yon dezyèm rechèch. Trè itil nan aplikasyon: ou bezwen id a touswit pou lye lòt tab. Pou mete plizyè ranje: VALUES (...), (...), (...) RETURNING id;. SELECT debaz la menm: SELECT non, pri FROM pwodwi WHERE an_stok = true ORDER BY pri DESC;. PostgreSQL gen operatè tèks pwisan: ILIKE fè LIKE san sansiblite kaz ('Diri' matche 'diri'), ak || konkatene tèks: SELECT non || ' - ' || pri FROM pwodwi;. Fonksyon dat: NOW(), CURRENT_DATE, epi AGE() pou diferans. Lè w ap teste, LIMIT 10 evite inonde ekran an. Epi sonje: PostgreSQL sansib ak kaz pou non tab/kolòn ki gen gimè — pi bon pratik se toujou ekri non yo an miniskil san aksan. [[CHECK:postgresql-n1-l03-c2]]",
+          "code": "INSERT INTO pwodwi (non, pri) VALUES\n  ('Diri 25lb', 250.50),\n  ('Lwil 1L', 180.00)\nRETURNING id, non;\n\nSELECT non || ' koute ' || pri AS deskripsyon\nFROM pwodwi\nWHERE non ILIKE 'diri%';",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "returning"
+              ],
+              "choices": [
+                "A) OUTPUT",
+                "B) RETURNING",
+                "C) GETTING",
+                "D) FETCH"
+              ],
+              "correct_ht": "B) RETURNING",
+              "explanation_ht": "RETURNING tounen kolòn ranje ki fèk modifye yo (id, elatriye) nan menm kòmand INSERT/UPDATE/DELETE a — pa bezwen yon SELECT apre.",
+              "id": "postgresql-n1-l03-e1",
+              "prompt_ht": "Ki klòz ki pèmèt INSERT tounen id ranje ki fèk kreye a?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "ilike"
+              ],
+              "correct_ht": "ILIKE",
+              "explanation_ht": "ILIKE se vèsyon LIKE PostgreSQL ki pa sansib ak majiskil/miniskil.",
+              "id": "postgresql-n1-l03-e2",
+              "prompt_ht": "Konplete pou rechèch tèks san sansiblite kaz: SELECT * FROM pwodwi WHERE non _____ 'diri%';",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "RETURNING mache tou ak UPDATE ak DELETE: UPDATE ... RETURNING * montre w egzakteman sa ki chanje — ekselan pou odit ak debogaj san rechèch siplemantè.",
+          "id": "postgresql-n1-l03",
+          "title_ht": "INSERT ak SELECT debaz",
+          "checkpoints": [
+            {
+              "id": "postgresql-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Rekèt SELECT * FROM pwodwi; ap:",
+              "accepted": [
+                "a",
+                "pran tout kolòn ak tout ranje nan tab pwodwi a"
+              ],
+              "correct_ht": "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+              "explanation_ht": "SELECT = pran; * = tout kolòn; FROM = nan ki tab.",
+              "choices": [
+                "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+                "B) Efase tab la",
+                "C) Kreye yon nouvo tab",
+                "D) Etenn bazdone a"
+              ]
+            },
+            {
+              "id": "postgresql-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — INSERT INTO sèvi pou:",
+              "accepted": [
+                "a",
+                "ajoute nouvo ranje (done) nan yon tab"
+              ],
+              "correct_ht": "A) Ajoute nouvo ranje (done) nan yon tab",
+              "explanation_ht": "INSERT = mete nouvo done andedan.",
+              "choices": [
+                "A) Ajoute nouvo ranje (done) nan yon tab",
+                "B) Efase yon tab",
+                "C) Li imèl yo",
+                "D) Fèmen bazdone a"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 1 — Debitan"
+    },
+    {
+      "id": "n2",
+      "lessons": [
+        {
+          "body_ht": "Relasyon ant tab yo se kè baz done relasyonèl. Yon kle primè (PRIMARY KEY) idantifye chak ranje yon fason inik; yon kle etranjè (FOREIGN KEY) nan yon lòt tab refere ak li, sa ki kreye lyen an. Egzanp: tab kòmand gen kliyan_id INTEGER REFERENCES kliyan(id) — chak kòmand dwe fè referans ak yon kliyan ki EGZISTE, sinon baz la refize INSERT la. Kontrèman ak SQLite, kle etranjè yo AKTIF pa default nan PostgreSQL. Ou ka presize konpòtman lè paran an efase: ON DELETE CASCADE efase kòmand yo otomatikman si kliyan an efase. ON DELETE SET NULL mete kliyan_id a NULL; RESTRICT (default) bloke efasman an. UNIQUE garanti pa gen doublon nan yon kolòn (tankou imèl kliyan). Konsevwa relasyon yo byen depi kòmansman: yon kliyan gen PLIZYÈ kòmand (one-to-many), epi yon kòmand gen plizyè pwodwi atravè yon tab lyezon (many-to-many). [[CHECK:postgresql-n2-l01-c1]] [[CHECK:postgresql-n2-l01-c2]]",
+          "code": "CREATE TABLE kliyan (\n  id SERIAL PRIMARY KEY,\n  non VARCHAR(100) NOT NULL,\n  imèl VARCHAR(150) UNIQUE NOT NULL\n);\n\nCREATE TABLE kòmand (\n  id SERIAL PRIMARY KEY,\n  kliyan_id INTEGER NOT NULL REFERENCES kliyan(id) ON DELETE CASCADE,\n  total NUMERIC(10,2) NOT NULL,\n  dat_kòmand DATE DEFAULT CURRENT_DATE\n);",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "on delete cascade"
+              ],
+              "choices": [
+                "A) ON DELETE IGNORE",
+                "B) ON DELETE CASCADE",
+                "C) ON DELETE STOP",
+                "D) ON DELETE NULLIFY"
+              ],
+              "correct_ht": "B) ON DELETE CASCADE",
+              "explanation_ht": "CASCADE pwopaje efasman an: efase yon kliyan efase otomatikman tout kòmand ki lye ak li. San sa, RESTRICT ta bloke efasman an.",
+              "id": "postgresql-n2-l01-e1",
+              "prompt_ht": "Ki opsyon ki efase otomatikman ranje pitit yo lè paran an efase?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "references"
+              ],
+              "correct_ht": "REFERENCES",
+              "explanation_ht": "REFERENCES kliyan(id) deklare kliyan_id kòm kle etranjè ki dwe koresponn ak yon id ki egziste nan tab kliyan.",
+              "id": "postgresql-n2-l01-e2",
+              "prompt_ht": "Konplete deklarasyon kle etranjè a: kliyan_id INTEGER _____ kliyan(id),",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Kle etranjè yo pwoteje entegrite done, men yo koute yon tès sou chak ekriti. Toujou mete yon indeks sou kolòn kle etranjè a — sinon chak tès vin yon full scan sou tab paran an.",
+          "id": "postgresql-n2-l01",
+          "title_ht": "Kle primè ak kle etranjè",
+          "checkpoints": [
+            {
+              "id": "postgresql-n2-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kle prensipal (PRIMARY KEY) dwe:",
+              "accepted": [
+                "a",
+                "inik pou chak ranje epi pa janm vid"
+              ],
+              "correct_ht": "A) Inik pou chak ranje epi pa janm vid",
+              "explanation_ht": "Se kat idantite chak ranje: inik, obligatwa.",
+              "choices": [
+                "A) Inik pou chak ranje epi pa janm vid",
+                "B) Kapab repete",
+                "C) Toujou yon foto",
+                "D) Chanje chak jou"
+              ]
+            },
+            {
+              "id": "postgresql-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Lè ou mande bibliyotekè a: ban m tout liv istwa ki pale de Ayiti — ou fè yon rekèt. SQL se lang ou pale ak bazdone a pou mande l enfòmasyon.\n\n [[CHECK:postgresql-n2-l02-c1]]\n\nJOIN rakonte tab yo, epi PostgreSQL ofri tout varyant estanda yo ak kèk siplemantè. INNER JOIN: sèlman match yo. LEFT JOIN: tout agoch + NULL adwat. RIGHT JOIN: envès la. FULL OUTER JOIN: tout toude bò, NULL kote pa gen match — itil pou 'kliyan san kòmand AK kòmand san kliyan' nan yon sèl rechèch. CROSS JOIN: pwodwi katezyen (itilize ak prekosyon). SELF JOIN: yon tab jwenn ak tèt li. Egzanp klasik anplwaye ak manadjè yo: SELECT e.non, m.non AS manadjè FROM anplwaye e LEFT JOIN anplwaye m ON e.manadjè_id = m.id;. Ou ka anpile JOIN: kliyan → kòmand → detay_kòmand → pwodwi nan yon sèl rechèch pou yon fakti konplè. Konsèy pèfòmans: JOIN sou kle etranjè endekse yo rapid; JOIN sou kolòn tèks san indeks sou gwo tab ka tounen yon kochma. EXPLAIN ANALYZE montre w tan reyèl chak etap plan an. [[CHECK:postgresql-n2-l02-c2]]",
+          "code": "SELECT k.non AS kliyan, p.non AS pwodwi, d.kantite\nFROM kliyan k\nJOIN kòmand c ON c.kliyan_id = k.id\nJOIN detay_kòmand d ON d.kòmand_id = c.id\nJOIN pwodwi p ON p.id = d.pwodwi_id\nWHERE c.dat_kòmand >= CURRENT_DATE - INTERVAL '30 days';",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "tout ranje toude tab yo, ak null kote pa gen match"
+              ],
+              "choices": [
+                "A) Sèlman match yo",
+                "B) Tout ranje toude tab yo, ak NULL kote pa gen match",
+                "C) Sèlman tab agoch la",
+                "D) Okenn ranje"
+              ],
+              "correct_ht": "B) Tout ranje toude tab yo, ak NULL kote pa gen match",
+              "explanation_ht": "FULL OUTER JOIN se inyon LEFT ak RIGHT JOIN: ou wè tout bagay, ak NULL ki make absans korespondans chak bò.",
+              "id": "postgresql-n2-l02-e1",
+              "prompt_ht": "Kisa FULL OUTER JOIN retounen?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "self join"
+              ],
+              "correct_ht": "SELF JOIN",
+              "explanation_ht": "Yon SELF JOIN jwenn yon tab ak tèt li (ak de alias diferan) — klasik pou yerachi tankou anplwaye/manadjè oswa kategori/paran.",
+              "id": "postgresql-n2-l02-e2",
+              "prompt_ht": "Ki tèm pou yon tab ki fè JOIN ak tèt li (egzanp anplwaye-manadjè)? _____",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "INTERVAL '30 days' se fason pwòp pou aritmetik dat nan PostgreSQL — pa janm fè kalkil dat ak nonb jou manyèlman, fizeau ak lè ete/lè ivè ap trayi ou.",
+          "id": "postgresql-n2-l02",
+          "title_ht": "JOIN avanse",
+          "checkpoints": [
+            {
+              "id": "postgresql-n2-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JOIN konekte:",
+              "accepted": [
+                "a",
+                "plizyè tab ansanm grasa kle ki gen rapò"
+              ],
+              "correct_ht": "A) Plizyè tab ansanm grasa kle ki gen rapò",
+              "explanation_ht": "JOIN marye tab yo sou kle etranje a pou wè done yo ansanm.",
+              "choices": [
+                "A) Plizyè tab ansanm grasa kle ki gen rapò",
+                "B) De òdinatè",
+                "C) De sit entènèt",
+                "D) De imaj"
+              ]
+            },
+            {
+              "id": "postgresql-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pwofesè a kalkile mwayèn klas la: li pa li chak nòt apa, li rezime yo. Agregasyon se rezime anpil done an yon sèl chif.\n\n [[CHECK:postgresql-n2-l03-c1]]\n\nFonksyon agregasyon transfòme ranje an rezime: COUNT, SUM, AVG, MIN, MAX. Epi PostgreSQL ajoute STRING_AGG(x, ', ') ki konkatene tèks gwoup yo an yon sèl chenn, ak ARRAY_AGG(x) ki fè yon tablo. GROUP BY rasanble ranje yo: SELECT kategori, COUNT(*), AVG(pri) FROM pwodwi GROUP BY kategori;. HAVING filtre gwoup yo: HAVING COUNT(*) > 3. Fonksyon fenèt (window functions) se nivo siperyè: yo kalkile agregasyon SAN kraze ranje yo. ROW_NUMBER() OVER (ORDER BY total DESC) nimewote chak kòmand pa rang. RANK() bay menm rang pou egalite; SUM(total) OVER (PARTITION BY kliyan_id) bay total kimilatif pa kliyan pandan chak ranje rete vizib. Diferans kle: GROUP BY diminye ranje yo an rezime, OVER() kenbe tout ranje epi ajoute yon kolòn kalkile. Pou rapò konplèks (top 3 pa kategori, kimilatif, pousantaj), fonksyon fenèt yo ranplase plizyè sous-rekèt. [[CHECK:postgresql-n2-l03-c2]]",
+          "code": "SELECT non, pri, kategori,\n  RANK() OVER (PARTITION BY kategori ORDER BY pri DESC) AS rang,\n  AVG(pri) OVER (PARTITION BY kategori) AS mwayèn_kategori\nFROM pwodwi;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "group by diminye ranje yo, over kenbe yo"
+              ],
+              "choices": [
+                "A) Pa gen diferans",
+                "B) GROUP BY diminye ranje yo an rezime, OVER() kenbe tout ranje epi ajoute yon kolòn",
+                "C) OVER pi lan toujou",
+                "D) GROUP BY pa mache ak JOIN"
+              ],
+              "correct_ht": "B) GROUP BY diminye ranje yo an rezime, OVER() kenbe tout ranje epi ajoute yon kolòn",
+              "explanation_ht": "Fonksyon fenèt kalkile sou yon 'fenèt' ranje san gwoupman: chak ranje orijinal rete nan rezilta a ak valè kalkile a akote li.",
+              "id": "postgresql-n2-l03-e1",
+              "prompt_ht": "Ki diferans ant GROUP BY ak yon fonksyon fenèt OVER()?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "over"
+              ],
+              "correct_ht": "OVER",
+              "explanation_ht": "OVER (PARTITION BY ... ORDER BY ...) defini fenèt la sou ki fonksyon an kalkile.",
+              "id": "postgresql-n2-l03-e2",
+              "prompt_ht": "Konplete fonksyon fenèt la: SELECT RANK() _____ (ORDER BY total DESC) FROM kòmand;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Fonksyon fenèt yo evalye APRE WHERE/GROUP BY/HAVING men AVAN ORDER BY final la — ou pa ka mete yon alias fenèt nan WHERE; itilize yon sous-rekèt oswa CTE pou filtre sou li.",
+          "id": "postgresql-n2-l03",
+          "title_ht": "Agregasyon ak fonksyon fenèt",
+          "checkpoints": [
+            {
+              "id": "postgresql-n2-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Fonksyon COUNT() ap:",
+              "accepted": [
+                "a",
+                "konte konbyen ranje ki genyen"
+              ],
+              "correct_ht": "A) Konte konbyen ranje ki genyen",
+              "explanation_ht": "Fonksyon agregasyon rezime anpil ranje an yon sèl chif.",
+              "choices": [
+                "A) Konte konbyen ranje ki genyen",
+                "B) Efase ranje yo",
+                "C) Triye ranje yo",
+                "D) Kache ranje yo"
+              ]
+            },
+            {
+              "id": "postgresql-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 2 — Entèmedyè"
+    },
+    {
+      "id": "n3",
+      "lessons": [
+        {
+          "body_ht": "Yon resèt kwizin se yon lis etap ou swiv chak fwa ou vle fè diri kole. Yon fonksyon se yon resèt pou òdinatè a: ou ekri etap yo yon fwa, epi ou rele l chak fwa ou bezwen l.\n\n [[CHECK:postgresql-n3-l01-c1]]\n\nPafwa SQL deklaratif pa sifi: ou bezwen bouk, kondisyon konplèks, oswa lojik metye reitilizab. PL/pgSQL se langaj pwosedi entegre PostgreSQL a. Ou kreye yon fonksyon: CREATE FUNCTION pri_ak_taks(p NUMERIC) RETURNS NUMERIC AS $$ BEGIN RETURN p * 1.10; END; $$ LANGUAGE plpgsql;. Kò a ant $$ ... $$ gen varyab (DECLARE), IF/ELSE, bouk LOOP/WHILE/FOR, ak jesyon erè EXCEPTION. Fonksyon yo ka retounen yon valè, yon tab (RETURNS TABLE), oswa yon seri (RETURN NEXT). Yo rele yo nan SQL nòmal: SELECT pri_ak_taks(100);. Avantaj: lojik la kouri TOUPRE done yo (pa gen ale-retou rezo), li reitilizab pa tout aplikasyon, epi li garanti menm règ yo pou tout moun. Defo: lojik metye nan baz la pi difisil pou vèsyone ak teste pase nan kòd aplikasyon — mete la sèlman sa ki vrèman fè pati done yo (kalkil, validasyon, odit). [[CHECK:postgresql-n3-l01-c2]]",
+          "code": "CREATE FUNCTION nivo_kliyan(total NUMERIC)\nRETURNS TEXT AS $$\nBEGIN\n  IF total >= 10000 THEN RETURN 'VIP';\n  ELSIF total >= 3000 THEN RETURN 'Fidèl';\n  ELSE RETURN 'Nouvo';\n  END IF;\nEND;\n$$ LANGUAGE plpgsql;\n\nSELECT non, nivo_kliyan(total_achte) FROM kliyan;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "plpgsql"
+              ],
+              "choices": [
+                "A) python",
+                "B) plpgsql",
+                "C) javascript",
+                "D) sqlscript"
+              ],
+              "correct_ht": "B) plpgsql",
+              "explanation_ht": "PL/pgSQL se langaj pwosedi natif PostgreSQL a, deklare ak LANGUAGE plpgsql nan fen definisyon fonksyon an.",
+              "id": "postgresql-n3-l01-e1",
+              "prompt_ht": "Ki langaj ou presize pou yon fonksyon pwosedi PostgreSQL?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "$$"
+              ],
+              "correct_ht": "$$",
+              "explanation_ht": "$$ ... $$ se 'dollar quoting': li delimite kò fonksyon an san ou bezwen echape gimè andedan li.",
+              "id": "postgresql-n3-l01-e2",
+              "prompt_ht": "Ki delimitè ki antoure kò yon fonksyon PL/pgSQL? _____ BEGIN ... END; _____",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Fonksyon PL/pgSQL yo konpile ak kach: premye apèl la prepare plan an, apèl apre yo reitilize li. Pou fonksyon yo rele souvan ak menm fòm paramèt, se yon gwo gen pèfòmans.",
+          "id": "postgresql-n3-l01",
+          "title_ht": "Fonksyon PL/pgSQL",
+          "checkpoints": [
+            {
+              "id": "postgresql-n3-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            },
+            {
+              "id": "postgresql-n3-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon VIEW se yon rechèch ki sove ak yon non — ou itilize li tankou yon tab: CREATE VIEW fakti AS SELECT ...;. Avantaj: ou kache konpleksite (itilizatè a wè yon 'tab' senp), ou santralize lojik (chanje view a yon fwa, tout moun benefisye), epi ou ka restrenn aksè (bay dwa sou view a san bay aksè sou tab baz yo). Yon MATERIALIZED VIEW estoke rezilta a fizikman: REFRESH MATERIALIZED VIEW rafrechi li. Pafè pou rapò lou sou done ki pa chanje souvan — lekti vin enstantane, pri a se rafrechisman peryodik. Pou pèfòmans rechèch, PostgreSQL ofri plizyè tip indeks: B-tree (default, egalite ak entèval), GIN (rechèch andedan JSONB ak full-text), BRIN (gwo tab kwonolojik, trè piti), ak indeks pasyèl (CREATE INDEX ... WHERE an_stok = true) ki endekse sèlman ranje ki enpòtan yo. Chwazi tip la selon kesyon ou poze yo, pa pa abitid. [[CHECK:postgresql-n3-l02-c1]] [[CHECK:postgresql-n3-l02-c2]]",
+          "code": "CREATE VIEW fakti AS\nSELECT k.non AS kliyan, c.id, c.total, c.dat_kòmand\nFROM kliyan k JOIN kòmand c ON c.kliyan_id = k.id;\n\nCREATE MATERIALIZED VIEW lavant_mwa AS\nSELECT date_trunc('month', dat_kòmand) AS mwa, SUM(total)\nFROM kòmand GROUP BY 1;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li estoke rezilta a fizikman epi dwe rafrechi"
+              ],
+              "choices": [
+                "A) Li pi rapid toujou",
+                "B) Li estoke rezilta a fizikman epi dwe rafrechi manyèlman/peryodikman",
+                "C) Li pa ka fè JOIN",
+                "D) Li efase tab orijinal la"
+              ],
+              "correct_ht": "B) Li estoke rezilta a fizikman epi dwe rafrechi manyèlman/peryodikman",
+              "explanation_ht": "Yon view nòmal re-egzekite rechèch la chak fwa (toujou ajou, pafwa lan). Yon materialized view se yon snapshot: lekti enstantane, men done yo ka demode jous REFRESH.",
+              "id": "postgresql-n3-l02-e1",
+              "prompt_ht": "Ki diferans yon MATERIALIZED VIEW ak yon VIEW nòmal?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "refresh materialized view"
+              ],
+              "correct_ht": "REFRESH MATERIALIZED VIEW",
+              "explanation_ht": "REFRESH MATERIALIZED VIEW non; rekalkile epi estoke nouvo rezilta a.",
+              "id": "postgresql-n3-l02-e2",
+              "prompt_ht": "Ki kòmand ki mete yon materialized view ajou? _____ lavant_mwa;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "REFRESH MATERIALIZED VIEW CONCURRENTLY rafrechi san bloke lekti yo — obligatwa an pwodiksyon. Li egzije yon indeks inik sou view a, kidonk prevwa li depi kreyasyon.",
+          "id": "postgresql-n3-l02",
+          "title_ht": "Views ak indeks espesyalize",
+          "checkpoints": [
+            {
+              "id": "postgresql-n3-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "postgresql-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Notasyon Big O mezire:",
+              "accepted": [
+                "a",
+                "kijan tan yon algoritm grandi lè done yo grandi"
+              ],
+              "correct_ht": "A) Kijan tan yon algoritm grandi lè done yo grandi",
+              "explanation_ht": "O(n) = lineyè; O(n²) = bouk anndan bouk — evite!",
+              "choices": [
+                "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                "B) Gwosè ekran an",
+                "C) Pri òdinatè a",
+                "D) Kantite koulè"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Lè manman w voye w achte pen, ou pa kanpe devan fou a ap tann li kwit — ou fè lòt bagay epi ou tounen. Kòd asenkron fè menm jan: li lanse yon travay epi li kontinye.\n\n [[CHECK:postgresql-n3-l03-c1]]\n\nTranzaksyon PostgreSQL yo pi sofistike pase SQLite. Nivo izolasyon kontwole sa yon tranzaksyon wè nan travay lòt tranzaksyon konkiran yo. READ COMMITTED (default): ou wè sèlman done KOMITE anvan chak kòmand — ase pou pifò aplikasyon. REPEATABLE READ: snapshot la friz nan kòmansman tranzaksyon an — menm SELECT repete bay menm rezilta, pwoteje kont 'non-repeatable reads'. SERIALIZABLE: pi strik, konpòte tankou tranzaksyon yo te kouri youn apre lòt — pri a se erè serializasyon ou dwe re-eseye. Pwoblèm klasik: 'lost update' (de tranzaksyon li menm valè epi ekri, youn pèdi), rezoud ak SELECT ... FOR UPDATE ki bloke ranje a jous COMMIT. SAVEPOINT pèmèt rollback pasyèl: SAVEPOINT p1; ... ROLLBACK TO p1; anile sèlman sa ki te fèt apre p1. Règ lò: kenbe tranzaksyon yo kout, pa janm mete atant itilizatè oswa apèl rezo ladan yo, epi toujou prevwa re-eseye sou erè serializasyon. [[CHECK:postgresql-n3-l03-c2]]",
+          "code": "BEGIN;\nSELECT balans FROM kont WHERE id = 1 FOR UPDATE;\nUPDATE kont SET balans = balans - 500 WHERE id = 1;\nSAVEPOINT apre_debi;\nUPDATE kont SET balans = balans + 500 WHERE id = 2;\n-- Si pwoblèm nan dezyèm pati a:\n-- ROLLBACK TO apre_debi;\nCOMMIT;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "repeatable read"
+              ],
+              "choices": [
+                "A) READ UNCOMMITTED",
+                "B) REPEATABLE READ",
+                "C) READ COMMITTED",
+                "D) CHAOS"
+              ],
+              "correct_ht": "B) REPEATABLE READ",
+              "explanation_ht": "REPEATABLE READ friz yon snapshot nan kòmansman tranzaksyon an: tout SELECT repete wè menm done yo, kèlkeswa sa lòt tranzaksyon komite pandan tan an.",
+              "id": "postgresql-n3-l03-e1",
+              "prompt_ht": "Ki nivo izolasyon ki garanti yon SELECT repete bay menm rezilta pandan tranzaksyon an?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "for update"
+              ],
+              "correct_ht": "FOR UPDATE",
+              "explanation_ht": "SELECT ... FOR UPDATE pran yon blokaj ekriti sou ranje yo jous fen tranzaksyon an, anpeche lòt tranzaksyon modifye yo pandan tan an.",
+              "id": "postgresql-n3-l03-e2",
+              "prompt_ht": "Konplete pou bloke ranje a pandan tranzaksyon an: SELECT balans FROM kont WHERE id = 1 _____;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Deadlock rive lè de tranzaksyon bloke youn lòt (A tann B, B tann A). Prevansyon: toujou bloke tab/ranje yo nan MENM lòd toupatou nan kòd ou a.",
+          "id": "postgresql-n3-l03",
+          "title_ht": "Izolasyon ak konkirans",
+          "checkpoints": [
+            {
+              "id": "postgresql-n3-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            },
+            {
+              "id": "postgresql-n3-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 3 — Avanse"
+    },
+    {
+      "id": "n4",
+      "lessons": [
+        {
+          "body_ht": "Pafwa ou pa bezwen yon klasè ak fòm strik — yon bwat kote ou jete papye jan yo vini an sifi. NoSQL se bwat fleksib pou done ki pa gen fòm fiks.\n\n [[CHECK:postgresql-n4-l01-c1]]\n\nJSONB se tip done 'JSON binè' PostgreSQL a — li estoke dokiman JSON nan yon fòma optimize, endeksab, epi rechèchab. Pafè pou done semi-estriktire: preferans itilizatè, katalòg pwodwi ak atribi varyab, repons API. Egzanp: CREATE TABLE pwodwi (id SERIAL PRIMARY KEY, info JSONB); INSERT ... VALUES (1, '{\"koulè\": \"wouj\", \"gwosè\": [\"M\", \"L\"], \"stok\": 10}');. Operatè kle yo: -> tounen yon valè JSON, ->> tounen tèks: info->>'koulè' bay 'wouj'. @> teste kontenans: WHERE info @> '{\"koulè\": \"wouj\"}' jwenn tout pwodwi wouj. ? teste prezans yon kle: WHERE info ? 'garanti'. Ak yon indeks GIN (CREATE INDEX ON pwodwi USING GIN (info);), rechèch sa yo vin rapid menm sou milyon dokiman. Ou ka mete ajou yon pati: info = info || '{\"stok\": 8}' fizyone kle yo. JSONB konbine fleksibilite NoSQL ak fyab relasyonèl — men pa abize li: sa ki toujou estriktire (pri, dat) rete nan kolòn nòmal. [[CHECK:postgresql-n4-l01-c2]]",
+          "code": "CREATE TABLE pwodwi (id SERIAL PRIMARY KEY, info JSONB);\nINSERT INTO pwodwi (info) VALUES\n  ('{\"non\": \"Chemiz\", \"koulè\": \"wouj\", \"stok\": 10}'),\n  ('{\"non\": \"Pantalon\", \"koulè\": \"ble\", \"stok\": 4}');\n\nSELECT info->>'non' AS non\nFROM pwodwi\nWHERE info @> '{\"koulè\": \"wouj\"}';",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "-> tounen json, ->> tounen teks"
+              ],
+              "choices": [
+                "A) Pa gen diferans",
+                "B) -> tounen yon valè JSON, ->> tounen tèks",
+                "C) ->> pi rapid",
+                "D) -> pa egziste"
+              ],
+              "correct_ht": "B) -> tounen yon valè JSON, ->> tounen tèks",
+              "explanation_ht": "info->'koulè' tounen \"wouj\" (JSON ak gimè), info->>'koulè' tounen wouj (tèks pi). Itilize ->> pou konparezon ak afichaj tèks.",
+              "id": "postgresql-n4-l01-e1",
+              "prompt_ht": "Ki diferans ant operatè -> ak ->>?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "gin"
+              ],
+              "correct_ht": "GIN",
+              "explanation_ht": "Yon indeks GIN sou kolòn JSONB a akselere operatè @>, ?, ?& sou dokiman yo.",
+              "id": "postgresql-n4-l01-e2",
+              "prompt_ht": "Ki tip indeks ki akselere rechèch JSONB? CREATE INDEX ON pwodwi USING _____ (info);",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "JSONB nòmalize espas ak lòd kle yo nan estokaj: de dokiman ekivalan pran menm fòm. Men li pa konsève doublon kle — dènye valè a genyen, tankou estanda JSON.",
+          "id": "postgresql-n4-l01",
+          "title_ht": "JSONB: fleksibilite NoSQL",
+          "checkpoints": [
+            {
+              "id": "postgresql-n4-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JavaScript nan yon paj web sèvi pou:",
+              "accepted": [
+                "a",
+                "fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni"
+              ],
+              "correct_ht": "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+              "explanation_ht": "JS = sèvo/konpòtman paj la.",
+              "choices": [
+                "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+                "B) Ekri tèks la",
+                "C) Bay koulè yo",
+                "D) Sere modpas"
+              ]
+            },
+            {
+              "id": "postgresql-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JSON se:",
+              "accepted": [
+                "a",
+                "yon fòma tèks pou echanje done òganize ak etikèt (kle/valè)"
+              ],
+              "correct_ht": "A) Yon fòma tèks pou echanje done òganize ak etikèt (kle/valè)",
+              "explanation_ht": "Egzanp: {\"non\": \"Marie\", \"laj\": 25} — tout lang konprann li.",
+              "choices": [
+                "A) Yon fòma tèks pou echanje done òganize ak etikèt (kle/valè)",
+                "B) Yon lang pwogramasyon",
+                "C) Yon bazdone",
+                "D) Yon navigatè"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Lè yon tab rive nan dizèn milyon ranje, menm ak indeks li vin lou: chak rechèch, chak VACUUM, chak backup soufri. Partitioning divize yon gwo tab lojik an plizyè tab fizik (patisyon) san chanje sa aplikasyon an wè. Ka klasik: tab lavant patisyone pa mwa: CREATE TABLE lavant (id SERIAL, dat DATE NOT NULL, total NUMERIC) PARTITION BY RANGE (dat). Apre ou kreye patisyon: CREATE TABLE lavant_2026_10 PARTITION OF lavant FOR VALUES FROM ('2026-10-01') TO ('2026-11-01');. Benefis: 'partition pruning' — yon rechèch WHERE dat >= '2026-10-01' li SÈLMAN patisyon oktòb la, pa tout istwa a. Antretyen vin fasil: DROP yon vye patisyon (segonn) olye DELETE milyon ranje (èdtan). Backup ak achiv pa patisyon. Règ: chwazi kle patisyon an selon kesyon ou poze yo (anjeneral dat), epi kenbe kantite patisyon rezonab (santèn, pa milye). [[CHECK:postgresql-n4-l02-c1]] [[CHECK:postgresql-n4-l02-c2]]",
+          "code": "CREATE TABLE lavant (\n  id SERIAL,\n  dat DATE NOT NULL,\n  total NUMERIC(10,2)\n) PARTITION BY RANGE (dat);\n\nCREATE TABLE lavant_2026_10 PARTITION OF lavant\n  FOR VALUES FROM ('2026-10-01') TO ('2026-11-01');\nCREATE TABLE lavant_2026_11 PARTITION OF lavant\n  FOR VALUES FROM ('2026-11-01') TO ('2026-12-01');",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "partition pruning"
+              ],
+              "choices": [
+                "A) Index skipping",
+                "B) Partition pruning",
+                "C) Table dropping",
+                "D) Query caching"
+              ],
+              "correct_ht": "B) Partition pruning",
+              "explanation_ht": "Planifikatè a elimine patisyon ki pa ka gen done pou kondisyon WHERE a — rechèch la li sèlman patisyon ki nesesè yo.",
+              "id": "postgresql-n4-l02-e1",
+              "prompt_ht": "Ki mekanis ki fè yon rechèch sou yon tab patisyone li sèlman patisyon ki enpòtan yo?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "partition by range"
+              ],
+              "correct_ht": "PARTITION BY RANGE",
+              "explanation_ht": "PARTITION BY RANGE (dat) deklare tab la patisyone pa entèval sou kolòn dat la; chak patisyon kouvri yon entèval.",
+              "id": "postgresql-n4-l02-e2",
+              "prompt_ht": "Konplete deklarasyon patisyon an: CREATE TABLE lavant (...) _____ (dat);",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "pg_partman otomatize kreyasyon patisyon (pa mwa/semèn) ak netwayaj vye yo. San automatisation, yon moun ap bliye kreye patisyon pwochen mwa a — epi INSERT yo ap echwe.",
+          "id": "postgresql-n4-l02",
+          "title_ht": "Partitioning: gwo tab",
+          "checkpoints": [
+            {
+              "id": "postgresql-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            },
+            {
+              "id": "postgresql-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon sèl sèvè se yon pwen echèk: si li tonbe, aplikasyon an tonbe. Replikasyon kopi done yo sou yon oswa plizyè sèvè rezèv (standby). PostgreSQL itilize replikasyon streaming: sèvè prensipal (primary) voye jounal modifikasyon (WAL) bay standby yo an tan reyèl. Konfigirasyon debaz: sou primary a, kreye yon wòl replikasyon epi pèmèt koneksyon nan pg_hba.conf; sou standby a, fè yon backup baz ak pg_basebackup -R ki ekri konfigirasyon replikasyon an otomatikman. Standby yo sèvi de objektif: 1) Haute disponibilité — si primary a tonbe, ou pwomouvwa yon standby an primary (failover) ak kèk segonn/minit entèripsyon. 2) Ekalaj lekti — voye gwo rapò SELECT yo sou standby yo pou soulaje primary a. Replikasyon senkron (synchronous_commit) garanti zewo pèt done men ajoute latans; asenkron (default) pi rapid men ka pèdi kèk segonn done nan yon krach. Siveye 'replication lag' — reta ant primary ak standby — ak view pg_stat_replication. [[CHECK:postgresql-n4-l03-c1]] [[CHECK:postgresql-n4-l03-c2]]",
+          "code": "-- Sou primary: kreye wòl replikasyon\nCREATE ROLE replikatè WITH REPLICATION LOGIN PASSWORD 'sekre';\n\n-- Sou standby: kopi baz la (egzekite sou machin standby)\n-- pg_basebackup -h primary_ip -U replikatè -R -D /var/lib/postgresql/data\n\n-- Siveye reta:\nSELECT client_addr, state, replay_lag FROM pg_stat_replication;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "primary voye jounal wal bay standby yo an tan reyèl"
+              ],
+              "choices": [
+                "A) Standby yo poze kesyon primary a chak minit",
+                "B) Primary a voye jounal WAL bay standby yo an tan reyèl",
+                "C) Yo pataje menm disk la",
+                "D) Done yo kopye yon fwa pa jou"
+              ],
+              "correct_ht": "B) Primary a voye jounal WAL bay standby yo an tan reyèl",
+              "explanation_ht": "Nan replikasyon streaming, primary a difize anrejistreman WAL yo kontinye; standby yo rejwe yo pou rete kopi egzak an tan reyèl.",
+              "id": "postgresql-n4-l03-e1",
+              "prompt_ht": "Kijan replikasyon streaming PostgreSQL fonksyone?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "pg_basebackup"
+              ],
+              "correct_ht": "pg_basebackup",
+              "explanation_ht": "pg_basebackup pran yon kopi fizik konplè primary a; opsyon -R ekri paramèt replikasyon yo pou standby a konekte otomatikman.",
+              "id": "postgresql-n4-l03-e2",
+              "prompt_ht": "Ki zouti ki kreye kopi inisyal pou yon sèvè standby? _____ -h primary_ip -U replikatè -R -D /data",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Teste failover ou a anvan ou bezwen li: yon plan replikasyon ki pa janm teste se yon ilizyon sekirite. Dokimante pwosedi pwomosyon an etap pa etap epi fè yon egzèsis chak trimès.",
+          "id": "postgresql-n4-l03",
+          "title_ht": "Replikasyon: haute disponibilité",
+          "checkpoints": [
+            {
+              "id": "postgresql-n4-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            },
+            {
+              "id": "postgresql-n4-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Rekèt SELECT * FROM pwodwi; ap:",
+              "accepted": [
+                "a",
+                "pran tout kolòn ak tout ranje nan tab pwodwi a"
+              ],
+              "correct_ht": "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+              "explanation_ht": "SELECT = pran; * = tout kolòn; FROM = nan ki tab.",
+              "choices": [
+                "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+                "B) Efase tab la",
+                "C) Kreye yon nouvo tab",
+                "D) Etenn bazdone a"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 4 — Ekspè"
+    }
+  ],
+  "name": "PostgreSQL"
+}

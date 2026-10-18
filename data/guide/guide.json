@@ -1,0 +1,3682 @@
+{
+  "id": "gid-programmation-v1",
+  "title_ht": "Gid Konplè Pwogramasyon — Kourikoulòm Mèt",
+  "version": "Oktòb 2026",
+  "description_ht": "Kolòn vetebral kourikoulòm Kòd Akademi: 7 etap, 16 modil, soti nan fondasyon rive nan pwojè final — dapre Gid Konplè Pwogramasyon an.",
+  "etapes": [
+    {
+      "id": "etap-1",
+      "numero": 1,
+      "icon": "🧠",
+      "title_ht": "Fondasyon òdinatè, lojik, tèminal ak Git",
+      "description_ht": "Konprann machin nan, panse tankou yon pwogramè, epi metrize zouti pwofesyonèl yo. San fondasyon sa a, tout rès la ap sou sab.",
+      "modules": [
+        {
+          "id": "g01",
+          "title_ht": "MODIL 1 — Fondasyon òdinatè ak rezònman enfòmatik",
+          "description_ht": "Pyès òdinatè, bit ak byte, sistèm operasyon, algoritm ak pseudocode. Se fondasyon tout rès pwogramasyon an: ou dwe kapab eksplike kijan yon pwogram kouri anvan ou ekri premye liy kòd ou.",
+          "related_lessons": [
+            "L01",
+            "L02"
+          ],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g01-l01",
+              "title_ht": "Bit, byte ak kijan òdinatè konte",
+              "body_ht": "Tout enfòmasyon nan yon òdinatè se zewo ak en (0 ak 1). Yon chif binè konsa rele yon BIT. Avèk 1 bit ou ka reprezante 2 valè (0 oswa 1); avèk 2 bit, 4 valè (00, 01, 10, 11); avèk 8 bit, 256 valè. Yon gwoup 8 bit rele yon BYTE — se inite debaz memwa a. [[CHECK:g01-l01-c1]]\n\nÒdinatè konte an binè (baz 2), men nou menm nou konte an desimal (baz 10). Pwogramè yo itilize tou egzadesimal (baz 16: 0-9 puis A-F) paske li pi kout pou ekri adres memwa ak koulè. Pa egzanp, koulè wouj an egzadesimal se #FF0000. Chak lèt ou tape gen yon nimewo (kòd ASCII/Unicode): lèt 'A' se 65. [[CHECK:g01-l01-c2]]\n\nDosye yo se sèlman swit byte ki gen yon sans: yon foto, yon chante, yon tèks. Chemen (path) yon dosye di òdinatè a egzakteman ki kote l ye, tankou yon adrès kay. Konprann bit, byte, dosye ak chemen se konprann lang manman tout lojisyèl. [[CHECK:g01-l01-c3]]",
+              "code": "print(bin(13))   # 0b1101  -> 13 an binè\nprint(hex(255))  # 0xff    -> 255 an egzadesimal\nprint(ord('A'))  # 65      -> kòd lèt A a",
+              "code_lang": "python",
+              "expert_note_ht": "Ekspè yo toujou konnen gwosè done y ap manyen: yon imaj 4K pa peze menm ak yon tèks. Chwazi bon fòma done a se premye desizyon pèfòmans lan.",
+              "exercises": [
+                {
+                  "id": "g01-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Konbyen bit ki fè 1 byte?",
+                  "choices": [
+                    "A) 4 bit",
+                    "B) 8 bit",
+                    "C) 16 bit",
+                    "D) 32 bit"
+                  ],
+                  "accepted": [
+                    "b",
+                    "8 bit"
+                  ],
+                  "correct_ht": "B) 8 bit",
+                  "explanation_ht": "Yon byte se egzakteman 8 bit, sa ki bay 256 valè posib (0 rive 255)."
+                },
+                {
+                  "id": "g01-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "Ekri nonb 13 an binè (sistèm baz 2).",
+                  "accepted": [
+                    "1101"
+                  ],
+                  "correct_ht": "1101",
+                  "explanation_ht": "13 = 8 + 4 + 0 + 1, kidonk an binè: 1101."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g01-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g01-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                },
+                {
+                  "id": "g01-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g01-l02",
+              "title_ht": "Algoritm, pseudocode ak rezònman lojik",
+              "body_ht": "Yon algoritm se yon swit etap klè ki rezoud yon pwoblèm — tankou yon resèt kwizin. Anvan ou ekri kòd, ou dwe kapab eksplike solisyon an ak mo pa w. Pseudocode se fason pwofesyonèl yo ekri algoritm san yo pa kole ak yon langaj: 'SI nòt >= 60 ALÒ afiche \"Ou pase\"'. [[CHECK:g01-l02-c1]]\n\nTwa zouti debaz: kondisyon (SI/ALÒ/SINON) pou pran desizyon, bouk (POU/TANKE) pou repete, ak fonksyon pou pake etap ki repete. Yon dyagram koule (flowchart) desine menm lojik la ak fòm: oval pou kòmansman/fen, rektang pou aksyon, lozanj pou desizyon. [[CHECK:g01-l02-c2]]\n\nRèg lò a: kraze yon gwo pwoblèm an ti pwoblèm. Pa ekri kòd pou 'sistèm lekòl' an yon fwa; kòmanse ak 'kalkile mwayèn', apre 'deside si elèv pase', apre 'sove nan dosye'. Teste tou ka limit yo: kisa k ap pase si lis nòt yo vid? [[CHECK:g01-l02-c3]]",
+              "code": "mwayèn = (n1 + n2 + n3) / 3\nSI mwayèn >= 60 ALÒ\n    afiche \"Elèv la pase\"\nSINON\n    afiche \"Elèv la echwe\"",
+              "code_lang": "pseudocode",
+              "expert_note_ht": "Ekspè yo pase plis tan ap panse pase ap tape. Yon èdtan pseudocode sou papye ekonomize twa èdtan debogaj devan ekran an.",
+              "exercises": [
+                {
+                  "id": "g01-l02-e1",
+                  "type": "code",
+                  "prompt_ht": "Ekri liy pseudocode ki kalkile mwayèn twa nòt n1, n2, n3.",
+                  "accepted": [
+                    "mwayèn = (n1 + n2 + n3) / 3",
+                    "mwayen = (n1 + n2 + n3) / 3",
+                    "mwayèn=(n1+n2+n3)/3",
+                    "moyenne = (n1 + n2 + n3) / 3"
+                  ],
+                  "correct_ht": "mwayèn = (n1 + n2 + n3) / 3",
+                  "explanation_ht": "Ou adisyone twa nòt yo epi ou divize pa 3. Lòd operasyon yo enpòtan: parentèz an premye."
+                },
+                {
+                  "id": "g01-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Ki diferans ant yon pwosesis (process) ak yon fil egzekisyon (thread)?",
+                  "choices": [
+                    "A) Se menm bagay la",
+                    "B) Yon pwosesis gen pwòp memwa pa l; thread yo pataje memwa pwosesis lan",
+                    "C) Yon thread pi lou pase yon pwosesis",
+                    "D) Yon pwosesis pa ka kouri an menm tan ak yon lòt"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon pwosesis gen pwòp memwa pa l; thread yo pataje memwa pwosesis lan"
+                  ],
+                  "correct_ht": "B) Yon pwosesis gen pwòp memwa pa l; thread yo pataje memwa pwosesis lan",
+                  "explanation_ht": "Yon pwosesis se yon pwogram k ap kouri ak pwòp espas memwa li. Thread yo se ti fil travay andedan yon pwosesis ki pataje menm memwa a — se pou sa yo pi rapid pou kreye."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g01-l02-c1",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « mwayèn » genyen? (ekri valè a)",
+                  "accepted": [
+                    "(n1 + n2 + n3) / 3"
+                  ],
+                  "correct_ht": "(n1 + n2 + n3) / 3",
+                  "explanation_ht": "Nan egzanp lan, liy « mwayèn = (n1 + n2 + n3) / 3 » mete valè « (n1 + n2 + n3) / 3 » nan bwat « mwayèn » a."
+                },
+                {
+                  "id": "g01-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g01-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+                  ],
+                  "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                  "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+                  "choices": [
+                    "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                    "B) Etenn ekran an",
+                    "C) Efase tout done",
+                    "D) Fèmen òdinatè a"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [],
+          "pass_criteria_ht": "Ou dwe kapab eksplike kijan yon pwogram kouri, li/ekri dosye, sèvi ak yon tèminal, epi tradui yon pwoblèm an etap lojik anvan ou ekri kòd."
+        },
+        {
+          "id": "g02",
+          "title_ht": "MODIL 2 — Zouti pwofesyonèl: tèminal, Git ak GitHub",
+          "description_ht": "Tèminal la, editè kòd, Git ak GitHub: bwat zouti chak devlopè pwofesyonèl. San yo, ou pa ka travay an ekip ni pwoteje travay ou.",
+          "related_lessons": [
+            "L14"
+          ],
+          "related_modules": [
+            "bash"
+          ],
+          "lessons": [
+            {
+              "id": "g02-l01",
+              "title_ht": "Tèminal: pale ak òdinatè w dirèkteman",
+              "body_ht": "Tèminal la se fenèt kote ou bay òdinatè a lòd ak tèks olye ou klike. Li pi rapid, pi presi, epi anpil travay devlopè (sèvè, deplwaman, Git) fèt sèlman la. Sou Windows se PowerShell, sou macOS se Terminal, sou Linux se shell (bash). [[CHECK:g02-l01-c1]]\n\nKòmand debaz: pwd montre anyè aktyèl la, ls lis fichye yo, cd antre nan yon anyè, mkdir kreye anyè, cp kopye, mv deplase/renome, rm efase. Atansyon ak rm: pa gen poubèl nan tèminal la! [[CHECK:g02-l01-c2]]\n\nOu pa bezwen sonje tout kòmand yo pa kè. Men ou dwe konnen yo egziste epi konnen li dokimantasyon an (man ls sou Linux, Get-Help sou PowerShell) olye ou kopye kòd san konprann. [[CHECK:g02-l01-c3]]",
+              "code": "pwd              # ki kote m ye?\nls               # kisa ki nan anyè a? (dir sou Windows)\ncd pwojè        # antre nan anyè 'pwojè'\nmkdir app        # kreye anyè 'app'\ncp fichye.txt bak/   # kopye fichye",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo itilize tèminal la chak jou. Yon devlopè ki pè tèminal la ap toujou depann de lòt moun pou deplwaye ak debogaj sèvè.",
+              "exercises": [
+                {
+                  "id": "g02-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki kòmand ki montre anyè aktyèl la?",
+                  "choices": [
+                    "A) ls",
+                    "B) cd",
+                    "C) pwd",
+                    "D) mkdir"
+                  ],
+                  "accepted": [
+                    "c",
+                    "pwd"
+                  ],
+                  "correct_ht": "C) pwd",
+                  "explanation_ht": "pwd vle di 'print working directory': li afiche chemen konplè anyè kote w ye a."
+                },
+                {
+                  "id": "g02-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "Konplete kòmand pou kreye yon anyè ki rele 'app': ____ app",
+                  "accepted": [
+                    "mkdir"
+                  ],
+                  "correct_ht": "mkdir",
+                  "explanation_ht": "mkdir = 'make directory'. Pa egzanp: mkdir app kreye anyè app lan."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g02-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Tèminal la pèmèt ou:",
+                  "accepted": [
+                    "a",
+                    "bay òdinatè a lòd ak tèks olye ou klike"
+                  ],
+                  "correct_ht": "A) Bay òdinatè a lòd ak tèks olye ou klike",
+                  "explanation_ht": "Pi rapid, pi presi — epi obligatwa pou sèvè.",
+                  "choices": [
+                    "A) Bay òdinatè a lòd ak tèks olye ou klike",
+                    "B) Gade film sèlman",
+                    "C) Jwe mizik sèlman",
+                    "D) Desine"
+                  ]
+                },
+                {
+                  "id": "g02-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon pil (stack) mache:",
+                  "accepted": [
+                    "a",
+                    "dènye antre, premye sòti — tankou yon pil asyèt"
+                  ],
+                  "correct_ht": "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                  "explanation_ht": "Ou pran toujou asyèt ki anwo a.",
+                  "choices": [
+                    "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                    "B) Premye antre, premye sòti",
+                    "C) O aza",
+                    "D) Pa lòd alfabetik"
+                  ]
+                },
+                {
+                  "id": "g02-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+                  ],
+                  "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                  "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+                  "choices": [
+                    "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                    "B) Yon sèl bagay",
+                    "C) Yon ekran",
+                    "D) Yon bouton"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g02-l02",
+              "title_ht": "Git ak GitHub: sove travay ou tankou yon pwofesyonèl",
+              "body_ht": "Git se yon sistèm ki sove chak vèsyon kòd ou. Ou travay, ou fè yon 'commit' (foto vèsyon an ak yon mesaj klè), epi ou ka tounen nan nenpòt vèsyon anvan. Pa gen plis 'final_v2_VREMAN_final.zip'. [[CHECK:g02-l02-c1]]\n\nBranch yo pèmèt ou eseye yon lide san kraze kòd prensipal la (main); apre, yon 'merge' oswa yon 'pull request' mete l andedan. GitHub se sit kote ou sere repository yo sou entènèt, travay an ekip, epi montre pòtfolyo w bay anplwayè. [[CHECK:g02-l02-c2]]\n\nRèg sekirite ki pa negosyab: PA JANM mete modpas, kle API oswa sekrè nan Git. Yon fichye .gitignore di Git ki fichye pou inyore. Ekri yon README pou chak pwojè: objektif, enstalasyon, fason pou lanse, tès ak ekran. [[CHECK:g02-l02-c3]]",
+              "code": "git init                          # kòmanse swiv yon pwojè\ngit add .                         # prepare tout chanjman yo\ngit commit -m \"Premye vèsyon\"     # sove ak yon mesaj klè\ngit branch nouvo-lide             # kreye yon branch\ngit push origin main              # voye sou GitHub",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo ekri mesaj commit ki eksplike POUKISA, pa sèlman KISA: 'korije kalkil taks pou Ayiti' pi itil pase 'fix'.",
+              "exercises": [
+                {
+                  "id": "g02-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki kòmand Git ki anrejistre chanjman yo ak yon mesaj?",
+                  "choices": [
+                    "A) git add",
+                    "B) git push",
+                    "C) git commit -m",
+                    "D) git init"
+                  ],
+                  "accepted": [
+                    "c",
+                    "git commit -m"
+                  ],
+                  "correct_ht": "C) git commit -m",
+                  "explanation_ht": "git add prepare chanjman yo, men se git commit -m \"mesaj\" ki sove yo nan istwa a."
+                },
+                {
+                  "id": "g02-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Kisa ou PA dwe janm mete nan yon repository Git?",
+                  "choices": [
+                    "A) Fichye README",
+                    "B) Kòd sous pwojè a",
+                    "C) Modpas ak kle API",
+                    "D) Fichye .gitignore"
+                  ],
+                  "accepted": [
+                    "c",
+                    "modpas ak kle api"
+                  ],
+                  "correct_ht": "C) Modpas ak kle API",
+                  "explanation_ht": "Yon fwa yon sekrè pouse sou GitHub, konsidere l konpwomèt: chanje l touswit epi sèvi ak .gitignore pou anpeche sa rive."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g02-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Git sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "sove chak vèsyon kòd ou pou ou ka tounen bak epi travay an ekip"
+                  ],
+                  "correct_ht": "A) Sove chak vèsyon kòd ou pou ou ka tounen bak epi travay an ekip",
+                  "explanation_ht": "Git = machin tan pou kòd ou.",
+                  "choices": [
+                    "A) Sove chak vèsyon kòd ou pou ou ka tounen bak epi travay an ekip",
+                    "B) Desine paj web",
+                    "C) Jwe jwèt",
+                    "D) Voye imèl"
+                  ]
+                },
+                {
+                  "id": "g02-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+                  ],
+                  "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                  "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+                  "choices": [
+                    "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                    "B) Yon sèl bagay",
+                    "C) Yon ekran",
+                    "D) Yon bouton"
+                  ]
+                },
+                {
+                  "id": "g02-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g02-p1",
+              "title_ht": "Repository pwofesyonèl ou",
+              "description_ht": "Kreye yon repository GitHub pou chak pwojè w ap fè nan gid sa a, ak yon README konplè.",
+              "objectives_ht": [
+                "Inisyalize Git nan pwojè a epi fè premye commit la",
+                "Ekri yon README: objektif, enstalasyon, fason pou lanse, tès ak ekran",
+                "Ajoute yon .gitignore ki eskli sekrè ak fichye tanporè",
+                "Pouse sou GitHub ak mesaj commit ki gen sans"
+              ],
+              "criteria_ht": [
+                "Repository a piblik (oswa prive ak aksè) epi li gen yon README lizib",
+                "Omwen 5 commit ak mesaj ki eksplike chanjman yo",
+                "Okenn modpas, kle API oswa done pèsonèl nan istwa a",
+                "Pwojè a ka klone epi lanse si w swiv README a"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etap-2",
+      "numero": 2,
+      "icon": "💻",
+      "title_ht": "Pwogramasyon",
+      "description_ht": "Lang yo, estrikti done ak algoritm: kè metye devlopè a. Pran tan isit la — tout rès la bati sou baz sa a.",
+      "modules": [
+        {
+          "id": "g03",
+          "title_ht": "MODIL 3 — Lang pwogramasyon: ki sa pou aprann, nan ki lòd?",
+          "description_ht": "Pa gen yon sèl lang ki pi bon pou tout bagay. Yon ekspè pa konn tout lang yo; li metrize prensip yo epi li chwazi bon zouti pou pwoblèm nan.",
+          "related_lessons": [
+            "L03",
+            "L04",
+            "L05",
+            "L06",
+            "L07",
+            "L08"
+          ],
+          "related_modules": [
+            "python",
+            "javascript",
+            "typescript",
+            "html",
+            "css",
+            "nodejs",
+            "php",
+            "sql"
+          ],
+          "lessons": [
+            {
+              "id": "g03-l01",
+              "title_ht": "Chwazi bon zouti pou bon pwoblèm nan",
+              "body_ht": "Chak lang fèt pou yon travay. Python briye nan otomatizasyon, backend ak analiz done. JavaScript + TypeScript domine web la (devan ak dèyè ak Node.js). SQL se lang tout bazdone relasyonèl. Kotlin se wa Android natif, Swift se wa iOS, Dart + Flutter fè mobil ak desktop ak yon sèl kòd. [[CHECK:g03-l01-c1]]\n\nLòd rekòmande nan gid sa a: kòmanse ak Python (senp, li tankou angle), apre JavaScript/TypeScript (web toupatou), apre SQL (done toupatou), apre yon lang konpile tankou C oswa Rust pou konprann memwa. Apre sa, espesyalize selon platfòm ou vize: Kotlin, Swift, oswa Flutter. [[CHECK:g03-l01-c2]]\n\nPa eseye aprann tout lang yo an menm tan — se pi gwo pyèj debutan yo. Yon lang byen metrize vo pi plis pase senk lang ou sèlman wè sifas yo. Prensip yo (vayab, kondisyon, bouk, fonksyon, objè) se menm yo toupatou; se sentaks la ki chanje. [[CHECK:g03-l01-c3]]",
+              "code": "# Menm lide, 3 lang:\nprint(\"Bonjou\")          # Python\nconsole.log(\"Bonjou\");   // JavaScript\necho \"Bonjou\";            // PHP",
+              "code_lang": "multi",
+              "expert_note_ht": "Ekspè yo chwazi lang selon pwojè a, ekip la ak mache travay la — pa selon mòd. Mande tèt ou: ki pwoblèm m ap rezoud, epi ki lang kominote a itilize pou li?",
+              "exercises": [
+                {
+                  "id": "g03-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki lang ki pi rekòmande pou otomatizasyon ak analiz done?",
+                  "choices": [
+                    "A) JavaScript",
+                    "B) Python",
+                    "C) Kotlin",
+                    "D) Swift"
+                  ],
+                  "accepted": [
+                    "b",
+                    "python"
+                  ],
+                  "correct_ht": "B) Python",
+                  "explanation_ht": "Python gen ekosistèm ki pi rich pou otomatizasyon, done ak zouti sekirite."
+                },
+                {
+                  "id": "g03-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Ki lang ofisyèl pou aplikasyon natif Android?",
+                  "choices": [
+                    "A) Swift",
+                    "B) Kotlin",
+                    "C) PHP",
+                    "D) C#"
+                  ],
+                  "accepted": [
+                    "b",
+                    "kotlin"
+                  ],
+                  "correct_ht": "B) Kotlin",
+                  "explanation_ht": "Kotlin se lang ofisyèl Google pou Android natif (null safety, coroutines, Jetpack)."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g03-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — JavaScript nan yon paj web sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni"
+                  ],
+                  "correct_ht": "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+                  "explanation_ht": "JS = sèvo/konpòtman paj la.",
+                  "choices": [
+                    "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+                    "B) Ekri tèks la",
+                    "C) Bay koulè yo",
+                    "D) Sere modpas"
+                  ]
+                },
+                {
+                  "id": "g03-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g03-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+                  ],
+                  "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                  "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+                  "choices": [
+                    "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                    "B) Etenn ekran an",
+                    "C) Efase tout done",
+                    "D) Fèmen òdinatè a"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": []
+        },
+        {
+          "id": "g04",
+          "title_ht": "MODIL 4 — Estrikti done, algoritm ak nivo avanse",
+          "description_ht": "Bwat entelijan pou sere done (estrikti done), resèt rapid pou trete yo (algoritm), ak fason pou mezire vitès (Big O). Se sa ki separe yon debutan ak yon pwofesyonèl.",
+          "related_lessons": [],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g04-l01",
+              "title_ht": "Estrikti done: chwazi bon bwat la",
+              "body_ht": "Yon lis (array) kenbe eleman yo nan lòd epi ou jwenn yo pa pozisyon — rapid pou li, pi lan pou mete nan mitan. Yon pil (stack) se 'dènye antre, premye sòti' tankou pil asyèt; yon ke (queue) se 'premye antre, premye sòti' tankou liy labank. [[CHECK:g04-l01-c1]]\n\nYon tab hash (dictionnaire, map) asosye kle ak valè: ou jwenn 'telefòn Marie' enstantaneman san ou pa fouye tout lis la. Yon pyebwa (tree) òganize done an yerachi (dosye òdinatè w se yon pyebwa); yon graf konekte pwen ak liy (rezo sosyal, kat wout). [[CHECK:g04-l01-c2]]\n\nChwazi estrikti a selon kesyon w ap poze done a: èske m ap chèche pa kle? pa lòd? èske m bezwen pi rapid lekti oswa ekriti? Move chwa a ka rann yon app 1000 fwa pi lan. [[CHECK:g04-l01-c3]]",
+              "code": "kontak = {}                    # tab hash (dict)\nkontak[\"Marie\"] = \"555-1234\"\nprint(kontak[\"Marie\"])        # aksè dirèk pa kle\n\nfè_lis = []                    # lis\nfè_lis.append(\"achte pen\")     # ajoute nan fen\npremye = fè_lis.pop(0)         # retire premye (konpòtman ke)",
+              "code_lang": "python",
+              "expert_note_ht": "Ekspè yo pa re-envante: yo itilize estrikti bibliyotèk lang lan bay, epi yo sèlman kreye yon estrikti espesyal lè mezi montre se la pwoblèm nan ye.",
+              "exercises": [
+                {
+                  "id": "g04-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki estrikti done ki mache 'premye antre, premye sòti' (FIFO)?",
+                  "choices": [
+                    "A) Pil (stack)",
+                    "B) Ke (queue)",
+                    "C) Pyebwa (tree)",
+                    "D) Graf"
+                  ],
+                  "accepted": [
+                    "b",
+                    "ke (queue)"
+                  ],
+                  "correct_ht": "B) Ke (queue)",
+                  "explanation_ht": "Yon ke trete eleman yo nan lòd yo te antre: premye antre, premye sòti — tankou liy labank."
+                },
+                {
+                  "id": "g04-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "Nan Python, ki metòd ki ajoute yon eleman nan FEN yon lis?",
+                  "accepted": [
+                    "append",
+                    ".append"
+                  ],
+                  "correct_ht": "append",
+                  "explanation_ht": "lis.append(x) ajoute x nan fen lis la. Se operasyon ki pi rapid sou yon lis."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g04-l01-c1",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « kontak » genyen? (ekri valè a)",
+                  "accepted": [
+                    "{}                    # tab hash (dict)"
+                  ],
+                  "correct_ht": "{}                    # tab hash (dict)",
+                  "explanation_ht": "Nan egzanp lan, liy « kontak = {}                    # tab hash (dict) » mete valè « {}                    # tab hash (dict) » nan bwat « kontak » a."
+                },
+                {
+                  "id": "g04-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Triye (sorting) done se tankou:",
+                  "accepted": [
+                    "a",
+                    "ranje kat jwèt ou pa nimewo: mete lòd nan dezòd"
+                  ],
+                  "correct_ht": "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+                  "explanation_ht": "Done nan lòd = rechèch rapid.",
+                  "choices": [
+                    "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+                    "B) Melanje kat yo",
+                    "C) Jete kat yo",
+                    "D) Kache kat yo"
+                  ]
+                },
+                {
+                  "id": "g04-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon pil (stack) mache:",
+                  "accepted": [
+                    "a",
+                    "dènye antre, premye sòti — tankou yon pil asyèt"
+                  ],
+                  "correct_ht": "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                  "explanation_ht": "Ou pran toujou asyèt ki anwo a.",
+                  "choices": [
+                    "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                    "B) Premye antre, premye sòti",
+                    "C) O aza",
+                    "D) Pa lòd alfabetik"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g04-l02",
+              "title_ht": "Big O: mezire vitès yon algoritm",
+              "body_ht": "Big O dekri kijan tan yon algoritm grandi lè done yo grandi. O(1) se konstan: pran yon eleman pa pozisyon pran menm tan kit gen 10 oswa 10 milyon eleman. O(n) se lineyè: fouye tout yon lis pran 2 fwa plis tan si lis la 2 fwa pi gwo. [[CHECK:g04-l02-c1]]\n\nO(log n) se rechèch binè: ou koupe pwoblèm nan an de chak fwa — 1 milyon eleman pran sèlman ~20 etap. O(n²) se bouk anndan bouk: 1000 eleman = 1 milyon operasyon; se souvan siy ou dwe chanje estrateji. [[CHECK:g04-l02-c2]]\n\nOu pa bezwen kalkil savan: jis konnen rekonèt bouk anndan bouk yo epi chèche fason pou evite yo (pa egzanp yon tab hash olye yon dezyèm bouk). Mezire ak tan reyèl pou konfime. [[CHECK:g04-l02-c3]]",
+              "code": "# O(n): yon sèl bouk\ndef chèche(lis, sib):\n    for x in lis:        # n etap maksimòm\n        if x == sib:\n            return True\n    return False\n\n# O(n²): bouk anndan bouk - evite si posib!\nfor a in lis:\n    for b in lis:        # n × n etap\n        konpare(a, b)",
+              "code_lang": "python",
+              "expert_note_ht": "Ekspè yo optimize sèlman sa mezi a montre ki lan. 'Premature optimization is the root of all evil' — Knuth: optimize twò bonè kreye kòd konplike pou anyen.",
+              "exercises": [
+                {
+                  "id": "g04-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Chèche yon eleman pa fouye tout yon lis n eleman se konpleksite:",
+                  "choices": [
+                    "A) O(1)",
+                    "B) O(log n)",
+                    "C) O(n)",
+                    "D) O(n²)"
+                  ],
+                  "accepted": [
+                    "c",
+                    "o(n)"
+                  ],
+                  "correct_ht": "C) O(n)",
+                  "explanation_ht": "Nan pi move ka a ou dwe gade chak eleman yon fwa: tan an grandi lineyèman ak n."
+                },
+                {
+                  "id": "g04-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Pou gwo volim done, ki pi rapid?",
+                  "choices": [
+                    "A) O(n²)",
+                    "B) O(n)",
+                    "C) Yo egal",
+                    "D) Sa depann de lang lan sèlman"
+                  ],
+                  "accepted": [
+                    "b",
+                    "o(n)"
+                  ],
+                  "correct_ht": "B) O(n)",
+                  "explanation_ht": "O(n) grandi lineyèman pandan O(n²) eksplose (bouk anndan bouk). Pou 10 000 eleman, se 10 000 kont 100 milyon operasyon."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g04-l02-c1",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+                  "accepted": [
+                    "chèche"
+                  ],
+                  "correct_ht": "chèche",
+                  "explanation_ht": "Fonksyon an rele « chèche » — se non sa a ou itilize pou rele l pita."
+                },
+                {
+                  "id": "g04-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Notasyon Big O mezire:",
+                  "accepted": [
+                    "a",
+                    "kijan tan yon algoritm grandi lè done yo grandi"
+                  ],
+                  "correct_ht": "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                  "explanation_ht": "O(n) = lineyè; O(n²) = bouk anndan bouk — evite!",
+                  "choices": [
+                    "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                    "B) Gwosè ekran an",
+                    "C) Pri òdinatè a",
+                    "D) Kantite koulè"
+                  ]
+                },
+                {
+                  "id": "g04-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon tès se tankou:",
+                  "accepted": [
+                    "a",
+                    "goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l"
+                  ],
+                  "correct_ht": "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+                  "explanation_ht": "Tès = prèv kòd la fè sa li pwomèt.",
+                  "choices": [
+                    "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+                    "B) Yon egzamen lekòl sèlman",
+                    "C) Yon jwèt",
+                    "D) Yon film"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g04-l03",
+              "title_ht": "Rekursyon ak graf",
+              "body_ht": "Yon fonksyon rekisif rele tèt li pou rezoud yon pi piti vèsyon menm pwoblèm nan. Sekrè a se KA BAZ la: kondisyon ki kanpe apel yo. San ka baz, fonksyon an rele tèt li pou tout tan jous memwa a plen (stack overflow). [[CHECK:g04-l03-c1]]\n\nYon graf se yon ansanm pwen (ne) konekte pa liy (arèt): rezo wout, rezo sosyal, rezo òdinatè. De gwo fason pou mache sou yon graf: an lajè (BFS. Kouch pa kouch, bon pou pi kout chemen) ak an pwofondè (DFS — ale jous nan fon anvan ou tounen). [[CHECK:g04-l03-c2]]\n\nRekursyon parèt toupatou: fouye dosye, kalkile fòmil, mache sou pyebwa ak graf. Pratike sou ti egzanp anvan ou atake gwo pwoblèm. [[CHECK:g04-l03-c3]]",
+              "code": "def faktoryèl(n):\n    if n == 0:        # KA BAZ: kanpe isit la\n        return 1\n    return n * faktoryèl(n - 1)   # apel rekisif\n\nprint(faktoryèl(5))  # 120",
+              "code_lang": "python",
+              "expert_note_ht": "Ekspè yo toujou ekri ka baz la ANVAN ka rekisif la. Si ou pa ka eksplike ka baz la ak yon fraz, ou pa pare pou ekri fonksyon an.",
+              "exercises": [
+                {
+                  "id": "g04-l03-e1",
+                  "type": "code",
+                  "prompt_ht": "Konplete ka baz faktoryèl la:  if n == 0:  return ____",
+                  "accepted": [
+                    "1"
+                  ],
+                  "correct_ht": "1",
+                  "explanation_ht": "Faktoryèl 0 se 1 pa definisyon — se pwen depa tout kalkil la."
+                },
+                {
+                  "id": "g04-l03-e2",
+                  "type": "qcm",
+                  "prompt_ht": "San ka baz, yon fonksyon rekisif ap:",
+                  "choices": [
+                    "A) Retounen 0 otomatikman",
+                    "B) Kanpe apre 10 apel",
+                    "C) Kontinye pou tout tan jous memwa plen",
+                    "D) Ale pi vit"
+                  ],
+                  "accepted": [
+                    "c",
+                    "kontinye pou tout tan jous memwa plen"
+                  ],
+                  "correct_ht": "C) Kontinye pou tout tan jous memwa plen",
+                  "explanation_ht": "Chak apel anpile sou pile a (stack); san ka baz pile a debòde: stack overflow."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g04-l03-c1",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+                  "accepted": [
+                    "faktoryèl"
+                  ],
+                  "correct_ht": "faktoryèl",
+                  "explanation_ht": "Fonksyon an rele « faktoryèl » — se non sa a ou itilize pou rele l pita."
+                },
+                {
+                  "id": "g04-l03-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g04-l03-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g04-p1",
+              "title_ht": "Konpare de algoritm tri",
+              "description_ht": "Ekri de fason pou triye yon lis (pa egzanp tri bul ak tri rapid), mezire tan yo sou lis ki grandi, epi eksplike diferans lan ak Big O.",
+              "objectives_ht": [
+                "Aplike de algoritm tri diferan",
+                "Mezire tan egzekisyon sou 100, 1000, 10 000 eleman",
+                "Ekri yon ti rapò ak Big O chak algoritm"
+              ],
+              "criteria_ht": [
+                "De algoritm yo mache kòrèkteman sou menm done yo",
+                "Mezi yo montre diferans kwasans lan (tablo oswa graf)",
+                "Rapò a eksplike POUKISA youn pi rapid ak notasyon Big O"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etap-3",
+      "numero": 3,
+      "icon": "🌐",
+      "title_ht": "Web, API, bazdone",
+      "description_ht": "Bati aplikasyon ki pale ak sèvè, sere done pwòpman, epi pwoteje yo. Se la pwojè w yo vin 'reyèl'.",
+      "modules": [
+        {
+          "id": "g05",
+          "title_ht": "MODIL 5 — Web, backend, API ak achitekti",
+          "description_ht": "Soti nan paj estatik rive nan aplikasyon konplè: frontend, backend, REST API, otantifikasyon ak achitekti pwòp.",
+          "related_lessons": [
+            "L11",
+            "L12",
+            "L13"
+          ],
+          "related_modules": [
+            "html",
+            "css",
+            "javascript",
+            "typescript",
+            "nodejs",
+            "php",
+            "python"
+          ],
+          "lessons": [
+            {
+              "id": "g05-l01",
+              "title_ht": "REST API ak HTTP: lang sèvè yo",
+              "body_ht": "Lè ou kòmande nan restoran, ou pale ak garçon an, li pote manje a soti nan kwizin nan. Yon API se garçon entènèt la: app ou a mande, sèvè a pote done yo.\n\n [[CHECK:g05-l01-c1]]\n\nYon API se kontra ant yon kliyan (app, paj web) ak yon sèvè: 'voye m lis pwodwi yo' epi sèvè a reponn ak done (souvan JSON). REST se stil ki pi komen: chak resous gen yon URL, epi metòd HTTP di aksyon an — GET li, POST kreye, PUT/PATCH modifye, DELETE efase. [[CHECK:g05-l01-c2]]\n\nSèvè a reponn ak kòd estati: 200 OK, 201 kreye, 400 move demann, 401 pa otantifye, 403 entèdi, 404 pa jwenn, 500 erè sèvè. Pou gwo lis, sèvi ak pajinasyon (page=2&limit=20) olyek voye 10 000 liy an yon fwa. [[CHECK:g05-l01-c3]]\n\nBon API gen kontra klè: dokimantasyon, vèsyon (/v1/...), limit vitès (rate limiting) pou anpeche abi, ak tan maksimòm datant (timeout) pou kliyan an pa bloke pou tout tan.",
+              "code": "GET /api/pwodwi?page=1&limit=20      # li lis pwodwi yo\nPOST /api/pwodwi                     # kreye yon pwodwi\n{\n  \"non\": \"Savon\",\n  \"pri\": 150\n}\n# Repons: 201 Created + pwodwi a an JSON",
+              "code_lang": "http",
+              "expert_note_ht": "Ekspè yo desine API a pou moun k ap itilize l, pa pou bazdone a. Yon bon non resous (/kliyan/42/lòd) vo pi plis pase yon dokimantasyon long.",
+              "exercises": [
+                {
+                  "id": "g05-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki metòd HTTP ou itilize pou KREYE yon nouvo resous?",
+                  "choices": [
+                    "A) GET",
+                    "B) POST",
+                    "C) DELETE",
+                    "D) PUT"
+                  ],
+                  "accepted": [
+                    "b",
+                    "post"
+                  ],
+                  "correct_ht": "B) POST",
+                  "explanation_ht": "POST voye done pou kreye; GET sèlman li; PUT modifye; DELETE efase."
+                },
+                {
+                  "id": "g05-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Kòd estati 404 vle di:",
+                  "choices": [
+                    "A) Tout bagay OK",
+                    "B) Resous la pa jwenn",
+                    "C) Erè nan sèvè a",
+                    "D) Ou pa gen pèmisyon"
+                  ],
+                  "accepted": [
+                    "b",
+                    "resous la pa jwenn"
+                  ],
+                  "correct_ht": "B) Resous la pa jwenn",
+                  "explanation_ht": "404 = Not Found. 200 = OK, 403 = entèdi, 500 = erè sèvè."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g05-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon API se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon garçon restoran: ou mande, li pote done soti nan sèvè a"
+                  ],
+                  "correct_ht": "A) Yon garçon restoran: ou mande, li pote done soti nan sèvè a",
+                  "explanation_ht": "App ou a = kliyan; API a = garçon; sèvè a = kwizin.",
+                  "choices": [
+                    "A) Yon garçon restoran: ou mande, li pote done soti nan sèvè a",
+                    "B) Yon plat manje",
+                    "C) Yon tab",
+                    "D) Yon kizin"
+                  ]
+                },
+                {
+                  "id": "g05-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Pou LI done nan yon API, ou itilize metòd:",
+                  "accepted": [
+                    "a",
+                    "get"
+                  ],
+                  "correct_ht": "A) GET",
+                  "explanation_ht": "GET = li; POST = kreye; PUT = modifye; DELETE = efase.",
+                  "choices": [
+                    "A) GET",
+                    "B) POST",
+                    "C) DELETE",
+                    "D) PUT"
+                  ]
+                },
+                {
+                  "id": "g05-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g05-l02",
+              "title_ht": "Otantifikasyon, otorizasyon ak sekirite backend",
+              "body_ht": "Lè ou kòmande nan restoran, ou pale ak garçon an, li pote manje a soti nan kwizin nan. Yon API se garçon entènèt la: app ou a mande, sèvè a pote done yo.\n\n [[CHECK:g05-l02-c1]]\n\nOtantifikasyon = pwouve KIYES ou ye (login ak modpas, oswa 'konekte ak Google' via OAuth). Otorizasyon = verifye KISA ou gen dwa fè. Se de bagay diferan: yon itilizatè konekte pa dwe kapab efase kont yon lòt itilizatè. [[CHECK:g05-l02-c2]]\n\nOpsyon modèn: sesyon (sèvè a sonje w), token JWT (kliyan an pote prèv la), OAuth/OIDC (konekte ak yon kont ki egziste san pataje modpas), ak MFA (dezyèm faktè tankou kòd SMS). Toujou sere modpas yo ak hash + sèl, pa janm an klè. [[CHECK:g05-l02-c3]]\n\nRèg an lò: verifye TOUT done sou sèvè a. Validasyon nan navigatè a se pou konfò itilizatè a; atakè a ka voye demann dirèkteman nan API a san pase pa paj ou a.",
+              "code": "# PA JANM konte sou navigatè a sèlman:\n# if (user.role === 'admin') montreBoutonEfase();  // danjere!\n# TOUJOU verifye sou sèvè a:\n# if not current_user.is_admin: return 403",
+              "code_lang": "javascript",
+              "expert_note_ht": "Ekspè yo trete chak demann kòm sispèk jous yo verifye l. 'Never trust the client' se fraz ou tande nan tout revizyon sekirite.",
+              "exercises": [
+                {
+                  "id": "g05-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "OAuth pèmèt yon itilizatè:",
+                  "choices": [
+                    "A) Kreye yon modpas pi fò",
+                    "B) Konekte ak yon kont ki egziste (Google...) san pataje modpas li",
+                    "C) Chifre bazdone a",
+                    "D) Akselere sit la"
+                  ],
+                  "accepted": [
+                    "b",
+                    "konekte ak yon kont ki egziste (google...) san pataje modpas li"
+                  ],
+                  "correct_ht": "B) Konekte ak yon kont ki egziste (Google...) san pataje modpas li",
+                  "explanation_ht": "OAuth delivre aksè san ou pa janm wè modpas itilizatè a — mwens risk pou ou tou."
+                },
+                {
+                  "id": "g05-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Otorizasyon se:",
+                  "choices": [
+                    "A) Pwouve kiyes ou ye",
+                    "B) Verifye sa itilizatè a GEN DWA fè",
+                    "C) Chifre modpas la",
+                    "D) Fè backup done yo"
+                  ],
+                  "accepted": [
+                    "b",
+                    "verifye sa itilizatè a gen dwa fè"
+                  ],
+                  "correct_ht": "B) Verifye sa itilizatè a GEN DWA fè",
+                  "explanation_ht": "Otantifikasyon = idantite; otorizasyon = pèmisyon. Verifye dwa a sou chak aksyon, sou sèvè a."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g05-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon API se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon garçon restoran: ou mande, li pote done soti nan sèvè a"
+                  ],
+                  "correct_ht": "A) Yon garçon restoran: ou mande, li pote done soti nan sèvè a",
+                  "explanation_ht": "App ou a = kliyan; API a = garçon; sèvè a = kwizin.",
+                  "choices": [
+                    "A) Yon garçon restoran: ou mande, li pote done soti nan sèvè a",
+                    "B) Yon plat manje",
+                    "C) Yon tab",
+                    "D) Yon kizin"
+                  ]
+                },
+                {
+                  "id": "g05-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Tèminal la pèmèt ou:",
+                  "accepted": [
+                    "a",
+                    "bay òdinatè a lòd ak tèks olye ou klike"
+                  ],
+                  "correct_ht": "A) Bay òdinatè a lòd ak tèks olye ou klike",
+                  "explanation_ht": "Pi rapid, pi presi — epi obligatwa pou sèvè.",
+                  "choices": [
+                    "A) Bay òdinatè a lòd ak tèks olye ou klike",
+                    "B) Gade film sèlman",
+                    "C) Jwe mizik sèlman",
+                    "D) Desine"
+                  ]
+                },
+                {
+                  "id": "g05-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Validasyon fòmilè sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "verifye enfòmasyon yo kòrèk anvan ou aksepte yo"
+                  ],
+                  "correct_ht": "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+                  "explanation_ht": "Imèl vid? Modpas twò kout? Refize anvan ou sere.",
+                  "choices": [
+                    "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+                    "B) Fè paj la bèl",
+                    "C) Jwe mizik",
+                    "D) Voye spam"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g05-p1",
+              "title_ht": "Sistèm randevou konplè",
+              "description_ht": "Konstwi yon vre sistèm randevou (pa egzanp pou yon klinik oswa salon): kont itilizatè, kalandriye, API, bazdone, imèl konfimasyon, wòl admin, tès, dokimantasyon ak deplwaman.",
+              "objectives_ht": [
+                "Kreye kont itilizatè ak login an sekirite (hash + MFA opsyonèl)",
+                "API REST pou randevou: kreye, modifye, anile, ak wòl admin",
+                "Voye imèl konfimasyon lè yon randevou kreye",
+                "Ekri tès pou chemen prensipal yo epi deplwaye sou entènèt"
+              ],
+              "criteria_ht": [
+                "Yon itilizatè ka enskri, konekte epi pran yon randevou bout an bout",
+                "Admin ka wè tout randevou; itilizatè nòmal wè pa l sèlman (otorizasyon verifye)",
+                "Imèl konfimasyon rive vre",
+                "README eksplike enstalasyon ak deplwaman; okenn sekrè nan kòd la"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g06",
+          "title_ht": "MODIL 6 — Bazdone ak jesyon done",
+          "description_ht": "Done se richès aplikasyon w lan. Aprann desine bazdone pwòp, ekri SQL an sekirite, epi chwazi bon sistèm pou bon done.",
+          "related_lessons": [
+            "L09",
+            "L10"
+          ],
+          "related_modules": [
+            "sql",
+            "sqlite",
+            "postgresql"
+          ],
+          "lessons": [
+            {
+              "id": "g06-l01",
+              "title_ht": "Konsepsyon bazdone relasyonèl",
+              "body_ht": "Yon bazdone relasyonèl òganize done an tablo (kliyan, pwodwi, lòd). Chak tablo gen yon kle prensipal (PRIMARY KEY): yon kolòn inik ki idantifye chak liy, souvan yon id. Yon kle etranje (FOREIGN KEY) konekte yon tablo ak yon lòt: lòd.kliyan_id refere kliyan.id. [[CHECK:g06-l01-c1]]\n\nRelasyon yo: 1-1 (yon moun, yon paspò), 1-anpil (yon kliyan, plizyè lòd), anpil-anpil (elèv ak kou: yon tablo entèmedyè). Normalizasyon evite repete menm enfòmasyon an toupatou — mwens erè, mwens espas. [[CHECK:g06-l01-c2]]\n\nIndex yo akselere rechèch (tankou endèks yon liv), men yo ralanti ekriti yon ti kras. Mete index sou kolòn ou chèche souvan (imèl, dat). [[CHECK:g06-l01-c3]]",
+              "code": "CREATE TABLE kliyan (\n  id BIGSERIAL PRIMARY KEY,\n  non TEXT NOT NULL,\n  imèl TEXT UNIQUE NOT NULL\n);\n\nCREATE TABLE lòd (\n  id BIGSERIAL PRIMARY KEY,\n  kliyan_id BIGINT REFERENCES kliyan(id),\n  total NUMERIC NOT NULL\n);",
+              "code_lang": "sql",
+              "expert_note_ht": "Ekspè yo desine chema a sou papye anvan yo ekri yon sèl CREATE TABLE. Yon move chema koute 10 fwa plis pou korije apre done reyèl antre ladan l.",
+              "exercises": [
+                {
+                  "id": "g06-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Yon kle prensipal (PRIMARY KEY) dwe:",
+                  "choices": [
+                    "A) Kapab repete",
+                    "B) Inik epi pa janm vid",
+                    "C) Toujou yon tèks",
+                    "D) Chanje chak jou"
+                  ],
+                  "accepted": [
+                    "b",
+                    "inik epi pa janm vid"
+                  ],
+                  "correct_ht": "B) Inik epi pa janm vid",
+                  "explanation_ht": "Kle prensipal la idantifye chak liy yon fason inik; san sa, relasyon yo pa fyab."
+                },
+                {
+                  "id": "g06-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "Konplete: FOREIGN KEY (kliyan_id) REFERENCES ____(id)",
+                  "accepted": [
+                    "kliyan",
+                    "kliyan(id)"
+                  ],
+                  "correct_ht": "kliyan",
+                  "explanation_ht": "Kle etranje a refere tablo kliyan an: chak lòd dwe konekte ak yon kliyan ki egziste."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g06-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+                  ],
+                  "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                  "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+                  "choices": [
+                    "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                    "B) Yon sèl kaye",
+                    "C) Yon jwèt",
+                    "D) Yon radyo"
+                  ]
+                },
+                {
+                  "id": "g06-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kle prensipal (PRIMARY KEY) dwe:",
+                  "accepted": [
+                    "a",
+                    "inik pou chak ranje epi pa janm vid"
+                  ],
+                  "correct_ht": "A) Inik pou chak ranje epi pa janm vid",
+                  "explanation_ht": "Se kat idantite chak ranje: inik, obligatwa.",
+                  "choices": [
+                    "A) Inik pou chak ranje epi pa janm vid",
+                    "B) Kapab repete",
+                    "C) Toujou yon foto",
+                    "D) Chanje chak jou"
+                  ]
+                },
+                {
+                  "id": "g06-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon index nan bazdone se tankou:",
+                  "accepted": [
+                    "a",
+                    "endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj"
+                  ],
+                  "correct_ht": "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+                  "explanation_ht": "Index akselere lekti, men li koute yon ti kras nan ekriti.",
+                  "choices": [
+                    "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+                    "B) Yon foto",
+                    "C) Yon tablo",
+                    "D) Yon jwèt"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g06-l02",
+              "title_ht": "SQL an sekirite: tranzaksyon ak backup",
+              "body_ht": "Ou fotokopye pyès idantite w epi ou sere kopi a lakay matant ou. Backup se fotokopi done w yo, pou si orijinal la pèdi.\n\n [[CHECK:g06-l02-c1]]\n\nPi gwo danje SQL se injection: si ou kole tèks itilizatè a dirèkteman nan yon query, atakè a ka ekri pwòp SQL pa l. Solisyon an senp: query ak paramèt ($1, ?) — bazdone a separe kòd ak done, epi atak la pa mache. [[CHECK:g06-l02-c2]]\n\nYon tranzaksyon pake plizyè operasyon: swa TOUT pase, swa ANYEN pa pase (prensip ACID). Egzanp: retire lajan nan yon kont + mete l nan yon lòt — ou pa vle premye a pase san dezyèm nan. [[CHECK:g06-l02-c3]]\n\nFinalman: backup regilye EPI teste restore a. Yon backup ou pa janm teste se yon espwa, pa yon plan. Estrateji 3-2-1: 3 kopi, 2 sipò diferan, 1 deyò lokal la.",
+              "code": "-- DANJERE: pa janm fè sa!\n-- query = \"SELECT * FROM itilizatè WHERE imèl = '\" + antre + \"'\"\n\n-- AN SEKIRITE: paramèt\nSELECT id, non FROM kliyan WHERE imèl = $1;\n\n-- Tranzaksyon\nBEGIN;\nUPDATE kont SET balans = balans - 100 WHERE id = 1;\nUPDATE kont SET balans = balans + 100 WHERE id = 2;\nCOMMIT;",
+              "code_lang": "sql",
+              "expert_note_ht": "Ekspè yo konsidere chak antre itilizatè kòm ostil jous li valide epi parametre. Yon sèl query san paramèt ka vide tout bazdone w.",
+              "exercises": [
+                {
+                  "id": "g06-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Pou anpeche SQL injection, ou dwe:",
+                  "choices": [
+                    "A) Kache paj login lan",
+                    "B) Itilize query ak paramèt ($1, ?)",
+                    "C) Mete yon modpas fò sou bazdone a",
+                    "D) Etenn sèvè a lannwit"
+                  ],
+                  "accepted": [
+                    "b",
+                    "itilize query ak paramèt ($1, ?)"
+                  ],
+                  "correct_ht": "B) Itilize query ak paramèt ($1, ?)",
+                  "explanation_ht": "Paramèt yo fòse bazdone a trete antre itilizatè a kòm DONE sèlman, pa kòm kòd SQL."
+                },
+                {
+                  "id": "g06-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Yon tranzaksyon ACID garanti:",
+                  "choices": [
+                    "A) Vitès maksimòm",
+                    "B) Tout operasyon yo pase, oswa okenn pa pase",
+                    "C) Done yo chifre",
+                    "D) Backup otomatik"
+                  ],
+                  "accepted": [
+                    "b",
+                    "tout operasyon yo pase, oswa okenn pa pase"
+                  ],
+                  "correct_ht": "B) Tout operasyon yo pase, oswa okenn pa pase",
+                  "explanation_ht": "Atomicity: yon transfè lajan pa ka kite yon kont debite san lòt la kredite."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g06-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon backup se:",
+                  "accepted": [
+                    "a",
+                    "yon kopi done w yo sere yon lòt kote pou si ou pèdi orijinal la"
+                  ],
+                  "correct_ht": "A) Yon kopi done w yo sere yon lòt kote pou si ou pèdi orijinal la",
+                  "explanation_ht": "Yon backup ou pa teste se yon espwa, pa yon plan.",
+                  "choices": [
+                    "A) Yon kopi done w yo sere yon lòt kote pou si ou pèdi orijinal la",
+                    "B) Yon sakado",
+                    "C) Yon jwèt",
+                    "D) Yon foto"
+                  ]
+                },
+                {
+                  "id": "g06-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                },
+                {
+                  "id": "g06-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+                  ],
+                  "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                  "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+                  "choices": [
+                    "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                    "B) Yon sèl bagay",
+                    "C) Yon ekran",
+                    "D) Yon bouton"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g06-p1",
+              "title_ht": "Bazdone pou yon boutik sou entènèt",
+              "description_ht": "Desine chema konplè yon boutik: kliyan, pwodwi, stock, lòd, liy lòd, peman ak livrezon. Ekri query rapò epi teste backup/restore.",
+              "objectives_ht": [
+                "Desine tablo yo ak kle prensipal/etranje sou papye anvan",
+                "Ekri query rapò: lavant pa mwa, top 10 pwodwi",
+                "Itilize tranzaksyon pou kreyasyon lòd (stock + peman)",
+                "Fè yon backup epi teste restore li sou yon baz vid"
+              ],
+              "criteria_ht": [
+                "Chema a kouvri tout sik lavi yon lòd san done repete",
+                "Rapò lavant pa mwa a bay bon chif sou done tès",
+                "Restore backup la rekonstwi bazdone a konplètman"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etap-4",
+      "numero": 4,
+      "icon": "📱",
+      "title_ht": "Mobil ak Desktop",
+      "description_ht": "Mete lojisyèl nan men moun yo: telefòn Android/iOS ak òdinatè Windows/macOS. Chwazi chemen w (natif oswa cross-platform) epi livre.",
+      "modules": [
+        {
+          "id": "g07",
+          "title_ht": "MODIL 7 — Aplikasyon mobil Android",
+          "description_ht": "De chemen: natif ak Kotlin (pi bon pèfòmans ak aksè sistèm) oswa cross-platform ak Flutter/React Native (yon sèl kòd pou plizyè platfòm).",
+          "related_lessons": [
+            "L15",
+            "L16",
+            "L17",
+            "L18"
+          ],
+          "related_modules": [
+            "kotlin",
+            "flutter",
+            "react-native"
+          ],
+          "lessons": [
+            {
+              "id": "g07-l01",
+              "title_ht": "Android: natif oswa cross-platform?",
+              "body_ht": "Telefòn ou se yon ti òdinatè nan poch ou. Kreye yon app mobil se ekri pwogram ki viv ladan l: bouton ou manyen, ekran ki chanje.\n\n [[CHECK:g07-l01-c1]]\n\nChemen natif la: Android Studio (editè ofisyèl), SDK, emulator pou teste san telefòn, ak ADB pou pale ak aparèy. Lang lan se Kotlin: null safety (fini ak erè null), coroutines pou travay asenkron, ak Jetpack Compose pou UI modèn deklaratif. [[CHECK:g07-l01-c2]]\n\nChemen cross-platform lan: Flutter (Dart) oswa React Native pataje 80-90% kòd ant Android ak iOS. Konpwomi a: ou depann de plugin pou fonksyon natif, epi debogaj pwoblèm espesifik platfòm mande konprann natif la kanmenm. [[CHECK:g07-l01-c3]]\n\nKèlkeswa chemen an: jere permissions (kamera, pozisyon) ak respè, sipòte mòd offline (Room pou done lokal), teste sou emulator AK yon aparèy fizik, epi siyen app lan pou Play Console.",
+              "code": "// Kotlin: null safety an aksyon\nvar non: String? = null   // ? = ka pa gen valè\nval longè = non?.length   // ?. = si non se null, bay null san kraze",
+              "code_lang": "kotlin",
+              "expert_note_ht": "Ekspè Android yo panse 'lifecycle' anvan tout: yon app ka mouri epi renèt nenpòt ki lè (wotasyon ekran, mank memwa). Sove eta a, pa sipoze l ap rete.",
+              "exercises": [
+                {
+                  "id": "g07-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki lang ofisyèl pou devlopman Android natif?",
+                  "choices": [
+                    "A) Java sèlman",
+                    "B) Kotlin",
+                    "C) Swift",
+                    "D) C#"
+                  ],
+                  "accepted": [
+                    "b",
+                    "kotlin"
+                  ],
+                  "correct_ht": "B) Kotlin",
+                  "explanation_ht": "Google rekòmande Kotlin pou Android natif: null safety, coroutines, Jetpack Compose."
+                },
+                {
+                  "id": "g07-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "ADB sèvi pou:",
+                  "choices": [
+                    "A) Desine UI a",
+                    "B) Kominike ak aparèy/emulator: enstale app, li logs",
+                    "C) Siyen app lan",
+                    "D) Pibliye sou Play Store"
+                  ],
+                  "accepted": [
+                    "b",
+                    "kominike ak aparèy/emulator: enstale app, li logs"
+                  ],
+                  "correct_ht": "B) Kominike ak aparèy/emulator: enstale app, li logs",
+                  "explanation_ht": "Android Debug Bridge se pon ant òdinatè w ak telefòn/emulator lan."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g07-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g07-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon fòmilè web se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l"
+                  ],
+                  "correct_ht": "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+                  "explanation_ht": "Non, imèl, modpas: ou ranpli, ou soumèt.",
+                  "choices": [
+                    "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+                    "B) Yon jwèt",
+                    "C) Yon film",
+                    "D) Yon chante"
+                  ]
+                },
+                {
+                  "id": "g07-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+                  "accepted": [
+                    "a",
+                    "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+                  ],
+                  "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                  "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+                  "choices": [
+                    "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                    "B) Yon imaj",
+                    "C) Yon kab",
+                    "D) Yon sourit"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g07-p1",
+              "title_ht": "To-do app ak offline storage",
+              "description_ht": "Yon lis tach ki mache san entènèt epi senkronize lè koneksyon tounen.",
+              "objectives_ht": [
+                "Ajoute/efase/make tach",
+                "Sere lokal (Room/DataStore)",
+                "UI pwòp ak Jetpack Compose oswa Flutter"
+              ],
+              "criteria_ht": [
+                "App lan fonksyone nèt san entènèt",
+                "Done yo pèsiste apre fèmen app lan"
+              ]
+            },
+            {
+              "id": "g07-p2",
+              "title_ht": "Aplikasyon depans pèsonèl",
+              "description_ht": "Swiv depans pa kategori, ak rechèch ak ekspòtasyon.",
+              "objectives_ht": [
+                "Antre depans ak kategori",
+                "Rechèch ak filtè pa dat/kategori",
+                "Ekspòte done yo (CSV)"
+              ],
+              "criteria_ht": [
+                "Total pa kategori a kòrèk",
+                "Ekspòtasyon CSV a louvri nan Excel/Sheets"
+              ]
+            },
+            {
+              "id": "g07-p3",
+              "title_ht": "Aplikasyon kliyan ak API an sekirite",
+              "description_ht": "App ki konekte ak yon vre API, ak login pwoteje.",
+              "objectives_ht": [
+                "Login ak token (pa sere modpas)",
+                "Rele API ak jere erè rezo",
+                "Teste sou emulator ak yon aparèy fizik"
+              ],
+              "criteria_ht": [
+                "Token an sere an sekirite (pa an klè)",
+                "App lan jere pèt koneksyon san kraze"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g08",
+          "title_ht": "MODIL 8 — Aplikasyon iOS ak macOS",
+          "description_ht": "Ekosistèm Apple: Swift, SwiftUI, Xcode. Atansyon: pou konpile ak siyen app iOS natif, ou bezwen yon Mac.",
+          "related_lessons": [
+            "L17"
+          ],
+          "related_modules": [
+            "swift",
+            "flutter",
+            "react-native"
+          ],
+          "lessons": [
+            {
+              "id": "g08-l01",
+              "title_ht": "iOS ak macOS ak Swift",
+              "body_ht": "Telefòn ou se yon ti òdinatè nan poch ou. Kreye yon app mobil se ekri pwogram ki viv ladan l: bouton ou manyen, ekran ki chanje.\n\n [[CHECK:g08-l01-c1]]\n\nSwift se lang modèn Apple: optionals (menm lide ak null safety Kotlin), async/await pou konkourans, ak SwiftUI pou UI deklaratif ki mache sou iOS AK macOS. Xcode se editè a, Simulator lan pou teste, Instruments pou pèfòmans. [[CHECK:g08-l01-c2]]\n\nDone lokal: SwiftData/Core Data oswa SQLite; rezo: URLSession. Sekirite Apple sevè: Keychain pou sekrè, App Transport Security (HTTPS obligatwa), privacy manifests ki deklare ki done ou kolekte. [[CHECK:g08-l01-c3]]\n\nDistribisyon: TestFlight pou beta-teste ak itilizatè reyèl, apre App Store Connect ak signing/provisioning. Pou macOS desktop: menu bar, rakoursi klavye, sandboxing, code signing ak notarization anvan distribisyon.",
+              "code": "// Swift: optionals ak async/await\nvar surnom: String? = nil\nif let non = surnom {\n    print(\"Bonjou, \\(non)\")\n}\n\nfunc chajeDone() async throws -> [Atik] {\n    let (done, _) = try await URLSession.shared.data(from: url)\n    return try JSONDecoder().decode([Atik].self, from: done)\n}",
+              "code_lang": "swift",
+              "expert_note_ht": "Ekspè iOS yo respekte règ Apple yo depi premye jou: yon app ki vyole privacy oswa ki mande twòp permissions ap rejte nan review — pa tann dènye minit.",
+              "exercises": [
+                {
+                  "id": "g08-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Pou konpile ak siyen yon app iOS natif, ou bezwen:",
+                  "choices": [
+                    "A) Nenpòt PC Windows",
+                    "B) Yon Mac ak Xcode",
+                    "C) Sèlman yon navigatè",
+                    "D) Yon sèvè Linux"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon mac ak xcode"
+                  ],
+                  "correct_ht": "B) Yon Mac ak Xcode",
+                  "explanation_ht": "Apple egzije macOS + Xcode pou toolchain iOS natif la."
+                },
+                {
+                  "id": "g08-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "TestFlight sèvi pou:",
+                  "choices": [
+                    "A) Pibliye dirèkteman sou App Store",
+                    "B) Beta-teste app lan ak itilizatè reyèl anvan sòti",
+                    "C) Ekri kòd Swift",
+                    "D) Siyen dokiman PDF"
+                  ],
+                  "accepted": [
+                    "b",
+                    "beta-teste app lan ak itilizatè reyèl anvan sòti"
+                  ],
+                  "correct_ht": "B) Beta-teste app lan ak itilizatè reyèl anvan sòti",
+                  "explanation_ht": "TestFlight distribye vèsyon beta bay testè; se apre validasyon ou soumèt nan App Store."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g08-l01-c1",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+                  "accepted": [
+                    "bonjou, \\(non)",
+                    "\"bonjou, \\(non)\""
+                  ],
+                  "correct_ht": "Bonjou, \\(non)",
+                  "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou, \\(non) »."
+                },
+                {
+                  "id": "g08-l01-c2",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+                  "accepted": [
+                    "chajedone"
+                  ],
+                  "correct_ht": "chajeDone",
+                  "explanation_ht": "Fonksyon an rele « chajeDone » — se non sa a ou itilize pou rele l pita."
+                },
+                {
+                  "id": "g08-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g08-p1",
+              "title_ht": "Aplikasyon nòt ki senkronize",
+              "description_ht": "App nòt ki sere lokal, senkronize ak yon API, jere erè rezo, epi mande sèlman permissions li bezwen. Dokimante tès ak distribisyon.",
+              "objectives_ht": [
+                "Sere nòt lokal (SwiftData/SQLite)",
+                "Senkronize ak yon API REST",
+                "Jere mòd offline ak konfli senkro",
+                "Mande sèlman permissions nesesè"
+              ],
+              "criteria_ht": [
+                "Nòt yo disponib san entènèt",
+                "Senkro a pa pèdi done lè koneksyon an koupe",
+                "Dokimantasyon eksplike kijan pou teste ak distribye via TestFlight"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g09",
+          "title_ht": "MODIL 9 — Aplikasyon Windows ak desktop cross-platform",
+          "description_ht": "Desktop pa mouri: lojisyèl jesyon, zouti biwo ak app pwofesyonèl ap viv la. Chwazi ant natif Windows, natif macOS, oswa cross-platform.",
+          "related_lessons": [],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g09-l01",
+              "title_ht": "Windows natif: C# ak .NET",
+              "body_ht": "Chemen ofisyèl Microsoft pou Windows modèn se C# + .NET ak WinUI (oubyen WPF pou app ki deja egziste). C# se yon lang pwòp ak tip fò, async/await, ak LINQ pou manipile koleksyon fasilman. [[CHECK:g09-l01-c1]]\n\nKonnen 'Windows internals' debaz: pwosesis ak sèvis, rejis (registry), jounal evènman (Event Viewer), permissions, ak PowerShell pou otomatize. BitLocker chifre disk la; Windows Defender pwoteje an tan reyèl. [[CHECK:g09-l01-c2]]\n\nDistribisyon Windows: enstalatè (MSIX/EXE), siyati kòd pou evite avètisman, ak mekanis mizajou otomatik. [[CHECK:g09-l01-c3]]",
+              "code": "// C#: LINQ an aksyon\nvar chè = pwodwi\n    .Where(p => p.Pri > 1000)\n    .OrderBy(p => p.Non)\n    .ToList();",
+              "code_lang": "csharp",
+              "expert_note_ht": "Ekspè Windows yo pa janm mande dwa admin san bezwen. Yon app ki egzije admin pou yon senp lis tach ap fè itilizatè yo mefye — ak rezon.",
+              "exercises": [
+                {
+                  "id": "g09-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki stack ofisyèl pou aplikasyon Windows modèn natif?",
+                  "choices": [
+                    "A) Electron",
+                    "B) C# / .NET + WinUI",
+                    "C) Flutter",
+                    "D) Java Swing"
+                  ],
+                  "accepted": [
+                    "b",
+                    "c# / .net + winui"
+                  ],
+                  "correct_ht": "B) C# / .NET + WinUI",
+                  "explanation_ht": "Microsoft pouse C#/.NET + WinUI kòm chemen natif modèn pou Windows."
+                },
+                {
+                  "id": "g09-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Event Viewer sou Windows pèmèt ou:",
+                  "choices": [
+                    "A) Desine fenèt",
+                    "B) Li jounal evènman sistèm ak aplikasyon yo",
+                    "C) Konpile kòd C#",
+                    "D) Jere rezo Wi-Fi"
+                  ],
+                  "accepted": [
+                    "b",
+                    "li jounal evènman sistèm ak aplikasyon yo"
+                  ],
+                  "correct_ht": "B) Li jounal evènman sistèm ak aplikasyon yo",
+                  "explanation_ht": "Event Viewer santralize logs Windows — premye kote pou chèche lè yon app kraze."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g09-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon evènman (event) tankou 'klik' se:",
+                  "accepted": [
+                    "a",
+                    "yon bagay ki rive (itilizatè aji) epi pwogram nan reponn"
+                  ],
+                  "correct_ht": "A) Yon bagay ki rive (itilizatè aji) epi pwogram nan reponn",
+                  "explanation_ht": "Ou 'koute' evènman an, epi ou di kisa pou fè lè li rive.",
+                  "choices": [
+                    "A) Yon bagay ki rive (itilizatè aji) epi pwogram nan reponn",
+                    "B) Yon erè",
+                    "C) Yon viris",
+                    "D) Yon fèt"
+                  ]
+                },
+                {
+                  "id": "g09-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Kòd asenkron (async/await) pèmèt pwogram nan:",
+                  "accepted": [
+                    "a",
+                    "lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann"
+                  ],
+                  "correct_ht": "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+                  "explanation_ht": "Tankou voye yon moun achte pen pandan ou kontinye kwit manje.",
+                  "choices": [
+                    "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+                    "B) Dòmi pou tout tan",
+                    "C) Etenn òdinatè a",
+                    "D) Efase memwa a"
+                  ]
+                },
+                {
+                  "id": "g09-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "prepare pwogram nan pou jere erè san kraze"
+                  ],
+                  "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+                  "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+                  "choices": [
+                    "A) Prepare pwogram nan pou jere erè san kraze",
+                    "B) Kache erè yo pou tout tan",
+                    "C) Fè pwogram nan pi rapid",
+                    "D) Efase fichye yo"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g09-l02",
+              "title_ht": "Desktop cross-platform: Electron, Flutter, .NET MAUI",
+              "body_ht": "Electron anbale teknoloji web (HTML/CSS/TypeScript) nan yon app desktop — se konsa VS Code fèt. Avantaj: yon sèl kòd pou Windows/Mac/Linux, ekip web yo pwodiktif touswit. Pri a: app yo lou (Chromium anbale) epi yo konsome plis memwa. [[CHECK:g09-l02-c1]]\n\nAltènativ: Flutter Desktop (lejè, yon sèl lang Dart), .NET MAUI (C#, bon entegrasyon Microsoft), Qt/C++ (maksimòm pèfòmans ak kontwòl, plis konplèks). Pa gen gayan absoli. [[CHECK:g09-l02-c2]]\n\nKonpare twa kritè anvan ou chwazi: pwa final app lan (itilizatè yo rayi telechajman 200 Mo pou yon kalkilatris), entegrasyon ak OS a (notifikasyon, menu, rakoursi), ak konpetans ekip ou a. [[CHECK:g09-l02-c3]]",
+              "code": "// Electron (main.js): kreye fenèt la\nconst { app, BrowserWindow } = require('electron');\nfunction kreyeFenèt() {\n  const fenèt = new BrowserWindow({ width: 1000, height: 700 });\n  fenèt.loadFile('index.html');\n}\napp.whenReady().then(kreyeFenèt);",
+              "code_lang": "javascript",
+              "expert_note_ht": "Ekspè yo mezire pwa enstalatè a depi premye vèsyon an. Yon app Electron ki peze 180 Mo pou afiche yon fòmilè se yon desizyon achitekti ki dwe jistifye.",
+              "exercises": [
+                {
+                  "id": "g09-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Electron pèmèt ou ekri aplikasyon desktop ak:",
+                  "choices": [
+                    "A) Sèlman C++",
+                    "B) HTML / CSS / JavaScript (TypeScript)",
+                    "C) Sèlman Python",
+                    "D) SQL"
+                  ],
+                  "accepted": [
+                    "b",
+                    "html / css / javascript (typescript)"
+                  ],
+                  "correct_ht": "B) HTML / CSS / JavaScript (TypeScript)",
+                  "explanation_ht": "Electron = Chromium + Node.js: ou devlope ak teknoloji web pou desktop."
+                },
+                {
+                  "id": "g09-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Pi gwo dezavantaj Electron se:",
+                  "choices": [
+                    "A) Li pa mache sou Mac",
+                    "B) Aplikasyon yo lou (Chromium anbale) epi konsome memwa",
+                    "C) Li pa sipòte JavaScript",
+                    "D) Li obligatwa peye lisans"
+                  ],
+                  "accepted": [
+                    "b",
+                    "aplikasyon yo lou (chromium anbale) epi konsome memwa"
+                  ],
+                  "correct_ht": "B) Aplikasyon yo lou (Chromium anbale) epi konsome memwa",
+                  "explanation_ht": "Chak app Electron pote pwòp navigatè l — pratik, men lou."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g09-l02-c1",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+                  "accepted": [
+                    "kreyefenèt"
+                  ],
+                  "correct_ht": "kreyeFenèt",
+                  "explanation_ht": "Fonksyon an rele « kreyeFenèt » — se non sa a ou itilize pou rele l pita."
+                },
+                {
+                  "id": "g09-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Nan Flutter, yon widget se:",
+                  "accepted": [
+                    "a",
+                    "yon brik lego ekran an: bouton, tèks, imaj — tout bagay se widget"
+                  ],
+                  "correct_ht": "A) Yon brik Lego ekran an: bouton, tèks, imaj — tout bagay se widget",
+                  "explanation_ht": "Ou anpile widget pou bati ekran an.",
+                  "choices": [
+                    "A) Yon brik Lego ekran an: bouton, tèks, imaj — tout bagay se widget",
+                    "B) Yon jwèt",
+                    "C) Yon erè",
+                    "D) Yon viris"
+                  ]
+                },
+                {
+                  "id": "g09-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon fòmilè web se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l"
+                  ],
+                  "correct_ht": "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+                  "explanation_ht": "Non, imèl, modpas: ou ranpli, ou soumèt.",
+                  "choices": [
+                    "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+                    "B) Yon jwèt",
+                    "C) Yon film",
+                    "D) Yon chante"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g09-l03",
+              "title_ht": "Pratik desktop pwofesyonèl",
+              "body_ht": "Yon app desktop serye jere: dyalòg fichye (louvri/sove), preferans itilizatè ki pèsiste, mizajou otomatik (itilizatè yo pa janm mete ajou alamen), enstalatè pwòp pou chak platfòm, ak jounal (logs) pou debogaj. [[CHECK:g09-l03-c1]]\n\nAksesibilite konte sou desktop tou: navigasyon klavye, tèks lizib, kontras. Backup done itilizatè a regilyèman — yon app jesyon ki pèdi done se yon app ki mouri. [[CHECK:g09-l03-c2]]\n\nTeste enstalatè a sou yon machin pwòp (VM), pa sèlman sou machin devlopman w lan ki gen tout depandans yo deja enstale. [[CHECK:g09-l03-c3]]",
+              "code": "# Checklist anvan chak livrezon desktop:\n# [ ] Enstalatè teste sou VM pwòp\n# [ ] Mizajou otomatik mache\n# [ ] Done itilizatè sove deyò anyè app lan\n# [ ] Dezensatalasyon netwaye apre l",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè desktop yo pa janm sere done itilizatè andedan anyè enstalasyon an: yon mizajou pa dwe janm efase travay yon moun.",
+              "exercises": [
+                {
+                  "id": "g09-l03-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Mizajou otomatik enpòtan sitou pou:",
+                  "choices": [
+                    "A) Fè app lan pi bèl",
+                    "B) Itilizatè yo resevwa koreksyon sekirite san atann",
+                    "C) Ogmante pri app lan",
+                    "D) Diminye gwosè fichye a"
+                  ],
+                  "accepted": [
+                    "b",
+                    "itilizatè yo resevwa koreksyon sekirite san atann"
+                  ],
+                  "correct_ht": "B) Itilizatè yo resevwa koreksyon sekirite san atann",
+                  "explanation_ht": "Pifò itilizatè pa mete ajou alamen; san auto-update, feblès yo rete ouvè."
+                },
+                {
+                  "id": "g09-l03-e2",
+                  "type": "code",
+                  "prompt_ht": "Sou Windows, ekstansyon fichye enstalatè klasik la se ____",
+                  "accepted": [
+                    "exe",
+                    ".exe"
+                  ],
+                  "correct_ht": ".exe",
+                  "explanation_ht": ".exe se fòma egzekitab/enstalatè Windows (MSIX se fòma modèn lan)."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g09-l03-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                },
+                {
+                  "id": "g09-l03-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Navigasyon nan yon app se:",
+                  "accepted": [
+                    "a",
+                    "pase soti nan yon ekran nan yon lòt"
+                  ],
+                  "correct_ht": "A) Pase soti nan yon ekran nan yon lòt",
+                  "explanation_ht": "Chak ekran se yon chanm; navigasyon se pòt yo.",
+                  "choices": [
+                    "A) Pase soti nan yon ekran nan yon lòt",
+                    "B) Kondwi yon machin",
+                    "C) Vole yon avyon",
+                    "D) Naje"
+                  ]
+                },
+                {
+                  "id": "g09-l03-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon tès se tankou:",
+                  "accepted": [
+                    "a",
+                    "goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l"
+                  ],
+                  "correct_ht": "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+                  "explanation_ht": "Tès = prèv kòd la fè sa li pwomèt.",
+                  "choices": [
+                    "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+                    "B) Yon egzamen lekòl sèlman",
+                    "C) Yon jwèt",
+                    "D) Yon film"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g09-p1",
+              "title_ht": "Aplikasyon desktop pou jesyon envantè",
+              "description_ht": "Konstwi yon app desktop konplè pou jere envantè yon ti biznis, ak enstalatè.",
+              "objectives_ht": [
+                "Rechèch ak filtraj pwodwi",
+                "Ekspòtasyon CSV",
+                "Bazdone lokal + backup",
+                "Login lokal si nesesè",
+                "Enstalatè pou platfòm ou vize a"
+              ],
+              "criteria_ht": [
+                "App lan enstale epi lanse sou yon machin pwòp",
+                "Done yo pèsiste epi backup la restore",
+                "Ekspòtasyon CSV a louvri kòrèkteman"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etap-5",
+      "numero": 5,
+      "icon": "🖥️",
+      "title_ht": "Sistèm operasyon, Linux ak rezo",
+      "description_ht": "Machin yo anba aplikasyon yo: administre sistèm, konprann rezo, otomatize. Se la ou vin endispansab.",
+      "modules": [
+        {
+          "id": "g10",
+          "title_ht": "MODIL 10 — Sistèm operasyon, Linux ak administrasyon",
+          "description_ht": "Anba chak app gen yon sistèm operasyon. Konprann Linux, administre sèvè, otomatize ak script — se la devlopè vin enjenyè.",
+          "related_lessons": [],
+          "related_modules": [
+            "bash"
+          ],
+          "lessons": [
+            {
+              "id": "g10-l01",
+              "title_ht": "Linux: filesystem ak permissions",
+              "body_ht": "Linux òganize tout kòm fichye anba rasin / : /home pou itilizatè yo, /etc pou konfigirasyon, /var pou done ki chanje (logs), /tmp pou tanporè. Tout bagay gen yon pwopriyetè, yon gwoup, ak permissions: li (r), ekri (w), egzekite (x) — pou pwopriyetè, gwoup, ak lòt moun. [[CHECK:g10-l01-c1]]\n\nchmod chanje permissions (chmod +x script.sh rann li egzekitab), chown chanje pwopriyetè. Prensip 'least privilege': bay chak itilizatè ak pwogram SÈLMAN dwa li bezwen. Yon sèvè web pa bezwen dwa ekri toupatou. [[CHECK:g10-l01-c2]]\n\nPou Windows: PowerShell, Task Manager, Event Viewer, Defender, BitLocker. Pou macOS: Terminal, Activity Monitor, FileVault, Gatekeeper, Time Machine. Prensip yo menm: mizajou, backup, chifreman disk, epi separe kont admin ak kont chak jou. [[CHECK:g10-l01-c3]]",
+              "code": "# Permissions: rwxr-xr--\n# pwopriyetè: rwx | gwoup: r-x | lòt: r--\nls -l script.sh\nchmod +x script.sh     # rann egzekitab\nchmod 600 sekrè.txt    # sèl pwopriyetè ka li/ekri\nchown marie:dev app/   # chanje pwopriyetè ak gwoup",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo pa janm fè chmod 777 'pou li mache'. Yon permission twò laj se yon pòt ouvè; konprann POUKISA aksè a refize anvan ou louvri l.",
+              "exercises": [
+                {
+                  "id": "g10-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Anyè /etc sou Linux gen:",
+                  "choices": [
+                    "A) Fichye pèsonèl itilizatè yo",
+                    "B) Fichye konfigirasyon sistèm lan",
+                    "C) Jounal (logs)",
+                    "D) Fichye tanporè"
+                  ],
+                  "accepted": [
+                    "b",
+                    "fichye konfigirasyon sistèm lan"
+                  ],
+                  "correct_ht": "B) Fichye konfigirasyon sistèm lan",
+                  "explanation_ht": "/etc = konfigirasyon, /home = itilizatè, /var = logs ak done ki chanje."
+                },
+                {
+                  "id": "g10-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "Konplete pou rann script.sh egzekitab: chmod ____ script.sh",
+                  "accepted": [
+                    "+x",
+                    "755",
+                    "a+x"
+                  ],
+                  "correct_ht": "+x",
+                  "explanation_ht": "chmod +x ajoute dwa egzekisyon. 755 se vèsyon nimerik ekivalan (rwxr-xr-x)."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g10-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                },
+                {
+                  "id": "g10-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Permissions rwx sou Linux di:",
+                  "accepted": [
+                    "a",
+                    "ki moun ki ka li, ekri oswa egzekite yon fichye"
+                  ],
+                  "correct_ht": "A) Ki moun ki ka li, ekri oswa egzekite yon fichye",
+                  "explanation_ht": "r = li, w = ekri, x = egzekite — pou pwopriyetè, gwoup, lòt.",
+                  "choices": [
+                    "A) Ki moun ki ka li, ekri oswa egzekite yon fichye",
+                    "B) Ki koulè fichye a",
+                    "C) Gwosè fichye a",
+                    "D) Ki lè yo kreye l"
+                  ]
+                },
+                {
+                  "id": "g10-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon evènman (event) tankou 'klik' se:",
+                  "accepted": [
+                    "a",
+                    "yon bagay ki rive (itilizatè aji) epi pwogram nan reponn"
+                  ],
+                  "correct_ht": "A) Yon bagay ki rive (itilizatè aji) epi pwogram nan reponn",
+                  "explanation_ht": "Ou 'koute' evènman an, epi ou di kisa pou fè lè li rive.",
+                  "choices": [
+                    "A) Yon bagay ki rive (itilizatè aji) epi pwogram nan reponn",
+                    "B) Yon erè",
+                    "C) Yon viris",
+                    "D) Yon fèt"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g10-l02",
+              "title_ht": "Administrasyon: pwosesis, sèvis, SSH ak otomatizasyon",
+              "body_ht": "Yon admin dwe wè sa k ap pase: ps ak top montre pwosesis yo, kill kanpe youn, journalctl li jounal sistèm lan. Sèvis yo jere ak systemd (systemctl start/…/enable) — sèvè web ou a se yon sèvis ki dwe redemare pou kont li si l tonbe. [[CHECK:g10-l02-c1]]\n\nSSH pèmèt ou administre yon sèvè adistans an sekirite. Pi bon pratik: koneksyon ak kle piblik/prive (kle prive a rete sou machin ou, kle piblik la sou sèvè a), enfim login ak modpas, epi limite firewall la (sèlman pò 22, 80, 443). [[CHECK:g10-l02-c2]]\n\nOtomatize repetisyon: script Bash pou backup ak rapò, cron/systemd timers pou pwograme yo. Toujou mete 'dry-run' ak konfimasyon anvan aksyon destriktif nan script ou yo. [[CHECK:g10-l02-c3]]",
+              "code": "# Siveyans rapid yon sèvè\nwhoami; id; uname -a\ndf -h            # espas disk\nfree -h          # memwa\nps aux | head    # pwosesis yo\nss -tulpn        # pò k ap koute\n\n# Kle SSH (fè yon sèl fwa)\nssh-keygen -t ed25519",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo otomatize tout sa yo fè de fwa. Dezyèm fwa ou tape menm kòmand antretyen an alamen, ekri l nan yon script ak log.",
+              "exercises": [
+                {
+                  "id": "g10-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki kòmand ki montre pwosesis yo an dirèk ak itilizasyon CPU/memwa?",
+                  "choices": [
+                    "A) ls",
+                    "B) top",
+                    "C) cd",
+                    "D) pwd"
+                  ],
+                  "accepted": [
+                    "b",
+                    "top"
+                  ],
+                  "correct_ht": "B) top",
+                  "explanation_ht": "top (oswa htop) afiche pwosesis yo an tan reyèl; ps bay yon foto estati."
+                },
+                {
+                  "id": "g10-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Ak otantifikasyon SSH pa kle, ou mete sou sèvè a:",
+                  "choices": [
+                    "A) Kle prive a",
+                    "B) Kle piblik la",
+                    "C) Modpas root la",
+                    "D) Tout kle yo"
+                  ],
+                  "accepted": [
+                    "b",
+                    "kle piblik la"
+                  ],
+                  "correct_ht": "B) Kle piblik la",
+                  "explanation_ht": "Kle prive a PA JANM kite machin ou. Sèvè a gen sèlman kle piblik la pou verifye w."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g10-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — SSH pèmèt ou:",
+                  "accepted": [
+                    "a",
+                    "kontwole yon òdinatè adistans an sekirite"
+                  ],
+                  "correct_ht": "A) Kontwole yon òdinatè adistans an sekirite",
+                  "explanation_ht": "Tout kominikasyon an chifre; pi bon ak kle olye modpas.",
+                  "choices": [
+                    "A) Kontwole yon òdinatè adistans an sekirite",
+                    "B) Voye lèt",
+                    "C) Gade televizyon",
+                    "D) Kwit manje"
+                  ]
+                },
+                {
+                  "id": "g10-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g10-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Triye (sorting) done se tankou:",
+                  "accepted": [
+                    "a",
+                    "ranje kat jwèt ou pa nimewo: mete lòd nan dezòd"
+                  ],
+                  "correct_ht": "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+                  "explanation_ht": "Done nan lòd = rechèch rapid.",
+                  "choices": [
+                    "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+                    "B) Melanje kat yo",
+                    "C) Jete kat yo",
+                    "D) Kache kat yo"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g10-p1",
+              "title_ht": "Hardening yon VM Linux",
+              "description_ht": "Mete yon VM Linux epi sekirize l tankou yon vre sèvè pwodiksyon.",
+              "objectives_ht": [
+                "Kreye yon itilizatè san dwa admin pou travay chak jou",
+                "Konfigire SSH ak kle sèlman (enfim modpas)",
+                "Limite firewall (sèlman pò nesesè)",
+                "Aktive mizajou otomatik sekirite",
+                "Kolekte logs epi teste restorasyon yon backup"
+              ],
+              "criteria_ht": [
+                "Koneksyon SSH ak modpas refize; ak kle li mache",
+                "Yon eskan pò montre sèlman pò ou te ouvri yo",
+                "Backup la restore sou yon VM vid avèk siksè"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g11",
+          "title_ht": "MODIL 11 — Rezo ak entènèt",
+          "description_ht": "Kijan done vwayaje: adrès IP, DNS, TCP/UDP, HTTP/HTTPS, firewall. San rezo, pa gen entènèt — epi pa gen app modèn.",
+          "related_lessons": [
+            "L19",
+            "L20"
+          ],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g11-l01",
+              "title_ht": "TCP/IP, adrès ak DNS",
+              "body_ht": "Chak aparèy sou rezo a gen yon adrès IP (pa egzanp 192.168.1.10). Yon subnet (sous-rezo) gwoup aparèy; gateway a se pòt sòti vè entènèt la; routeur a deside chemen pake yo. DHCP bay adrès otomatikman; NAT pèmèt tout aparèy lakay ou pataje yon sèl adrès piblik. [[CHECK:g11-l01-c1]]\n\nMoun sonje non (google.com), machin bezwen nimewo: DNS se anyè telefòn entènèt la ki tradui non an adrès IP. Yon rechèch DNS pase pa plizyè sèvè an kachèt — se pou sa premye vizit la ka pi lan. [[CHECK:g11-l01-c2]]\n\nZouti debaz: ping (èske machin nan reponn?), traceroute (ki chemen pake a pran?), nslookup/dig (ki adrès IP pou non sa a?). [[CHECK:g11-l01-c3]]",
+              "code": "# Eksplore rezo w (sèlman rezo w gen dwa teste!)\nping 8.8.8.8              # èske m konekte?\nnslookup google.com       # ki IP pou non sa a?\ntraceroute google.com     # ki chemen pake yo pran?",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè rezo yo toujou kòmanse pa kouch ki pi ba a: èske kab la konekte? èske IP a bon? 80% pwoblèm 'entènèt pa mache' se kouch 1-3, pa aplikasyon an.",
+              "exercises": [
+                {
+                  "id": "g11-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "DNS sèvi pou:",
+                  "choices": [
+                    "A) Chifre done yo",
+                    "B) Tradui non domèn (google.com) an adrès IP",
+                    "C) Bloke viris",
+                    "D) Akselere òdinatè a"
+                  ],
+                  "accepted": [
+                    "b",
+                    "tradui non domèn (google.com) an adrès ip"
+                  ],
+                  "correct_ht": "B) Tradui non domèn (google.com) an adrès IP",
+                  "explanation_ht": "San DNS ou ta dwe sonje nimewo IP chak sit ou vizite."
+                },
+                {
+                  "id": "g11-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "Konplete pou rezoud DNS yon domèn nan tèminal: ____ google.com",
+                  "accepted": [
+                    "nslookup",
+                    "dig"
+                  ],
+                  "correct_ht": "nslookup",
+                  "explanation_ht": "nslookup (oswa dig sou Linux) mande sèvè DNS la ki adrès IP pou non an."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g11-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — DNS se tankou:",
+                  "accepted": [
+                    "a",
+                    "liv adrès entènèt la: li tradui non sit (google.com) an adrès ip"
+                  ],
+                  "correct_ht": "A) Liv adrès entènèt la: li tradui non sit (google.com) an adrès IP",
+                  "explanation_ht": "Moun sonje non; machin bezwen nimewo.",
+                  "choices": [
+                    "A) Liv adrès entènèt la: li tradui non sit (google.com) an adrès IP",
+                    "B) Yon diksyonè anglè",
+                    "C) Yon liv kwizin",
+                    "D) Yon kat jewografik"
+                  ]
+                },
+                {
+                  "id": "g11-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                },
+                {
+                  "id": "g11-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Ki objektif leson sa a pou ou?",
+                  "accepted": [
+                    "a",
+                    "konprann lide a epi pratike l ak egzanp lan"
+                  ],
+                  "correct_ht": "A) Konprann lide a epi pratike l ak egzanp lan",
+                  "explanation_ht": "Chak leson: konprann LIDE a an premye (analoji a), apre pratike ak egzanp lan.",
+                  "choices": [
+                    "A) Konprann lide a epi pratike l ak egzanp lan",
+                    "B) Aprann tout kòd la pa kè",
+                    "C) Kopye san konprann",
+                    "D) Sote pratik la"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g11-l02",
+              "title_ht": "TCP kont UDP, HTTP ak TLS",
+              "body_ht": "Lè ou voye yon lèt, ou mete adrès sou anvlòp la epi lapòs pote l. Chak aparèy sou entènèt gen yon adrès postal (IP), epi DNS se liv adrès la.\n\n [[CHECK:g11-l02-c1]]\n\nTCP se livrezon ak konfimasyon: chak pake verifye, lòd garanti — pafè pou paj web ak fichye. UDP se 'voye epi bliye': pi rapid, men san garanti — pafè pou apèl video ak jwèt an dirèk kote vitès konte plis pase pèfeksyon. [[CHECK:g11-l02-c2]]\n\nChak sèvis koute sou yon pò: 80 = HTTP, 443 = HTTPS, 22 = SSH, 53 = DNS. HTTP se lang web la (demann/repons); HTTPS se HTTP andedan yon tinèl chifre TLS. TLS pwoteje done yo PANDAN y ap vwayaje — li pa pwoteje yo sou sèvè a apre sa. [[CHECK:g11-l02-c3]]\n\nAk curl ou ka wè headers yon sit; ak Wireshark ou ka obsève trafik pwòp laboratwa w (pa janm sniffe trafik lòt moun san pèmisyon).",
+              "code": "# Gade yon sit pale HTTP\ncurl -I https://example.com     # sèlman headers\n\n# Pò komen yo\n# 22/SSH  53/DNS  80/HTTP  443/HTTPS  3306/MySQL  5432/PostgreSQL",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo li headers HTTP yo tankou yon doktè li analiz san: kòd estati, kalite kontni, politik sekirite — tout istwa a la.",
+              "exercises": [
+                {
+                  "id": "g11-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Ki nimewo pò HTTPS la?",
+                  "choices": [
+                    "A) 80",
+                    "B) 22",
+                    "C) 443",
+                    "D) 53"
+                  ],
+                  "accepted": [
+                    "c",
+                    "443"
+                  ],
+                  "correct_ht": "C) 443",
+                  "explanation_ht": "443 = HTTPS (HTTP an sekirite), 80 = HTTP san chifreman, 22 = SSH, 53 = DNS."
+                },
+                {
+                  "id": "g11-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "HTTPS pwoteje done yo:",
+                  "choices": [
+                    "A) Pou tout tan, toupatou",
+                    "B) Pandan y ap vwayaje ant navigatè a ak sèvè a",
+                    "C) Sèlman sou telefòn",
+                    "D) Kont tout viris"
+                  ],
+                  "accepted": [
+                    "b",
+                    "pandan y ap vwayaje ant navigatè a ak sèvè a"
+                  ],
+                  "correct_ht": "B) Pandan y ap vwayaje ant navigatè a ak sèvè a",
+                  "explanation_ht": "TLS chifre transpò a. Yon fwa done yo rive sou sèvè a, se sekirite sèvè a ki konte."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g11-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — HTTPS pwoteje:",
+                  "accepted": [
+                    "a",
+                    "done yo pandan y ap vwayaje ant ou ak sit la"
+                  ],
+                  "correct_ht": "A) Done yo pandan y ap vwayaje ant ou ak sit la",
+                  "explanation_ht": "TLS = tinèl chifre. Li pa pwoteje done yo sou sèvè a apre.",
+                  "choices": [
+                    "A) Done yo pandan y ap vwayaje ant ou ak sit la",
+                    "B) Òdinatè a kont pousyè",
+                    "C) Batri telefòn nan",
+                    "D) Ekran an kont kraze"
+                  ]
+                },
+                {
+                  "id": "g11-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Pou LI done nan yon API, ou itilize metòd:",
+                  "accepted": [
+                    "a",
+                    "get"
+                  ],
+                  "correct_ht": "A) GET",
+                  "explanation_ht": "GET = li; POST = kreye; PUT = modifye; DELETE = efase.",
+                  "choices": [
+                    "A) GET",
+                    "B) POST",
+                    "C) DELETE",
+                    "D) PUT"
+                  ]
+                },
+                {
+                  "id": "g11-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g11-l03",
+              "title_ht": "Firewall, segmentasyon ak Wi-Fi an sekirite",
+              "body_ht": "Yon firewall se gad pòtay rezo a: li kite pase sa ki otorize epi bloke rès la. Règ debaz: refize tout pa defo, apre ouvri sèlman sa nesesè. Segmentasyon separe rezo a an zòn (envite, travay, sèvè) pou yon pwoblèm nan yon zòn pa kontamine tout. [[CHECK:g11-l03-c1]]\n\n'Zero trust' se prensip modèn lan: pa fè okenn aparèy oswa itilizatè konfyans otomatikman paske l 'andedan' — verifye chak aksè, chak fwa. Se yon prensip, pa yon pwodwi majik ou achte. [[CHECK:g11-l03-c2]]\n\nPou Wi-Fi lakay ou: WPA2/WPA3 ak yon modpas fò inik, chanje modpas admin routeur a, etenn WPS, epi mete firmware ajou. Yon rezo envite separe pwoteje aparèy pèsonèl ou. [[CHECK:g11-l03-c3]]",
+              "code": "# Règ firewall senp (egzanp konseptwèl)\n# PA DEFO: refize tout koneksyon antre\n# OUVRI: 22 (SSH, sèlman IP admin), 80/443 (web piblik)\n# TOUT RÈS: refize + log",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo konsidere rezo 'entèn' kòm ostil tankou entènèt la. Atak ki fè plis dega yo souvan kòmanse andedan.",
+              "exercises": [
+                {
+                  "id": "g11-l03-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Prensip 'zero trust' vle di:",
+                  "choices": [
+                    "A) Pa gen modpas ditou",
+                    "B) Pa fè okenn aparèy/aksè konfyans otomatikman; verifye tout, chak fwa",
+                    "C) Fè tout moun konfyans andedan biwo a",
+                    "D) Etenn firewall la"
+                  ],
+                  "accepted": [
+                    "b",
+                    "pa fè okenn aparèy/aksè konfyans otomatikman; verifye tout, chak fwa"
+                  ],
+                  "correct_ht": "B) Pa fè okenn aparèy/aksè konfyans otomatikman; verifye tout, chak fwa",
+                  "explanation_ht": "Zero trust: kote aksè a soti pa pwouve l lejitim — verifikasyon kontinyèl obligatwa."
+                },
+                {
+                  "id": "g11-l03-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Pou sekirize Wi-Fi lakay ou, pi enpòtan se:",
+                  "choices": [
+                    "A) Kache non rezo a (SSID)",
+                    "B) WPA2/WPA3 ak modpas fò inik + chanje modpas admin routeur a",
+                    "C) Mete routeur a byen wo",
+                    "D) Etenn entènèt lannwit"
+                  ],
+                  "accepted": [
+                    "b",
+                    "wpa2/wpa3 ak modpas fò inik + chanje modpas admin routeur a"
+                  ],
+                  "correct_ht": "B) WPA2/WPA3 ak modpas fò inik + chanje modpas admin routeur a",
+                  "explanation_ht": "Chifreman fò + modpas inik se fondasyon an; kache SSID pa yon sekirite reyèl."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g11-l03-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon firewall se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon gad pòtay: li kite sa ki otorize pase epi bloke rès la"
+                  ],
+                  "correct_ht": "A) Yon gad pòtay: li kite sa ki otorize pase epi bloke rès la",
+                  "explanation_ht": "Règ debaz: refize tout, apre ouvri sèlman sa nesesè.",
+                  "choices": [
+                    "A) Yon gad pòtay: li kite sa ki otorize pase epi bloke rès la",
+                    "B) Yon mi dife pou kwit manje",
+                    "C) Yon fenèt",
+                    "D) Yon pòt ouvè"
+                  ]
+                },
+                {
+                  "id": "g11-l03-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                },
+                {
+                  "id": "g11-l03-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon bon modpas se:",
+                  "accepted": [
+                    "a",
+                    "long, inik pou chak kont, epi sere nan yon password manager"
+                  ],
+                  "correct_ht": "A) Long, inik pou chak kont, epi sere nan yon password manager",
+                  "explanation_ht": "Inik pa kont: si youn koule, lòt yo an sekirite.",
+                  "choices": [
+                    "A) Long, inik pou chak kont, epi sere nan yon password manager",
+                    "B) Non chen ou",
+                    "C) 123456",
+                    "D) Menm modpas toupatou"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g11-p1",
+              "title_ht": "Kat ak odit rezo lakay ou",
+              "description_ht": "Desine rezo w sou papye epi fè yon ti odit sekirite.",
+              "objectives_ht": [
+                "Desine routeur, aparèy, subnet ak sèvis yo",
+                "Verifye chifreman Wi-Fi (WPA2/WPA3) ak modpas admin routeur a",
+                "Idantifye yon amelyorasyon (rezo envite, mizajou firmware) epi aplike l"
+              ],
+              "criteria_ht": [
+                "Kat la montre tout aparèy prensipal yo ak wòl yo",
+                "Wi-Fi a an WPA2/WPA3 ak modpas fò; modpas admin routeur a chanje",
+                "Omwen yon amelyorasyon dokimante epi aplike"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etap-6",
+      "numero": 6,
+      "icon": "🛡️",
+      "title_ht": "Sekirite defansif ak hacking etik",
+      "description_ht": "Pwoteje sistèm yo epi konprann atakè yo — toujou nan kad legal. Sekirite se konpetans ki pi rechèche nan mache a.",
+      "modules": [
+        {
+          "id": "g12",
+          "title_ht": "MODIL 12 — Sekirite enfòmatik: fondasyon",
+          "description_ht": "Konfidansyalite, entegrite, disponiblite. Menas, feblès, kontwòl. Sekirite se pa yon opsyon apre — se yon fason pou panse depi premye liy kòd la.",
+          "related_lessons": [
+            "L21",
+            "L22"
+          ],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g12-l01",
+              "title_ht": "CIA ak modèl menas",
+              "body_ht": "Twa objektif sekirite: Konfidansyalite (sèlman moun otorize wè done yo), Entegrite (done yo pa modifye san otorizasyon), Disponiblite (sistèm nan aksesib lè bezwen). Chak desizyon sekirite pwoteje youn oswa plizyè nan twa sa yo. [[CHECK:g12-l01-c1]]\n\nModèl menas senp pou CHAK pwojè — reponn 7 kesyon: Ki done ki enpòtan? Ki moun ki ta ka atake? Ki pwen antre ki egziste? Kisa ki ka mal pase? Ki kontwòl ki diminye risk la? Kijan n ap detekte ensidan an? Kijan n ap retabli sèvis la? [[CHECK:g12-l01-c2]]\n\nBaz ijyèn: modpas inik pa kont (password manager), MFA toupatou, least privilege, mizajou regilye, backup offline. 90% ensidan yo eksplwate baz ki neglije, pa teknik sinema. [[CHECK:g12-l01-c3]]",
+              "code": "# Modèl menas eksprès pou yon ti boutik sou entènèt\n# Done enpòtan: kat kliyan, modpas, lòd\n# Atakè posib: bot otomatik, konpetitè, anplwaye mekontan\n# Pwen antre: fòmilè login, API peman, imèl anplwaye\n# Kontwòl: MFA, rate limit, paramèt SQL, backup",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo fè modèl menas la ANVAN yo ekri kòd, pa apre yon ensidan. Senk minit kesyon ekonomize senk semèn kriz.",
+              "exercises": [
+                {
+                  "id": "g12-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "'C' nan triyang CIA a vle di:",
+                  "choices": [
+                    "A) Kontwòl",
+                    "B) Konfidansyalite",
+                    "C) Kriptografi",
+                    "D) Kourikoulòm"
+                  ],
+                  "accepted": [
+                    "b",
+                    "konfidansyalite"
+                  ],
+                  "correct_ht": "B) Konfidansyalite",
+                  "explanation_ht": "CIA = Konfidansyalite (sèl otorize wè), Entegrite (pa modifye), Disponiblite (aksesib)."
+                },
+                {
+                  "id": "g12-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "MFA ajoute yon ____ faktè apre modpas la.",
+                  "accepted": [
+                    "dezyèm",
+                    "dezyem",
+                    "2yèm",
+                    "2yem",
+                    "second",
+                    "deuxième"
+                  ],
+                  "correct_ht": "dezyèm",
+                  "explanation_ht": "Multi-Factor Authentication: menm si yo vòlè modpas ou, yo pa gen dezyèm faktè a (kòd, kle fizik)."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g12-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Premye kesyon yon modèl menas poze se:",
+                  "accepted": [
+                    "a",
+                    "ki done ki enpòtan pou pwoteje?"
+                  ],
+                  "correct_ht": "A) Ki done ki enpòtan pou pwoteje?",
+                  "explanation_ht": "Ou pa ka pwoteje sa ou pa konnen ki gen valè.",
+                  "choices": [
+                    "A) Ki done ki enpòtan pou pwoteje?",
+                    "B) Ki koulè pou sit la?",
+                    "C) Ki mizik pou mete?",
+                    "D) Ki manje pou sèvi?"
+                  ]
+                },
+                {
+                  "id": "g12-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g12-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon bon modpas se:",
+                  "accepted": [
+                    "a",
+                    "long, inik pou chak kont, epi sere nan yon password manager"
+                  ],
+                  "correct_ht": "A) Long, inik pou chak kont, epi sere nan yon password manager",
+                  "explanation_ht": "Inik pa kont: si youn koule, lòt yo an sekirite.",
+                  "choices": [
+                    "A) Long, inik pou chak kont, epi sere nan yon password manager",
+                    "B) Non chen ou",
+                    "C) 123456",
+                    "D) Menm modpas toupatou"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g12-l02",
+              "title_ht": "Kriptografi san tèt chaje",
+              "body_ht": "De konsèp pa konfonn: HASHING se yon sèl sans (done → anprent fiks; ou pa ka tounen) — pafè pou sere modpas ak verifye entegrite fichye. ENCRYPTION se de sans ak yon kle (chifre → dechifre) — pafè pou pwoteje done an transpò ak an repo. [[CHECK:g12-l02-c1]]\n\nChifreman simetrik (yon sèl kle, rapid. AES) kont asimetrik (kle piblik + kle prive, pi lan — RSA): an pratik yo konbine — asimetrik pou echanje kle, simetrik pou done yo. Se konsa TLS mache. [[CHECK:g12-l02-c2]]\n\nRèg ki pa janm chanje: PA ENVANTE pwòp kriptografi w. Itilize bibliyotèk estanda ki revize (libsodium, modil TLS lang ou a). Erè kriptografi yo envizib jous yo katastwofik. [[CHECK:g12-l02-c3]]",
+              "code": "# Bon pratik modpas (konseptwèl)\n# 1. Itilizatè kreye modpas\n# 2. Sèvè a kalkile hash + sèl inik (bcrypt/argon2)\n# 3. Sere SÈLMAN hash la — pa janm modpas an klè\n# 4. Pou login: hash antre a, konpare ak hash ki sere a",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo pa diskite algoritm nan reyinyon; yo pran estanda endistri a epi yo konsantre sou jesyon kle — se la vrè feblès yo ye.",
+              "exercises": [
+                {
+                  "id": "g12-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Hashing sèvi sitou pou:",
+                  "choices": [
+                    "A) Voye imèl",
+                    "B) Sere modpas ak verifye entegrite (yon sèl sans)",
+                    "C) Akselere sit web",
+                    "D) Fè backup"
+                  ],
+                  "accepted": [
+                    "b",
+                    "sere modpas ak verifye entegrite (yon sèl sans)"
+                  ],
+                  "correct_ht": "B) Sere modpas ak verifye entegrite (yon sèl sans)",
+                  "explanation_ht": "Hash pa ka 'dechifre' — se egzakteman sa ou vle pou modpas."
+                },
+                {
+                  "id": "g12-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Chifreman asimetrik itilize:",
+                  "choices": [
+                    "A) Yon sèl kle",
+                    "B) Yon kle piblik + yon kle prive",
+                    "C) Pa gen kle ditou",
+                    "D) Modpas itilizatè a"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon kle piblik + yon kle prive"
+                  ],
+                  "correct_ht": "B) Yon kle piblik + yon kle prive",
+                  "explanation_ht": "Sa ki chifre ak kle piblik la sèl kle prive a ka dechifre — baz TLS ak siyati dijital."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g12-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Chifreman (encryption) fè:",
+                  "accepted": [
+                    "a",
+                    "li transfòme mesaj an sekrè sèl moun ki gen kle a ka li"
+                  ],
+                  "correct_ht": "A) Li transfòme mesaj an sekrè sèl moun ki gen kle a ka li",
+                  "explanation_ht": "San kle a, mesaj la sanble ak dezòd.",
+                  "choices": [
+                    "A) Li transfòme mesaj an sekrè sèl moun ki gen kle a ka li",
+                    "B) Li efase mesaj la",
+                    "C) Li voye mesaj la pi vit",
+                    "D) Li tradui an anglè"
+                  ]
+                },
+                {
+                  "id": "g12-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "prepare pwogram nan pou jere erè san kraze"
+                  ],
+                  "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+                  "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+                  "choices": [
+                    "A) Prepare pwogram nan pou jere erè san kraze",
+                    "B) Kache erè yo pou tout tan",
+                    "C) Fè pwogram nan pi rapid",
+                    "D) Efase fichye yo"
+                  ]
+                },
+                {
+                  "id": "g12-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g12-l03",
+              "title_ht": "OWASP Top 10 ak kòd an sekirite",
+              "body_ht": "Ou pa kite pòt kay ou louvri lannwit. Sekirite enfòmatik se menm lide a pou pwogram: kadna (modpas), gad (antivirus), ak bon règleman.\n\n [[CHECK:g12-l03-c1]]\n\nOWASP Top 10 se lis 10 pi gwo risk aplikasyon web: injection, otantifikasyon kase, ekspozisyon done sansib, kontwòl aksè kase, move konfigirasyon, elatriye. Se referans mondyal pou devlopè ak oditè. [[CHECK:g12-l03-c2]]\n\nDefans pratik: query ak paramèt (kont injection), verifye dwa sou chak aksyon sou sèvè a (kont aksè kase), output encoding + CSP (kont XSS), token CSRF sou fòmilè, cookies 'secure + httpOnly', rate limit sou login ak API, limit sou upload fichye (tip, gwosè, kote stokaj). [[CHECK:g12-l03-c3]]\n\nSonje: pa mete sekrè API nan app mobil/desktop kòm si yo t ap rete sekrè — nenpòt moun ka ekstrè yo. Sekrè yo rete sou sèvè a.",
+              "code": "# Checklist sekirite chak fòmilè/API\n# [ ] Tout antre valide (tip, longè, fòma)\n# [ ] Query ak paramèt sèlman\n# [ ] Dwa verifye sou sèvè a pou chak aksyon\n# [ ] Rate limit sou login/reset/API\n# [ ] Okenn sekrè nan kòd kliyan an",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo li OWASP Top 10 chak ane tankou yon jounal: nouvo risk antre, ansyen yo chanje plas. Sekirite se yon abònman, pa yon acha inik.",
+              "exercises": [
+                {
+                  "id": "g12-l03-e1",
+                  "type": "qcm",
+                  "prompt_ht": "'Broken Access Control' vle di:",
+                  "choices": [
+                    "A) Modpas la twò fèb",
+                    "B) Yon itilizatè ka wè oswa fè bagay li pa gen dwa",
+                    "C) Sit la twò lan",
+                    "D) Bazdone a plen"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon itilizatè ka wè oswa fè bagay li pa gen dwa"
+                  ],
+                  "correct_ht": "B) Yon itilizatè ka wè oswa fè bagay li pa gen dwa",
+                  "explanation_ht": "Egzanp: chanje 'id=123' an 'id=124' nan URL epi wè done yon lòt moun."
+                },
+                {
+                  "id": "g12-l03-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Kont atak CSRF sou yon fòmilè, ou itilize:",
+                  "choices": [
+                    "A) Yon pi bèl bouton",
+                    "B) Yon token CSRF inik pa sesyon",
+                    "C) Plis koulè",
+                    "D) Yon CAPTCHA sèlman"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon token csrf inik pa sesyon"
+                  ],
+                  "correct_ht": "B) Yon token CSRF inik pa sesyon",
+                  "explanation_ht": "Token an pwouve fòmilè a soti nan pwòp sit ou a, pa nan yon sit atakè."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g12-l03-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+                  ],
+                  "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                  "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+                  "choices": [
+                    "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                    "B) Yon sèl bagay",
+                    "C) Yon ekran",
+                    "D) Yon bouton"
+                  ]
+                },
+                {
+                  "id": "g12-l03-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                },
+                {
+                  "id": "g12-l03-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — ORDER BY pri DESC ap:",
+                  "accepted": [
+                    "a",
+                    "triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache"
+                  ],
+                  "correct_ht": "A) Triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache",
+                  "explanation_ht": "ORDER BY = mete nan lòd; DESC = desandan (gwo → piti).",
+                  "choices": [
+                    "A) Triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache",
+                    "B) Efase pri yo",
+                    "C) Kache pri yo",
+                    "D) Melanje rezilta yo o aza"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g12-p1",
+              "title_ht": "Odit sekirite yon pwojè w",
+              "description_ht": "Pran yon pwojè w te deja fè epi fè yon odit sekirite fòmal ak modèl menas.",
+              "objectives_ht": [
+                "Reponn 7 kesyon modèl menas yo sou pwojè a",
+                "Tcheke chak pwen nan checklist OWASP ki aplikab",
+                "Korije omwen 3 feblès ou jwenn epi dokimante yo"
+              ],
+              "criteria_ht": [
+                "Dokiman odit la idantifye byen yo, menas yo ak kontwòl yo",
+                "Omwen 3 koreksyon aplike epi teste",
+                "Okenn sekrè oswa done sansib nan kòd la apre odit la"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g13",
+          "title_ht": "MODIL 13 — Hacking etik ak tès pénétration legal",
+          "description_ht": "Aprann panse tankou yon atakè — pou defann pi byen. STRIKTMAN nan kad legal: sistèm ou posede, laboratwa fòmasyon, oswa misyon ak otorizasyon ekri.",
+          "related_lessons": [
+            "L21"
+          ],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g13-l01",
+              "title_ht": "Règ legal yo anvan tout bagay",
+              "body_ht": "Hacking etik = hacking AK pèmisyon. San otorizasyon ekri ki defini scope (ki IP/domèn, ki lè, ki sa ki entèdi, kontak ijans), nenpòt tès se ilegal — menm 'jis gade'. Pa eskane, pa eseye modpas, pa eksplwate okenn sistèm ou pa gen dwa sou li. [[CHECK:g13-l01-c1]]\n\nKote ou KA pratike legalman: pwòp machin ak rezo w, VM izole, aplikasyon ki fèt pou fòmasyon (OWASP Juice Shop, DVWA. An lokal sèlman), platfòm CTF (TryHackMe, Hack The Box), ak PortSwigger Web Security Academy (laboratwa legal gratis). [[CHECK:g13-l01-c2]]\n\nEtik la pa opsyonèl: respekte vi prive, pa pran done reyèl, rapòte responsab, epi pa janm itilize konpetans ou pou antre kote ou pa envite. [[CHECK:g13-l01-c3]]",
+              "code": "# Règ an lò (kole sou mi w)\n# 1. Pèmisyon ekri anvan nenpòt tès\n# 2. Rete andedan scope a\n# 3. Prèv minimòm, pa done reyèl\n# 4. Rapòte, korije, re-teste",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè sekirite yo pi sevè sou etik pase nenpòt lòt devlopè: yon sèl debòdman detwi karyè w pou tout tan. Pèmisyon ekri se kontra w ak libète w.",
+              "exercises": [
+                {
+                  "id": "g13-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Eskane yon sit ou pa gen pèmisyon sou li se:",
+                  "choices": [
+                    "A) Legal si ou pa kraze anyen",
+                    "B) Ilegal — pèmisyon ekri obligatwa",
+                    "C) OK si se lannwit",
+                    "D) OK pou sit gouvènman sèlman"
+                  ],
+                  "accepted": [
+                    "b",
+                    "ilegal — pèmisyon ekri obligatwa"
+                  ],
+                  "correct_ht": "B) Ilegal — pèmisyon ekri obligatwa",
+                  "explanation_ht": "Lwa pa fè diferans 'ti gade': san otorizasyon, se yon entrizyon."
+                },
+                {
+                  "id": "g13-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Premye etap yon tès pénétration pwofesyonèl se:",
+                  "choices": [
+                    "A) Lanse eskanè a",
+                    "B) Defini scope ak otorizasyon ekri",
+                    "C) Chwazi zouti yo",
+                    "D) Ekri rapò a"
+                  ],
+                  "accepted": [
+                    "b",
+                    "defini scope ak otorizasyon ekri"
+                  ],
+                  "correct_ht": "B) Defini scope ak otorizasyon ekri",
+                  "explanation_ht": "San scope ekri: ki sib, ki lè, ki entèdi, ki kontak ijans — pa gen tès."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g13-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                },
+                {
+                  "id": "g13-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+                  "accepted": [
+                    "a",
+                    "prepare pwogram nan pou jere erè san kraze"
+                  ],
+                  "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+                  "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+                  "choices": [
+                    "A) Prepare pwogram nan pou jere erè san kraze",
+                    "B) Kache erè yo pou tout tan",
+                    "C) Fè pwogram nan pi rapid",
+                    "D) Efase fichye yo"
+                  ]
+                },
+                {
+                  "id": "g13-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — DOM la se:",
+                  "accepted": [
+                    "a",
+                    "paj web la kòm yon pyebwa objè javascript ka manyen"
+                  ],
+                  "correct_ht": "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+                  "explanation_ht": "Chak baliz vin yon 'ne' ou ka li, chanje oswa efase ak JS.",
+                  "choices": [
+                    "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+                    "B) Yon bazdone",
+                    "C) Yon antivirus",
+                    "D) Yon jwèt"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g13-l02",
+              "title_ht": "Metodoloji: soti nan rekonesans rive nan rapò",
+              "body_ht": "Apre doktè a egzamine w, li ekri yon rapò: sa l jwenn, gravite a, tretman an. Yon rapò sekirite se menm bagay la pou yon sistèm.\n\n [[CHECK:g13-l02-c1]]\n\nYon pentest pwofesyonèl swiv 6 etap: 1) Otorizasyon ak scope ekri. 2) Rekonesans pasif (dokiman piblik, enfòmasyon domèn — san touche sib la). 3) Dekouvèt nan laboratwa: idantifye sèvis ak vèsyon san deranje sistèm nan. [[CHECK:g13-l02-c2]]\n\n4) Evalyasyon: verifye feblès ak PRÈV MINIMÒM, san aksè done prive. 5) Rapò: rezime egzekitif, risk, prèv redakte, enpak, etap pou repwodui an sekirite, koreksyon rekòmande. 6) Koreksyon ak re-test: verifye defans lan mache epi fèmen feblès la. [[CHECK:g13-l02-c3]]\n\nZouti laboratwa: Burp Suite Community oswa OWASP ZAP (enspekte app), Nmap (sèlman sou rezo w), Wireshark (analiz trafik). Zouti a pa fè ekspè a — metodoloji a fè l.",
+              "code": "# Estrikti yon finding nan rapò a\n# - Tit + ID + severite (kritik/wo/mwayen/ba)\n# - Sistèm nan scope + rezime enpak biznis\n# - Prèv minimòm (redakte, san done reyèl)\n# - Etap pou repwodui + koreksyon rekòmande\n# - Dat, limit, sa ki pa teste, rezilta re-test",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo pase plis tan sou rapò a pase sou eksplwatasyon an. Yon feblès byen eksplike ak koreksyon klè vo plis pase dis feblès jete nan yon lis.",
+              "exercises": [
+                {
+                  "id": "g13-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Apre faz dekouvèt la, ki etap ki vini?",
+                  "choices": [
+                    "A) Rapò final",
+                    "B) Evalyasyon feblès ak prèv minimòm",
+                    "C) Fèmen kontra a",
+                    "D) Efase logs yo"
+                  ],
+                  "accepted": [
+                    "b",
+                    "evalyasyon feblès ak prèv minimòm"
+                  ],
+                  "correct_ht": "B) Evalyasyon feblès ak prèv minimòm",
+                  "explanation_ht": "Ou verifye chak feblès ak jis ase prèv pou pwouve l, san touche done prive."
+                },
+                {
+                  "id": "g13-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Yon bon rapò sekirite gen ladan l:",
+                  "choices": [
+                    "A) Sèlman lis feblès yo",
+                    "B) Risk, prèv redakte, enpak ak koreksyon rekòmande",
+                    "C) Modpas yo jwenn",
+                    "D) Non atakè yo"
+                  ],
+                  "accepted": [
+                    "b",
+                    "risk, prèv redakte, enpak ak koreksyon rekòmande"
+                  ],
+                  "correct_ht": "B) Risk, prèv redakte, enpak ak koreksyon rekòmande",
+                  "explanation_ht": "Kliyan an bezwen konprann risk biznis la ak kijan pou korije — pa teknik sinema."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g13-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g13-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon diksyonè (dict/map) mache tankou:",
+                  "accepted": [
+                    "a",
+                    "yon diksyonè mo: ou bay yon kle, ou resevwa valè a"
+                  ],
+                  "correct_ht": "A) Yon diksyonè mo: ou bay yon kle, ou resevwa valè a",
+                  "explanation_ht": "Kle → valè. Ou pa chèche pa pozisyon, ou chèche pa non (kle a).",
+                  "choices": [
+                    "A) Yon diksyonè mo: ou bay yon kle, ou resevwa valè a",
+                    "B) Yon lis san lòd",
+                    "C) Yon foto",
+                    "D) Yon chante"
+                  ]
+                },
+                {
+                  "id": "g13-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — DOM la se:",
+                  "accepted": [
+                    "a",
+                    "paj web la kòm yon pyebwa objè javascript ka manyen"
+                  ],
+                  "correct_ht": "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+                  "explanation_ht": "Chak baliz vin yon 'ne' ou ka li, chanje oswa efase ak JS.",
+                  "choices": [
+                    "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+                    "B) Yon bazdone",
+                    "C) Yon antivirus",
+                    "D) Yon jwèt"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g13-l03",
+              "title_ht": "Konprann feblès yo: SQLi, XSS, aksè kase",
+              "body_ht": "Yon vòlè pa kase pòt la — li glise yon fo kle. Atak web eksplwate ti twou nan kòd la. Konprann yo se aprann fèmen twou yo.\n\n [[CHECK:g13-l03-c1]]\n\nPa aprann klike zouti — konprann POUKISA feblès yo egziste. SQL injection: aplikasyon an melanje kòd SQL ak done itilizatè; query ak paramèt separe yo, epi atak la mouri. XSS: aplikasyon an afiche tèks itilizatè san encode; navigatè a egzekite l kòm kòd — output encoding + CSP bloke l. [[CHECK:g13-l03-c2]]\n\nBroken access control: sèvè a pa verifye dwa sou chak aksyon (chanje id nan URL epi wè done lòt moun). Misconfiguration: modpas pa defo, sèvis initil ouvè, dwa twò laj, logs ki ekspoze sekrè. [[CHECK:g13-l03-c3]]\n\nLè ou KONPRANN kòz la, ou ekri kòd ki pa gen feblès la depi premye fwa — se sa ki fè yon devlopè sekirize, pa yon chasè feblès.",
+              "code": "-- SQLi: kisa k pase san paramèt\n-- Antre itilizatè: ' OR '1'='1\n-- Query final: SELECT * FROM users WHERE email = '' OR '1'='1'\n-- -> '1'='1' toujou vre: atakè a wè TOUT itilizatè!\n-- Ak paramèt $1: antre a rete yon senp TÈKS, atak la echwe.",
+              "code_lang": "sql",
+              "expert_note_ht": "Ekspè yo aprann chak feblès nan tou de direksyon: kijan pou eksplwate l nan labo, epi kijan pou anpeche l nan kòd. Dezyèm direksyon an se travay la.",
+              "exercises": [
+                {
+                  "id": "g13-l03-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Query ak paramèt anpeche SQL injection paske:",
+                  "choices": [
+                    "A) Yo pi rapid",
+                    "B) Yo separe kòd SQL la ak done itilizatè a",
+                    "C) Yo chifre bazdone a",
+                    "D) Yo kache tablo yo"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yo separe kòd sql la ak done itilizatè a"
+                  ],
+                  "correct_ht": "B) Yo separe kòd SQL la ak done itilizatè a",
+                  "explanation_ht": "Bazdone a pa janm entèprete antre itilizatè a kòm kòd — se kle defans lan."
+                },
+                {
+                  "id": "g13-l03-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Kont XSS (script nan paj web), defans prensipal la se:",
+                  "choices": [
+                    "A) Mete plis JavaScript",
+                    "B) Output encoding + Content Security Policy (CSP)",
+                    "C) Etenn navigatè a",
+                    "D) Chanje koulè paj la"
+                  ],
+                  "accepted": [
+                    "b",
+                    "output encoding + content security policy (csp)"
+                  ],
+                  "correct_ht": "B) Output encoding + Content Security Policy (CSP)",
+                  "explanation_ht": "Encode tèks itilizatè anvan afichaj pou navigatè a pa egzekite l kòm kòd."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g13-l03-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Atak XSS rive lè:",
+                  "accepted": [
+                    "a",
+                    "yon sit afiche tèks itilizatè san verifye epi navigatè a egzekite l kòm kòd"
+                  ],
+                  "correct_ht": "A) Yon sit afiche tèks itilizatè san verifye epi navigatè a egzekite l kòm kòd",
+                  "explanation_ht": "Defans: encode sòti a (output encoding) + Content Security Policy.",
+                  "choices": [
+                    "A) Yon sit afiche tèks itilizatè san verifye epi navigatè a egzekite l kòm kòd",
+                    "B) Ou manje twòp",
+                    "C) Ou dòmi twòp",
+                    "D) Ou bwè dlo"
+                  ]
+                },
+                {
+                  "id": "g13-l03-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — SQL injection rive lè:",
+                  "accepted": [
+                    "a",
+                    "atakè a glise pwòp kòd sql pa l nan yon antre itilizatè"
+                  ],
+                  "correct_ht": "A) Atakè a glise pwòp kòd SQL pa l nan yon antre itilizatè",
+                  "explanation_ht": "Defans: query ak paramèt ($1, ?) — separe kòd ak done.",
+                  "choices": [
+                    "A) Atakè a glise pwòp kòd SQL pa l nan yon antre itilizatè",
+                    "B) Ou manje piman",
+                    "C) Ou kouri vit",
+                    "D) Ou chante"
+                  ]
+                },
+                {
+                  "id": "g13-l03-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g13-p1",
+              "title_ht": "Laboratwa sekirite defansif",
+              "description_ht": "Monte OWASP Juice Shop oswa DVWA an lokal (izole), jwenn feblès, korije yo, epi ekri yon rapò.",
+              "objectives_ht": [
+                "Enstale Juice Shop/DVWA nan yon VM izole (pa sou rezo prensipal)",
+                "Dokimante 3 feblès: risk, prèv minimòm, koreksyon",
+                "Ekri tès ki echwe anvan koreksyon epi pase apre",
+                "Ekri yon rapò ak scope, limit ak plan amelyorasyon"
+              ],
+              "criteria_ht": [
+                "Laboratwa a izole (pa aksesib de deyò)",
+                "3 findings dokimante ak severite ak koreksyon",
+                "Tès yo pwouve koreksyon yo mache",
+                "Rapò a swiv modèl pwofesyonèl la (pa gen done reyèl)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etap-7",
+      "numero": 7,
+      "icon": "🚀",
+      "title_ht": "Pwojè final, pòtfolyo, karyè",
+      "description_ht": "DevSecOps, kalite, epi gwo pwojè final yo ki pwouve ou pare. Soti isit la ak yon pòtfolyo, pa sèlman sètifika.",
+      "modules": [
+        {
+          "id": "g14",
+          "title_ht": "MODIL 14 — DevSecOps, Cloud ak deplwaman",
+          "description_ht": "Soti nan 'li mache sou machin mwen' rive nan 'li mache toupatou, an sekirite, otomatikman'. Docker, CI/CD, cloud ak siveyans.",
+          "related_lessons": [],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g14-l01",
+              "title_ht": "Docker: anbale aplikasyon w",
+              "body_ht": "Docker pake app ou ak tout depandans li nan yon CONTAINER: menm anviwònman sou machin dev, tès ak pwodiksyon — fini ak 'li te mache sou machin mwen!'. Yon IMAGE se modèl la (resèt), yon CONTAINER se egzanp k ap kouri a. [[CHECK:g14-l01-c1]]\n\nKonsèp kle: Dockerfile (resèt konstriksyon), volumes (done ki siviv container a), networks (container yo pale youn ak lòt). Pou devlopman, yon fichye compose lanse app + bazdone an yon sèl kòmand. [[CHECK:g14-l01-c2]]\n\nSekirite: pa kouri tout bagay kòm root nan container a, eskane imaj yo pou feblès, epi pa mete sekrè nan imaj la. Pase yo kòm varyab anviwònman nan moman egzekisyon. [[CHECK:g14-l01-c3]]",
+              "code": "# Dockerfile minimal (Node.js)\nFROM node:20-alpine\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --only=production\nCOPY . .\nUSER node              # pa kouri kòm root!\nCMD [\"node\", \"server.js\"]",
+              "code_lang": "dockerfile",
+              "expert_note_ht": "Ekspè yo kenbe imaj yo piti (alpine/slim) epi yo rekonstwi souvan. Yon imaj 1 Go ki pa mete ajou depi yon ane se yon mize feblès.",
+              "exercises": [
+                {
+                  "id": "g14-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Yon container Docker se:",
+                  "choices": [
+                    "A) Yon machin virtuel konplè",
+                    "B) Yon anviwònman izole lejè ki kouri app ou ak depandans li",
+                    "C) Yon bazdone",
+                    "D) Yon editè kòd"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon anviwònman izole lejè ki kouri app ou ak depandans li"
+                  ],
+                  "correct_ht": "B) Yon anviwònman izole lejè ki kouri app ou ak depandans li",
+                  "explanation_ht": "Container pataje kernel OS a — pi lejè pase yon VM, men izole ase pou deplwaman."
+                },
+                {
+                  "id": "g14-l01-e2",
+                  "type": "code",
+                  "prompt_ht": "Konplete pou bati yon imaj: docker ____ -t monapp .",
+                  "accepted": [
+                    "build"
+                  ],
+                  "correct_ht": "build",
+                  "explanation_ht": "docker build li Dockerfile a epi kreye imaj 'monapp' la."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g14-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Docker pèmèt ou:",
+                  "accepted": [
+                    "a",
+                    "anbale app ou ak tout zafè l nan yon container ki mache toupatou"
+                  ],
+                  "correct_ht": "A) Anbale app ou ak tout zafè l nan yon container ki mache toupatou",
+                  "explanation_ht": "Fini ak 'li te mache sou machin mwen'!",
+                  "choices": [
+                    "A) Anbale app ou ak tout zafè l nan yon container ki mache toupatou",
+                    "B) Desine logo",
+                    "C) Ekri tèks",
+                    "D) Jwe jwèt"
+                  ]
+                },
+                {
+                  "id": "g14-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                },
+                {
+                  "id": "g14-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g14-l02",
+              "title_ht": "CI/CD, Cloud ak siveyans",
+              "body_ht": "CI/CD se tiyo otomatik la: chak fwa ou pouse kòd, li lanse lint, tès inite, eskan depandans ak sekrè, bati, epi deplwaye. Objektif: ti chanjman souvan, detekte pwoblèm bonè, deplwaye san estrès. [[CHECK:g14-l02-c1]]\n\nCloud fondamantal: IAM (ki gen dwa sou kisa), rezo virtuel, depo objè pou fichye, bazdone jere, ak logs santralize. Infrastructure as Code: sèvè w yo dekri nan fichye Git ki revize — ou ka rekonstwi tout enfrastrikti a. [[CHECK:g14-l02-c2]]\n\nObservability: logs (kisa k pase), metrics (konbyen), traces (ki chemen). Mete alèt ki ITIL (sèvis tonbe, disk plen), pa 200 alèt ou inyore. Epi backup 3-2-1 ak tès restore, toujou. [[CHECK:g14-l02-c3]]",
+              "code": "# Pipeline tipik (konseptwèl)\n# 1. push -> lint + tès inite\n# 2. eskan depandans + eskan sekrè\n# 3. build imaj Docker\n# 4. deploy sou anviwònman tès -> tès e2e\n# 5. deploy pwodiksyon (ak bouton apwobasyon)",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo trete pipeline a kòm kòd: revize, teste, vèsyone. Yon pipeline ki flaky (tès ki pase/echoue o aza) detwi konfyans ekip la pi vit pase okenn bug.",
+              "exercises": [
+                {
+                  "id": "g14-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "CI/CD otomatize sitou:",
+                  "choices": [
+                    "A) Ekri kòd la",
+                    "B) Tès + bati + deplwaman chak fwa ou pouse kòd",
+                    "C) Chwazi koulè UI a",
+                    "D) Reponn kliyan yo"
+                  ],
+                  "accepted": [
+                    "b",
+                    "tès + bati + deplwaman chak fwa ou pouse kòd"
+                  ],
+                  "correct_ht": "B) Tès + bati + deplwaman chak fwa ou pouse kòd",
+                  "explanation_ht": "Entegrasyon kontinyèl + deplwaman kontinyèl: ti livrezon souvan, mwens risk."
+                },
+                {
+                  "id": "g14-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Estrateji backup 3-2-1 vle di:",
+                  "choices": [
+                    "A) 3 backup pa jou",
+                    "B) 3 kopi done, sou 2 sipò diferan, 1 kopi deyò lokal la",
+                    "C) 2 kopi sèlman",
+                    "D) 1 backup pa mwa"
+                  ],
+                  "accepted": [
+                    "b",
+                    "3 kopi done, sou 2 sipò diferan, 1 kopi deyò lokal la"
+                  ],
+                  "correct_ht": "B) 3 kopi done, sou 2 sipò diferan, 1 kopi deyò lokal la",
+                  "explanation_ht": "Yon ensandi/vol/ransomware pa dwe ka detwi tout kopi yo an menm tan."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g14-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+                  ],
+                  "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                  "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+                  "choices": [
+                    "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                    "B) Yon sèl gato",
+                    "C) Yon frijidè",
+                    "D) Yon televizyon"
+                  ]
+                },
+                {
+                  "id": "g14-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+                  "accepted": [
+                    "a",
+                    "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+                  ],
+                  "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                  "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+                  "choices": [
+                    "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                    "B) Pou fè ekran an bèl",
+                    "C) Pou jwe mizik",
+                    "D) Pou etenn òdinatè a"
+                  ]
+                },
+                {
+                  "id": "g14-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+                  ],
+                  "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                  "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+                  "choices": [
+                    "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                    "B) Yon sèl kaye",
+                    "C) Yon jwèt",
+                    "D) Yon radyo"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g14-p1",
+              "title_ht": "Pipeline konplè pou yon API",
+              "description_ht": "Mete yon ti API ak bazdone nan Docker, kreye yon pipeline ki teste, eskane epi deplwaye.",
+              "objectives_ht": [
+                "Dockerize API + bazdone (compose pou dev)",
+                "Pipeline: lint, tès, eskan depandans, eskan sekrè",
+                "Deplwaye yon vèsyon demo san okenn sekrè nan repository a"
+              ],
+              "criteria_ht": [
+                "docker compose up lanse tout stack la an lokal",
+                "Pipeline a bloke yon push ki gen tès ki echwe oswa sekrè",
+                "Demo a aksesib sou entènèt; okenn kle nan Git"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g15",
+          "title_ht": "MODIL 15 — Tès, kalite ak pèfòmans",
+          "description_ht": "Kòd ki pa teste se kòd ki ap tann kraze. Aprann tip tès yo, mezire pèfòmans, epi livre vèsyon pwòp ak changelog.",
+          "related_lessons": [
+            "L23"
+          ],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g15-l01",
+              "title_ht": "Tip tès yo: soti nan inite rive nan bout an bout",
+              "body_ht": "Anvan ou bay yon gato ou fè a zanmi w, ou goute l. Tès se goute kòd la: ou verifye li bon anvan ou bay lòt moun sèvi ak li.\n\n [[CHECK:g15-l01-c1]]\n\nTès inite (unit): verifye yon ti fonksyon pou kont li — rapid, anpil. Tès entegrasyon: verifye konpozan yo pale byen (API + bazdone). Tès bout an bout (e2e): simule yon vre itilizatè nan navigatè oswa app — lan, men pwouve tout chèn lan. [[CHECK:g15-l01-c2]]\n\nTès kontra: verifye API a respekte kontra li pwomèt (fòma repons). Tès akseptasyon: kliyan an konfime bezwen an satisfè. Mocks (fo konpozan) itil, men pa fè tès yo depann twòp de detay entèn — tès frajil yo kraze a chak refaktoring. [[CHECK:g15-l01-c3]]\n\nRèg: ekri tès pou chemen prensipal yo AK ka erè yo. Yon tès ki pa janm echwe pa pwoteje anyen.",
+              "code": "def kalkile_total(pri, kantite, rabè=0):\n    return pri * kantite * (1 - rabè)\n\ndef test_total_senp():\n    assert kalkile_total(100, 2) == 200\n\ndef test_total_rabè():\n    assert kalkile_total(100, 2, 0.1) == 180\n\ndef test_total_zero():\n    assert kalkile_total(100, 0) == 0   # ka limit!",
+              "code_lang": "python",
+              "expert_note_ht": "Ekspè yo ekri tès la tankou dokimantasyon egzekitab: non tès la eksplike KONPÒTMAN atann lan. 'test_total_zero' pi klè pase 'test3'.",
+              "exercises": [
+                {
+                  "id": "g15-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Yon tès inite (unit test) verifye:",
+                  "choices": [
+                    "A) Tout sistèm lan",
+                    "B) Yon ti fonksyon/konpozan pou kont li",
+                    "C) Vitès entènèt la",
+                    "D) Design UI a"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon ti fonksyon/konpozan pou kont li"
+                  ],
+                  "correct_ht": "B) Yon ti fonksyon/konpozan pou kont li",
+                  "explanation_ht": "Inite = pi piti moso testab la. Rapid, izole, anpil."
+                },
+                {
+                  "id": "g15-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Yon tès bout an bout (e2e) simule:",
+                  "choices": [
+                    "A) Yon fonksyon sèl",
+                    "B) Yon itilizatè reyèl atravè tout aplikasyon an",
+                    "C) Sèlman bazdone a",
+                    "D) Konpilasyon an"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon itilizatè reyèl atravè tout aplikasyon an"
+                  ],
+                  "correct_ht": "B) Yon itilizatè reyèl atravè tout aplikasyon an",
+                  "explanation_ht": "E2E pwouve chèn konplè a (UI → API → bazdone), men li pi lan epi pi frajil."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g15-l01-c1",
+                  "type": "code",
+                  "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+                  "accepted": [
+                    "kalkile_total"
+                  ],
+                  "correct_ht": "kalkile_total",
+                  "explanation_ht": "Fonksyon an rele « kalkile_total » — se non sa a ou itilize pou rele l pita."
+                },
+                {
+                  "id": "g15-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon tès se tankou:",
+                  "accepted": [
+                    "a",
+                    "goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l"
+                  ],
+                  "correct_ht": "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+                  "explanation_ht": "Tès = prèv kòd la fè sa li pwomèt.",
+                  "choices": [
+                    "A) Goute gato a anvan ou sèvi l: verifye kòd la mache anvan ou livre l",
+                    "B) Yon egzamen lekòl sèlman",
+                    "C) Yon jwèt",
+                    "D) Yon film"
+                  ]
+                },
+                {
+                  "id": "g15-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+                  "accepted": [
+                    "a",
+                    "ki kalite valè yon varyab ka kenbe"
+                  ],
+                  "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+                  "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+                  "choices": [
+                    "A) Ki kalite valè yon varyab ka kenbe",
+                    "B) Ki koulè pou itilize",
+                    "C) Ki mizik pou jwe",
+                    "D) Ki lang pou pale"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g15-l02",
+              "title_ht": "Pèfòmans, vèsyon ak livrezon pwòp",
+              "body_ht": "Nan fen yon gwo liv gen yon endèks: ou jwenn paj yon sijè san li tout liv la. Yon index bazdone se menm bagay la pou done.\n\n [[CHECK:g15-l02-c1]]\n\nLè yon app lan: profile anvan ou devine — mezire CPU, memwa, plan query SQL (EXPLAIN), latans rezo. Souvan koupab la se yon query san index oswa yon bouk N+1, pa lang lan. [[CHECK:g15-l02-c2]]\n\nZouti: cache pou done ki pa chanje souvan, pajinasyon pou gwo lis, konpresyon, imaj optimize. Pa optimize sa itilizatè a pa santi. [[CHECK:g15-l02-c3]]\n\nLivrezon pwofesyonèl: versioning semantik (MAJEUR.mineur.patch: 2.4.1), changelog ki eksplike chanjman yo, estrateji rollback (kijan pou tounen vit si deplwaman an kraze), ak telemetri ki respekte vi prive itilizatè yo.",
+              "code": "# Versioning semantik\n# 2.4.1 -> MAJEUR=2 (chanjman kraze), mineur=4 (nouvo fonksyon),\n#          patch=1 (koreksyon bug)\n# Règ: pa janm kraze konpatibilite nan yon patch!",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè yo mezire anvan yo optimize, epi yo ekri changelog la pou MOUN, pa pou machin. 'Korije bug' pa yon changelog; 'korije kalkil taks pou montan > 1M Gdes' se youn.",
+              "exercises": [
+                {
+                  "id": "g15-l02-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Nan vèsyon 2.4.1 (semantik), chif '4' la vle di:",
+                  "choices": [
+                    "A) Chanjman ki kraze konpatibilite",
+                    "B) Nouvo fonksyonalite konpatib",
+                    "C) Koreksyon ti bug",
+                    "D) Vèsyon tès"
+                  ],
+                  "accepted": [
+                    "b",
+                    "nouvo fonksyonalite konpatib"
+                  ],
+                  "correct_ht": "B) Nouvo fonksyonalite konpatib",
+                  "explanation_ht": "MAJEUR.mineur.patch: mineur = nouvo fonksyon san kraze; patch = koreksyon."
+                },
+                {
+                  "id": "g15-l02-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Yon estrateji rollback sèvi lè:",
+                  "choices": [
+                    "A) Ou vle pi vit",
+                    "B) Yon deplwaman fèk kraze bagay epi ou dwe tounen nan vèsyon anvan vit",
+                    "C) Ou chanje non app lan",
+                    "D) Ou fè backup"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon deplwaman fèk kraze bagay epi ou dwe tounen nan vèsyon anvan vit"
+                  ],
+                  "correct_ht": "B) Yon deplwaman fèk kraze bagay epi ou dwe tounen nan vèsyon anvan vit",
+                  "explanation_ht": "Chak deplwaman dwe gen yon chemen retou teste — pa dekouvri l pandan kriz la."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g15-l02-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Notasyon Big O mezire:",
+                  "accepted": [
+                    "a",
+                    "kijan tan yon algoritm grandi lè done yo grandi"
+                  ],
+                  "correct_ht": "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                  "explanation_ht": "O(n) = lineyè; O(n²) = bouk anndan bouk — evite!",
+                  "choices": [
+                    "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                    "B) Gwosè ekran an",
+                    "C) Pri òdinatè a",
+                    "D) Kantite koulè"
+                  ]
+                },
+                {
+                  "id": "g15-l02-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Nan vèsyon 2.4.1, chif '4' la vle di:",
+                  "accepted": [
+                    "a",
+                    "nouvo fonksyonalite (konpatib ak anvan)"
+                  ],
+                  "correct_ht": "A) Nouvo fonksyonalite (konpatib ak anvan)",
+                  "explanation_ht": "MAJEUR.mineur.patch: mineur = nouvo fonksyon san kraze.",
+                  "choices": [
+                    "A) Nouvo fonksyonalite (konpatib ak anvan)",
+                    "B) Chanjman ki kraze tout",
+                    "C) Ti koreksyon",
+                    "D) Vèsyon tès"
+                  ]
+                },
+                {
+                  "id": "g15-l02-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon index nan bazdone se tankou:",
+                  "accepted": [
+                    "a",
+                    "endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj"
+                  ],
+                  "correct_ht": "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+                  "explanation_ht": "Index akselere lekti, men li koute yon ti kras nan ekriti.",
+                  "choices": [
+                    "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+                    "B) Yon foto",
+                    "C) Yon tablo",
+                    "D) Yon jwèt"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g15-p1",
+              "title_ht": "Kouvèti tès sou yon pwojè w",
+              "description_ht": "Pran yon pwojè w epi ajoute yon swit tès serye ak mezi pèfòmans debaz.",
+              "objectives_ht": [
+                "Ekri tès inite pou fonksyon prensipal yo (chemen nòmal + ka erè + ka limit)",
+                "Ajoute omwen 2 tès entegrasyon (API + bazdone)",
+                "Profile yon operasyon lan epi dokimante rezilta a"
+              ],
+              "criteria_ht": [
+                "Tès yo pase (vèt) epi yo echwe si ou kraze kòd la volontèman",
+                "Rapò kouvèti montre chemen prensipal yo kouvri",
+                "Dokiman pèfòmans idantifye omwen yon amelyorasyon mezire"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g16",
+          "title_ht": "MODIL 16 — Pwojè final ki mete tout bagay ansanm",
+          "description_ht": "Moman verite: konbine tout konpetans yo nan gwo pwojè pòtfolyo ki pwouve ou pare pou estaj oswa travay.",
+          "related_lessons": [
+            "L24"
+          ],
+          "related_modules": [],
+          "lessons": [
+            {
+              "id": "g16-l01",
+              "title_ht": "Pòtfolyo ki louvri pòt",
+              "body_ht": "Anplwayè pa li CV an premye — yo klike sou pwojè w yo. Yon bon pwojè pòtfolyo gen: yon README klè (objektif, enstalasyon, lansman), yon demo aksesib (lyen oswa video), kòd pwòp ak commit ki gen sans, tès, ak yon seksyon 'limit ak amelyorasyon pwochen' ki montre ou panse tankou yon enjenyè. [[CHECK:g16-l01-c1]]\n\nChwazi yon ESPESYALIZASYON prensipal (pa egzanp backend, Android, oswa sekirite aplikasyon) epi bati 2 gwo pwojè ladan l, olye 10 ti pwojè sifas. Ajoute yon dezyèm domèn ki konplete premye a. [[CHECK:g16-l01-c2]]\n\nOu pa bezwen metrize tout bagay anvan ou aplike. Konpetans ekspè a se: rezoud pwoblèm difisil, evalye risk, eksplike desizyon teknik ou yo, epi kenbe sistèm yo serye ak an sekirite. [[CHECK:g16-l01-c3]]",
+              "code": "# Checklist pwojè pòtfolyo\n# [ ] README: objektif, enstalasyon, lansman, ekran\n# [ ] Demo live oswa video 2 minit\n# [ ] Tès pou chemen prensipal yo\n# [ ] Pa gen sekrè nan repo a\n# [ ] Seksyon limit + amelyorasyon pwochen\n# [ ] Commit ki rakonte istwa pwojè a",
+              "code_lang": "bash",
+              "expert_note_ht": "Ekspè rekritè yo chèche tras panse: POUKISA ou chwazi teknoloji sa a? Ki konpwomi ou fè? Yon paragraf 'desizyon teknik' nan README a vo plis pase 500 liy kòd.",
+              "exercises": [
+                {
+                  "id": "g16-l01-e1",
+                  "type": "qcm",
+                  "prompt_ht": "Yon bon README pwojè gen ladan l:",
+                  "choices": [
+                    "A) Sèlman non w",
+                    "B) Objektif, enstalasyon, fason pou lanse, tès ak ekran",
+                    "C) Modpas bazdone a",
+                    "D) Lis tout fichye yo"
+                  ],
+                  "accepted": [
+                    "b",
+                    "objektif, enstalasyon, fason pou lanse, tès ak ekran"
+                  ],
+                  "correct_ht": "B) Objektif, enstalasyon, fason pou lanse, tès ak ekran",
+                  "explanation_ht": "Yon etranje dwe ka konprann epi lanse pwojè a sèlman ak README a."
+                },
+                {
+                  "id": "g16-l01-e2",
+                  "type": "qcm",
+                  "prompt_ht": "Pi bon estrateji karyè selon gid la:",
+                  "choices": [
+                    "A) Aprann tout lang yo an menm tan",
+                    "B) Yon espesyalizasyon prensipal + yon dezyèm domèn ki konplete l",
+                    "C) Sèlman teyori, pa gen pwojè",
+                    "D) Tann diplòm lan anvan kode"
+                  ],
+                  "accepted": [
+                    "b",
+                    "yon espesyalizasyon prensipal + yon dezyèm domèn ki konplete l"
+                  ],
+                  "correct_ht": "B) Yon espesyalizasyon prensipal + yon dezyèm domèn ki konplete l",
+                  "explanation_ht": "Pwofondè nan yon domèn + lajè nan yon dezyèm: se pwofil ki jwenn travay."
+                }
+              ],
+              "checkpoints": [
+                {
+                  "id": "g16-l01-c1",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+                  "accepted": [
+                    "a",
+                    "premye antre, premye sòti — tankou liy labank"
+                  ],
+                  "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+                  "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+                  "choices": [
+                    "A) Premye antre, premye sòti — tankou liy labank",
+                    "B) Dènye antre, premye sòti",
+                    "C) O aza",
+                    "D) Toujou dènye a"
+                  ]
+                },
+                {
+                  "id": "g16-l01-c2",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+                  "accepted": [
+                    "a",
+                    "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+                  ],
+                  "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                  "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+                  "choices": [
+                    "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                    "B) Yon koulè",
+                    "C) Yon chante",
+                    "D) Yon jwèt"
+                  ]
+                },
+                {
+                  "id": "g16-l01-c3",
+                  "type": "qcm",
+                  "prompt_ht": "⚡ Kesyon rapid — DOM la se:",
+                  "accepted": [
+                    "a",
+                    "paj web la kòm yon pyebwa objè javascript ka manyen"
+                  ],
+                  "correct_ht": "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+                  "explanation_ht": "Chak baliz vin yon 'ne' ou ka li, chanje oswa efase ak JS.",
+                  "choices": [
+                    "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+                    "B) Yon bazdone",
+                    "C) Yon antivirus",
+                    "D) Yon jwèt"
+                  ]
+                }
+              ]
+            }
+          ],
+          "projects": [
+            {
+              "id": "g16-p1",
+              "title_ht": "Pwojè A — Sistèm jesyon biznis",
+              "description_ht": "Pwojè final konplè: web dashboard + API + PostgreSQL, app Android (ajoute iOS si ou gen Mac), app desktop si bezwen an jistifye sa.",
+              "objectives_ht": [
+                "Dashboard web + API REST + PostgreSQL",
+                "Aplikasyon Android (natif oswa cross-platform)",
+                "Wòl admin/anplwaye/kliyan ak permissions sou sèvè a",
+                "Rapò, rechèch, backup, logs, tès ak deplwaman"
+              ],
+              "criteria_ht": [
+                "Tout wòl yo teste: chak wè sèlman sa l gen dwa wè",
+                "Backup/restore fonksyone; logs pèmèt retrace yon aksyon",
+                "Demo live + README konplè + prezantasyon 5 minit"
+              ]
+            },
+            {
+              "id": "g16-p2",
+              "title_ht": "Pwojè B — Laboratwa sekirite defansif",
+              "description_ht": "Kreye yon aplikasyon demonstrasyon vilnerab SÈLMAN nan VM izole, dokimante risk yo, epi montre koreksyon yo youn apre lòt.",
+              "objectives_ht": [
+                "App demo vilnerab nan VM izole (pa janm sou entènèt)",
+                "Dokimante chak risk ak severite",
+                "Tès ki echwe anvan koreksyon epi pase apre",
+                "Rapò sekirite ak scope, prèv san done reyèl, plan amelyorasyon"
+              ],
+              "criteria_ht": [
+                "VM nan izole nèt (pa gen aksè de deyò)",
+                "Chak feblès gen koreksyon verifye pa tès",
+                "Rapò a pwofesyonèl: limit klè, okenn done reyèl"
+              ]
+            },
+            {
+              "id": "g16-p3",
+              "title_ht": "Pwojè C — Otomatik administrasyon",
+              "description_ht": "Zouti Python/Bash/PowerShell pou rapò sistèm, backup verifye ak siveyans sèvis.",
+              "objectives_ht": [
+                "Rapò sistèm otomatik (CPU, disk, sèvis)",
+                "Backup verifye ak notifikasyon si echèk",
+                "Log tout aksyon; dry-run + konfimasyon pou aksyon destriktif",
+                "README, tès, enstalasyon ak egzanp itilizasyon"
+              ],
+              "criteria_ht": [
+                "Script yo idempotent (ka rekouri san dega)",
+                "Dry-run montre sa k ap pase anvan egzekisyon",
+                "Logs pèmèt odit tout aksyon yo"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

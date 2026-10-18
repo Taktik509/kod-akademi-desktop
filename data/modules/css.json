@@ -1,0 +1,923 @@
+{
+  "category_ht": "Web (devan)",
+  "description_ht": "CSS se langaj ki bay stil ak bote a paj entènèt: koulè, fòm, pozisyon ak animasyon. Se li ki fè yon paj sanble pwofesyonèl.",
+  "id": "css",
+  "levels": [
+    {
+      "id": "n1",
+      "lessons": [
+        {
+          "body_ht": "CSS (Cascading Style Sheets) se langaj ki dekri kijan eleman HTML yo dwe parèt: koulè yo, gwosè yo, pozisyon yo. Si HTML se zo kay la, CSS se penti a, mozayik la ak dekorasyon an. Yon règ CSS gen twa pati: selektè a (ki eleman y ap style, pa egzanp p), deklarasyon an andedan akolad yo, ak chak deklarasyon ki se yon pwopriyete ak yon valè (color: red;). Gen twa fason pou mete CSS: andedan atribi style dirèkteman sou eleman an (pa rekòmande), nan yon baliz <style> nan <head> la, oswa. Pi bon pratik la — nan yon fichye .css apa ke w konekte ak <link rel=\"stylesheet\" href=\"style.css\">. Fichye apa a pi bon paske yon sèl fichye ka style tout paj sit ou a, epi navigatè a mete l nan kachèt pou paj yo chaje pi vit. Lè plizyè règ aplike sou menm eleman an, se règ ki pi espesifik la ki genyen — se sa yo rele kaskad la. Konprann selektè debaz yo (non baliz, .klas, #id) se premye pa a pou kontwole aparans nenpòt sit. [[CHECK:css-n1-l01-c1]] [[CHECK:css-n1-l01-c2]]",
+          "code": "p {\n  color: blue;\n  font-size: 18px;\n}\n.tit-prensipal {\n  color: green;\n  text-align: center;\n}\n#logo {\n  width: 120px;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "selektè a",
+                "selekte a"
+              ],
+              "choices": [
+                "A) Deklarasyon an",
+                "B) Selektè a",
+                "C) Pwopriyete a",
+                "D) Valè a"
+              ],
+              "correct_ht": "B) Selektè a",
+              "explanation_ht": "Selektè a (p, .klas, #id) di navigatè a ki eleman règ la aplike sou li.",
+              "id": "css-n1-l01-e1",
+              "prompt_ht": "Ki pati nan yon règ CSS ki chwazi ki eleman y ap style?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "p",
+                "p {"
+              ],
+              "correct_ht": "p",
+              "explanation_ht": "Non baliz la poukont li (p) chwazi tout paragraf nan paj la.",
+              "id": "css-n1-l01-e2",
+              "prompt_ht": "Ekri selektè pou tout paragraf <p> yo:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Òganize fichye CSS ou pa seksyon ak kòmantè (/* Tèt paj la */) — nan 6 mwa w ap di tèt ou mèsi.",
+          "id": "css-n1-l01",
+          "title_ht": "Ki sa CSS ye",
+          "checkpoints": [
+            {
+              "id": "css-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — CSS sèvi pou:",
+              "accepted": [
+                "a",
+                "bay stil paj la: koulè, gwosè tèks, espas, pozisyon"
+              ],
+              "correct_ht": "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+              "explanation_ht": "CSS = rad paj la. Menm HTML a ka mete 10 rad diferan.",
+              "choices": [
+                "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+                "B) Ekri tèks paj la",
+                "C) Sere done",
+                "D) Voye imèl"
+              ]
+            },
+            {
+              "id": "css-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML sèvi pou:",
+              "accepted": [
+                "a",
+                "bay estrikti paj web la: tit, paragraf, lyen, imaj"
+              ],
+              "correct_ht": "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+              "explanation_ht": "HTML = zo bwa paj la; CSS = rad la; JS = sèvo a.",
+              "choices": [
+                "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+                "B) Bay koulè yo",
+                "C) Fè kalkil konplike",
+                "D) Jere bazdone"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Koulè se premye bagay vizitè a remake. Nan CSS, pwopriyete color chanje koulè tèks la epi background-color chanje koulè dèyè l. Ou ka ekri koulè ak non (red, green), ak egzadesimal (#ff0000 pou wouj), oswa ak rgb (rgb(255, 0, 0)). Egzadesimal la pi itilize nan travay pwofesyonèl paske li kout epi presi. Pou tèks, font-family chwazi polis la — toujou bay yon lis sekou (font-family: Arial, sans-serif;) pou si premye a pa egziste sou aparèy vizitè a. font-size kontwole gwosè a (itilize px pou kontwòl presi oswa rem pou aksesibilite), font-weight: bold fè l gra, font-style: italic fè l panche. text-align: center santre tèks la, line-height bay espas ant liy yo — yon line-height 1.6 rann long tèks pi fasil pou li. Atansyon ak kontras: tèks gri pal sou fon blan difisil pou li; vize yon kontras fò pou tout moun ka li, ki gen ladan moun ki gen pwoblèm vizyon. [[CHECK:css-n1-l02-c1]] [[CHECK:css-n1-l02-c2]]",
+          "code": "h1 {\n  color: #1a7a3c;\n  font-family: Arial, sans-serif;\n  text-align: center;\n}\np {\n  color: #333333;\n  font-size: 17px;\n  line-height: 1.6;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "c",
+                "color"
+              ],
+              "choices": [
+                "A) background-color",
+                "B) text-color",
+                "C) color",
+                "D) font-color"
+              ],
+              "correct_ht": "C) color",
+              "explanation_ht": "color kontwole koulè tèks la; background-color se pou koulè dèyè tèks la.",
+              "id": "css-n1-l02-e1",
+              "prompt_ht": "Ki pwopriyete ki chanje koulè tèks la?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "color: #ff0000;",
+                "color:#ff0000;",
+                "color: red;"
+              ],
+              "correct_ht": "color: #ff0000;",
+              "explanation_ht": "color: #ff0000; bay tèks la koulè wouj ak kòd egzadesimal la.",
+              "id": "css-n1-l02-e2",
+              "prompt_ht": "Ekri deklarasyon ki mete koulè tèks la an wouj (#ff0000):",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Defini koulè mak ou kòm varyab CSS depi kòmansman an — konsa w chanje yo yon sèl kote pou tout sit la.",
+          "id": "css-n1-l02",
+          "title_ht": "Koulè ak tèks",
+          "checkpoints": [
+            {
+              "id": "css-n1-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            },
+            {
+              "id": "css-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Aksesibilite nan app vle di:",
+              "accepted": [
+                "a",
+                "tout moun ka itilize l, menm moun ki pa wè oswa tande byen"
+              ],
+              "correct_ht": "A) Tout moun ka itilize l, menm moun ki pa wè oswa tande byen",
+              "explanation_ht": "Lektè ekran, kontras, navigasyon klavye: se pou tout moun.",
+              "choices": [
+                "A) Tout moun ka itilize l, menm moun ki pa wè oswa tande byen",
+                "B) Li bèl sèlman",
+                "C) Li rapid sèlman",
+                "D) Li chè"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Nan CSS, chak eleman se yon bwat rektangilè. Box model la dekri kat kouch bwat sa a: kontni an nan mitan (tèks oswa imaj), apre padding (espas andedan, ant kontni an ak bwòdè a), apre border (bwòdè a li menm), epi margin (espas deyò, ant bwat sa a ak vwazen l yo). Konfonn padding ak margin se erè nimewo 1 debutan yo: padding pouse kontni an lwen bwòdè a (andedan), margin pouse lòt eleman yo lwen bwat la (deyò). Ou ka kontwole chak kote apa (margin-top, padding-left) oswa tout ansanm (margin: 10px 20px;). Pwopriyete width ak height fikse gwosè kontni an — men atansyon, pa default padding ak border AJOUTE sou lajè a! Règ box-sizing: border-box; chanje konpòtman sa a pou lajè a gen ladan padding ak border — mete l sou tout bagay ak * { box-sizing: border-box; } epi lavi w ap pi fasil. border bezwen twa valè: epesè, stil, koulè (border: 2px solid green;). [[CHECK:css-n1-l03-c1]] [[CHECK:css-n1-l03-c2]]",
+          "code": "* {\n  box-sizing: border-box;\n}\n.kat {\n  width: 300px;\n  padding: 20px;\n  border: 2px solid #1a7a3c;\n  margin: 15px;\n  background-color: #f5f5f5;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "padding se espas andedan bwat la, margin se espas deyò bwat la"
+              ],
+              "choices": [
+                "A) Pa gen diferans",
+                "B) Padding se espas andedan bwat la, margin se espas deyò bwat la",
+                "C) Margin se andedan, padding se deyò",
+                "D) Padding mache sèlman sou tèks"
+              ],
+              "correct_ht": "B) Padding se espas andedan bwat la, margin se espas deyò bwat la",
+              "explanation_ht": "Padding separe kontni an ak bwòdè a (andedan); margin separe bwat la ak vwazen l yo (deyò).",
+              "id": "css-n1-l03-e1",
+              "prompt_ht": "Ki diferans ant padding ak margin?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "border: 2px solid #1a7a3c;",
+                "border:2px solid #1a7a3c;"
+              ],
+              "correct_ht": "border: 2px solid #1a7a3c;",
+              "explanation_ht": "border pran twa valè nan lòd: epesè, stil, koulè.",
+              "id": "css-n1-l03-e2",
+              "prompt_ht": "Ekri deklarasyon border konplè: 2px, solid, vèt (#1a7a3c):",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan zouti devlopè navigatè a (F12), onglet Styles montre box model la an koulè — pi bon fason pou konprann espas yo.",
+          "id": "css-n1-l03",
+          "title_ht": "Box model: marge, padding ak bwòdè",
+          "checkpoints": [
+            {
+              "id": "css-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — CSS sèvi pou:",
+              "accepted": [
+                "a",
+                "bay stil paj la: koulè, gwosè tèks, espas, pozisyon"
+              ],
+              "correct_ht": "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+              "explanation_ht": "CSS = rad paj la. Menm HTML a ka mete 10 rad diferan.",
+              "choices": [
+                "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+                "B) Ekri tèks paj la",
+                "C) Sere done",
+                "D) Voye imèl"
+              ]
+            },
+            {
+              "id": "css-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 1 — Debitan"
+    },
+    {
+      "id": "n2",
+      "lessons": [
+        {
+          "body_ht": "Flexbox se sistèm layout modèn pou ranje eleman sou yon liy oswa yon kolòn. Ou aktive l ak display: flex; sou eleman paran an (kontenè a), epi tout pitit dirèk li yo vin atik flex. De konsèp kle: aks prensipal (main axis) ak aks kwaze (cross axis). flex-direction: row ranje atik yo orizontalman (default), column vètikalman. justify-content kontwole pozisyon sou aks prensipal la: flex-start (kòmansman), center (mitan), space-between (atik yo pouse nan bout yo ak espas egal nan mitan), space-around. align-items kontwole aks kwaze a: stretch (default, atik yo pran tout wotè), center, flex-start. gap: 10px; mete espas ant atik yo san margin konplike — se fason modèn lan. flex: 1; sou yon atik fè l pran tout espas ki rete. Flexbox pafè pou ba navigasyon, santre yon bagay nan mitan paj la (justify-content: center; align-items: center; ak wotè 100vh), ak ranje kat yo. Egzèsis: santre yon div nan mitan ekran an ak flexbox sèlman. [[CHECK:css-n2-l01-c1]] [[CHECK:css-n2-l01-c2]]",
+          "code": ".kontene {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 15px;\n  height: 100vh;\n}\n.atik {\n  flex: 1;\n  padding: 20px;\n  background: #e8f5e9;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "justify-content"
+              ],
+              "choices": [
+                "A) align-items",
+                "B) justify-content",
+                "C) text-align",
+                "D) flex-center"
+              ],
+              "correct_ht": "B) justify-content",
+              "explanation_ht": "justify-content jere aks prensipal la (orizontal pa default); align-items jere aks kwaze a.",
+              "id": "css-n2-l01-e1",
+              "prompt_ht": "Ki pwopriyete ki santre atik flex yo sou aks prensipal la?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "display: flex;",
+                "display:flex;"
+              ],
+              "correct_ht": "display: flex;",
+              "explanation_ht": "display: flex; fè eleman an tounen yon kontenè flex epi pitit li yo vin atik flex.",
+              "id": "css-n2-l01-e2",
+              "prompt_ht": "Ekri deklarasyon ki aktive flexbox sou yon kontenè:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pou santre yon sèl bagay nan mitan paj la, flexbox ak place-content: center sou body a se solisyon 2 liy lan.",
+          "id": "css-n2-l01",
+          "title_ht": "Flexbox",
+          "checkpoints": [
+            {
+              "id": "css-n2-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Flexbox nan CSS ede ou:",
+              "accepted": [
+                "a",
+                "ranje eleman yo byen sou yon liy oswa kolòn, menm sou ti ekran"
+              ],
+              "correct_ht": "A) Ranje eleman yo byen sou yon liy oswa kolòn, menm sou ti ekran",
+              "explanation_ht": "Flexbox = bwat fleksib ki ranje pitit li yo otomatikman.",
+              "choices": [
+                "A) Ranje eleman yo byen sou yon liy oswa kolòn, menm sou ti ekran",
+                "B) Chwazi koulè",
+                "C) Ekri tèks",
+                "D) Fè backup"
+              ]
+            },
+            {
+              "id": "css-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pandan flexbox ekselan pou yon dimansyon (liy oswa kolòn), CSS Grid fèt pou layout de dimansyon: liy AK kolòn ansanm. Ou aktive l ak display: grid; epi w defini estrikti a ak grid-template-columns. Pa egzanp grid-template-columns: 1fr 1fr 1fr; kreye twa kolòn egal — inite fr (fraction) pran yon pòsyon nan espas lib la, pi entelijan pase pousantaj. gap: 20px; mete espas ant ranje ak kolòn yo. Pou layout reponsiv san media query, repeat(auto-fit, minmax(250px, 1fr)); se majik: li kreye otan kolòn 250px ki antre, epi yo elaji pou ranpli espas la. Ou ka poze atik yo presi ak grid-column: 1 / 3; (soti liy 1 rive liy 3) oswa kite yo ranpli otomatikman. grid-template-areas pèmèt desine layout a ak non (\"tèt tèt\" \"meni kontni\") — trè lizib pou gwo layout. Règ pratik: flexbox pou konpozan (ba, kat), grid pou paj antye (tèt, kolòn, pye). Egzèsis: konstwi yon galri foto ak auto-fit epi redimansyone fenèt la pou wè majik la. [[CHECK:css-n2-l02-c1]] [[CHECK:css-n2-l02-c2]]",
+          "code": ".galri {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n  gap: 20px;\n}\n.tèt {\n  grid-column: 1 / -1;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon pòsyon nan espas lib ki rete a"
+              ],
+              "choices": [
+                "A) Yon pousantaj fiks",
+                "B) Yon pòsyon nan espas lib ki rete a",
+                "C) Gwosè font la",
+                "D) Lajè ekran an"
+              ],
+              "correct_ht": "B) Yon pòsyon nan espas lib ki rete a",
+              "explanation_ht": "fr (fraction) divize espas LIB la — 1fr 2fr bay dezyèm kolòn nan de fwa premye a.",
+              "id": "css-n2-l02-e1",
+              "prompt_ht": "Kisa inite fr a reprezante nan grid-template-columns?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "grid-template-columns: 1fr 1fr 1fr;",
+                "grid-template-columns: repeat(3, 1fr);"
+              ],
+              "correct_ht": "grid-template-columns: 1fr 1fr 1fr;",
+              "explanation_ht": "Twa fwa 1fr divize espas la an twa kolòn egal.",
+              "id": "css-n2-l02-e2",
+              "prompt_ht": "Ekri deklarasyon ki kreye 3 kolòn egal ak grid:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "1 / -1 vle di 'soti premye liy rive dènye a' — fason elegant pou fè yon eleman pran tout lajè grid la.",
+          "id": "css-n2-l02",
+          "title_ht": "Grid",
+          "checkpoints": [
+            {
+              "id": "css-n2-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — CSS Grid se ideyal pou:",
+              "accepted": [
+                "a",
+                "desen paj an ranje ak kolòn (tablo vizyèl)"
+              ],
+              "correct_ht": "A) Desen paj an ranje ak kolòn (tablo vizyèl)",
+              "explanation_ht": "Grid = kadriyaj 2 dimansyon; Flexbox = 1 dimansyon.",
+              "choices": [
+                "A) Desen paj an ranje ak kolòn (tablo vizyèl)",
+                "B) Ekri tèks sèlman",
+                "C) Jwe mizik",
+                "D) Voye imèl"
+              ]
+            },
+            {
+              "id": "css-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon sit 'responsiv' se yon sit ki:",
+              "accepted": [
+                "a",
+                "pran fòm ekran an byen: telefòn, tablèt, òdinatè"
+              ],
+              "correct_ht": "A) Pran fòm ekran an byen: telefòn, tablèt, òdinatè",
+              "explanation_ht": "Tankou dlo ki pran fòm veso a.",
+              "choices": [
+                "A) Pran fòm ekran an byen: telefòn, tablèt, òdinatè",
+                "B) Reponn vit sèlman",
+                "C) Gen anpil koulè",
+                "D) Pa janm chanje"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pwopriyete position kontwole kijan yon eleman plase nan paj la, ak senk valè. static se default la: eleman an swiv koule nòmal dokiman an. relative deplase eleman an parapò ak pozisyon nòmal li (ak top, left...) san l pa deranje lòt eleman yo — espas orijinal li rete. absolute soti eleman an nèt nan koule a epi poze l parapò ak zansèt positionne ki pi pre a (sa vle di premye paran ki gen position relative, absolute oswa fixed). Pafè pou mete yon badj sou yon imaj oswa yon bouton fèmen sou yon kat. fixed kole eleman an sou fenèt navigatè a: li rete vizib menm lè w scroll — ideal pou ba navigasyon anlè ak bouton WhatsApp flotan. sticky se melanj lan: li konpòte l tankou relative jous w scroll rive sou li, apre li kole tankou fixed — pafè pou tèt tablo. z-index kontwole anpileman (ki sou ki) men li mache sèlman sou eleman positionne. Sonje: twòp absolute/fixed kraze koule natirèl paj la; itilize yo ak entansyon. [[CHECK:css-n2-l03-c1]] [[CHECK:css-n2-l03-c2]]",
+          "code": ".kat {\n  position: relative;\n}\n.badj {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  background: red;\n  color: white;\n}\n.ba-nav {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 100;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "parapò ak zansèt positionne ki pi pre a"
+              ],
+              "choices": [
+                "A) Toujou parapò ak paj la",
+                "B) Parapò ak zansèt positionne ki pi pre a",
+                "C) Parapò ak ekran an",
+                "D) Okenn — li rete kote l ye"
+              ],
+              "correct_ht": "B) Parapò ak zansèt positionne ki pi pre a",
+              "explanation_ht": "Absolute chèche premye paran ki gen position (relative/absolute/fixed/sticky); san sa, se paj la.",
+              "id": "css-n2-l03-e1",
+              "prompt_ht": "Parapò ak kisa yon eleman absolute pozisyone?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "position: fixed;",
+                "position:fixed;"
+              ],
+              "correct_ht": "position: fixed;",
+              "explanation_ht": "position: fixed kole eleman an sou fenèt la; li pa bouje ak scroll la.",
+              "id": "css-n2-l03-e2",
+              "prompt_ht": "Ekri deklarasyon ki kole yon ba navigasyon anlè ekran an menm lè w scroll:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pou yon meni dewoule (dropdown), paran an position: relative epi meni an position: absolute — duo klasik la.",
+          "id": "css-n2-l03",
+          "title_ht": "Pozisyonman",
+          "checkpoints": [
+            {
+              "id": "css-n2-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "css-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon index nan bazdone se tankou:",
+              "accepted": [
+                "a",
+                "endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj"
+              ],
+              "correct_ht": "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+              "explanation_ht": "Index akselere lekti, men li koute yon ti kras nan ekriti.",
+              "choices": [
+                "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+                "B) Yon foto",
+                "C) Yon tablo",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 2 — Entèmedyè"
+    },
+    {
+      "id": "n3",
+      "lessons": [
+        {
+          "body_ht": "Tranzisyon bay mouvman dous lè yon pwopriyete chanje — pa egzanp yon bouton ki chanje koulè lè sourit pase sou li. Ou deklare l ak transition: background-color 0.3s ease; (pwopriyete, dire, koub vitès). San tranzisyon, chanjman an toudenkou; ak li, tout bagay dous. transform deplase, vire oswa agrandi eleman an san l pa deranje layout la: translate(10px, 20px) deplase l, scale(1.1) agrandi l 10%, rotate(45deg) vire l. Konbine ak :hover, ou kreye efè entèraktif pwofesyonèl. Pou animasyon konplèks ki repete, @keyframes defini etap yo: @keyframes glise { from { transform: translateX(0); } to { transform: translateX(100px); } } epi animation: glise 2s infinite; aplike l. Pwopriyete animation-iteration-count: infinite fè l repete san rete, alternate fè l ale-vini. Konsèy pèfòmans: anime sèlman transform ak opacity — navigatè a jere yo ak GPU a, san l pa rekalkile layout la. Animasyon lou sou width oswa margin fè paj la sakade. Itilize animasyon pou gide je vizitè a, pa pou distrè l. [[CHECK:css-n3-l01-c1]] [[CHECK:css-n3-l01-c2]]",
+          "code": ".bouton {\n  background: #1a7a3c;\n  color: white;\n  padding: 12px 24px;\n  transition: background 0.3s ease, transform 0.3s ease;\n}\n.bouton:hover {\n  background: #145c2e;\n  transform: scale(1.05);\n}\n@keyframes flote {\n  from { transform: translateY(0); }\n  to { transform: translateY(-10px); }\n}\n.balon {\n  animation: flote 2s ease-in-out infinite alternate;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "a",
+                "changement pwopriyete a toudenkou"
+              ],
+              "choices": [
+                "A) Chanjman pwopriyete a toudenkou",
+                "B) Yon animasyon konplèks ak plizyè etap",
+                "C) Yon chanjman koulè sèlman",
+                "D) Yon efè 3D"
+              ],
+              "correct_ht": "A) Chanjman pwopriyete a toudenkou",
+              "explanation_ht": "San transition, navigatè a aplike nouvo valè a enstantaneman; transition fè l glise dousman.",
+              "id": "css-n3-l01-e1",
+              "prompt_ht": "Kisa k ap pase lè yon :hover chanje koulè san transition?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "@keyframes flote",
+                "@keyframes"
+              ],
+              "correct_ht": "@keyframes flote",
+              "explanation_ht": "@keyframes defini non animasyon an ak etap li yo (from/to oswa pousantaj).",
+              "id": "css-n3-l01-e2",
+              "prompt_ht": "Ki règ ki defini etap yon animasyon ki rele 'flote'?",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "transform: translateZ(0); ka fòse akselerasyon GPU sou vye aparèy — men pa abize l, li konsome memwa.",
+          "id": "css-n3-l01",
+          "title_ht": "Tranzisyon ak animasyon",
+          "checkpoints": [
+            {
+              "id": "css-n3-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Animasyon nan yon app sèvi pou:",
+              "accepted": [
+                "a",
+                "gide je itilizatè a epi fè chanjman yo konprann (parèt/disparèt dousman)"
+              ],
+              "correct_ht": "A) Gide je itilizatè a epi fè chanjman yo konprann (parèt/disparèt dousman)",
+              "explanation_ht": "Bon animasyon = kominikasyon; move animasyon = distraksyon.",
+              "choices": [
+                "A) Gide je itilizatè a epi fè chanjman yo konprann (parèt/disparèt dousman)",
+                "B) Fè bri",
+                "C) Ralanti app lan",
+                "D) Kache bouton yo"
+              ]
+            },
+            {
+              "id": "css-n3-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon sit modèn dwe bèl sou telefòn, tablèt ak òdinatè. Media queries se zouti a: @media (max-width: 768px) { ... } aplike stil yo sèlman lè ekran an pi piti pase 768px. Estrateji mobile-first rekòmande: ekri stil mobil yo an premye (se default la), apre ajoute media queries ak min-width pou ekran ki pi gran (min-width: 768px, 1024px). Poukisa? Pifò vizitè Ayiti navige sou telefòn, epi kòd mobil-an-premye pi lejè. Pwen rupture (breakpoints) komen: 640px (telefòn), 768px (tablèt), 1024px (òdinatè). Fonksyon clamp() se zam modèn lan: font-size: clamp(1rem, 2.5vw, 2rem). Bay yon gwosè minimòm, yon gwosè fluid ki swiv lajè ekran an (vw = viewport width), ak yon maksimòm — tipografi fluid san okenn media query! Inite vw/vh mezire parapò ak fenèt la: 100vw se tout lajè ekran an. Teste sou vrè telefòn, pa sèlman nan mòd mobil navigatè a — pèfòmans reyèl la diferan. Sonje tou: imaj lou touye vitès mobil — konprese yo anvan w mete yo sou sit la. [[CHECK:css-n3-l02-c1]] [[CHECK:css-n3-l02-c2]]",
+          "code": "h1 {\n  font-size: clamp(1.5rem, 4vw, 3rem);\n}\n.kolòn {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n  .kolòn {\n    grid-template-columns: 1fr 1fr;\n  }\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "ekri stil mobil yo an premye, apre ajoute min-width pou pi gran ekran"
+              ],
+              "choices": [
+                "A) Kache tout bagay sou mobil",
+                "B) Ekri stil mobil yo an premye, apre ajoute min-width pou pi gran ekran",
+                "C) Fè de sit apa",
+                "D) Itilize sèlman max-width"
+              ],
+              "correct_ht": "B) Ekri stil mobil yo an premye, apre ajoute min-width pou pi gran ekran",
+              "explanation_ht": "Mobile-first: baz la se mobil (pi lejè), media queries ak min-width ajoute konplèksite pou gran ekran.",
+              "id": "css-n3-l02-e1",
+              "prompt_ht": "Kisa estrateji mobile-first la ye?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "clamp(1.5rem, 4vw, 3rem)",
+                "clamp()"
+              ],
+              "correct_ht": "clamp(1.5rem, 4vw, 3rem)",
+              "explanation_ht": "clamp(minimòm, fluid, maksimòm) bay tipografi ki adapte ak ekran an san media query.",
+              "id": "css-n3-l02-e2",
+              "prompt_ht": "Ekri fonksyon ki bay yon font-size fluid ant 1.5rem ak 3rem:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Chwazi breakpoints ou selon kontni w (lè layout la kraze), pa selon modèl telefòn espesifik.",
+          "id": "css-n3-l02",
+          "title_ht": "Design reponsiv",
+          "checkpoints": [
+            {
+              "id": "css-n3-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon sit 'responsiv' se yon sit ki:",
+              "accepted": [
+                "a",
+                "pran fòm ekran an byen: telefòn, tablèt, òdinatè"
+              ],
+              "correct_ht": "A) Pran fòm ekran an byen: telefòn, tablèt, òdinatè",
+              "explanation_ht": "Tankou dlo ki pran fòm veso a.",
+              "choices": [
+                "A) Pran fòm ekran an byen: telefòn, tablèt, òdinatè",
+                "B) Reponn vit sèlman",
+                "C) Gen anpil koulè",
+                "D) Pa janm chanje"
+              ]
+            },
+            {
+              "id": "css-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Varyab CSS (custom properties) pèmèt ou nonmen valè epi reyitilize yo: ou deklare ak --koulè-prensipal: #1a7a3c; epi w itilize ak color: var(--koulè-prensipal);. Pi gwo avantaj: chanje yon koulè yon sèl kote mete tout sit la ajou. Deklare varyab global yo nan :root (se eleman html la) pou tout paj la wè yo. Varyab yo swiv kaskad la tou: ou ka redefini yon varyab andedan yon seksyon (pa egzanp yon tèm nwa: .tèm-nwa { --fon: #111. }) epi tout pitit li yo eritye nouvo valè a — se baz tèm klè/nwa modèn yo! var() pran yon dezyèm agiman sekou: var(--koulè, blue) itilize blue si varyab la pa defini. Fonksyon calc() fè kalkil: width: calc(100% - 40px); — sonje espas yo otou - ak + obligatwa! min() ak max() chwazi pi piti/pi gran valè a: width: min(600px, 90%); pa janm depase 600px men retresi sou mobil. Konbinezon varyab + calc + clamp se fondasyon design systems pwofesyonèl yo. [[CHECK:css-n3-l03-c1]] [[CHECK:css-n3-l03-c2]]",
+          "code": ":root {\n  --koulè-prensipal: #1a7a3c;\n  --espas: 16px;\n}\n.bouton {\n  background: var(--koulè-prensipal);\n  padding: var(--espas);\n  width: min(400px, 90%);\n}\n.tèm-nwa {\n  --koulè-prensipal: #4caf50;\n  background: #111;\n  color: white;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "c",
+                "var(--koulè-prensipal)"
+              ],
+              "choices": [
+                "A) $koulè-prensipal",
+                "B) @koulè-prensipal",
+                "C) var(--koulè-prensipal)",
+                "D) #koulè-prensipal"
+              ],
+              "correct_ht": "C) var(--koulè-prensipal)",
+              "explanation_ht": "var() li valè yon varyab CSS; de tirè yo (--x) make deklarasyon an.",
+              "id": "css-n3-l03-e1",
+              "prompt_ht": "Kijan w itilize varyab --koulè-prensipal nan yon deklarasyon?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "--koulè-prensipal: #1a7a3c;",
+                "--koule-prensipal: #1a7a3c;"
+              ],
+              "correct_ht": "--koulè-prensipal: #1a7a3c;",
+              "explanation_ht": "Deklarasyon varyab kòmanse ak de tirè (--non) swivi ak de pwen ak valè a.",
+              "id": "css-n3-l03-e2",
+              "prompt_ht": "Ekri deklarasyon varyab --koulè-prensipal ak valè #1a7a3c:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Varyab CSS vivan nan navigatè a: JavaScript ka li/chanje yo — pafè pou tèm klè/nwa ak yon sèl klik.",
+          "id": "css-n3-l03",
+          "title_ht": "Varyab CSS ak kalkil",
+          "checkpoints": [
+            {
+              "id": "css-n3-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon varyab se tankou…",
+              "accepted": [
+                "a",
+                "yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "bwat"
+              ],
+              "correct_ht": "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+              "explanation_ht": "Varyab = bwat + etikèt (non). Ou mete yon valè andedan, epi ou repran l nenpòt ki lè ak non an.",
+              "choices": [
+                "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "B) Yon foto sou ekran an",
+                "C) Yon chante",
+                "D) Yon bouton ou peze"
+              ]
+            },
+            {
+              "id": "css-n3-l03-c2",
+              "type": "vrai-faux",
+              "prompt_ht": "⚡ Kesyon rapid — Vre oswa fo: yon varyab ka chanje valè pandan pwogram nan ap kouri.",
+              "accepted": [
+                "a",
+                "vre",
+                "vre"
+              ],
+              "correct_ht": "A) Vre",
+              "explanation_ht": "Se pou sa yo rele l varyab: valè a ka varye. (Yon konstan, okontrè, pa chanje.)",
+              "choices": [
+                "A) Vre",
+                "B) Fo"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 3 — Avanse"
+    },
+    {
+      "id": "n4",
+      "lessons": [
+        {
+          "body_ht": "Kaskad la se kè CSS: lè plizyè règ konpetisyon pou menm eleman an, navigatè a chwazi selon twa kritè nan lòd: orijin/enpòtans, espesifisite, lòd sous. @layer (cascade layers) se zouti modèn pou kontwole premye kritè a: ou deklare kouch tankou @layer baz, konpozan, utilitè. Epi règ nan kouch utilitè TOUJOU genyen sou kouch baz, kèlkeswa espesifisite a! Sa fini ak lagè !important la: mete reset ou nan @layer baz epi stil konpozan ou nan @layer konpozan, epi konpozan an genyen san fòse. Espesifisite kalkile tankou (id, klas, eleman): #nav .lyen a = (1, 1, 1) bat .lyen a = (0, 1, 1). Stil inline (style=\"...\") bat prèske tout bagay, epi !important bat tout — men se zam dènye rekou, pa abitid. Lòd sous la deside sèlman lè tout lòt egal: dènye règ la genyen. Konprann kaskad la vle di w pa janm bezwen devine poukisa yon stil pa aplike — w li lòd priyorite a. Zouti devlopè a montre règ yo bare lè yo pèdi batay kaskad la. [[CHECK:css-n4-l01-c1]] [[CHECK:css-n4-l01-c2]]",
+          "code": "@layer baz, konpozan, utilitè;\n@layer baz {\n  p { margin: 0; }\n}\n@layer konpozan {\n  .kat p { margin: 16px; }\n}\n@layer utilitè {\n  .san-maj { margin: 0; }\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "règ nan kouch ki deklare an dènye a genyen, kèlkeswa espesifisite a"
+              ],
+              "choices": [
+                "A) Règ ki pi long lan genyen",
+                "B) Règ nan kouch ki deklare an dènye a genyen, kèlkeswa espesifisite a",
+                "C) Pa gen diferans ak san layer",
+                "D) Premye kouch la toujou genyen"
+              ],
+              "correct_ht": "B) Règ nan kouch ki deklare an dènye a genyen, kèlkeswa espesifisite a",
+              "explanation_ht": "@layer kreye yon lòd priyorite eksplisit ki pase anvan espesifisite — fini ak lagè !important.",
+              "id": "css-n4-l01-e1",
+              "prompt_ht": "Kijan @layer chanje règ kaskad la?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "@layer baz, konpozan, utilitè;",
+                "@layer baz;"
+              ],
+              "correct_ht": "@layer baz, konpozan, utilitè;",
+              "explanation_ht": "Deklarasyon @layer ak non yo fikse lòd priyorite a davans, menm anvan règ yo ekri.",
+              "id": "css-n4-l01-e2",
+              "prompt_ht": "Ekri deklarasyon ki kreye twa kouch: baz, konpozan, utilitè:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Mete @layer nan yon fichye 'layers.css' enpòte an premye — tout ekip la swiv menm achitekti a.",
+          "id": "css-n4-l01",
+          "title_ht": "@layer ak kaskad",
+          "checkpoints": [
+            {
+              "id": "css-n4-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — CSS sèvi pou:",
+              "accepted": [
+                "a",
+                "bay stil paj la: koulè, gwosè tèks, espas, pozisyon"
+              ],
+              "correct_ht": "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+              "explanation_ht": "CSS = rad paj la. Menm HTML a ka mete 10 rad diferan.",
+              "choices": [
+                "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+                "B) Ekri tèks paj la",
+                "C) Sere done",
+                "D) Voye imèl"
+              ]
+            },
+            {
+              "id": "css-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon sit ekspè respekte tout vizitè, ki gen ladan moun ki gen pwoblèm vizyon oswa mouvman. Media query prefers-reduced-motion detekte si itilizatè a mande mwens animasyon nan sistèm li: @media (prefers-reduced-motion: reduce) { * { animation: none. Transition: none; } } — sa a se yon OBLIGASYON etik, pa yon opsyon, pou moun ki gen vètij oswa kriz. Kontras koulè: tèks nòmal bezwen yon rapò kontras 4.5:1 minimòm ak fon an (WCAG AA); zouti gratis tankou WebAIM Contrast Checker verifye l. Pa konte sèlman sou koulè pou kominike enfòmasyon (pa egzanp erè an wouj sèlman) — ajoute ikon oswa tèks tou pou moun ki pa wè koulè yo. :focus-visible montre kontou fokis sèlman lè w navige ak klavye (pa ak sourit) — navigasyon klavye rete vizib san l pa deranje itilizatè sourit yo. font-size pa janm anba 16px pou tèks kò a, epi sib taktil (bouton) omwen 44px — dwèt yo bezwen espas. Aksesibilite se kalite, pa yon opsyon. [[CHECK:css-n4-l02-c1]] [[CHECK:css-n4-l02-c2]]",
+          "code": "@media (prefers-reduced-motion: reduce) {\n  *, *::before, *::after {\n    animation-duration: 0.01ms;\n    transition-duration: 0.01ms;\n  }\n}\nbouton:focus-visible {\n  outline: 3px solid #1a7a3c;\n  outline-offset: 2px;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "c",
+                "pou respekte itilizatè ki mande mwens animasyon (vètij, kriz)"
+              ],
+              "choices": [
+                "A) Pou ekonomize batri",
+                "B) Pou fè sit la pi vit",
+                "C) Pou respekte itilizatè ki mande mwens animasyon (vètij, kriz)",
+                "D) Se yon egzijans Google"
+              ],
+              "correct_ht": "C) Pou respekte itilizatè ki mande mwen animasyon (vètij, kriz)",
+              "explanation_ht": "Kèk moun gen reyaksyon fizik grav ak animasyon; sistèm yo ka mande rediksyon — sit ou dwe obeyi.",
+              "id": "css-n4-l02-e1",
+              "prompt_ht": "Poukisa ou dwe jere prefers-reduced-motion?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                ":focus-visible",
+                ":focus-visible {",
+                "bouton:focus-visible"
+              ],
+              "correct_ht": "bouton:focus-visible",
+              "explanation_ht": ":focus-visible aplike stil sèlman lè fokis la vini ak klavye — pi bon eksperyans pou tout moun.",
+              "id": "css-n4-l02-e2",
+              "prompt_ht": "Ki selektè ki montre kontou fokis sèlman pou navigasyon klavye?",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Teste sit ou ak klavye sèlman (Tab/Shift+Tab) yon fwa pa mwa — w ap dekouvri pwoblèm w pa t janm wè ak sourit.",
+          "id": "css-n4-l02",
+          "title_ht": "Mouvman, kontras ak aksè",
+          "checkpoints": [
+            {
+              "id": "css-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon sit 'responsiv' se yon sit ki:",
+              "accepted": [
+                "a",
+                "pran fòm ekran an byen: telefòn, tablèt, òdinatè"
+              ],
+              "correct_ht": "A) Pran fòm ekran an byen: telefòn, tablèt, òdinatè",
+              "explanation_ht": "Tankou dlo ki pran fòm veso a.",
+              "choices": [
+                "A) Pran fòm ekran an byen: telefòn, tablèt, òdinatè",
+                "B) Reponn vit sèlman",
+                "C) Gen anpil koulè",
+                "D) Pa janm chanje"
+              ]
+            },
+            {
+              "id": "css-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Container queries se evolisyon media queries: olye w reponn ak lajè FENÈT la, konpozan an reponn ak lajè KONTENÈ li a. Ou deklare container-type: inline-size; sou paran an, apre @container (min-width: 400px) { .kat { ... } } aplike stil lè KAT la (pa ekran an) depase 400px. Sa rann konpozan vrèman reyitilizab: menm kat la afiche yon fason nan yon kolòn etwat ak yon lòt fason nan yon paj laj — san okenn klas diferan! Subgrid rezoud pwoblèm aliyman nan grid enbrike: yon pitit ak grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; eritye kolòn paran an, kidonk atik nan diferan kat yo aliyen pafètman. De teknoloji sa yo ansanm pèmèt design systems kote konpozan yo entelijan poukont yo. Sipò navigatè modèn yo bon kounye a (2023+); pou vye navigatè, kenbe yon fallback senp anvan. Lè w metrise sa yo, w ap ekri mwens kòd pou plis layout — mak yon ekspè vre. [[CHECK:css-n4-l03-c1]] [[CHECK:css-n4-l03-c2]]",
+          "code": ".kat-paran {\n  container-type: inline-size;\n}\n@container (min-width: 400px) {\n  .kat {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n  }\n}\n.sou-gri {\n  display: grid;\n  grid-template-columns: subgrid;\n}",
+          "code_lang": "css",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "ak lajè kontenè konpozan an li menm"
+              ],
+              "choices": [
+                "A) Ak lajè fenèt navigatè a",
+                "B) Ak lajè kontenè konpozan an li menm",
+                "C) Ak wotè ekran an",
+                "D) Ak gwosè font la"
+              ],
+              "correct_ht": "B) Ak lajè kontenè konpozan an li menm",
+              "explanation_ht": "Container queries reponn ak espas KONPOZAN an genyen, pa ekran an — konpozan reyitilizab toupatou.",
+              "id": "css-n4-l03-e1",
+              "prompt_ht": "Ki diferans prensipal ant @container ak @media?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "container-type: inline-size;",
+                "container-type:inline-size;"
+              ],
+              "correct_ht": "container-type: inline-size;",
+              "explanation_ht": "container-type: inline-size fè eleman an tounen yon kontenè kesyon pou pitit li yo.",
+              "id": "css-n4-l03-e2",
+              "prompt_ht": "Ekri deklarasyon ki fè yon eleman tounen kontenè pou container queries:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Konbine @container ak subgrid: konpozan ki adapte ak espas li epi ki aliyen ak vwazen l yo — nivo design system pwofesyonèl.",
+          "id": "css-n4-l03",
+          "title_ht": "Container queries ak subgrid",
+          "checkpoints": [
+            {
+              "id": "css-n4-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — CSS Grid se ideyal pou:",
+              "accepted": [
+                "a",
+                "desen paj an ranje ak kolòn (tablo vizyèl)"
+              ],
+              "correct_ht": "A) Desen paj an ranje ak kolòn (tablo vizyèl)",
+              "explanation_ht": "Grid = kadriyaj 2 dimansyon; Flexbox = 1 dimansyon.",
+              "choices": [
+                "A) Desen paj an ranje ak kolòn (tablo vizyèl)",
+                "B) Ekri tèks sèlman",
+                "C) Jwe mizik",
+                "D) Voye imèl"
+              ]
+            },
+            {
+              "id": "css-n4-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Docker pèmèt ou:",
+              "accepted": [
+                "a",
+                "anbale app ou ak tout zafè l nan yon container ki mache toupatou"
+              ],
+              "correct_ht": "A) Anbale app ou ak tout zafè l nan yon container ki mache toupatou",
+              "explanation_ht": "Fini ak 'li te mache sou machin mwen'!",
+              "choices": [
+                "A) Anbale app ou ak tout zafè l nan yon container ki mache toupatou",
+                "B) Desine logo",
+                "C) Ekri tèks",
+                "D) Jwe jwèt"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 4 — Ekspè"
+    }
+  ],
+  "name": "CSS"
+}

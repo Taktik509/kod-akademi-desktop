@@ -1,0 +1,912 @@
+{
+  "id": "sql",
+  "name": "SQL",
+  "category_ht": "Baz done",
+  "description_ht": "SQL se langaj tout baz done yo (MySQL, PostgreSQL). Ou aprann sere, chèche, epi analize done — konpetans tout aplikasyon bezwen.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "sql-n1-l01",
+          "title_ht": "Ki sa yon baz done ye + SELECT",
+          "body_ht": "Yon baz done se yon sistèm òganize pou sere gwo kantite enfòmasyon. Done yo chita nan tab: chak tab gen kolòn (kalite enfòmasyon, pa egzanp non, pri) ak ranje (chak antre, pa egzanp chak pwodwi). SQL (Structured Query Language) se langaj ou itilize pou pale ak baz done a. Rekèt ki pi debaz la se SELECT: SELECT * FROM pwodwi; pran TOUT kolòn (*) ak tout ranje tab pwodwi a. Pou chwazi kolòn espesifik: SELECT non, pri FROM pwodwi;. Pwen-virgil ; fini chak rekèt. SQL pa sansib ak majiskil/miniskil pou mo kle yo, men konvansyon an se ekri yo an MAJISKIL pou kòd la pi lizib. Prèske tout aplikasyon nan mond lan — boutik, bank, rezo sosyal — sere done yo nan baz done SQL. Lè ou metrize SELECT, ou ka deja reponn kesyon biznis reyèl. [[CHECK:sql-n1-l01-c1]] [[CHECK:sql-n1-l01-c2]]",
+          "code": "SELECT * FROM pwodwi;\nSELECT non, pri FROM pwodwi;\nSELECT non AS non_pwodwi, pri AS pri_gdes FROM pwodwi;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo evite SELECT * nan kòd pwodiksyon — yo nonmen kolòn yo pou rekèt la rete estab si tab la chanje.",
+          "exercises": [
+            {
+              "id": "sql-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki rekèt ki pran tout kolòn tab pwodwi a?",
+              "choices": [
+                "A) GET * FROM pwodwi;",
+                "B) SELECT * FROM pwodwi;",
+                "C) TAKE * FROM pwodwi;",
+                "D) SHOW pwodwi;"
+              ],
+              "accepted": [
+                "b",
+                "select * from pwodwi"
+              ],
+              "correct_ht": "B) SELECT * FROM pwodwi;",
+              "explanation_ht": "SELECT * FROM non_tab pran tout kolòn ak tout ranje tab la."
+            },
+            {
+              "id": "sql-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou chwazi kolòn non an: SELECT ____ FROM pwodwi;",
+              "accepted": [
+                "non"
+              ],
+              "correct_ht": "non",
+              "explanation_ht": "Ou mete non kolòn yo ant SELECT ak FROM."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Rekèt SELECT * FROM pwodwi; ap:",
+              "accepted": [
+                "a",
+                "pran tout kolòn ak tout ranje nan tab pwodwi a"
+              ],
+              "correct_ht": "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+              "explanation_ht": "SELECT = pran; * = tout kolòn; FROM = nan ki tab.",
+              "choices": [
+                "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+                "B) Efase tab la",
+                "C) Kreye yon nouvo tab",
+                "D) Etenn bazdone a"
+              ]
+            },
+            {
+              "id": "sql-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n1-l02",
+          "title_ht": "Filtre done ak WHERE",
+          "body_ht": "Raman ou vle TOUT done yo — ou vle sèlman sa ki enterese ou. Kloz WHERE filtre ranje yo selon yon kondisyon: SELECT * FROM pwodwi WHERE pri < 1000; bay sèlman pwodwi ki koute mwens pase 1000. Operatè yo: = (egal), <> oswa != (pa egal), > < >= <=. Pou tèks: WHERE vil = 'Pòtoprens'; — tèks toujou nan gimè. LIKE pèmèt rechèch pasyèl ak % kòm joker: WHERE non LIKE 'M%' jwenn tout non ki kòmanse ak M. IN teste plizyè valè: WHERE vil IN ('Pòtoprens', 'Kap Ayisyen');. BETWEEN pran yon entèval: WHERE pri BETWEEN 500 AND 2000;. Ou konbine kondisyon ak AND (tou de vre), OR (youn vre), NOT (ranvèse). Metrize WHERE epi ou ka deja fè rechèch pwisan: tout kliyan ki poko peye, tout pwodwi ki fini nan stok. [[CHECK:sql-n1-l02-c1]] [[CHECK:sql-n1-l02-c2]]",
+          "code": "SELECT * FROM pwodwi WHERE pri < 1000;\nSELECT non FROM kliyan WHERE vil = 'Potoprens';\nSELECT * FROM pwodwi WHERE pri BETWEEN 500 AND 2000 AND stok > 0;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo mete kondisyon ki pi selektif yo an premye epi yo verifye plan egzekisyon an pou gwo tab.",
+          "exercises": [
+            {
+              "id": "sql-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kloz ki filtre ranje yo nan yon rekèt?",
+              "choices": [
+                "A) FILTER",
+                "B) WHERE",
+                "C) IF",
+                "D) HAVING"
+              ],
+              "accepted": [
+                "b",
+                "where"
+              ],
+              "correct_ht": "B) WHERE",
+              "explanation_ht": "WHERE ... filtre ranje yo anvan yo retounen."
+            },
+            {
+              "id": "sql-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou jwenn pwodwi ki koute plis pase 500: SELECT * FROM pwodwi WHERE pri ____ 500;",
+              "accepted": [
+                ">"
+              ],
+              "correct_ht": ">",
+              "explanation_ht": "Operatè > vle di pi gran pase."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n1-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kloz WHERE nan yon rekèt SQL sèvi pou:",
+              "accepted": [
+                "a",
+                "filtre: pran sèlman ranje ki satisfè kondisyon an"
+              ],
+              "correct_ht": "A) Filtre: pran sèlman ranje ki satisfè kondisyon an",
+              "explanation_ht": "WHERE = sèlman sa ki... Pa egzanp WHERE pri > 100.",
+              "choices": [
+                "A) Filtre: pran sèlman ranje ki satisfè kondisyon an",
+                "B) Triye pa koulè",
+                "C) Efase tout",
+                "D) Chanje non tab la"
+              ]
+            },
+            {
+              "id": "sql-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n1-l03",
+          "title_ht": "Triye ak limite: ORDER BY, LIMIT",
+          "body_ht": "Baz done a pa garanti lòd ranje yo si ou pa mande l. ORDER BY triye rezilta yo: SELECT * FROM pwodwi ORDER BY pri; triye soti pi bon mache rive pi chè (ASC se pa defo). Ajoute DESC pou lòd desandan: ORDER BY pri DESC montre pi chè yo an premye. Ou ka triye sou plizyè kolòn: ORDER BY vil ASC, non ASC;. LIMIT limite kantite ranje: SELECT * FROM pwodwi ORDER BY pri DESC LIMIT 5; bay 5 pwodwi ki pi chè yo — pafè pou top 10, dènye atik, pajinasyon. LIMIT 10 OFFSET 20 sote 20 premye yo epi pran 10 apre — se konsa paj 3 yon lis (10 pa paj) mache. DISTINCT retire doublon: SELECT DISTINCT vil FROM kliyan; bay chak vil yon sèl fwa. Konbinezon WHERE + ORDER BY + LIMIT se fòmil 90% rapò biznis yo: 10 kliyan ki pi gwo achtè mwa sa a, pa egzanp. [[CHECK:sql-n1-l03-c1]] [[CHECK:sql-n1-l03-c2]]",
+          "code": "SELECT * FROM pwodwi ORDER BY pri DESC LIMIT 5;\nSELECT DISTINCT vil FROM kliyan;\nSELECT non, pri FROM pwodwi ORDER BY pri ASC LIMIT 10 OFFSET 20;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo pa janm itilize LIMIT san ORDER BY lè lòd la enpòtan, paske rezilta a ta enprevizib.",
+          "exercises": [
+            {
+              "id": "sql-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kloz ki triye rezilta yo soti pi gran rive pi piti?",
+              "choices": [
+                "A) ORDER BY x ASC",
+                "B) ORDER BY x DESC",
+                "C) SORT BY x",
+                "D) GROUP BY x"
+              ],
+              "accepted": [
+                "b",
+                "order by x desc",
+                "desc"
+              ],
+              "correct_ht": "B) ORDER BY x DESC",
+              "explanation_ht": "DESC (descending) triye soti pi gran rive pi piti; ASC se envès la."
+            },
+            {
+              "id": "sql-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou pran sèlman 5 premye yo: SELECT * FROM pwodwi _____ 5;",
+              "accepted": [
+                "limit"
+              ],
+              "correct_ht": "LIMIT",
+              "explanation_ht": "LIMIT n retounen sèlman n premye ranje yo."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — ORDER BY pri DESC ap:",
+              "accepted": [
+                "a",
+                "triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache"
+              ],
+              "correct_ht": "A) Triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache",
+              "explanation_ht": "ORDER BY = mete nan lòd; DESC = desandan (gwo → piti).",
+              "choices": [
+                "A) Triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache",
+                "B) Efase pri yo",
+                "C) Kache pri yo",
+                "D) Melanje rezilta yo o aza"
+              ]
+            },
+            {
+              "id": "sql-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Triye (sorting) done se tankou:",
+              "accepted": [
+                "a",
+                "ranje kat jwèt ou pa nimewo: mete lòd nan dezòd"
+              ],
+              "correct_ht": "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+              "explanation_ht": "Done nan lòd = rechèch rapid.",
+              "choices": [
+                "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+                "B) Melanje kat yo",
+                "C) Jete kat yo",
+                "D) Kache kat yo"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "sql-n2-l04",
+          "title_ht": "Ajoute, modifye, efase done",
+          "body_ht": "Li done se yon bagay, jere yo se yon lòt. INSERT ajoute ranje: INSERT INTO pwodwi (non, pri, stok) VALUES ('Savon', 150, 50);. Toujou nonmen kolòn yo — sa pwoteje ou si tab la chanje. UPDATE modifye ranje ki egziste: UPDATE pwodwi SET pri = 175 WHERE id = 3;. ATANSYON: san WHERE, UPDATE chanje TOUT ranje tab la! Se erè ki pi danjere nan SQL. Menm règ pou DELETE: DELETE FROM pwodwi WHERE id = 3; efase yon sèl pwodwi, san WHERE li efase tout tab la. Anvan yon UPDATE oswa DELETE, bon abitid se kouri SELECT ak menm WHERE a pou wè ki ranje w ap touche. Nan aplikasyon reyèl, rekèt sa yo kouri dèyè fòmilè admin: ajoute pwodwi, chanje pri, retire atik. Avèk pouvwa sa a vini responsabilite: toujou verifye WHERE ou a de fwa. [[CHECK:sql-n2-l04-c1]] [[CHECK:sql-n2-l04-c2]]",
+          "code": "INSERT INTO pwodwi (non, pri, stok) VALUES ('Savon', 150, 50);\nUPDATE pwodwi SET pri = 175 WHERE id = 3;\nDELETE FROM pwodwi WHERE id = 3;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo itilize tranzaksyon (BEGIN/COMMIT) pou operasyon miltip epi yo gen backup anvan gwo UPDATE/DELETE.",
+          "exercises": [
+            {
+              "id": "sql-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa k ap pase si ou kouri UPDATE san WHERE?",
+              "choices": [
+                "A) Anyen",
+                "B) Tout ranje tab la modifye",
+                "C) Yon erè sèlman",
+                "D) Sèlman premye ranje a"
+              ],
+              "accepted": [
+                "b",
+                "tout ranje tab la modifye"
+              ],
+              "correct_ht": "B) Tout ranje tab la modifye",
+              "explanation_ht": "San WHERE, UPDATE aplike sou chak ranje tab la — trè danjere!"
+            },
+            {
+              "id": "sql-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou ajoute yon ranje: ______ INTO pwodwi (non) VALUES ('Savon');",
+              "accepted": [
+                "insert"
+              ],
+              "correct_ht": "INSERT",
+              "explanation_ht": "INSERT INTO ... VALUES ... ajoute yon nouvo ranje nan tab la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n2-l04-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "sql-n2-l04-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n2-l05",
+          "title_ht": "Fonksyon agrejasyon",
+          "body_ht": "Pafwa ou pa vle lis done yo — ou vle rezime yo. Fonksyon agrejasyon yo kalkile sou yon ansanm ranje epi bay yon sèl valè. COUNT(*) konte ranje: konbyen pwodwi genyen? SUM(pri) adisyone: ki total lavant yo? AVG(pri) bay mwayèn: ki pri mwayen an? MIN(pri) ak MAX(pri) bay pi piti ak pi gran valè. Egzanp: SELECT COUNT(*), AVG(pri) FROM pwodwi WHERE stok > 0; bay kantite ak pri mwayen pwodwi ki an stok yo. COUNT(kolòn) konte sèlman valè ki pa nil, alòske COUNT(*) konte tout ranje. Fonksyon sa yo se baz tout tablo bò biznis yo: total lavant jodi a, kantite kliyan, mwayèn nòt. Yo reponn kesyon an yon sèl rekèt olye ou telechaje tout done yo pou kalkile deyò. [[CHECK:sql-n2-l05-c1]] [[CHECK:sql-n2-l05-c2]]",
+          "code": "SELECT COUNT(*) AS total_pwodwi FROM pwodwi;\nSELECT SUM(montan) AS total_lavant FROM komand WHERE dat = '2026-10-18';\nSELECT AVG(pri) AS pri_mwayen, MAX(pri) AS pi_che FROM pwodwi;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo konnen COUNT(*) pi rapid pase COUNT(kolòn) epi yo evite agrejasyon sou done yo pa filtre.",
+          "exercises": [
+            {
+              "id": "sql-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon ki kalkile mwayèn yon kolòn?",
+              "choices": [
+                "A) SUM()",
+                "B) AVG()",
+                "C) MEAN()",
+                "D) MIDDLE()"
+              ],
+              "accepted": [
+                "b",
+                "avg()",
+                "avg"
+              ],
+              "correct_ht": "B) AVG()",
+              "explanation_ht": "AVG(kolòn) bay valè mwayèn; SUM adisyone, COUNT konte."
+            },
+            {
+              "id": "sql-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou konte ranje yo: SELECT ____(*) FROM pwodwi;",
+              "accepted": [
+                "count"
+              ],
+              "correct_ht": "COUNT",
+              "explanation_ht": "COUNT(*) konte tout ranje tab la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n2-l05-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            },
+            {
+              "id": "sql-n2-l05-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Fonksyon COUNT() ap:",
+              "accepted": [
+                "a",
+                "konte konbyen ranje ki genyen"
+              ],
+              "correct_ht": "A) Konte konbyen ranje ki genyen",
+              "explanation_ht": "Fonksyon agregasyon rezime anpil ranje an yon sèl chif.",
+              "choices": [
+                "A) Konte konbyen ranje ki genyen",
+                "B) Efase ranje yo",
+                "C) Triye ranje yo",
+                "D) Kache ranje yo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n2-l06",
+          "title_ht": "GROUP BY ak HAVING",
+          "body_ht": "Agrejasyon yo vin pi pwisan lè ou gwoup done yo. GROUP BY divize ranje yo an gwoup epi kalkile yon rezilta pa gwoup: SELECT vil, COUNT(*) FROM kliyan GROUP BY vil; bay kantite kliyan pa vil. Ou ka gen plizyè nivo: GROUP BY vil, seks. Lè ou itilize GROUP BY, tout kolòn nan SELECT ki pa nan yon fonksyon agrejasyon DWE nan GROUP BY a. Pou filtre SOU rezilta gwoup yo, ou pa ka itilize WHERE (li filtre anvan gwoupman). Ou itilize HAVING: SELECT vil, COUNT(*) AS n FROM kliyan GROUP BY vil HAVING n > 10; bay sèlman vil ki gen plis pase 10 kliyan. Egzanp biznis: lavant pa mwa, kantite komand pa kliyan, stok pa kategori. GROUP BY + HAVING se kè analiz done nan SQL. [[CHECK:sql-n2-l06-c1]] [[CHECK:sql-n2-l06-c2]]",
+          "code": "SELECT vil, COUNT(*) AS kantite FROM kliyan GROUP BY vil;\nSELECT kategori, SUM(pri * kantite) AS lavant\nFROM komand\nGROUP BY kategori\nHAVING lavant > 10000;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo sonje lòd egzekisyon an: WHERE anvan GROUP BY, HAVING apre — sa eksplike anpil erè.",
+          "exercises": [
+            {
+              "id": "sql-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kloz ki filtre rezilta APRE yon GROUP BY?",
+              "choices": [
+                "A) WHERE",
+                "B) HAVING",
+                "C) FILTER",
+                "D) AFTER"
+              ],
+              "accepted": [
+                "b",
+                "having"
+              ],
+              "correct_ht": "B) HAVING",
+              "explanation_ht": "HAVING filtre sou gwoup yo apre agrejasyon; WHERE filtre ranje yo anvan."
+            },
+            {
+              "id": "sql-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou gwoup pa vil: SELECT vil, COUNT(*) FROM kliyan ______ ___ vil;",
+              "accepted": [
+                "group by"
+              ],
+              "correct_ht": "GROUP BY",
+              "explanation_ht": "GROUP BY vil kreye yon gwoup pa chak valè vil."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n2-l06-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — GROUP BY kategori ap:",
+              "accepted": [
+                "a",
+                "gwoup ranje yo pa kategori pou kalkile yon rezime pa gwoup"
+              ],
+              "correct_ht": "A) Gwoup ranje yo pa kategori pou kalkile yon rezime pa gwoup",
+              "explanation_ht": "Pa egzanp: total lavant PA kategori, pa yon sèl total global.",
+              "choices": [
+                "A) Gwoup ranje yo pa kategori pou kalkile yon rezime pa gwoup",
+                "B) Efase kategori yo",
+                "C) Chanje non tab la",
+                "D) Triye pa koulè"
+              ]
+            },
+            {
+              "id": "sql-n2-l06-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "sql-n3-l07",
+          "title_ht": "JOIN: konekte plizyè tab",
+          "body_ht": "Done reyèl yo pa chita nan yon sèl tab: tab komand gen id_kliyan, tab kliyan gen non yo. JOIN konekte tab yo sou yon kle komen. INNER JOIN bay sèlman ranje ki matche nan tou de tab: SELECT k.dat, cl.non FROM komand k INNER JOIN kliyan cl ON k.id_kliyan = cl.id. — komand san kliyan valid pa parèt. LEFT JOIN kenbe TOUT ranje tab goch la menm si pa gen match: tout kliyan parèt, menm sa ki poko achte (kolòn komand yo ap nil). RIGHT JOIN se envès la, FULL JOIN kenbe tout de kote. Alias (k pou komand) fè rekèt yo pi kout. Chwazi bon JOIN an enpòtan: yon INNER JOIN kote ou te bezwen LEFT ka fè done disparèt nan rapò ou san ou pa remake. JOIN se teknik ki pi itilize nan SQL pwofesyonèl — chak rapò biznis konbine plizyè tab. [[CHECK:sql-n3-l07-c1]] [[CHECK:sql-n3-l07-c2]]",
+          "code": "SELECT cl.non, k.dat, k.montan\nFROM komand k\nINNER JOIN kliyan cl ON k.id_kliyan = cl.id;\n\nSELECT cl.non, COUNT(k.id) AS achte\nFROM kliyan cl\nLEFT JOIN komand k ON k.id_kliyan = cl.id\nGROUP BY cl.non;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo verifye kantite ranje anvan/apre JOIN pou detekte match miltip ki gonfle rezilta yo.",
+          "exercises": [
+            {
+              "id": "sql-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki JOIN ki kenbe tout kliyan menm sa ki pa gen komand?",
+              "choices": [
+                "A) INNER JOIN",
+                "B) LEFT JOIN",
+                "C) RIGHT JOIN",
+                "D) CROSS JOIN"
+              ],
+              "accepted": [
+                "b",
+                "left join"
+              ],
+              "correct_ht": "B) LEFT JOIN",
+              "explanation_ht": "LEFT JOIN kenbe tout ranje tab goch la; sa ki pa matche gen nil."
+            },
+            {
+              "id": "sql-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kondisyon jointi a: ... JOIN kliyan cl __ k.id_kliyan = cl.id;",
+              "accepted": [
+                "on"
+              ],
+              "correct_ht": "ON",
+              "explanation_ht": "ON presize kolòn ki konekte de tab yo nan JOIN lan."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n3-l07-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JOIN konekte:",
+              "accepted": [
+                "a",
+                "plizyè tab ansanm grasa kle ki gen rapò"
+              ],
+              "correct_ht": "A) Plizyè tab ansanm grasa kle ki gen rapò",
+              "explanation_ht": "JOIN marye tab yo sou kle etranje a pou wè done yo ansanm.",
+              "choices": [
+                "A) Plizyè tab ansanm grasa kle ki gen rapò",
+                "B) De òdinatè",
+                "C) De sit entènèt",
+                "D) De imaj"
+              ]
+            },
+            {
+              "id": "sql-n3-l07-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n3-l08",
+          "title_ht": "Sous-rekèt: rekèt andedan rekèt",
+          "body_ht": "Yon sous-rekèt se yon rekèt SELECT andedan yon lòt rekèt. Fòm ki pi senp: SELECT * FROM pwodwi WHERE pri > (SELECT AVG(pri) FROM pwodwi). — sous-rekèt la kalkile pri mwayen an, apre rekèt prensipal la pran pwodwi ki pi chè pase mwayèn nan. Avèk IN: WHERE id IN (SELECT id_pwodwi FROM komand) bay pwodwi ki janm vann. EXISTS verifye egzistans pi efikasman sou gwo tab. Sous-rekèt ka nan FROM tou (tab derive): SELECT * FROM (SELECT vil, COUNT(*) AS n FROM kliyan GROUP BY vil) AS rez WHERE n > 5;. Règ: sous-rekèt la dwe nan parantez epi souvan bezwen yon alias. Lè yon sous-rekèt vin twò konplèks pou li, se siy pou pase nan CTE (WITH) — w ap wè sa nan nivo ekspè. Sous-rekèt pèmèt ou poze kesyon an de etap nan yon sèl rekèt. [[CHECK:sql-n3-l08-c1]] [[CHECK:sql-n3-l08-c2]]",
+          "code": "SELECT non, pri FROM pwodwi\nWHERE pri > (SELECT AVG(pri) FROM pwodwi);\n\nSELECT non FROM kliyan\nWHERE id IN (SELECT id_kliyan FROM komand WHERE montan > 5000);",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo prefere JOIN oswa CTE pase sous-rekèt korelé ki kouri yon fwa pa ranje (lant anpil).",
+          "exercises": [
+            {
+              "id": "sql-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki sa yon sous-rekèt ye?",
+              "choices": [
+                "A) Yon backup baz done",
+                "B) Yon rekèt SELECT andedan yon lòt rekèt",
+                "C) Yon tab tanporè",
+                "D) Yon erè SQL"
+              ],
+              "accepted": [
+                "b",
+                "yon reket select andedan yon lot reket"
+              ],
+              "correct_ht": "B) Yon rekèt SELECT andedan yon lòt rekèt",
+              "explanation_ht": "Sous-rekèt la kalkile yon valè oswa yon lis ke rekèt prensipal la itilize."
+            },
+            {
+              "id": "sql-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou teste si id a nan lis la: WHERE id __ (SELECT id FROM komand);",
+              "accepted": [
+                "in"
+              ],
+              "correct_ht": "IN",
+              "explanation_ht": "IN teste si yon valè fè pati rezilta sous-rekèt la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n3-l08-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Fonksyon COUNT() ap:",
+              "accepted": [
+                "a",
+                "konte konbyen ranje ki genyen"
+              ],
+              "correct_ht": "A) Konte konbyen ranje ki genyen",
+              "explanation_ht": "Fonksyon agregasyon rezime anpil ranje an yon sèl chif.",
+              "choices": [
+                "A) Konte konbyen ranje ki genyen",
+                "B) Efase ranje yo",
+                "C) Triye ranje yo",
+                "D) Kache ranje yo"
+              ]
+            },
+            {
+              "id": "sql-n3-l08-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n3-l09",
+          "title_ht": "Kreye tab: CREATE TABLE",
+          "body_ht": "Jous kounye a ou travay sou tab ki egziste. Kounye a ou pral kreye pa ou yo ak CREATE TABLE. Ou defini chak kolòn ak non ak tip: id INT PRIMARY KEY AUTO_INCREMENT (idantifyan inik ki monte poukont li), non VARCHAR(100) (tèks jous 100 karaktè), pri DECIMAL(10,2) (nonb ak 2 desimal. Pou lajan, pa janm FLOAT!), dat_enskri DATE, aktif BOOLEAN. Kontwent yo pwoteje done: NOT NULL (kolòn nan pa ka vid), UNIQUE (pa gen doublon, pou imèl), DEFAULT 0 (valè pa defo). FOREIGN KEY konekte tab yo: FOREIGN KEY (id_kliyan) REFERENCES kliyan(id) — baz done a refize komand pou kliyan ki pa egziste. ALTER TABLE ajoute kolòn pita: ALTER TABLE pwodwi ADD COLUMN deskripsyon TEXT;. DROP TABLE efase yon tab nèt — danjere, verifye de fwa. Byen desine tab ou yo depi kòmansman evite gwo pwoblèm pita. [[CHECK:sql-n3-l09-c1]] [[CHECK:sql-n3-l09-c2]]",
+          "code": "CREATE TABLE kliyan (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  non VARCHAR(100) NOT NULL,\n  imel VARCHAR(150) UNIQUE NOT NULL,\n  vil VARCHAR(80) DEFAULT 'Potoprens',\n  dat_enskri DATE\n);",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo itilize migrations (fichye vèsyone) olye CREATE TABLE manyèl pou chanjman yo swivab.",
+          "exercises": [
+            {
+              "id": "sql-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki tip ki pi bon pou sere pri lajan?",
+              "choices": [
+                "A) FLOAT",
+                "B) INT",
+                "C) DECIMAL(10,2)",
+                "D) VARCHAR"
+              ],
+              "accepted": [
+                "c",
+                "decimal(10,2)",
+                "decimal"
+              ],
+              "correct_ht": "C) DECIMAL(10,2)",
+              "explanation_ht": "DECIMAL sere valè egzak; FLOAT gen erè awondi ki danjere pou lajan."
+            },
+            {
+              "id": "sql-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou id a inik epi otomatik: id INT PRIMARY KEY _____________,",
+              "accepted": [
+                "auto_increment",
+                "auto increment"
+              ],
+              "correct_ht": "AUTO_INCREMENT",
+              "explanation_ht": "AUTO_INCREMENT fè baz done a bay yon nouvo nimewo inik pou chak ranje."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n3-l09-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            },
+            {
+              "id": "sql-n3-l09-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "sql-n4-l10",
+          "title_ht": "Window functions: kalkil sou fenèt",
+          "body_ht": "GROUP BY kraze ranje yo an yon sèl rezilta pa gwoup. Window functions fè kalkil sou yon gwoup ranje SAN kraze yo — chak ranje kenbe idantite l epi resevwa yon valè kalkile. Sentaks la itilize OVER: SELECT non, pri, RANK() OVER (ORDER BY pri DESC) AS ran FROM pwodwi; bay chak pwodwi ran l selon pri. PARTITION BY divize an fenèt: ROW_NUMBER() OVER (PARTITION BY kategori ORDER BY pri DESC) nimewote pwodwi yo pa kategori. LAG(pri) OVER (ORDER BY dat) bay pri jounen anvan an — pafè pou kalkile kwasans: (pri - LAG(pri) OVER (...)) / LAG(pri) OVER (...). Fonksyon komen: ROW_NUMBER, RANK, DENSE_RANK, SUM() OVER, AVG() OVER. Window functions se zam analis done yo: klasman, total kimilatif, mwayèn mobil, konparezon peryòd — tout san sous-rekèt konplèks. Yo disponib nan PostgreSQL, MySQL 8+, SQL Server. [[CHECK:sql-n4-l10-c1]] [[CHECK:sql-n4-l10-c2]]",
+          "code": "SELECT non, kategori, pri,\n  RANK() OVER (ORDER BY pri DESC) AS ran_general,\n  ROW_NUMBER() OVER (PARTITION BY kategori ORDER BY pri DESC) AS ran_kategori\nFROM pwodwi;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo itilize window functions olye self-join pou kalkil kimilatif — pi lizib epi pi rapid.",
+          "exercises": [
+            {
+              "id": "sql-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kloz ki defini fenèt yon window function?",
+              "choices": [
+                "A) WINDOW",
+                "B) OVER",
+                "C) FRAME",
+                "D) PARTITION sèlman"
+              ],
+              "accepted": [
+                "b",
+                "over"
+              ],
+              "correct_ht": "B) OVER",
+              "explanation_ht": "OVER (...) defini fenèt la: lòd, epi opsyonèlman PARTITION BY."
+            },
+            {
+              "id": "sql-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou nimewote pa kategori: ROW_NUMBER() OVER (___________ BY kategori ORDER BY pri DESC)",
+              "accepted": [
+                "partition"
+              ],
+              "correct_ht": "PARTITION",
+              "explanation_ht": "PARTITION BY divize done yo an fenèt separe pa kategori."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n4-l10-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            },
+            {
+              "id": "sql-n4-l10-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Fonksyon COUNT() ap:",
+              "accepted": [
+                "a",
+                "konte konbyen ranje ki genyen"
+              ],
+              "correct_ht": "A) Konte konbyen ranje ki genyen",
+              "explanation_ht": "Fonksyon agregasyon rezime anpil ranje an yon sèl chif.",
+              "choices": [
+                "A) Konte konbyen ranje ki genyen",
+                "B) Efase ranje yo",
+                "C) Triye ranje yo",
+                "D) Kache ranje yo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n4-l11",
+          "title_ht": "CTE: rekèt nonmen ak WITH",
+          "body_ht": "Yon CTE (Common Table Expression) se yon rekèt tanporè nonmen ou defini ak WITH epi ou reitilize: WITH lavant_mwa AS (SELECT MONTH(dat) AS mwa, SUM(montan) AS total FROM komand GROUP BY MONTH(dat)) SELECT * FROM lavant_mwa WHERE total > 10000;. Avantaj sou sous-rekèt: pi lizib (non klè olye parantez anpile), ou ka refere l plizyè fwa nan menm rekèt la, epi ou ka chène plizyè CTE ak vigil. Fòm ki pi pwisan se CTE rekisif pou done yerachik (kategori ak sou-kategori, òganigram): WITH RECURSIVE yerachi AS (SELECT ... UNION ALL SELECT ... FROM yerachi ...) — li rele tèt li jous pa gen nouvo ranje. CTE yo pa toujou pi rapid (kèk baz done materyalize yo), men yo fè rekèt konplèks yo konpranab. Nan kòd analis, yon rekèt 100 liy ak CTE byen nonmen pi fasil pou kenbe pase menm lojik la an sous-rekèt anpile. [[CHECK:sql-n4-l11-c1]] [[CHECK:sql-n4-l11-c2]]",
+          "code": "WITH top_kliyan AS (\n  SELECT id_kliyan, SUM(montan) AS total\n  FROM komand\n  GROUP BY id_kliyan\n  HAVING total > 20000\n)\nSELECT c.non, t.total\nFROM top_kliyan t\nJOIN kliyan c ON c.id = t.id_kliyan\nORDER BY t.total DESC;",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo itilize CTE rekisif pou yerachi epi yo mezire si baz done a optimize CTE a byen.",
+          "exercises": [
+            {
+              "id": "sql-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ki kòmanse yon CTE?",
+              "choices": [
+                "A) TEMP",
+                "B) WITH",
+                "C) DEFINE",
+                "D) AS"
+              ],
+              "accepted": [
+                "b",
+                "with"
+              ],
+              "correct_ht": "B) WITH",
+              "explanation_ht": "WITH non AS (SELECT ...) defini yon CTE ou ka itilize nan rekèt prensipal la."
+            },
+            {
+              "id": "sql-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou yon CTE rekisif: WITH ________ yerachi AS (...)",
+              "accepted": [
+                "recursive"
+              ],
+              "correct_ht": "RECURSIVE",
+              "explanation_ht": "WITH RECURSIVE pèmèt CTE a refere tèt li pou done yerachik."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n4-l11-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "sql-n4-l11-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — GROUP BY kategori ap:",
+              "accepted": [
+                "a",
+                "gwoup ranje yo pa kategori pou kalkile yon rezime pa gwoup"
+              ],
+              "correct_ht": "A) Gwoup ranje yo pa kategori pou kalkile yon rezime pa gwoup",
+              "explanation_ht": "Pa egzanp: total lavant PA kategori, pa yon sèl total global.",
+              "choices": [
+                "A) Gwoup ranje yo pa kategori pou kalkile yon rezime pa gwoup",
+                "B) Efase kategori yo",
+                "C) Chanje non tab la",
+                "D) Triye pa koulè"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sql-n4-l12",
+          "title_ht": "Index ak plan egzekisyon",
+          "body_ht": "Yon rekèt sou yon tab 10 milyon ranje san index fè baz done a li CHAK ranje (full scan) — lant anpil. Yon index se yon estrikti (tankou endèks yon liv) ki pèmèt baz done a jwenn ranje yo rapidman: CREATE INDEX idx_komand_dat ON komand(dat); akselere tout rekèt ki filtre sou dat. Mete index sou kolòn nan WHERE, JOIN (kle etranje), ak ORDER BY. Men atansyon: chak index ralanti INSERT/UPDATE (baz done a dwe mete l ajou) epi pran espas — pa mete index sou tout kolòn. EXPLAIN montre plan egzekisyon an: EXPLAIN SELECT * FROM komand WHERE dat = '2026-10-18'; — chèche type: ALL (full scan, move) vs ref/range (itilize index, bon). Zouti ekspè: index konpoze (plizyè kolòn nan bon lòd), index pasyèl, ANALYZE pou estatistik ajou. Optimize san mezire se devine: EXPLAIN anvan, kreye index, EXPLAIN apre. [[CHECK:sql-n4-l12-c1]] [[CHECK:sql-n4-l12-c2]]",
+          "code": "CREATE INDEX idx_komand_dat ON komand(dat);\nEXPLAIN SELECT * FROM komand WHERE dat = '2026-10-18';\n-- Cheche: type = ref (bon) olye ALL (full scan, move)",
+          "code_lang": "sql",
+          "expert_note_ht": "Ekspè yo mezire ak EXPLAIN ANALYZE (tan reyèl) epi yo retire index ki pa itilize pou akselere ekriti yo.",
+          "exercises": [
+            {
+              "id": "sql-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kòmand ki montre kijan baz done a egzekite yon rekèt?",
+              "choices": [
+                "A) DESCRIBE",
+                "B) EXPLAIN",
+                "C) ANALYZE PLAN",
+                "D) SHOW PLAN"
+              ],
+              "accepted": [
+                "b",
+                "explain"
+              ],
+              "correct_ht": "B) EXPLAIN",
+              "explanation_ht": "EXPLAIN afiche plan egzekisyon an: ki index itilize, konbyen ranje eskane."
+            },
+            {
+              "id": "sql-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kreyasyon index la: CREATE _____ idx_dat ON komand(dat);",
+              "accepted": [
+                "index"
+              ],
+              "correct_ht": "INDEX",
+              "explanation_ht": "CREATE INDEX non ON tab(kolòn) kreye yon index pou rechèch rapid."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "sql-n4-l12-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon index nan bazdone se tankou:",
+              "accepted": [
+                "a",
+                "endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj"
+              ],
+              "correct_ht": "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+              "explanation_ht": "Index akselere lekti, men li koute yon ti kras nan ekriti.",
+              "choices": [
+                "A) Endèks yon liv: li ede jwenn enfòmasyon vit san li tout paj",
+                "B) Yon foto",
+                "C) Yon tablo",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "sql-n4-l12-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,852 @@
+{
+  "id": "react-native",
+  "name": "React Native",
+  "category_ht": "Mobil",
+  "description_ht": "React Native pèmèt ou ekri yon sèl kòd JavaScript pou kreye aplikasyon Android AK iOS an menm tan. Se chwa ki pi rapid pou rive sou de platfòm yo ak yon sèl ekip.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "react-native-n1-l01",
+          "title_ht": "Enstale anviwònman an ak Expo",
+          "body_ht": "Telefòn ou se yon ti òdinatè nan poch ou. Kreye yon app mobil se ekri pwogram ki viv ladan l: bouton ou manyen, ekran ki chanje.\n\n [[CHECK:react-native-n1-l01-c1]]\n\nReact Native se framework Meta (Facebook) kreye pou bati app mobil ak JavaScript. Fason pi fasil pou kòmanse se Expo: yon twous ki jere tout konfigirasyon difisil yo pou ou. Ou bezwen Node.js enstale sou òdinatè w. Apre, yon sèl kòmand kreye pwojè a: npx create-expo-app MonApp — li jenere tout fichye debaz yo. Pou wè app ou a, ou lanse npx expo start, epi ou eskane kòd QR la ak aplikasyon Expo Go sou telefòn ou (disponib sou Play Store ak App Store). Chak fwa ou sove yon fichye, telefòn nan mete ajou touswit — yo rele sa \"fast refresh\". Ou pa bezwen Android Studio ni Xcode pou kòmanse! Nan pwochen leson an, nou pral louvri App.js epi konprann JSX, langaj makèp React Native lan. Apre premye lanse a, eseye modifye tèks nan App.js epi sove — ou pral wè chanjman an parèt sou telefòn nan touswit san ou pa re-lanse anyen. Se maji fast refresh la, epi se li ki rann devlopman mobil modèn agreyab. [[CHECK:react-native-n1-l01-c2]]",
+          "code": "npx create-expo-app MonApp\ncd MonApp\nnpx expo start",
+          "code_lang": "javascript",
+          "expert_note_ht": "Pou pwojè reyèl, fikse vèsyon Expo SDK a nan app.json epi dokimante l — mizajou SDK san plan se sous nimewo 1 pinèz \"li te mache yè\".",
+          "exercises": [
+            {
+              "id": "react-native-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki kòmand kreye yon nouvo pwojè Expo?",
+              "choices": [
+                "A) npm init app",
+                "B) npx create-expo-app MonApp",
+                "C) expo new MonApp",
+                "D) react-native init"
+              ],
+              "accepted": [
+                "b",
+                "npx create-expo-app",
+                "create-expo-app"
+              ],
+              "correct_ht": "B) npx create-expo-app MonApp",
+              "explanation_ht": "create-expo-app se jeneratè ofisyèl pwojè Expo; lòt yo se pou ansyen metòd yo."
+            },
+            {
+              "id": "react-native-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kòmand kreyasyon an: npx ___ MonApp",
+              "accepted": [
+                "create-expo-app"
+              ],
+              "correct_ht": "create-expo-app",
+              "explanation_ht": "npx create-expo-app MonApp jenere estrikti pwojè a konplè."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Anvan ou pibliye yon app sou yon Store, ou dwe:",
+              "accepted": [
+                "a",
+                "teste l byen, siyen l, epi respekte règ boutik la"
+              ],
+              "correct_ht": "A) Teste l byen, siyen l, epi respekte règ boutik la",
+              "explanation_ht": "Chak Store gen pwosesis review: prepare w depi premye jou.",
+              "choices": [
+                "A) Teste l byen, siyen l, epi respekte règ boutik la",
+                "B) Efase kòd la",
+                "C) Vann telefòn ou",
+                "D) Chanje non w"
+              ]
+            },
+            {
+              "id": "react-native-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JavaScript nan yon paj web sèvi pou:",
+              "accepted": [
+                "a",
+                "fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni"
+              ],
+              "correct_ht": "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+              "explanation_ht": "JS = sèvo/konpòtman paj la.",
+              "choices": [
+                "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+                "B) Ekri tèks la",
+                "C) Bay koulè yo",
+                "D) Sere modpas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react-native-n1-l02",
+          "title_ht": "JSX ak konpozan",
+          "body_ht": "Yon aplikasyon React Native bati ak \"konpozan\" — ti blok UI re-itilizab, tankou brik Lego. Chak konpozan se yon fonksyon JavaScript ki retoune JSX. JSX sanble HTML men se JavaScript: <Text>Bonjou</Text> dekri yon tèks sou ekran an. Twa konpozan debaz: View (yon bwat kontenè, tankou div), Text (pou tout tèks — OBLIGATWA, ou pa ka mete tèks dirèkteman), ak Button oswa Pressable (pou klike). Egzanp lan montre konpozan App: li ekspòte pa defo (export default) epi li retoune yon View ki gen yon Text. Non konpozan yo toujou kòmanse ak majiskil — se kijan React distenge yo ak baliz senp. Lè ou bezwen menm UI a plizyè kote, ou kreye yon konpozan epi ou re-itilize l: <Tit mwen />. Panse an konpozan se panse an React. Ou ka mete JavaScript andedan JSX ak aksan boukle: <Text>Bonjou, {non}!</Text> montre valè varyab non an. Aksan {} se pon ant lojik JS ak makèp la — ou pral itilize yo tout tan. [[CHECK:react-native-n1-l02-c1]] [[CHECK:react-native-n1-l02-c2]]",
+          "code": "import { View, Text } from 'react-native';\n\nexport default function App() {\n  return (\n    <View>\n      <Text>Bonjou, Ayiti!</Text>\n    </View>\n  );\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Kenbe konpozan yo piti epi konsantre sou yon sèl bagay; yon konpozan ki fè twòp bagay vin difisil pou teste epi pou re-itilize.",
+          "exercises": [
+            {
+              "id": "react-native-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa JSX ye?",
+              "choices": [
+                "A) Yon baz done",
+                "B) JavaScript ak sentaks makèp pou dekri UI",
+                "C) Yon langaj stil",
+                "D) Yon sèvè"
+              ],
+              "accepted": [
+                "b",
+                "javascript ak makeup",
+                "javascript ak makèp"
+              ],
+              "correct_ht": "B) JavaScript ak sentaks makèp pou dekri UI",
+              "explanation_ht": "JSX melanje JavaScript ak baliz tankou <Text> pou dekri entèfas la deklarativman."
+            },
+            {
+              "id": "react-native-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete ekspò konpozan an: export default function ___() { return <Text>Bonjou</Text>; }",
+              "accepted": [
+                "app"
+              ],
+              "correct_ht": "App",
+              "explanation_ht": "Konpozan prensipal la rele App pa konvansyon, ak majiskil nan kòmansman."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "app"
+              ],
+              "correct_ht": "App",
+              "explanation_ht": "Fonksyon an rele « App » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon konpozan se:",
+              "accepted": [
+                "a",
+                "yon pyès app: bouton, fòmilè, menu — chak fè yon travay"
+              ],
+              "correct_ht": "A) Yon pyès app: bouton, fòmilè, menu — chak fè yon travay",
+              "explanation_ht": "Ou konbine konpozan pou bati ekran konplè.",
+              "choices": [
+                "A) Yon pyès app: bouton, fòmilè, menu — chak fè yon travay",
+                "B) Yon machin antye",
+                "C) Yon kay antye",
+                "D) Yon pyebwa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react-native-n1-l03",
+          "title_ht": "StyleSheet: bay app ou bèl fòm",
+          "body_ht": "Pa defo, konpozan React Native yo lèd — se ou ki bay yo stil. Ou fè sa ak StyleSheet.create, ki sanble CSS men ekri an JavaScript: olye background-color ou ekri backgroundColor (\"camelCase\"). Egzanp lan kreye stil kontenè ak tit: kontenè a pran tout ekran (flex: 1), santre kontni l (justifyContent ak alignItems), epi tit la gen gwosè 24 ak gra. Ou aplike yon stil ak pwop style: <View style={stil.kontenè}>. Ou ka konbine plizyè stil ak yon tablo: style={[stil.baz, stil.aksan]}. Sistèm layout la rele Flexbox: pa defo, timoun yo anpile VÈTIKAL (column) — kontrèman ak web! Sonje: nan React Native, tout mezi se an \"pwen\" (pa gen px), epi koulè yo ekri tankou sou web (\"#ff0000\", \"red\"). Yon app ki byen style se yon app itilizatè yo fè konfyans. Pou tèks, pwop enpòtan yo se fontSize, fontWeight ('bold'), color, ak textAlign. Pou espasman: margin se espas DEYÒ eleman an, padding se espas ANDADAN l — menm lojik ak CSS web la. [[CHECK:react-native-n1-l03-c1]] [[CHECK:react-native-n1-l03-c2]]",
+          "code": "import { View, Text, StyleSheet } from 'react-native';\n\nexport default function App() {\n  return (\n    <View style={stil.kontenè}>\n      <Text style={stil.tit}>Byenveni!</Text>\n    </View>\n  );\n}\n\nconst stil = StyleSheet.create({\n  kontenè: { flex: 1, justifyContent: 'center', alignItems: 'center' },\n  tit: { fontSize: 24, fontWeight: 'bold' },\n});",
+          "code_lang": "javascript",
+          "expert_note_ht": "Mete stil yo nan StyleSheet.create olye objè anliy: yo valide yon sèl fwa epi yo pi pèfòman pase nouvo objè chak rann.",
+          "exercises": [
+            {
+              "id": "react-native-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki konpozan ou DWE itilize pou afiche tèks nan React Native?",
+              "choices": [
+                "A) <p>",
+                "B) <Text>",
+                "C) <span>",
+                "D) Tèks dirèk san baliz"
+              ],
+              "accepted": [
+                "b",
+                "<text>",
+                "text"
+              ],
+              "correct_ht": "B) <Text>",
+              "explanation_ht": "Tout tèks dwe andedan yon konpozan <Text>; tèks kri andeyò l bay erè."
+            },
+            {
+              "id": "react-native-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kreyasyon stil la: const stil = ___.create({ tit: { fontSize: 24 } });",
+              "accepted": [
+                "stylesheet"
+              ],
+              "correct_ht": "StyleSheet",
+              "explanation_ht": "StyleSheet.create valide epi optimize objè stil ou yo."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "app"
+              ],
+              "correct_ht": "App",
+              "explanation_ht": "Fonksyon an rele « App » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — CSS sèvi pou:",
+              "accepted": [
+                "a",
+                "bay stil paj la: koulè, gwosè tèks, espas, pozisyon"
+              ],
+              "correct_ht": "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+              "explanation_ht": "CSS = rad paj la. Menm HTML a ka mete 10 rad diferan.",
+              "choices": [
+                "A) Bay stil paj la: koulè, gwosè tèks, espas, pozisyon",
+                "B) Ekri tèks paj la",
+                "C) Sere done",
+                "D) Voye imèl"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "react-native-n2-l04",
+          "title_ht": "useState ak props: done ki vivan",
+          "body_ht": "Sonje ki paj ou te ye nan liv ou a: ou mete yon makè ladan l pou ou pa pèdi plas ou. 'Eta' yon app se makè sa a — li sonje kote itilizatè a ye ak sa l ap fè.\n\n [[CHECK:react-native-n2-l04-c1]]\n\nYon app estatik pa itil — ou bezwen done ki chanje epi ekran an mete ajou. Se travay useState, \"hook\" ki pi enpòtan nan React. const [non, setNon] = useState(\"\") kreye yon varyab eta non (kòmanse vid) ak yon fonksyon setNon pou chanje l. Lè ou rele setNon(\"Ana\"), React rebati konpozan an ak nouvo valè a — ekran an mete ajou otomatikman! Ou pa janm modifye eta a dirèkteman (non = \"x\" pa mache). Dezyèm konsèp: props. Se kijan yon paran voye done bay yon timoun: <Salitasyon non=\"Ana\" /> — epi timoun nan li l ak function Salitasyon({ non }). Props yo li-sèlman: timoun nan pa ka chanje yo. Règ: eta a desann pa props, evènman yo monte pa fonksyon. Avèk useState + props, ou ka bati fòm, kontè, ak ekran entèraktif reyèl. Lè eta a se yon objè oswa tablo, pa modifye l dirèkteman — kreye yon kopi: setLis([...lis, nouvo]). React konpare referans, kidonk yon nouvo tablo deklanche rann; yon modifikasyon dirèk pa fè anyen. [[CHECK:react-native-n2-l04-c2]]",
+          "code": "import { useState } from 'react';\nimport { View, Text, Button } from 'react-native';\n\nexport default function App() {\n  const [kontè, setKontè] = useState(0);\n  return (\n    <View>\n      <Text>Kontè: {kontè}</Text>\n      <Button title=\"Mete +1\" onPress={() => setKontè(kontè + 1)} />\n    </View>\n  );\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Pa mete kalkil lou dirèkteman nan kò konpozan an — chak chanjman eta rebati l; izole kalkil yo nan fonksyon oswa useMemo.",
+          "exercises": [
+            {
+              "id": "react-native-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa \"const [non, setNon] = useState('')\" bay ou?",
+              "choices": [
+                "A) Yon konstan sèlman",
+                "B) Valè eta a ak fonksyon pou mete l ajou",
+                "C) De konpozan",
+                "D) Yon pwomès"
+              ],
+              "accepted": [
+                "b",
+                "vale ak fonksyon",
+                "valè ak fonksyon"
+              ],
+              "correct_ht": "B) Valè eta a ak fonksyon pou mete l ajou",
+              "explanation_ht": "useState retoune yon pè: valè aktyèl la ak \"setter\" ki deklanche yon nouvo rann."
+            },
+            {
+              "id": "react-native-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete destriktirasyon an: const [non, ___] = useState(\"\");",
+              "accepted": [
+                "setnon",
+                "setNon"
+              ],
+              "correct_ht": "setNon",
+              "explanation_ht": "Pa konvansyon, setter a rele set + non varyab la ak majiskil."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n2-l04-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "app"
+              ],
+              "correct_ht": "App",
+              "explanation_ht": "Fonksyon an rele « App » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n2-l04-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react-native-n2-l05",
+          "title_ht": "FlatList: montre lis done",
+          "body_ht": "Prèske chak app montre lis: kontak, pwodwi, mesaj. Nan React Native, ou pa fè yon bouk manyèl. Ou itilize FlatList, ki optimize pou lis long: li pa rann tout atik yo an menm tan, sèlman sa ki vizib sou ekran (\"virtualization\"). Twa pwop esansyèl: data resevwa tablo done a, renderItem di kijan pou desine CHAK atik (li resevwa { item }), epi keyExtractor bay yon kle inik pou chak atik (souvan item.id) pou React swiv yo byen. Egzanp lan montre yon lis fwi. Atansyon: pa mete FlatList andedan yon ScrollView — se yon erè klasik ki kase virtualization an. Si ou bezwen yon antèt, itilize pwop ListHeaderComponent. Pou lis orizontal, mete horizontal. FlatList se youn nan konpozan ou pral itilize chak jou kòm devlopè mobil. Pou pèfòmans, evite kreye nouvo objè stil chak rann andedan renderItem — deplase stil yo deyò konpozan an. Epi toujou bay keyExtractor yon kle estab (pa endèks!) pou React pa mele atik yo lè lis la chanje. [[CHECK:react-native-n2-l05-c1]] [[CHECK:react-native-n2-l05-c2]]",
+          "code": "import { FlatList, Text, View } from 'react-native';\n\nconst fwi = [\n  { id: '1', non: 'Mango' },\n  { id: '2', non: 'Bannann' },\n];\n\nexport default function App() {\n  return (\n    <FlatList\n      data={fwi}\n      keyExtractor={(at) => at.id}\n      renderItem={({ item }) => <Text>{item.non}</Text>}\n    />\n  );\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Pou lis ki chanje souvan, memoize renderItem ak useCallback epi atik yo ak React.memo — sinon chak defileman rebati tout atik yo.",
+          "exercises": [
+            {
+              "id": "react-native-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki pwop FlatList di kijan pou desine chak atik?",
+              "choices": [
+                "A) data",
+                "B) renderItem",
+                "C) keyExtractor",
+                "D) itemView"
+              ],
+              "accepted": [
+                "b",
+                "renderitem",
+                "renderItem"
+              ],
+              "correct_ht": "B) renderItem",
+              "explanation_ht": "renderItem resevwa { item } epi li retoune JSX pou chak eleman nan lis la."
+            },
+            {
+              "id": "react-native-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou bay chak atik yon kle inik: keyExtractor={(at) ___ at.id}",
+              "accepted": [
+                "=>"
+              ],
+              "correct_ht": "=>",
+              "explanation_ht": "keyExtractor se yon fonksyon flèch ki retoune kle inik chak atik la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n2-l05-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « data » genyen? (ekri valè a)",
+              "accepted": [
+                "{fwi}"
+              ],
+              "correct_ht": "{fwi}",
+              "explanation_ht": "Nan egzanp lan, liy « data = {fwi} » mete valè « {fwi} » nan bwat « data » a."
+            },
+            {
+              "id": "react-native-n2-l05-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "app"
+              ],
+              "correct_ht": "App",
+              "explanation_ht": "Fonksyon an rele « App » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "react-native-n2-l06",
+          "title_ht": "Navigasyon ant ekran",
+          "body_ht": "Yon app reyèl gen plizyè ekran: akeyi, detay, pwofil. Bibliyotèk estanda a se React Navigation. Ou kòmanse ak yon NavigationContainer ki anvlòp tout app lan, epi yon \"Stack Navigator\" ki jere pil ekran yo: const Stack = createNativeStackNavigator(). Andedan <Stack.Navigator>, ou deklare chak ekran: <Stack.Screen name=\"Akeyi\" component={EkranAkeyi} />. Chak ekran resevwa yon objè navigation kòm pwop: pou ale nan yon lòt ekran, ou rele navigation.navigate(\"Detay\"); pou tounen dèyè, navigation.goBack(). Ou ka voye done tou: navigate(\"Detay\", { id: 5 }) — epi ekran Detay la li yo ak route.params. Stack la jere bouton \"retounen\" ak animasyon tranzisyon pou ou, sou tou de platfòm yo. Nan pwochen nivo a, nou pral chaje done reyèl sou entènèt pou ekran sa yo. Ou ka anbrike navigatè: yon Tab Navigator anba ak yon Stack andedan chak tab — se estrikti pifò app reyèl yo. Chak ekran nan pil la kenbe pwòp eta l, kidonk tounen dèyè retabli ekran an jan ou te kite l la. [[CHECK:react-native-n2-l06-c1]] [[CHECK:react-native-n2-l06-c2]]",
+          "code": "import { NavigationContainer } from '@react-navigation/native';\nimport { createNativeStackNavigator } from '@react-navigation/native-stack';\nimport { Button } from 'react-native';\n\nconst Stack = createNativeStackNavigator();\n\nfunction Akeyi({ navigation }) {\n  return <Button title=\"Wè detay\" onPress={() => navigation.navigate('Detay')} />;\n}\n\nexport default function App() {\n  return (\n    <NavigationContainer>\n      <Stack.Navigator>\n        <Stack.Screen name=\"Akeyi\" component={Akeyi} />\n      </Stack.Navigator>\n    </NavigationContainer>\n  );\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Pa janm enbrike plizyè NavigationContainer — yon sèl nan rasin app lan; navigatè anndan yo (tab, stack) rete senp.",
+          "exercises": [
+            {
+              "id": "react-native-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki metòd voye itilizatè a sou yon lòt ekran?",
+              "choices": [
+                "A) navigation.push()",
+                "B) navigation.navigate('Non')",
+                "C) goTo('Non')",
+                "D) open('Non')"
+              ],
+              "accepted": [
+                "b",
+                "navigate",
+                "navigation.navigate"
+              ],
+              "correct_ht": "B) navigation.navigate('Non')",
+              "explanation_ht": "navigate('NonEkran') mete ekran an sou pil navigasyon an (oswa ale sou li si li deja la)."
+            },
+            {
+              "id": "react-native-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou ale sou ekran Detay: navigation.___('Detay');",
+              "accepted": [
+                "navigate"
+              ],
+              "correct_ht": "navigate",
+              "explanation_ht": "navigation.navigate('Detay') deklanche tranzisyon an sou ekran Detay la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n2-l06-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "akeyi"
+              ],
+              "correct_ht": "Akeyi",
+              "explanation_ht": "Fonksyon an rele « Akeyi » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n2-l06-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Navigasyon nan yon app se:",
+              "accepted": [
+                "a",
+                "pase soti nan yon ekran nan yon lòt"
+              ],
+              "correct_ht": "A) Pase soti nan yon ekran nan yon lòt",
+              "explanation_ht": "Chak ekran se yon chanm; navigasyon se pòt yo.",
+              "choices": [
+                "A) Pase soti nan yon ekran nan yon lòt",
+                "B) Kondwi yon machin",
+                "C) Vole yon avyon",
+                "D) Naje"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "react-native-n3-l07",
+          "title_ht": "useEffect ak apèl API",
+          "body_ht": "Yon machin fèt ak pyès: motè, wou, volan — chak fè yon travay. Yon app fèt ak konpozan: bouton, fòmilè, menu — chak fè yon travay.\n\n [[CHECK:react-native-n3-l07-c1]]\n\nPifò app chaje done sou entènèt: lis pwodwi, pwofil, nouvèl. Hook useEffect la pèmèt ou egzekite \"efè segondè\" — tankou yon apèl rezo — lè konpozan an parèt. Egzanp: useEffect(() => { chajeItilizatè(); }, []) — tablo vid [] a vle di \"kouri yon SÈL fwa, nan kòmansman\". San li, efè a ta kouri apre CHAK rann epi kreye yon bouk enfini apèl! Andedan, nou itilize fetch ak async/await: const r = await fetch(url); const done = await r.json(); apre nou mete done nan eta ak set. Bon pratik: jere twa eta — chaje (loading), siksè (done), ak erè. Montre yon ActivityIndicator pandan chajman, epi yon mesaj si gen erè. Pa bliye: pa rele setEta apre konpozan an fin disparèt (efè netwayaj). Avèk useEffect + fetch, app ou a konekte ak mond reyèl la. Toujou mete apèl asenkron an nan yon fonksyon separe andedan useEffect — pa make fonksyon efè a li menm async, paske React atann yon fonksyon netwayaj oswa anyen kòm retou. [[CHECK:react-native-n3-l07-c2]]",
+          "code": "import { useState, useEffect } from 'react';\nimport { Text, ActivityIndicator } from 'react-native';\n\nexport default function App() {\n  const [done, setDone] = useState(null);\n\n  useEffect(() => {\n    (async () => {\n      const r = await fetch('https://api.example.com/yo');\n      setDone(await r.json());\n    })();\n  }, []);\n\n  if (!done) return <ActivityIndicator />;\n  return <Text>{done.non}</Text>;\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Nan pwojè reyèl, pa gaye fetch toupatou — kreye yon kouch \"api.js\" santral ak jesyon erè inifòm, epi konsidere React Query pou kach.",
+          "exercises": [
+            {
+              "id": "react-native-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa \"useEffect(() => {...}, [])\" ak tablo vid la fè?",
+              "choices": [
+                "A) Kouri apre chak rann",
+                "B) Kouri yon sèl fwa nan kòmansman",
+                "C) Pa janm kouri",
+                "D) Kouri chak segonn"
+              ],
+              "accepted": [
+                "b",
+                "yon sel fwa",
+                "yon sèl fwa"
+              ],
+              "correct_ht": "B) Kouri yon sèl fwa nan kòmansman",
+              "explanation_ht": "Tablo depandans vid la di React: pa gen depandans, kidonk kouri efè a yon sèl fwa."
+            },
+            {
+              "id": "react-native-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou efè a kouri yon sèl fwa: useEffect(() => { chaje(); }, ___);",
+              "accepted": [
+                "[]"
+              ],
+              "correct_ht": "[]",
+              "explanation_ht": "Tablo vid [] vle di okenn depandans — efè a kouri sèlman nan montaj konpozan an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n3-l07-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "app"
+              ],
+              "correct_ht": "App",
+              "explanation_ht": "Fonksyon an rele « App » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n3-l07-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kòd asenkron (async/await) pèmèt pwogram nan:",
+              "accepted": [
+                "a",
+                "lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann"
+              ],
+              "correct_ht": "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+              "explanation_ht": "Tankou voye yon moun achte pen pandan ou kontinye kwit manje.",
+              "choices": [
+                "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+                "B) Dòmi pou tout tan",
+                "C) Etenn òdinatè a",
+                "D) Efase memwa a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react-native-n3-l08",
+          "title_ht": "Fòm ak validasyon",
+          "body_ht": "Fòm yo se kè entèraksyon: enskripsyon, koneksyon, kòmand. Konpozan debaz la se TextInput. Ou kontwole l ak eta: <TextInput value={non} onChangeText={setNon} /> — chak lèt itilizatè a tape rele setNon, epi value montre valè aktyèl la (\"controlled input\"). Pwop itil: placeholder (tèks gid), secureTextEntry (pou modpas — kache lèt yo), keyboardType (\"email-address\", \"numeric\" pou bon klavye). Validasyon: anvan ou voye, verifye tout bagay — egzanp lan tcheke si non vid epi si imèl gen @. Montre erè yo an wouj anba chan yo. Bon pratik UX: dezaktive bouton \"Voye\" la toutotan fòm nan pa valid, epi montre erè sèlman apre itilizatè a eseye voye (pa pandan l ap tape premye lèt la!). Yon fòm byen valide pwoteje sèvè w kont move done. Pou eksperyans itilizatè, ajoute autoCapitalize=\"none\" sou chan imèl (telefòn yo mete majiskil otomatikman!) epi returnKeyType=\"done\" pou bouton klavye a fè sans. Ti detay sa yo fè fòm ou santi pwofesyonèl. [[CHECK:react-native-n3-l08-c1]] [[CHECK:react-native-n3-l08-c2]]",
+          "code": "import { useState } from 'react';\nimport { View, Text, TextInput, Button } from 'react-native';\n\nexport default function Fòm() {\n  const [imèl, setImèl] = useState('');\n  const [erè, setErè] = useState('');\n  const voye = () => {\n    if (!imèl.includes('@')) setErè('Imèl pa valid');\n    else setErè('');\n  };\n  return (\n    <View>\n      <TextInput value={imèl} onChangeText={setImèl} placeholder=\"Imèl ou\" keyboardType=\"email-address\" />\n      {erè ? <Text style={{ color: 'red' }}>{erè}</Text> : null}\n      <Button title=\"Voye\" onPress={voye} />\n    </View>\n  );\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Pa janm fè konfyans sou validasyon kliyan sèlman — sèvè a dwe re-valide tout done; kliyan an se pou UX, sèvè a se pou sekirite.",
+          "exercises": [
+            {
+              "id": "react-native-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki pwop TextInput kaptire chak lèt itilizatè a tape?",
+              "choices": [
+                "A) onPress",
+                "B) onChangeText",
+                "C) onType",
+                "D) onInput"
+              ],
+              "accepted": [
+                "b",
+                "onchangetext"
+              ],
+              "correct_ht": "B) onChangeText",
+              "explanation_ht": "onChangeText resevwa nouvo tèks la chak fwa li chanje — ou konekte l ak setter eta a."
+            },
+            {
+              "id": "react-native-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete chan kontwole a: <TextInput value={imèl} ___={setImèl} />",
+              "accepted": [
+                "onchangetext"
+              ],
+              "correct_ht": "onChangeText",
+              "explanation_ht": "onChangeText={setImèl} mete eta a ajou ak chak lèt tape."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n3-l08-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "fòm"
+              ],
+              "correct_ht": "Fòm",
+              "explanation_ht": "Fonksyon an rele « Fòm » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n3-l08-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Validasyon fòmilè sèvi pou:",
+              "accepted": [
+                "a",
+                "verifye enfòmasyon yo kòrèk anvan ou aksepte yo"
+              ],
+              "correct_ht": "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+              "explanation_ht": "Imèl vid? Modpas twò kout? Refize anvan ou sere.",
+              "choices": [
+                "A) Verifye enfòmasyon yo kòrèk anvan ou aksepte yo",
+                "B) Fè paj la bèl",
+                "C) Jwe mizik",
+                "D) Voye spam"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react-native-n3-l09",
+          "title_ht": "Context API: eta global",
+          "body_ht": "Lè plizyè ekran bezwen menm done (itilizatè konekte, tèm, lang), pase props nan 5 nivo vin yon kochma (\"prop drilling\"). Solisyon natif React: Context API. Twa etap: 1) Kreye kontèks la: const TèmKontèks = createContext(). 2) Bay valè a ak yon Provider nan rasin app lan: <TèmKontèks.Provider value={tèm}>. 3) Li l nenpòt kote ak hook useContext: const tèm = useContext(TèmKontèks). Chak fwa valè Provider a chanje, tout konpozan k ap koute yo rebati otomatikman. Egzanp lan pataje yon tèm koulè. Atansyon: pa mete TOUT eta nan yon sèl gwo kontèks — chak chanjman rebati tout konsomatè yo. Separe kontèks yo pa sijè (AuthKontèks, TèmKontèks). Pou app trè konplèks, gen bibliyotèk tankou Zustand oswa Redux, men Context sifi pou pifò ka. Ou ka konbine plizyè Provider youn andedan lòt nan rasin app lan pou separe sijè yo. Epi pou valè ki pa chanje (konstan), ou ka pase yo dirèkteman san useState — Provider aksepte nenpòt valè. [[CHECK:react-native-n3-l09-c1]] [[CHECK:react-native-n3-l09-c2]]",
+          "code": "import { createContext, useContext, useState } from 'react';\nimport { Text } from 'react-native';\n\nconst TèmKontèks = createContext('klè');\n\nfunction Tit() {\n  const tèm = useContext(TèmKontèks);\n  return <Text>Tèm: {tèm}</Text>;\n}\n\nexport default function App() {\n  const [tèm] = useState('fonse');\n  return (\n    <TèmKontèks.Provider value={tèm}>\n      <Tit />\n    </TèmKontèks.Provider>\n  );\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Si yon kontèks chanje twò souvan epi rann lan vin lou, separe valè ki chanje vit ak valè ki estab nan de kontèks diferan.",
+          "exercises": [
+            {
+              "id": "react-native-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa yon Provider fè nan Context API?",
+              "choices": [
+                "A) Li bay valè kontèks la bay tout konpozan timoun yo",
+                "B) Li kreye yon nouvo ekran",
+                "C) Li fè apèl API",
+                "D) Li estoke done sou disk"
+              ],
+              "accepted": [
+                "a",
+                "bay vale",
+                "bay valè"
+              ],
+              "correct_ht": "A) Li bay valè kontèks la bay tout konpozan timoun yo",
+              "explanation_ht": "Provider a difize value a nan tout pyebwa timoun li yo; useContext li l."
+            },
+            {
+              "id": "react-native-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete lekti kontèks la: const tèm = ___(TèmKontèks);",
+              "accepted": [
+                "usecontext",
+                "useContext"
+              ],
+              "correct_ht": "useContext",
+              "explanation_ht": "useContext(TèmKontèks) retoune valè aktyèl kontèks la epi rebati lè li chanje."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n3-l09-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "tit"
+              ],
+              "correct_ht": "Tit",
+              "explanation_ht": "Fonksyon an rele « Tit » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n3-l09-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "react-native-n4-l10",
+          "title_ht": "Reanimated: animasyon 60 FPS",
+          "body_ht": "Desen anime se plizyè imaj ki pase vit pou bay enpresyon mouvman. Animasyon nan yon app se menm trik la: ti chanjman rapid ki fè ekran an vivan epi ki gide je itilizatè a.\n\n [[CHECK:react-native-n4-l10-c1]]\n\nAnimasyon ak Animated API klasik la kouri sou thread JavaScript — si JS okipe, animasyon an \"jank\" (li sote). Reanimated 3 rezoud sa: animasyon yo kouri sou UI thread natif la, kidonk yo rete flid 60 FPS menm si JS bloke. Konsèp kle: useSharedValue kreye yon valè \"pataje\" ant JS ak UI thread: const opasite = useSharedValue(1). Pou chanje l ak animasyon, ou itilize fonksyon \"worklet\" tankou withTiming (pwogresif sou yon dire) oswa withSpring (efè resò fizik): opasite.value = withTiming(0, { duration: 500 }). Apre, useAnimatedStyle konekte valè a ak stil: const stilAnim = useAnimatedStyle(() => ({ opacity: opasite.value })). Ou aplike l sou yon Animated.View. Règ: ou li/ekri .value sèlman; pa mete lojik lou nan worklet yo. Avèk Reanimated, ou ka bati jès konplèks (glise, zoom) ki santi yo natif — se diferans ant yon app \"ok\" ak yon app \"waw\". Ou ka anime plizyè pwopriyete an menm tan nan menm useAnimatedStyle: opasite, echèl (transform), ak pozisyon — tout sou UI thread san okenn sote. [[CHECK:react-native-n4-l10-c2]]",
+          "code": "import Animated, { useSharedValue, useAnimatedStyle, withTiming } from 'react-native-reanimated';\n\nexport default function Bwat() {\n  const opasite = useSharedValue(1);\n  const stilAnim = useAnimatedStyle(() => ({\n    opacity: opasite.value,\n  }));\n  const kache = () => { opasite.value = withTiming(0, { duration: 500 }); };\n  return <Animated.View style={[{ width: 100, height: 100, backgroundColor: 'blue' }, stilAnim]} />;\n}",
+          "code_lang": "javascript",
+          "expert_note_ht": "Pou jès taktil konplèks, konbine Reanimated ak Gesture Handler: jès la rete sou UI thread de bout an bout, zewo latans.",
+          "exercises": [
+            {
+              "id": "react-native-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Poukisa Reanimated pi flid pase Animated klasik?",
+              "choices": [
+                "A) Li itilize mwens kòd",
+                "B) Animasyon yo kouri sou UI thread natif, pa sou JS",
+                "C) Li pa itilize stil",
+                "D) Li mache sèlman sou iOS"
+              ],
+              "accepted": [
+                "b",
+                "ui thread",
+                "sou ui thread natif"
+              ],
+              "correct_ht": "B) Animasyon yo kouri sou UI thread natif, pa sou JS",
+              "explanation_ht": "Worklet yo egzekite dirèkteman sou UI thread, kidonk blokaj JS pa afekte animasyon an."
+            },
+            {
+              "id": "react-native-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kreyasyon valè pataje a: const opasite = ___(1);",
+              "accepted": [
+                "usesharedvalue"
+              ],
+              "correct_ht": "useSharedValue",
+              "explanation_ht": "useSharedValue kreye yon valè pataje ant thread JS ak UI thread."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n4-l10-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "bwat"
+              ],
+              "correct_ht": "Bwat",
+              "explanation_ht": "Fonksyon an rele « Bwat » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "react-native-n4-l10-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Animasyon nan yon app sèvi pou:",
+              "accepted": [
+                "a",
+                "gide je itilizatè a epi fè chanjman yo konprann (parèt/disparèt dousman)"
+              ],
+              "correct_ht": "A) Gide je itilizatè a epi fè chanjman yo konprann (parèt/disparèt dousman)",
+              "explanation_ht": "Bon animasyon = kominikasyon; move animasyon = distraksyon.",
+              "choices": [
+                "A) Gide je itilizatè a epi fè chanjman yo konprann (parèt/disparèt dousman)",
+                "B) Fè bri",
+                "C) Ralanti app lan",
+                "D) Kache bouton yo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react-native-n4-l11",
+          "title_ht": "TurboModules: nouvo achitekti",
+          "body_ht": "React Native modèn (\"nouvo achitekti\" a) ranplase ansyen \"Bridge\" la ak de moso: JSI (JavaScript Interface) pou apèl dirèk ant JS ak natif san konvèsyon JSON, ak TurboModules pou modil natif ki chaje \"lazy\" (sèlman lè ou bezwen yo). Konsèp ou dwe konnen kòm ekspè: yon TurboModule se yon modil natif (Java/Kotlin oswa Objective-C) ou ekri yon \"spec\" pou li an TypeScript. Yon entèfas ki dekri metòd yo: export interface Spec extends TurboModule { getNon(): string; }. Zouti \"Codegen\" li spec sa a epi li jenere tout kòd pon an otomatikman pou tou de platfòm yo. Ou pa bezwen ekri TurboModule chak jou (bibliyotèk yo fè l pou ou), men konprann achitekti a eksplike POUkisa nouvo React Native lan pi rapid nan demaraj, epi li pèmèt ou ekri pwòp modil natif ou lè ou bezwen aksè pyès (kamera, bloutouf) ki pa egziste nan JS. Nouvo achitekti a gen ladan Fabric tou (nouvo sistèm rann UI) — ansanm ak TurboModules, yo fè React Native konpetitif ak devlopman natif. [[CHECK:react-native-n4-l11-c1]] [[CHECK:react-native-n4-l11-c2]]",
+          "code": "// KalkilatrisSpec.ts — spec TurboModule\nimport type { TurboModule } from 'react-native';\nimport { TurboModuleRegistry } from 'react-native';\n\nexport interface Spec extends TurboModule {\n  sòm(a: number, b: number): number;\n}\n\nexport default TurboModuleRegistry.getEnforcing<Spec>('Kalkilatris');",
+          "code_lang": "javascript",
+          "expert_note_ht": "Anvan ou ekri yon TurboModule, tcheke si yon bibliyotèk kominotè deja fè l — antretyen kòd natif sou 2 platfòm koute chè.",
+          "exercises": [
+            {
+              "id": "react-native-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki avantaj prensipal TurboModules sou ansyen Bridge la?",
+              "choices": [
+                "A) Mwens fichye",
+                "B) Apèl dirèk JS↔natif via JSI ak chajman lazy — pi rapid",
+                "C) Pa bezwen kòd natif",
+                "D) Se sèlman pou iOS"
+              ],
+              "accepted": [
+                "b",
+                "apel direk",
+                "apèl dirèk",
+                "jsi"
+              ],
+              "correct_ht": "B) Apèl dirèk JS↔natif via JSI ak chajman lazy — pi rapid",
+              "explanation_ht": "JSI elimine konvèsyon JSON Bridge la, epi modil yo chaje sèlman lè yo itilize."
+            },
+            {
+              "id": "react-native-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete spec la: export interface Spec extends ___ { sòm(a: number, b: number): number; }",
+              "accepted": [
+                "turbomodule"
+              ],
+              "correct_ht": "TurboModule",
+              "explanation_ht": "Entèfas spec la dwe etann TurboModule pou Codegen jenere pon natif la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n4-l11-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "react-native-n4-l11-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JavaScript nan yon paj web sèvi pou:",
+              "accepted": [
+                "a",
+                "fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni"
+              ],
+              "correct_ht": "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+              "explanation_ht": "JS = sèvo/konpòtman paj la.",
+              "choices": [
+                "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+                "B) Ekri tèks la",
+                "C) Bay koulè yo",
+                "D) Sere modpas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react-native-n4-l12",
+          "title_ht": "Pibliye app ou sou store yo",
+          "body_ht": "Yon app fini sèlman lè li nan men itilizatè yo. Avèk Expo, sèvis EAS Build bati app ou nan nwaj la — ou pa bezwen Mac pou fè vèsyon iOS! Pwosesis: 1) Konfigire app.json (non, idantifyan \"com.konpayi.app\", ikon, ekran demaraj). 2) Kreye kont Expo epi konekte: eas login. 3) Lanse bati: eas build -p android (bay yon AAB pou Play Store) oswa -p ios (bay yon IPA pou App Store). 4) Pou pibliye: Play Store mande yon kont devlopè ($25 yon sèl fwa) ak AAB siyen. App Store mande Apple Developer Program ($99/ane) epi ou soumèt via EAS Submit oswa Transporter. Prepare byen: tès sou vrè aparèy, règ konfidansyalite, deskripsyon ak kaptur ekran nan plizyè lang. Premye piblikasyon an pran tan (revizyon Apple ka dire 1-2 jou) — prevwa l. Fete: ou se yon devlopè mobil pibliye! Apre piblikasyon, swiv kraze ak zouti tankou Sentry, epi koute revizyon itilizatè yo — premye vèsyon yo toujou bezwen 2-3 mizajou rapid pou estabilize. [[CHECK:react-native-n4-l12-c1]] [[CHECK:react-native-n4-l12-c2]]",
+          "code": "eas login\neas build -p android --profile production\neas build -p ios --profile production\neas submit -p android",
+          "code_lang": "javascript",
+          "expert_note_ht": "Otomatize ak EAS Update pou voye koreksyon JS san repase revizyon store — men pa itilize l pou chanjman natif oswa fonksyonalite degize.",
+          "exercises": [
+            {
+              "id": "react-native-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki sèvis Expo bati app ou nan nwaj la (menm pou iOS san Mac)?",
+              "choices": [
+                "A) Expo Go",
+                "B) EAS Build",
+                "C) Metro",
+                "D) Snack"
+              ],
+              "accepted": [
+                "b",
+                "eas build",
+                "eas"
+              ],
+              "correct_ht": "B) EAS Build",
+              "explanation_ht": "EAS Build konpile vèsyon natif yo sou sèvè Expo — ou resevwa AAB/IPA pare pou store."
+            },
+            {
+              "id": "react-native-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou bati vèsyon Android pwodiksyon: eas build -p ___ --profile production",
+              "accepted": [
+                "android"
+              ],
+              "correct_ht": "android",
+              "explanation_ht": "-p android chwazi platfòm Android; --profile production itilize konfig pwodiksyon an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "react-native-n4-l12-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Anvan ou pibliye yon app sou yon Store, ou dwe:",
+              "accepted": [
+                "a",
+                "teste l byen, siyen l, epi respekte règ boutik la"
+              ],
+              "correct_ht": "A) Teste l byen, siyen l, epi respekte règ boutik la",
+              "explanation_ht": "Chak Store gen pwosesis review: prepare w depi premye jou.",
+              "choices": [
+                "A) Teste l byen, siyen l, epi respekte règ boutik la",
+                "B) Efase kòd la",
+                "C) Vann telefòn ou",
+                "D) Chanje non w"
+              ]
+            },
+            {
+              "id": "react-native-n4-l12-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

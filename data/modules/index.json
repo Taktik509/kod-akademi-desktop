@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bash",
+    "name": "Bash",
+    "category_ht": "Sistèm",
+    "file": "bash.json"
+  },
+  {
+    "id": "css",
+    "name": "CSS",
+    "category_ht": "Web (devan)",
+    "file": "css.json"
+  },
+  {
+    "id": "dart",
+    "name": "Dart",
+    "category_ht": "Mobil",
+    "file": "dart.json"
+  },
+  {
+    "id": "flutter",
+    "name": "Flutter",
+    "category_ht": "Mobil",
+    "file": "flutter.json"
+  },
+  {
+    "id": "html",
+    "name": "HTML",
+    "category_ht": "Web (devan)",
+    "file": "html.json"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "category_ht": "Web (devan)",
+    "file": "javascript.json"
+  },
+  {
+    "id": "kotlin",
+    "name": "Kotlin",
+    "category_ht": "Mobil",
+    "file": "kotlin.json"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "category_ht": "Web (dèyè)",
+    "file": "nodejs.json"
+  },
+  {
+    "id": "php",
+    "name": "PHP",
+    "category_ht": "Web (dèyè)",
+    "file": "php.json"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "category_ht": "Baz done",
+    "file": "postgresql.json"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category_ht": "Web (dèyè)",
+    "file": "python.json"
+  },
+  {
+    "id": "react-native",
+    "name": "React Native",
+    "category_ht": "Mobil",
+    "file": "react-native.json"
+  },
+  {
+    "id": "sql",
+    "name": "SQL",
+    "category_ht": "Baz done",
+    "file": "sql.json"
+  },
+  {
+    "id": "sqlite",
+    "name": "SQLite",
+    "category_ht": "Baz done",
+    "file": "sqlite.json"
+  },
+  {
+    "id": "swift",
+    "name": "Swift",
+    "category_ht": "Mobil",
+    "file": "swift.json"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "category_ht": "Web (devan)",
+    "file": "typescript.json"
+  }
+]

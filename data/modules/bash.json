@@ -1,0 +1,863 @@
+{
+  "category_ht": "Sistèm",
+  "description_ht": "Bash se langaj tèminal Linux ak Mac la — zouti pou otomatize travay, jere sèvè, epi ekri script ki fè òdinatè a travay pou ou.",
+  "id": "bash",
+  "levels": [
+    {
+      "id": "n1",
+      "lessons": [
+        {
+          "body_ht": "Bash (Bourne Again Shell) se pwogram ki li kòmand ou tape nan tèminal la sou Linux ak Mac. Chak fwa ou tape ls epi peze Antre, se Bash ki egzekite li. Yon script Bash se yon fichye tèks ki gen yon seri kòmand — olye ou tape 20 kòmand chak maten, ou ekri yo yon fwa epi ou lanse script la. Premye liy yon script se 'shebang': #!/bin/bash — li di sistèm nan 'itilize Bash pou li fichye sa a'. Apre ou ekri script la, ou dwe rann li egzekitab: chmod +x monscript.sh. Epi ou lanse li ak ./monscript.sh. Kòmand debaz pou kòmanse: echo montre tèks, ls liste fichye, cd chanje dosye, pwd montre kote ou ye, mkdir kreye dosye. Egzanp premye script: li di bonjou epi montre dat jodi a ak kòmand date. Bash se langaj administrasyon sistèm nan — metrize li epi w ap otomatize nenpòt travay repetitif. [[CHECK:bash-n1-l01-c1]] [[CHECK:bash-n1-l01-c2]]",
+          "code": "#!/bin/bash\n# Premye script mwen\necho \"Bonjou!\"\necho \"Jodi a se:\"\ndate\necho \"Ou ye nan:\"\npwd",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li di sistèm nan itilize bash pou li fichye a"
+              ],
+              "choices": [
+                "A) Se yon kòmantè dekoratif",
+                "B) Li di sistèm nan itilize Bash pou li fichye a",
+                "C) Li enstale Bash",
+                "D) Li fèmen tèminal la"
+              ],
+              "correct_ht": "B) Li di sistèm nan itilize Bash pou li fichye a",
+              "explanation_ht": "Shebang #!/bin/bash sou premye liy lan di sistèm nan ki entèprèt pou itilize lè ou lanse fichye a dirèkteman.",
+              "id": "bash-n1-l01-e1",
+              "prompt_ht": "Kisa liy #!/bin/bash nan kòmansman yon script vle di?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "chmod +x"
+              ],
+              "correct_ht": "chmod +x",
+              "explanation_ht": "chmod +x ajoute dwa egzekisyon sou fichye a — san li, sistèm nan refize lanse script la dirèkteman.",
+              "id": "bash-n1-l01-e2",
+              "prompt_ht": "Ki kòmand ki rann yon script egzekitab? _____ monscript.sh",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Toujou teste script ou yo ak bash -n monscript.sh anvan ou lanse yo: li tcheke sentaks la san egzekite anyen — li kenbe fòt tapaj anvan yo fè dega.",
+          "id": "bash-n1-l01",
+          "title_ht": "Premye script ou a",
+          "checkpoints": [
+            {
+              "id": "bash-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "bash-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Imajine yon bwat soulye ak yon etikèt sou li. Ou mete yon bagay andedan, epi lè ou bezwen l, ou chèche bwat ki gen etikèt la. Yon varyab se egzakteman sa pou òdinatè a: yon bwat ki gen yon non, kote li sere yon enfòmasyon.\n\n [[CHECK:bash-n1-l02-c1]]\n\nYon varyab nan Bash se yon non ki kenbe yon valè: non=\"Garry\". ATANSYON ak espas: non = \"Garry\" ak espas otou = ap ECHWE — Bash entèprete li kòm yon kòmand. Pa gen espas otou siy egal la, janm. Pou itilize valè a, mete $ devan non an: echo \"Bonjou $non\". Gimè doub (\"\") pèmèt ekspansyon varyab ($non vin valè li); gimè senp ('') kenbe tèks la literal — echo '$non' montre $non, pa Garry. Sa se yon sous erè klasik. Varyab espesyal yo: $0 non script la, $1 $2 premye/dezyèm agiman itilizatè a bay, $# kantite agiman, $? kòd soti dènye kòmand lan (0 = siksè). Kòmand read mande itilizatè a tape yon valè: read -p \"Non ou: \" non. Epi $(kòmand) pran SOTI yon kòmand epi mete li nan varyab: jodi=$(date +%Y-%m-%d). [[CHECK:bash-n1-l02-c2]]",
+          "code": "#!/bin/bash\nnon=\"Garry\"\necho \"Bonjou $non!\"\nread -p \"Ki laj ou? \" laj\necho \"Lane pwochèn ou ap gen $((laj + 1)) an.\"\njodi=$(date +%Y-%m-%d)\necho \"Jodi a se $jodi\"",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "echo \"bonjou $non\""
+              ],
+              "choices": [
+                "A) echo 'Bonjou $non'",
+                "B) echo \"Bonjou $non\"",
+                "C) echo Bonjou $non!",
+                "D) Toulede A ak B"
+              ],
+              "correct_ht": "B) echo \"Bonjou $non\"",
+              "explanation_ht": "Gimè doub pèmèt ekspansyon: $non ranplase pa valè li. Gimè senp ta montre tèks literal $non.",
+              "id": "bash-n1-l02-e1",
+              "prompt_ht": "Ki liy ki montre 'Bonjou Garry' si non=\"Garry\"?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "$1"
+              ],
+              "correct_ht": "$1",
+              "explanation_ht": "$1 se premye agiman liy kòmand lan, $2 dezyèm nan, elatriye. $0 se non script la li menm.",
+              "id": "bash-n1-l02-e2",
+              "prompt_ht": "Konplete pou montre premye agiman itilizatè a bay: echo \"Agiman: _____\"",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Toujou mete varyab ou yo ant gimè doub: \"$non\" olye $non. San gimè, yon valè ak espas (tankou 'Pòtoprens Ayiti') ap kase an plizyè mo epi kraze kòmand ou a.",
+          "id": "bash-n1-l02",
+          "title_ht": "Varyab ak antre itilizatè",
+          "checkpoints": [
+            {
+              "id": "bash-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « non » genyen? (ekri valè a)",
+              "accepted": [
+                "garry",
+                "\"garry\""
+              ],
+              "correct_ht": "Garry",
+              "explanation_ht": "Nan egzanp lan, liy « non = \"Garry\" » mete valè « Garry » nan bwat « non » a."
+            },
+            {
+              "id": "bash-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon varyab se tankou…",
+              "accepted": [
+                "a",
+                "yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "bwat"
+              ],
+              "correct_ht": "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+              "explanation_ht": "Varyab = bwat + etikèt (non). Ou mete yon valè andedan, epi ou repran l nenpòt ki lè ak non an.",
+              "choices": [
+                "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "B) Yon foto sou ekran an",
+                "C) Yon chante",
+                "D) Yon bouton ou peze"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Chak maten ou pran desizyon: SI lapli ap tonbe, ou pran parapli. SINON, ou kite l. Pwogram yo pran desizyon menm jan an — se sa nou pral aprann jodi a.\n\n [[CHECK:bash-n1-l03-c1]]\n\nScript entelijan pran desizyon ak if. Fòm debaz: if [ kondisyon ]; then ... fi. Kwòchè [ ] yo se aktyèlman yon kòmand (test) — kidonk ESPAS obligatwa andedan: if [ $laj -ge 18 ] (pa if [$laj...]). Operatè pou nonb: -eq (egal), -ne (pa egal), -gt (pi gran), -lt (pi piti), -ge, -le. Pou tèks: = (egal), != (pa egal), -z (vid), -n (pa vid). Pou fichye: -e (egziste), -f (fichye regilye), -d (dosye), -r/-w/-x (dwa li/ekri/egzekite). Estrikti konplè: if ...; then ... elif ...; then ... else ... fi. Ou konbine tès ak && (E) ak || (OSWA): if [ $a -gt 5 ] && [ $b -lt 10 ]; then. Fòm modèn [[ ]] (doub kwòchè) pi an sekirite: li pa bezwen gimè otou varyab epi sipòte =~ pou regex: if [[ $imèl =~ ^.+@.+\\..+$ ]]; then. Pou script senp, [ ] sifi; pou validasyon konplèks, prefere [[ ]]. [[CHECK:bash-n1-l03-c2]]",
+          "code": "#!/bin/bash\nread -p \"Ki laj ou? \" laj\nif [ \"$laj\" -ge 18 ]; then\n  echo \"Ou granmoun.\"\nelif [ \"$laj\" -ge 13 ]; then\n  echo \"Ou adolesan.\"\nelse\n  echo \"Ou timoun.\"\nfi\n\nif [ -f \"rapò.txt\" ]; then\n  echo \"Fichye a egziste.\"\nfi",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "-ge"
+              ],
+              "choices": [
+                "A) >=",
+                "B) -ge",
+                "C) -eq",
+                "D) =>"
+              ],
+              "correct_ht": "B) -ge",
+              "explanation_ht": "Nan tès [ ], konparezon nonb itilize -eq, -ne, -gt, -lt, -ge, -le. >= pa valid andedan kwòchè senp.",
+              "id": "bash-n1-l03-e1",
+              "prompt_ht": "Ki operatè ki vle di 'pi gran pase oswa egal' pou nonb nan [ ]?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "fi"
+              ],
+              "correct_ht": "fi",
+              "explanation_ht": "Yon blòk if nan Bash fèmen ak fi ('if' alenvè) — bliye li se erè sentaks ki pi komen pou debutan.",
+              "id": "bash-n1-l03-e2",
+              "prompt_ht": "Ki mo kle ki fèmen yon blòk if nan Bash? if [ ... ]; then echo ok; _____",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Erè nimewo 1: [ $x = \"ok\" ] san gimè lè $x vid vin [ = \"ok\" ] epi kraze. Toujou ekri [ \"$x\" = \"ok\" ] oswa itilize [[ $x == ok ]] ki an sekirite san gimè.",
+          "id": "bash-n1-l03",
+          "title_ht": "Pran desizyon: if",
+          "checkpoints": [
+            {
+              "id": "bash-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "bash-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 1 — Debitan"
+    },
+    {
+      "id": "n2",
+      "lessons": [
+        {
+          "body_ht": "Lè manman w di ou ranje 10 jwèt, ou repete menm mouvman an 10 fwa. Olye yon pwogramè ekri menm lòd la 10 fwa, li di òdinatè a: repete sa 10 fwa. Se sa yon bouk ye.\n\n [[CHECK:bash-n2-l01-c1]]\n\nBouk repete aksyon. Bouk for la ideyal pou lis: for f in *.txt; do echo \"Tretman: $f\"; done trete chak fichye .txt nan dosye a. Ou ka boukle sou nonb: for i in {1..5}; do ...; done, oswa fòm C: for ((i=1; i<=5; i++)); do ...; done. Bouk while la kontinye toutotan kondisyon an vre: while [ $n -gt 0 ]; do echo $n; n=$((n-1)); done — konte a bak. Fòm klasik: li yon fichye liy pa liy: while IFS= read -r liy; do echo \"$liy\"; done < done.txt. Mo kle break soti nan bouk la, continue sote nan pwochen tou a. ATANSYON: yon while san kondisyon ki vin fo se yon bouk enfini ki ap manje CPU — toujou verifye varyab kondisyon an chanje andedan bouk la. Bouk + tès fichye = script antretyen pwisan: for f in /var/log/*.log; do [ -f \"$f\" ] && echo \"$f egziste\"; done. [[CHECK:bash-n2-l01-c2]]",
+          "code": "#!/bin/bash\n# Konte liy chak fichye txt\nfor f in *.txt; do\n  n=$(wc -l < \"$f\")\n  echo \"$f: $n liy\"\ndone\n\n# Konte a bak\nn=3\nwhile [ $n -gt 0 ]; do\n  echo \"$n...\"\n  n=$((n - 1))\ndone\necho \"Ale!\"",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "tout fichye ki fini ak .txt"
+              ],
+              "choices": [
+                "A) Yon sèl fichye",
+                "B) Tout fichye ki fini ak .txt nan dosye aktyèl la",
+                "C) Tout dosye yo",
+                "D) Anyen"
+              ],
+              "correct_ht": "B) Tout fichye ki fini ak .txt nan dosye aktyèl la",
+              "explanation_ht": "*.txt se yon glob: Bash elaji li an lis tout fichye ki matche modèl la anvan bouk la kòmanse.",
+              "id": "bash-n2-l01-e1",
+              "prompt_ht": "Kisa for f in *.txt; do ...; done trete?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "done"
+              ],
+              "correct_ht": "done",
+              "explanation_ht": "Yon bouk for/while nan Bash fèmen ak done ('neod'... an reyalite se 'do' alenvè) — estrikti a se for ...; do ...; done.",
+              "id": "bash-n2-l01-e2",
+              "prompt_ht": "Ki mo kle ki fèmen yon bouk for? for i in 1 2 3; do echo $i; _____",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Evite for f in $(ls): si non fichye gen espas, li kase. Glob dirèk (*.txt) oswa find ... -print0 | while IFS= read -r -d '' se fason ki an sekirite.",
+          "id": "bash-n2-l01",
+          "title_ht": "Bouk for ak while",
+          "checkpoints": [
+            {
+              "id": "bash-n2-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « n » genyen? (ekri valè a)",
+              "accepted": [
+                "$(wc -l < \"$f\")"
+              ],
+              "correct_ht": "$(wc -l < \"$f\")",
+              "explanation_ht": "Nan egzanp lan, liy « n = $(wc -l < \"$f\") » mete valè « $(wc -l < \"$f\") » nan bwat « n » a."
+            },
+            {
+              "id": "bash-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon fonksyon regwoupe kòmand an yon non reitilizab: salye() { echo \"Bonjou $1!\"; }. Ou rele li tankou yon kòmand: salye \"Garry\". Paramèt yo rive kòm $1, $2... andedan fonksyon an (pa konfonn ak agiman script la — andedan fonksyon, $1 se agiman FONKSYON an). Mo kle local deklare varyab lokal: local total=0 — san local, varyab la global epi li ka ekraze varyab script la pa aksidan. Toujou itilize local nan fonksyon! Fonksyon ka retounen yon KÒD SOTI (0-255) ak return: verifye_fichye() { [ -f \"$1\" ] && return 0 || return 1; }. Men pou retounen TÈKS, ou itilize echo epi pran li ak $(...): doub() { echo $(($1 * 2)); }; rezilta=$(doub 21). Konvansyon: kòd soti = siksè/echèk (pou if), echo = done tèks. Òganize gwo script an fonksyon anwo, apèl yo anba — se baz script lizib. [[CHECK:bash-n2-l02-c1]] [[CHECK:bash-n2-l02-c2]]",
+          "code": "#!/bin/bash\nsòm() {\n  local a=$1\n  local b=$2\n  echo $((a + b))\n}\n\nsi_par() {\n  [ $(( $1 % 2 )) -eq 0 ] && return 0 || return 1\n}\n\nrezilta=$(sòm 40 2)\necho \"40 + 2 = $rezilta\"\nif si_par 10; then echo \"10 se par\"; fi",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "echo epi pran li ak $(...) — return se selman pou kod soti 0-255"
+              ],
+              "choices": [
+                "A) Ak mo kle return",
+                "B) Ak echo, epi moun ki rele a pran li ak $(...) — return se sèlman pou kòd soti 0-255",
+                "C) Fonksyon pa ka retounen anyen",
+                "D) Ak mo kle output"
+              ],
+              "correct_ht": "B) Ak echo, epi moun ki rele a pran li ak $(...) — return se sèlman pou kòd soti 0-255",
+              "explanation_ht": "return nan Bash limite a 0-255 epi li vle di siksè/echèk. Done tèks soti pa stdout (echo), kidonk ou kaptire li ak substitisyon kòmand.",
+              "id": "bash-n2-l02-e1",
+              "prompt_ht": "Kijan yon fonksyon Bash retounen tèks bay moun ki rele li?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "local"
+              ],
+              "correct_ht": "local",
+              "explanation_ht": "local fè varyab la egziste sèlman andedan fonksyon an — san li, tout varyab yo global pa default nan Bash.",
+              "id": "bash-n2-l02-e2",
+              "prompt_ht": "Ki mo kle ki fè yon varyab lokal nan yon fonksyon? _____ total=0",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Mete set -u nan script ou yo: li fè script la echwe si ou itilize yon varyab ki pa defini — li kenbe fòt tapaj tankou $nno olye $non anvan yo fè dega an silans.",
+          "id": "bash-n2-l02",
+          "title_ht": "Fonksyon",
+          "checkpoints": [
+            {
+              "id": "bash-n2-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « rezilta » genyen? (ekri valè a)",
+              "accepted": [
+                "$(sòm 40 2)"
+              ],
+              "correct_ht": "$(sòm 40 2)",
+              "explanation_ht": "Nan egzanp lan, liy « rezilta = $(sòm 40 2) » mete valè « $(sòm 40 2) » nan bwat « rezilta » a."
+            },
+            {
+              "id": "bash-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Tès fichye ak tèks se travay chak jou yon script. Operatè fichye esansyèl: -e egziste, -f fichye regilye, -d dosye, -s pa vid, -r lizib, -w ekribab, -x egzekitab. Konbinezon klasik: if [ -f \"$f\" ] && [ -s \"$f\" ]; then — 'si se yon fichye ki pa vid'. Pou tèks: = ak != pou egalite, -z pou vid (if [ -z \"$non\" ]; then echo \"Non vid!\"; fi), -n pou pa vid. Longè tèks: ${#non} bay kantite karaktè. Ekstrè pati: ${non:0:3} bay 3 premye karaktè yo. Ranplase: ${fichye%.txt} retire sifiks .txt (itil pou jenere non soti), ${chemen##*/} pran non fichye a san dosye a. Ka pratik: yon script backup ki tcheke dosye sous la egziste (-d), kreye dosye destinasyon an si li pa la (mkdir -p), epi kopye sèlman fichye ki chanje. Tès solid = script solid: yon script ki verifye sipozisyon li yo pa janm fè dega pa sipriz. [[CHECK:bash-n2-l03-c1]] [[CHECK:bash-n2-l03-c2]]",
+          "code": "#!/bin/bash\nsous=\"/done/pwojè\"\nif [ ! -d \"$sous\" ]; then\n  echo \"Erè: $sous pa egziste\" >&2\n  exit 1\nfi\nmkdir -p \"$sous/backup\"\nfor f in \"$sous\"/*.txt; do\n  [ -f \"$f\" ] || continue\n  baz=${f##*/}\n  non=${baz%.txt}\n  echo \"Backup: $non (${#baz} karaktè)\"\ndone",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "-d"
+              ],
+              "choices": [
+                "A) -f",
+                "B) -d",
+                "C) -e",
+                "D) -x"
+              ],
+              "correct_ht": "B) -d",
+              "explanation_ht": "-d teste si chemen an se yon dosye ki egziste. -f se pou fichye regilye, -e pou nenpòt kalite egzistans.",
+              "id": "bash-n2-l03-e1",
+              "prompt_ht": "Ki operatè ki teste si yon chemen se yon dosye?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "-z"
+              ],
+              "correct_ht": "-z",
+              "explanation_ht": "[ -z \"$var\" ] vre si varyab la vid oswa pa defini — tès klasik pou valide antre itilizatè.",
+              "id": "bash-n2-l03-e2",
+              "prompt_ht": "Konplete pou detekte yon varyab vid: if [ _____ \"$non\" ]; then echo \"Vide\"; fi",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "${var:-default} bay yon valè ranplasman si var vid san modifye li — pafè pou paramèt opsyonèl: dosye=${1:-/tmp} pran /tmp si itilizatè a pa bay agiman.",
+          "id": "bash-n2-l03",
+          "title_ht": "Tès fichye ak manipilasyon tèks",
+          "checkpoints": [
+            {
+              "id": "bash-n2-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « sous » genyen? (ekri valè a)",
+              "accepted": [
+                "/done/pwojè",
+                "\"/done/pwojè\""
+              ],
+              "correct_ht": "/done/pwojè",
+              "explanation_ht": "Nan egzanp lan, liy « sous = \"/done/pwojè\" » mete valè « /done/pwojè » nan bwat « sous » a."
+            },
+            {
+              "id": "bash-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 2 — Entèmedyè"
+    },
+    {
+      "id": "n3",
+      "lessons": [
+        {
+          "body_ht": "Pipes (|) ak redireksyon se supèpouvwa liy kòmand lan. Yon pipe voye SOTI yon kòmand kòm ANTRE pwochen an: ls -la | grep \".txt\" filtre lis fichye yo. Cat aksè.log | cut -d' ' -f1 | sort | uniq -c | sort -nr montre IP ki pi aktif yo nan yon log. Redireksyon > voye soti nan yon fichye (ekraze), >> ajoute nan fen (san ekraze), < li antre nan yon fichye. Erè yo ale sou yon kouran apa (stderr): 2> fikse_erè.log pran erè yo, 2>&1 fizyone erè ak soti nòmal, &> pran toude. Konbinezon pwisan: find . -name \"*.log\" 2>/dev/null | xargs grep -l \"ERROR\" chèche ERROR nan tout log san mesaj 'permission denied' yo. /dev/null se 'twou nwa' a: voye sa ou pa vle wè ladan li. Metrize pipes epi w ap fè analiz done konplèks nan yon sèl liy san ekri okenn script. [[CHECK:bash-n3-l01-c1]] [[CHECK:bash-n3-l01-c2]]",
+          "code": "# Top 5 IP nan yon log Apache\ncut -d' ' -f1 aksè.log | sort | uniq -c | sort -nr | head -5\n\n# Chèche erè, inyore pwoblèm pèmisyon\nfind /var/log -name \"*.log\" 2>/dev/null | xargs grep -l \"ERROR\" 2>/dev/null\n\n# Sove soti + erè\n./monscript.sh > soti.log 2> erè.log",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li voye soti yon komand kom antre pwochen an"
+              ],
+              "choices": [
+                "A) Li ekraze yon fichye",
+                "B) Li voye soti yon kòmand kòm antre pwochen an",
+                "C) Li kreye yon nouvo fichye",
+                "D) Li kouri an background"
+              ],
+              "correct_ht": "B) Li voye soti yon kòmand kòm antre pwochen an",
+              "explanation_ht": "Pipe | konekte stdout kòmand agoch la sou stdin kòmand adwat la — se konsa ou konstwi chenn tretman done.",
+              "id": "bash-n3-l01-e1",
+              "prompt_ht": "Kisa pipe | fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "2>"
+              ],
+              "correct_ht": "2>",
+              "explanation_ht": "2> redirije stderr (kouran 2) nan yon fichye. 1> (oubyen >) se pou stdout, &> pou toude.",
+              "id": "bash-n3-l01-e2",
+              "prompt_ht": "Konplete pou voye mesaj erè yo nan yon fichye: ./script.sh _____ erè.log",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan script, prefere 2>/dev/null sèlman pou erè ou ATANN (tankou find sou dosye san pèmisyon). Pa kache tout erè aveugleman — yon erè ou pa wè se yon pwoblèm ou pa ka debog.",
+          "id": "bash-n3-l01",
+          "title_ht": "Pipes ak redireksyon",
+          "checkpoints": [
+            {
+              "id": "bash-n3-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon pipe (|) nan tèminal fè:",
+              "accepted": [
+                "a",
+                "li voye rezilta yon kòmand kòm antre nan pwochen kòmand lan"
+              ],
+              "correct_ht": "A) Li voye rezilta yon kòmand kòm antre nan pwochen kòmand lan",
+              "explanation_ht": "Pa egzanp: ls | grep txt = montre sèlman liy ki gen 'txt'.",
+              "choices": [
+                "A) Li voye rezilta yon kòmand kòm antre nan pwochen kòmand lan",
+                "B) Li koupe tiyo dlo",
+                "C) Li fèmen òdinatè a",
+                "D) Li efase fichye"
+              ]
+            },
+            {
+              "id": "bash-n3-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — npm/pip/composer sèvi pou:",
+              "accepted": [
+                "a",
+                "enstale pakè (kòd pare) lòt moun ekri pou ou itilize"
+              ],
+              "correct_ht": "A) Enstale pakè (kòd pare) lòt moun ekri pou ou itilize",
+              "explanation_ht": "Pa re-envante wou a: itilize travay kominote a.",
+              "choices": [
+                "A) Enstale pakè (kòd pare) lòt moun ekri pou ou itilize",
+                "B) Kwit manje",
+                "C) Lave rad",
+                "D) Kondwi"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "grep, sed ak awk se twa kouto swis tretman tèks. grep chèche modèl: grep \"ERROR\" app.log; grep -i pa sansib ak kaz, -r rechèch rekisif nan dosye, -v envèse (montre liy ki PA matche), -c konte. sed modifye tèks an kouran: sed 's/ansyen/nouvo/g' ranplase tout (san g, sèlman premye pa liy); sed -i modifye fichye a dirèkteman (fè backup ak -i.bak!); sed '/^#/d' efase liy kòmantè. awk se yon mini-langaj pou done an kolòn: awk -F: '{print $1}' /etc/passwd montre premye kolòn. Awk '$3 > 100 {print $1, $3}' filtre sou 3yèm kolòn; awk '{s+=$2} END {print s}' adisyone 2yèm kolòn. Chenn tipik: grep \"ERROR\" app.log | awk '{print $1, $2, $5}' | sort | uniq -c — ekstrè, fòmate, konte. Twa zouti sa yo ranplase santèn liy Python pou travay tèks rapid. [[CHECK:bash-n3-l02-c1]] [[CHECK:bash-n3-l02-c2]]",
+          "code": "# Ranplase tout 'http://' pa 'https://' nan fichye konfig\nsed -i.bak 's|http://|https://|g' config.txt\n\n# Total 2yèm kolòn yon CSV\nawk -F, '{s+=$2} END {print \"Total: \" s}' lavant.csv\n\n# Liy ki gen ERROR men pa DEBUG\ngrep \"ERROR\" app.log | grep -v \"DEBUG\" | head -20",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "sed"
+              ],
+              "choices": [
+                "A) grep",
+                "B) sed",
+                "C) awk",
+                "D) sort"
+              ],
+              "correct_ht": "B) sed",
+              "explanation_ht": "sed (stream editor) fè sibstisyon tèks an kouran ak s/ansyen/nouvo/g. grep chèche, awk trete kolòn.",
+              "id": "bash-n3-l02-e1",
+              "prompt_ht": "Ki zouti ki ranplase tèks nan yon fichye oswa kouran?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "$2"
+              ],
+              "correct_ht": "$2",
+              "explanation_ht": "Nan awk, $1 $2 $3... se kolòn yo (chan yo), $0 se liy antye a. -F presize separetè a.",
+              "id": "bash-n3-l02-e2",
+              "prompt_ht": "Konplete pou awk montre 2yèm kolòn lan: awk -F, '{print _____}' done.csv",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Lè w ap itilize sed -i, TOUJOU bay yon ekstansyon backup (-i.bak) sou fichye enpòtan. Yon regex mal ekri ak -i san backup se yon fichye detwi san retou.",
+          "id": "bash-n3-l02",
+          "title_ht": "grep, sed ak awk",
+          "checkpoints": [
+            {
+              "id": "bash-n3-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — grep sèvi pou:",
+              "accepted": [
+                "a",
+                "chèche liy ki gen yon mo/modèl nan tèks"
+              ],
+              "correct_ht": "A) Chèche liy ki gen yon mo/modèl nan tèks",
+              "explanation_ht": "grep se loup ou pou fouye nan tèks.",
+              "choices": [
+                "A) Chèche liy ki gen yon mo/modèl nan tèks",
+                "B) Desine",
+                "C) Kalkile",
+                "D) Jwe"
+              ]
+            },
+            {
+              "id": "bash-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon script serye dwe echwe PWÒP lè yon bagay pa mache — pa kontinye aveugleman apre yon erè. set -e fè script la soti touswit si yon kòmand echwe (kòd soti ≠ 0). set -u fè li echwe sou varyab ki pa defini. set -o pipefail fè yon chenn pipe echwe si NENPÒT kòmand ladan li echwe (san sa, sèlman dènye a konte). Konbinezon an se liy defans estanda: set -euo pipefail nan tèt chak script serye. Apre sa, tcheke kòd soti kòmand kritik yo: if ! cp \"$sous\" \"$dest\"; then echo \"Kopi echwe\" >&2; exit 1; fi. Redirije mesaj erè sou stderr ak >&2 pou yo pa melanje ak soti nòmal. Epi chwazi kòd soti ki gen sans: 0 = siksè, 1 = erè jeneral, 2 = move itilizasyon. Yon script ak set -euo pipefail + mesaj erè klè + kòd soti pwòp se yon script ou ka mete nan yon cron san pè. [[CHECK:bash-n3-l03-c1]] [[CHECK:bash-n3-l03-c2]]",
+          "code": "#!/bin/bash\nset -euo pipefail\n\nsous=\"${1:?Bay dosye sous la kòm agiman}\"\ndest=\"${2:-/tmp/backup}\"\n\nif [ ! -d \"$sous\" ]; then\n  echo \"Erè: $sous pa yon dosye\" >&2\n  exit 1\nfi\nmkdir -p \"$dest\"\ncp -r \"$sous\" \"$dest\" || { echo \"Kopi echwe\" >&2; exit 1; }\necho \"Backup OK: $sous -> $dest\"",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li fè script la soti touswit si yon komand echwe"
+              ],
+              "choices": [
+                "A) Li montre tout kòmand yo",
+                "B) Li fè script la soti touswit si yon kòmand echwe",
+                "C) Li inyore tout erè",
+                "D) Li fèmen tèminal la"
+              ],
+              "correct_ht": "B) Li fè script la soti touswit si yon kòmand echwe",
+              "explanation_ht": "set -e (errexit): premye kòmand ki tounen kòd ≠ 0 sispann script la. San li, script la kontinye sou done a mwatye — danjere.",
+              "id": "bash-n3-l03-e1",
+              "prompt_ht": "Kisa set -e fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                ">&2"
+              ],
+              "correct_ht": ">&2",
+              "explanation_ht": ">&2 redirije tèks la sou stderr (kouran 2) — konvansyon pou mesaj erè, pou yo pa polye stdout script la.",
+              "id": "bash-n3-l03-e2",
+              "prompt_ht": "Konplete pou mesaj erè a ale sou stderr: echo \"Erè!\" _____",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "set -e gen sibtilite (li pa deklanche nan kèk kontèks tankou kondisyon if). Pou script kritik, konbine li ak tès eksplisit || exit 1 sou kòmand ki vrèman enpòtan yo.",
+          "id": "bash-n3-l03",
+          "title_ht": "Jesyon erè solid",
+          "checkpoints": [
+            {
+              "id": "bash-n3-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « sous » genyen? (ekri valè a)",
+              "accepted": [
+                "${1:?bay dosye sous la kòm agiman}",
+                "\"${1:?bay dosye sous la kòm agiman}\""
+              ],
+              "correct_ht": "${1:?Bay dosye sous la kòm agiman}",
+              "explanation_ht": "Nan egzanp lan, liy « sous = \"${1:?Bay dosye sous la kòm agiman}\" » mete valè « ${1:?Bay dosye sous la kòm agiman} » nan bwat « sous » a."
+            },
+            {
+              "id": "bash-n3-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 3 — Avanse"
+    },
+    {
+      "id": "n4",
+      "lessons": [
+        {
+          "body_ht": "Yon script serye dwe netwaye dèyè li menm lè li entèwonpi: itilizatè peze Ctrl+C, sistèm voye siyal, oswa yon erè rive. trap pèmèt ou pran siyal yo epi egzekite yon netwayaj: trap 'rm -f \"$TMP\"' EXIT egzekite kòmand la lè script la fini — NENPÒT fason li fini (siksè, erè, Ctrl+C). Se fason ki an sekirite pou jere fichye tanporè: kreye ak tmp=$(mktemp), epi trap netwayaj la touswit apre. Ou ka pran siyal espesifik: trap 'echo \"Entèripsyon!\"; exit 130' INT pran Ctrl+C. Konbinezon ekspè konplè: set -euo pipefail + mktemp + trap EXIT + fonksyon netwayaj nome: cleanup() { rm -rf \"$TMPDIR\"; }; trap cleanup EXIT. Sa garanti: pa gen fichye tanporè ki rete, pa gen verou (lock) ki bloke pwochen ekzekisyon, epi konpòtman previzib. Yon script san trap ki kreye fichye tanporè se yon script k ap sal sistèm nan ti kras chak fwa li entèwonpi. [[CHECK:bash-n4-l01-c1]] [[CHECK:bash-n4-l01-c2]]",
+          "code": "#!/bin/bash\nset -euo pipefail\n\nTMPDIR=$(mktemp -d)\ncleanup() {\n  rm -rf \"$TMPDIR\"\n  echo \"Netwayaj fini.\" >&2\n}\ntrap cleanup EXIT INT TERM\n\necho \"Travay nan $TMPDIR...\"\n# ... travay reyèl isit la ...\necho \"Fini.\"",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "egzekite yon netwayaj le script la fini, nenpot fason li fini"
+              ],
+              "choices": [
+                "A) Li anpeche script la janm fini",
+                "B) Li egzekite yon netwayaj lè script la fini, nenpòt fason li fini",
+                "C) Li kreye yon fichye tanporè",
+                "D) Li voye yon imèl"
+              ],
+              "correct_ht": "B) Li egzekite yon netwayaj lè script la fini, nenpòt fason li fini",
+              "explanation_ht": "trap ... EXIT anrejistre yon kòmand ki kouri nan soti script la — siksè, erè set -e, oswa siyal INT/TERM. Netwayaj garanti.",
+              "id": "bash-n4-l01-e1",
+              "prompt_ht": "Kisa trap 'cleanup' EXIT garanti?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "mktemp"
+              ],
+              "correct_ht": "mktemp",
+              "explanation_ht": "mktemp kreye yon fichye/dosye tanporè ak yon non inik an sekirite — pa janm devine non tanporè manyèlman (risk kolizyon ak atak).",
+              "id": "bash-n4-l01-e2",
+              "prompt_ht": "Ki kòmand ki kreye yon dosye tanporè an sekirite? TMPDIR=$(_____ -d)",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pa mete travay lou nan fonksyon trap la: si sistèm nan ap fèmen (TERM), ou gen kèk segonn sèlman. Netwayaj rapid ak idempotent — li dwe mache menm si li kouri de fwa.",
+          "id": "bash-n4-l01",
+          "title_ht": "Trap: netwayaj garanti",
+          "checkpoints": [
+            {
+              "id": "bash-n4-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « TMPDIR » genyen? (ekri valè a)",
+              "accepted": [
+                "$(mktemp -d)"
+              ],
+              "correct_ht": "$(mktemp -d)",
+              "explanation_ht": "Nan egzanp lan, liy « TMPDIR = $(mktemp -d) » mete valè « $(mktemp -d) » nan bwat « TMPDIR » a."
+            },
+            {
+              "id": "bash-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Process substitution <(...) pèmèt ou trete SOTI yon kòmand tankou yon FICHYE — san fichye tanporè reyèl. Sentaks: diff <(ls dosye1) <(ls dosye2) konpare de lis kòm si se te de fichye. Bash kreye yon 'tib' (pipe) oswa /dev/fd epi pase chemen an bay kòmand lan. Ka pwisan: konpare soti tan reyèl ak yon referans: diff <(./jenere_rapò.sh) rapò_referans.txt. Oswa bay plizyè antre nan yon kòmand ki aksepte yon sèl fichye: paste <(cut -d, -f1 a.csv) <(cut -d, -f2 b.csv). Fòm >(....) fè envès la: li pran SOTI kòmand lan kòm antre. Itil pou voye menm done bay de konsomatè: tee >(grep ERROR > erè.log) | grep INFO > info.log separe yon log an de fichye nan yon sèl pas. Limit: se yon ekstansyon Bash (pa POSIX sh) — script ou a dwe gen #!/bin/bash epi pa kouri ak sh. Epi kèk pwogram ki bezwen 'chèche' (seek) nan fichye a pa mache ak tib. [[CHECK:bash-n4-l02-c1]] [[CHECK:bash-n4-l02-c2]]",
+          "code": "# Konpare de dosye san fichye tanporè\ndiff <(ls -1 /sovgad/lendi) <(ls -1 /sovgad/madi)\n\n# Konbine kolòn de CSV san fichye entèmedyè\npaste -d, <(cut -d, -f1 kliyan.csv) <(cut -d, -f3 kòmand.csv) > rezime.csv\n\n# Voye soti bay de tretman an menm tan\ngrep \"TRANZAKSYON\" jounal.log | tee >(grep -c \"OK\" > ok.txt) | grep -c \"ECHWE\" > echwe.txt",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li trete soti yon komand tankou yon fichye, san fichye tanpore"
+              ],
+              "choices": [
+                "A) Li kreye yon pwosesis zombie",
+                "B) Li trete soti yon kòmand tankou yon fichye, san fichye tanporè",
+                "C) Li ranplase yon varyab",
+                "D) Li touye yon pwosesis"
+              ],
+              "correct_ht": "B) Li trete soti yon kòmand tankou yon fichye, san fichye tanporè",
+              "explanation_ht": "<(...) ekspoze soti kòmand lan atravè yon deskriptè fichye (/dev/fd/63) — kòmand lan li li tankou yon fichye nòmal, men pa gen anyen ekri sou disk.",
+              "id": "bash-n4-l02-e1",
+              "prompt_ht": "Kisa <(...) (process substitution) fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "diff"
+              ],
+              "correct_ht": "diff",
+              "explanation_ht": "diff konpare de fichye liy pa liy — ak <(...), de 'fichye' yo se soti de kòmand an tan reyèl.",
+              "id": "bash-n4-l02-e2",
+              "prompt_ht": "Ki kòmand ki konpare de lis dosye: _____ <(ls dosye1) <(ls dosye2)",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Process substitution pa mache si script la kouri ak sh (mòd POSIX). Toujou verifye shebang ou a se #!/bin/bash epi teste ak ./script.sh, pa sh script.sh.",
+          "id": "bash-n4-l02",
+          "title_ht": "Process substitution",
+          "checkpoints": [
+            {
+              "id": "bash-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            },
+            {
+              "id": "bash-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Poukisa pwogram yo ekri nan fichye?",
+              "accepted": [
+                "a",
+                "pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen"
+              ],
+              "correct_ht": "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+              "explanation_ht": "Memwa pwogram nan efase lè li fèmen; fichye a rete sou disk la.",
+              "choices": [
+                "A) Pou sere enfòmasyon epi reli yo pita, menm apre pwogram nan fèmen",
+                "B) Pou fè ekran an bèl",
+                "C) Pou jwe mizik",
+                "D) Pou etenn òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon script pwofesyonèl aksepte opsyon liy kòmand tankou -v (verbose), -o fichye (soti), -h (èd) — menm jan ak zouti sistèm yo. getopts se utilite Bash entegre pou analize yo pwòp: while getopts \":hvo:\" opt. Do case $opt in h) montre_èd. Exit 0;; v) VERBOSE=1;; o) SOTI=\"$OPTARG\";; \\?) echo \"Opsyon enkoni: -$OPTARG\" >&2; exit 2;; :) echo \"-$OPTARG bezwen yon valè\" >&2; exit 2;; esac; done. Chenn \":hvo:\" defini opsyon yo; : devan fè jesyon erè silansye (ou jere \\? ak : tèt ou); : apre o vle di -o pran yon agiman (nan $OPTARG). Apre bouk la, shift $((OPTIND-1)) retire opsyon yo pou $@ gen sèlman agiman pozisyonèl yo. Ajoute yon fonksyon èd (-h) ki eksplike itilizasyon an, valè default pou tout opsyon, epi kòd soti 2 pou move itilizasyon (konvansyon). Yon script ak getopts + èd + default + erè klè se yon zouti lòt moun ka itilize san li kòd ou a. [[CHECK:bash-n4-l03-c1]] [[CHECK:bash-n4-l03-c2]]",
+          "code": "#!/bin/bash\nset -euo pipefail\nVERBOSE=0\nSOTI=\"\"\n\nmontre_èd() { echo \"Itilizasyon: $0 [-v] [-o fichye] dosye\"; }\n\nwhile getopts \":hvo:\" opt; do\n  case $opt in\n    h) montre_èd; exit 0;;\n    v) VERBOSE=1;;\n    o) SOTI=\"$OPTARG\";;\n    \\?) echo \"Opsyon enkoni: -$OPTARG\" >&2; exit 2;;\n    :) echo \"-$OPTARG bezwen yon valè\" >&2; exit 2;;\n  esac\ndone\nshift $((OPTIND - 1))\n[ $# -eq 0 ] && { montre_èd; exit 2; }",
+          "code_lang": "bash",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li pran yon agiman (valè a nan $optarg)"
+              ],
+              "choices": [
+                "A) Li opsyonèl",
+                "B) Li pran yon agiman (valè a nan $OPTARG)",
+                "C) Li entèdi",
+                "D) Li repete"
+              ],
+              "correct_ht": "B) Li pran yon agiman (valè a nan $OPTARG)",
+              "explanation_ht": "Nan chenn getopts, yon : apre lèt opsyon an vle di li egzije yon agiman; getopts mete valè a nan varyab $OPTARG.",
+              "id": "bash-n4-l03-e1",
+              "prompt_ht": "Kisa : apre o nan \":hvo:\" vle di?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "optarg"
+              ],
+              "correct_ht": "OPTARG",
+              "explanation_ht": "$OPTARG se varyab getopts ranpli ak valè agiman opsyon aktyèl la (egzanp: -o rapò.txt → OPTARG=rapò.txt).",
+              "id": "bash-n4-l03-e2",
+              "prompt_ht": "Ki varyab ki kenbe valè agiman yon opsyon? SOTI=\"$_____\"",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pou script konplèks ak opsyon long (--verbose), getopts pa sifi — itilize GNU getopt (kòmand ekstèn) oswa yon ti parseur manyèl. Men pou 90% script yo, getopts se bon chwa a.",
+          "id": "bash-n4-l03",
+          "title_ht": "getopts: opsyon pwofesyonèl",
+          "checkpoints": [
+            {
+              "id": "bash-n4-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « VERBOSE » genyen? (ekri valè a)",
+              "accepted": [
+                "0"
+              ],
+              "correct_ht": "0",
+              "explanation_ht": "Nan egzanp lan, liy « VERBOSE = 0 » mete valè « 0 » nan bwat « VERBOSE » a."
+            },
+            {
+              "id": "bash-n4-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 4 — Ekspè"
+    }
+  ],
+  "name": "Bash"
+}

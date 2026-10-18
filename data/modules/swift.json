@@ -1,0 +1,791 @@
+{
+  "id": "swift",
+  "name": "Swift",
+  "category_ht": "Mobil",
+  "description_ht": "Swift se langaj Apple kreye pou iPhone, iPad ak Mac — rapid, an sekirite, epi fasil pou li. Se li ki dèyè tout aplikasyon natif iOS yo.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "swift-n1-l01",
+          "title_ht": "Premye pwogram Swift ou",
+          "body_ht": "Swift se langaj Apple te kreye an 2014 pou ranplase Objective-C — li pi rapid, pi an sekirite, epi pi agreyab pou ekri. Pou devlope pou iPhone, ou itilize Xcode (gratis sou Mac) oswa yon \"playground\", yon teren jwèt kote kòd la egzekite touswit. Fonksyon print() la afiche tèks sou konsòl la: print(\"Bonjou, Ayiti!\") montre mesaj la. Kontrèman ak anpil langaj, Swift pa mande pwen-virgil nan fen liy yo, epi kòd la li prèske tankou fraz angle senp. Lè ou lanse pwogram nan, enstriksyon yo egzekite liy pa liy, soti anwo desann. Ou ka eseye Swift sou entènèt tou san Mac, sou sit tankou swiftfiddle.com. Yon fwa ou konprann print, ou deja ka kominike ak itilizatè a. Nan pwochen leson an, nou pral aprann kijan pou sere enfòmasyon nan varyab ak konstan. Chak enstriksyon egzekite nan lòd ou ekri yo, epi ou ka mete plizyè print youn apre lòt pou swiv pwogrè pwogram nan. Se teknik debogaj ki pi senp lan, epi ou pral itilize l chak jou. [[CHECK:swift-n1-l01-c1]] [[CHECK:swift-n1-l01-c2]]",
+          "code": "print(\"Bonjou, Ayiti!\")\nprint(\"Byenveni nan Swift\")",
+          "code_lang": "swift",
+          "expert_note_ht": "Nan app reyèl, print sèvi sèlman pou debogaj pandan devlopman — pou itilizatè final, ou montre tèks atravè entèfas (SwiftUI) olye konsòl.",
+          "exercises": [
+            {
+              "id": "swift-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon Swift itilize pou afiche tèks sou konsòl la?",
+              "choices": [
+                "A) echo()",
+                "B) print()",
+                "C) println()",
+                "D) show()"
+              ],
+              "accepted": [
+                "b",
+                "print",
+                "print()"
+              ],
+              "correct_ht": "B) print()",
+              "explanation_ht": "print() se fonksyon Swift pou afiche sou konsòl la; println se pou Kotlin/Java."
+            },
+            {
+              "id": "swift-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Ekri non fonksyon ki manke a: _____(\"Bonjou\")",
+              "accepted": [
+                "print"
+              ],
+              "correct_ht": "print",
+              "explanation_ht": "print(\"Bonjou\") afiche mo Bonjou a sou konsòl la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n1-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou, ayiti!",
+                "\"bonjou, ayiti!\""
+              ],
+              "correct_ht": "Bonjou, Ayiti!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou, Ayiti! »."
+            },
+            {
+              "id": "swift-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kisa print() fè?",
+              "accepted": [
+                "a",
+                "li montre yon mesaj sou ekran an"
+              ],
+              "correct_ht": "A) Li montre yon mesaj sou ekran an",
+              "explanation_ht": "print() se fason pwogram nan pale ak ou: li ekri tèks sou ekran an.",
+              "choices": [
+                "A) Li montre yon mesaj sou ekran an",
+                "B) Li etenn òdinatè a",
+                "C) Li efase yon fichye",
+                "D) Li fèmen pwogram nan"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "swift-n1-l02",
+          "title_ht": "Varyab ak konstan: var ak let",
+          "body_ht": "Nan Swift gen de fason pou sere yon valè: var pou varyab ki ka chanje, let pou konstan ki pa janm chanje apre ou kreye yo. Egzanp: var laj = 25 ka vin 26 pita, men let non = \"Garry\" rete \"Garry\" pou tout tan. Swift se yon langaj ak tip strik, men li entelijan: li devine tip la pou kont li. laj = 25 vin yon Int (nonm antye), pri = 19.99 vin yon Double (desimal), marye = true vin yon Bool (vre/fo), epi non = \"Garry\" vin yon String (tèks). Ou ka deklare tip la aklè tou: var vil: String = \"Pòtoprens\". Règ an lò nan Swift: itilize let pa defo, epi chanje pou var sèlman lè ou vreman bezwen modifye valè a. Konpilatè a ap pwoteje w: si ou eseye chanje yon let, li refize konpile. Abitid sa a anpeche yon pakèt pinèz depi nan kòmansman. Bay varyab ou yo non ki eksplike sa yo kenbe, tankou nonItilizatè olye x. Kòd ou a se dokimantasyon tèt li, epi ou menm nan twa mwa ap remèsye w. [[CHECK:swift-n1-l02-c1]] [[CHECK:swift-n1-l02-c2]]",
+          "code": "let non = \"Garry\"\nvar laj = 25\nlaj = 26\nprint(\"\\(non) gen \\(laj) an\")",
+          "code_lang": "swift",
+          "expert_note_ht": "Itilize let toutotan ou kapab: sa pèmèt konpilatè a optimize kòd la epi li rann entansyon ou klè pou lòt devlopè yo.",
+          "exercises": [
+            {
+              "id": "swift-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ou itilize pou yon konstan ki pa ka chanje?",
+              "choices": [
+                "A) var",
+                "B) let",
+                "C) const",
+                "D) val"
+              ],
+              "accepted": [
+                "b",
+                "let"
+              ],
+              "correct_ht": "B) let",
+              "explanation_ht": "let deklare yon konstan; var se pou varyab ki ka chanje."
+            },
+            {
+              "id": "swift-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou deklare yon konstan non: ___ non = \"Ayiti\"",
+              "accepted": [
+                "let"
+              ],
+              "correct_ht": "let",
+              "explanation_ht": "let non = \"Ayiti\" kreye yon konstan tèks ki pa ka chanje."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « laj » genyen? (ekri valè a)",
+              "accepted": [
+                "26"
+              ],
+              "correct_ht": "26",
+              "explanation_ht": "Nan egzanp lan, liy « laj = 26 » mete valè « 26 » nan bwat « laj » a."
+            },
+            {
+              "id": "swift-n1-l02-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "\\(non) gen \\(laj) an",
+                "\"\\(non) gen \\(laj) an\""
+              ],
+              "correct_ht": "\\(non) gen \\(laj) an",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « \\(non) gen \\(laj) an »."
+            }
+          ]
+        },
+        {
+          "id": "swift-n1-l03",
+          "title_ht": "Fonksyon: func",
+          "body_ht": "Yon fonksyon se yon blok kòd ou bay yon non pou re-itilize l. Nan Swift ou deklare l ak mo kle func. Egzanp lan: func sòm(a: Int, b: Int) -> Int. Non an se sòm, li pran de paramèt a ak b (tou de Int), epi -> Int di ki tip done fonksyon an retoune. Mo kle return voye rezilta a bay moun ki rele l. Yon patikilarite Swift: chak paramèt gen yon \"label\" pou apèl la. Lè ou rele sòm(a: 3, b: 4), ou dwe ekri label yo a: ak b: — sa fè apèl yo li tankou fraz: voyeImèl(bay: \"Ana\"). Si ou pa vle label, mete _ devan non paramèt la: func sòm(_ a: Int, _ b: Int). Fonksyon yo se zo do tout app: yo divize travay an ti moso klè, fasil pou teste epi pou re-itilize. Bay chak fonksyon yon non ki di egzakteman sa l fè. [[CHECK:swift-n1-l03-c1]] [[CHECK:swift-n1-l03-c2]]",
+          "code": "func sòm(a: Int, b: Int) -> Int {\n    return a + b\n}\n\nprint(sòm(a: 3, b: 4))",
+          "code_lang": "swift",
+          "expert_note_ht": "Swiv gid nonmen Apple la: non fonksyon yo kòmanse ak vèb (kalkile, chaje, voye) epi label paramèt yo fè apèl la li tankou yon fraz natirèl.",
+          "exercises": [
+            {
+              "id": "swift-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle deklare yon fonksyon nan Swift?",
+              "choices": [
+                "A) function",
+                "B) fun",
+                "C) func",
+                "D) def"
+              ],
+              "accepted": [
+                "c",
+                "func"
+              ],
+              "correct_ht": "C) func",
+              "explanation_ht": "func se mo kle Swift pou deklare fonksyon; fun se pou Kotlin."
+            },
+            {
+              "id": "swift-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou fonksyon an retoune yon Int: func doub(n: Int) -> ___ { return n * 2 }",
+              "accepted": [
+                "int"
+              ],
+              "correct_ht": "Int",
+              "explanation_ht": "-> Int apre parantèz yo deklare tip done fonksyon an ap retoune."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "sòm(a: 3, b: 4)"
+              ],
+              "correct_ht": "sòm(a: 3, b: 4)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « sòm(a: 3, b: 4) »."
+            },
+            {
+              "id": "swift-n1-l03-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "sòm"
+              ],
+              "correct_ht": "sòm",
+              "explanation_ht": "Fonksyon an rele « sòm » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "swift-n2-l04",
+          "title_ht": "Kondisyon: if, guard ak switch",
+          "body_ht": "Swift gen twa zam pou pran desizyon. if/else se baz la: si kondisyon an vre, yon blok kouri, sinon lòt la. Dezyèm lan se guard — se if tèt anba: ou ekri kondisyon ou ATANN lan, epi si li PA satisfè, ou sòti nan fonksyon an touswit ak return. Egzanp: guard let non = nonOpsyonèl else { return } — si nonOpsyonèl pa gen valè, fonksyon an kanpe la. Sa evite \"piramid\" if andedan if, epi kòd la rete plat e lizib. Twazyèm lan se switch: ou teste yon valè kont plizyè case. Swift egzije switch la \"exhaustive\" — ou dwe kouvri tout ka posib, sinon ou mete default. Sa se yon pwoteksyon: konpilatè a pa kite ou bliye yon ka. Nan app iOS, ou pral itilize guard tout tan pou valide done, epi switch pou jere eta ekran yo. Nan switch, ou ka teste entèval tou: case 90...100 pou nòt, menm jan ak lòt langaj. Epi ou ka mete plizyè valè nan yon sèl case ak vigil, tankou case \"samdi\", \"dimanch\":. [[CHECK:swift-n2-l04-c1]] [[CHECK:swift-n2-l04-c2]]",
+          "code": "func salye(nonOpsyonèl: String?) {\n    guard let non = nonOpsyonèl else {\n        print(\"Pa gen non\")\n        return\n    }\n    print(\"Bonjou, \\(non)!\")\n}\n\nlet jou = \"lendi\"\nswitch jou {\ncase \"samdi\", \"dimanch\":\n    print(\"Wikenn!\")\ndefault:\n    print(\"Jou lasemèn\")\n}",
+          "code_lang": "swift",
+          "expert_note_ht": "Prefere guard olye if pou kondisyon sòti bonè — kòd la vin pi plat, chemen \"kè kontan\" an rete sou bò goch, fasil pou swiv.",
+          "exercises": [
+            {
+              "id": "swift-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle pèmèt ou sòti bonè nan yon fonksyon lè yon kondisyon pa satisfè?",
+              "choices": [
+                "A) break",
+                "B) guard",
+                "C) exit",
+                "D) unless"
+              ],
+              "accepted": [
+                "b",
+                "guard"
+              ],
+              "correct_ht": "B) guard",
+              "explanation_ht": "guard verifye kondisyon an; si li fo, blok else a egzekite (souvan return) epi fonksyon an kanpe."
+            },
+            {
+              "id": "swift-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou dewoule opsyonèl la oswa sòti: ___ let non = nonOpsyonèl else { return }",
+              "accepted": [
+                "guard"
+              ],
+              "correct_ht": "guard",
+              "explanation_ht": "guard let dewoule opsyonèl la; si li nil, else a kouri epi fonksyon an retounen."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n2-l04-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "pa gen non",
+                "\"pa gen non\""
+              ],
+              "correct_ht": "Pa gen non",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Pa gen non »."
+            },
+            {
+              "id": "swift-n2-l04-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "salye"
+              ],
+              "correct_ht": "salye",
+              "explanation_ht": "Fonksyon an rele « salye » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "swift-n2-l05",
+          "title_ht": "Bouk ak koleksyon",
+          "body_ht": "Pou repete aksyon, Swift gen bouk for-in ki mache sou sekans: for i in 1...5 repete 5 fwa (note twa pwen ... ki enkli dènye a, kontrèman ak 1..<5 ki ekskli l). Ou itilize l tou pou mache sou tablo: for fwi in fwiYo. Bouk while kontinye toutotan kondisyon an vre. Pou sere plizyè valè, gen Array (lis òdone): var fwi = [\"mango\", \"bannann\"], kote fwi[0] se premye eleman an. Gen Dictionary (kle → valè): var pri = [\"mango\": 50], kote pri[\"mango\"] bay 50. Epi gen Set pou koleksyon san doublon. Tablo Swift yo an sekirite: si ou eseye li yon endèks ki pa egziste, pwogram nan kanpe ak erè olye li bay fatra — se yon pwoteksyon, pa yon pwoblèm. Nan app iOS, koleksyon yo dèyè chak lis: kontak, pwodwi, notifikasyon. Pou ajoute yon eleman nan yon tablo, itilize append: fwi.append(\"papay\"). Pou wè kantite eleman: fwi.count. Epi pou verifye si yon tablo vid: fwi.isEmpty — pi klè pase tcheke count == 0. [[CHECK:swift-n2-l05-c1]] [[CHECK:swift-n2-l05-c2]]",
+          "code": "let fwi = [\"mango\", \"bannann\", \"zoranji\"]\nfor f in fwi {\n    print(f)\n}\nfor i in 1...3 {\n    print(\"Tou \\(i)\")\n}\nlet pri = [\"mango\": 50, \"bannann\": 25]\nprint(pri[\"mango\"] ?? 0)",
+          "code_lang": "swift",
+          "expert_note_ht": "Pou transfòmasyon koleksyon, prefere map/filter/reduce olye bouk for — se stil fonksyonèl Swift la epi kòd la pi ekspresif.",
+          "exercises": [
+            {
+              "id": "swift-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki bouk ki mache sou chak eleman yon tablo?",
+              "choices": [
+                "A) for fwi in fwiYo",
+                "B) for (i = 0; i < n; i++)",
+                "C) foreach fwi",
+                "D) loop fwi"
+              ],
+              "accepted": [
+                "a",
+                "for-in",
+                "for in"
+              ],
+              "correct_ht": "A) for fwi in fwiYo",
+              "explanation_ht": "for-in se bouk natif Swift pou itere sou sekans ak koleksyon."
+            },
+            {
+              "id": "swift-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete bouk la: for fwi ___ fwiYo { print(fwi) }",
+              "accepted": [
+                "in"
+              ],
+              "correct_ht": "in",
+              "explanation_ht": "Mo kle in separe varyab bouk la ak koleksyon l ap mache sou li a."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n2-l05-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "f"
+              ],
+              "correct_ht": "f",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « f »."
+            },
+            {
+              "id": "swift-n2-l05-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "swift-n2-l06",
+          "title_ht": "Optionals: jere valè ki ka pa la",
+          "body_ht": "Nan anpil langaj, eseye itilize yon valè ki pa egziste fè pwogram nan kraze (pi popilè: NullPointerException). Swift rezoud pwoblèm sa a ak Optionals. Yon Optional se yon bwat ki ka gen yon valè OSWA pa gen anyen (nil). Ou deklare l ak ?: var non: String? = nil. Ou pa ka itilize l dirèkteman — fòk ou \"dewoule\" (unwrap) l anvan. Fason pi an sekirite: if let non = nonOpsyonèl — si gen valè, li antre nan blok la ak valè a dewoule; sinon li sote. Oswa guard let pou sòti bonè. Genyen tou \"nil coalescing\" ??: let afichaj = nonOpsyonèl ?? \"Envite\" — li itilize valè a si li egziste, sinon li pran \"Envite\". Evite ! (force unwrap) sof si ou SÈTEN gen valè — se li ki fè app kraze. Optionals se kè sekirite Swift la: konpilatè a fòse w jere ka \"pa gen valè\" a. Sonje: yon Optional ki pa janm resevwa valè rete nil, epi eseye dewoule l ak ! ap kraze pwogram nan touswit. [[CHECK:swift-n2-l06-c1]] [[CHECK:swift-n2-l06-c2]]",
+          "code": "var surnon: String? = nil\nsurnon = \"Ti Garry\"\n\nif let s = surnon {\n    print(\"Surnon: \\(s)\")\n}\n\nlet afichaj = surnon ?? \"Envite\"\nprint(afichaj)",
+          "code_lang": "swift",
+          "expert_note_ht": "Pa janm itilize force unwrap (!) sou done ki soti deyò (rezo, itilizatè) — se sous nimewo 1 kraze app iOS nan pwodiksyon.",
+          "exercises": [
+            {
+              "id": "swift-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa \"String?\" vle di nan Swift?",
+              "choices": [
+                "A) Yon tèks ki pa janm vid",
+                "B) Yon tèks ki ka gen valè oswa nil",
+                "C) Yon tèks ki toujou nil",
+                "D) Yon erè sentaks"
+              ],
+              "accepted": [
+                "b",
+                "opsyonel",
+                "optional",
+                "ka gen vale oswa nil"
+              ],
+              "correct_ht": "B) Yon tèks ki ka gen valè oswa nil",
+              "explanation_ht": "? apre tip la fè l vin yon Optional: bwat ki ka gen valè oswa nil."
+            },
+            {
+              "id": "swift-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou itilize \"Envite\" si pa gen valè: let n = nonOpsyonèl ?? ___",
+              "accepted": [
+                "\"envite\"",
+                "envite"
+              ],
+              "correct_ht": "\"Envite\"",
+              "explanation_ht": "?? (nil coalescing) bay valè adwat la lè opsyonèl la se nil."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n2-l06-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « surnon » genyen? (ekri valè a)",
+              "accepted": [
+                "ti garry",
+                "\"ti garry\""
+              ],
+              "correct_ht": "Ti Garry",
+              "explanation_ht": "Nan egzanp lan, liy « surnon = \"Ti Garry\" » mete valè « Ti Garry » nan bwat « surnon » a."
+            },
+            {
+              "id": "swift-n2-l06-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "surnon: \\(s)",
+                "\"surnon: \\(s)\""
+              ],
+              "correct_ht": "Surnon: \\(s)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Surnon: \\(s) »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "swift-n3-l07",
+          "title_ht": "Klas, Struct ak Protocol",
+          "body_ht": "Swift gen de fason pou kreye tip pwòp ou: class ak struct. Diferans fondamantal la: class se tip REFERANS (lè ou pase l, ou pase adrès la. De varyab ka pwente sou menm objè a), struct se tip VALÈ (lè ou pase l, ou fè yon kopi). Règ senp: itilize struct pa defo; itilize class sèlman lè ou bezwen pataje eta oswa eritay. Egzanp lan montre struct Veyikil ak yon pwopriyete vitès ak yon metòd akselere() — note mo kle mutating, obligatwa pou metòd ki chanje yon struct. Protocol se yon kontra: li deklare sa yon tip dwe kapab fè, san di kijan. protocol Kondwi { func demare() } — nenpòt class oswa struct ki adopte l dwe gen metòd demare. Se baz \"protocol-oriented programming\", filozofi Apple la: ou pwograme kont kontra, pa kont tip konkrè. Sa rann kòd la fleksib epi fasil pou teste. Yon protocol ka egzije pwopriyete tou, pa sèlman metòd: var non: String { get } — nenpòt tip ki adopte l dwe bay pwopriyete sa a. [[CHECK:swift-n3-l07-c1]] [[CHECK:swift-n3-l07-c2]]",
+          "code": "struct Veyikil {\n    var vitès = 0\n    mutating func akselere() {\n        vitès += 10\n    }\n}\n\nprotocol Kondwi {\n    func demare()\n}\n\nvar machin = Veyikil()\nmachin.akselere()\nprint(machin.vitès)",
+          "code_lang": "swift",
+          "expert_note_ht": "Nan SwiftUI, tout view yo se struct — se poutèt sa yo lejè epi rapid; class rezève pou modèl done pataje (@Observable).",
+          "exercises": [
+            {
+              "id": "swift-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki diferans prensipal ant struct ak class nan Swift?",
+              "choices": [
+                "A) struct pi rapid toujou",
+                "B) struct se tip valè (kopi), class se tip referans",
+                "C) class pa ka gen metòd",
+                "D) Pa gen diferans"
+              ],
+              "accepted": [
+                "b",
+                "tip vale",
+                "vale vs referans"
+              ],
+              "correct_ht": "B) struct se tip valè (kopi), class se tip referans",
+              "explanation_ht": "Lè ou pase yon struct, ou kopye l; lè ou pase yon class, ou pataje menm enstans lan."
+            },
+            {
+              "id": "swift-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon struct la: ___ Veyikil { var vitès = 0 }",
+              "accepted": [
+                "struct"
+              ],
+              "correct_ht": "struct",
+              "explanation_ht": "struct kreye yon tip valè — chwa pa defo nan Swift modèn."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n3-l07-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "machin.vitès"
+              ],
+              "correct_ht": "machin.vitès",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « machin.vitès »."
+            },
+            {
+              "id": "swift-n3-l07-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "akselere"
+              ],
+              "correct_ht": "akselere",
+              "explanation_ht": "Fonksyon an rele « akselere » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "swift-n3-l08",
+          "title_ht": "Closures: fonksyon san non",
+          "body_ht": "Yon resèt kwizin se yon lis etap ou swiv chak fwa ou vle fè diri kole. Yon fonksyon se yon resèt pou òdinatè a: ou ekri etap yo yon fwa, epi ou rele l chak fwa ou bezwen l.\n\n [[CHECK:swift-n3-l08-c1]]\n\nYon closure se yon blok kòd ou ka sere nan yon varyab epi pase kòm paramèt — tankou yon ti machin ou bay yon lòt fonksyon pou li kondi. Sentaks konplè a: { (paramèt) -> TipRetou in kò }. Men Swift gen rakousi elegant: lè yon closure se dènye paramèt yon fonksyon, ou ka ekri l deyò parantèz yo (\"trailing closure\"). Epi pou closure yon sèl liy ak yon sèl paramèt, ou ka itilize $0 pou premye paramèt la san nonmen l: nonb.map { $0 * 2 }. Egzanp lan montre twa fòm: yon closure sere nan varyab, yon trailing closure ak sorted, epi $0 ak map. Closure yo toupatou nan iOS: bouton aksyon, konplesyon rezo, animasyon. Konprann yo se konprann mwatye kòd Swift ou pral li. Atansyon nan pwochen nivo a: closure yo ka kenbe referans fò epi kreye sik memwa — n ap wè kijan pou evite sa. [[CHECK:swift-n3-l08-c2]]",
+          "code": "let doub = { (n: Int) -> Int in n * 2 }\nprint(doub(5))\n\nlet nonb = [3, 1, 2]\nlet triye = nonb.sorted { $0 < $1 }\nprint(triye)\nlet kare = nonb.map { $0 * $0 }\nprint(kare)",
+          "code_lang": "swift",
+          "expert_note_ht": "Lè yon closure bezwen sòti nan fonksyon an (escaping), Swift fòse w make paramèt la @escaping — sa fè lavi memwa a eksplisit.",
+          "exercises": [
+            {
+              "id": "swift-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Nan yon closure, kisa \"$0\" reprezante?",
+              "choices": [
+                "A) Premye liy kòd la",
+                "B) Premye paramèt closure a",
+                "C) Valè retou a",
+                "D) Kantite paramèt yo"
+              ],
+              "accepted": [
+                "b",
+                "premye paramet",
+                "premye paramèt"
+              ],
+              "correct_ht": "B) Premye paramèt closure a",
+              "explanation_ht": "$0, $1... se non rakousi pou paramèt closure yo, nan lòd yo vini."
+            },
+            {
+              "id": "swift-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou triple chak nonm: let t = nonb.map { $0 * ___ }",
+              "accepted": [
+                "3"
+              ],
+              "correct_ht": "3",
+              "explanation_ht": "$0 se chak eleman; $0 * 3 triple li epi map bay nouvo tablo a."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n3-l08-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "doub(5)"
+              ],
+              "correct_ht": "doub(5)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « doub(5) »."
+            },
+            {
+              "id": "swift-n3-l08-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "swift-n3-l09",
+          "title_ht": "async/await: kòd asenkron modèn",
+          "body_ht": "Lè manman w voye w achte pen, ou pa kanpe devan fou a ap tann li kwit — ou fè lòt bagay epi ou tounen. Kòd asenkron fè menm jan: li lanse yon travay epi li kontinye.\n\n [[CHECK:swift-n3-l09-c1]]\n\nLè app ou a chaje done sou entènèt, ou pa vle ekran an jele. Anvan, devlopè yo te itilize \"completion handler\" (closure anndan closure) ki te vin yon labirent. Swift modèn gen async/await: ou make yon fonksyon async, epi ou rele l ak await. Egzanp: func chajeNon() async -> String — mo kle async di \"fonksyon sa a ka pran tan\". Lè ou ekri let non = await chajeNon(), pwogram nan SISPANN nan pwen sa a san bloke thread la, epi li reprann lè done a rive. Kòd la li tankou kòd senkron senp! Pou rele yon fonksyon async, ou dwe nan yon kontèks async tou, oswa andedan yon Task { ... }. Nan egzanp lan, Task lanse travay la epi await tann rezilta a. Nan iOS, ou lanse Task nan .task (SwiftUI) oswa nan aksyon bouton. async/await se fason ofisyèl pou rezo nan Swift jodi a. Ou ka lanse plizyè Task an paralèl epi tann yo tout ak await — men fòk ou jere anilasyon pwòp pou pa kite travay kouri pou kont yo. [[CHECK:swift-n3-l09-c2]]",
+          "code": "func chajeNon() async -> String {\n    try? await Task.sleep(nanoseconds: 500_000_000)\n    return \"Garry\"\n}\n\nTask {\n    let non = await chajeNon()\n    print(\"Bonjou, \\(non)!\")\n}",
+          "code_lang": "swift",
+          "expert_note_ht": "Pa melanje completion handler ak async/await nan nouvo kòd — gen withCheckedContinuation pou pon ansyen API yo, men nouvo kòd dwe natif async.",
+          "exercises": [
+            {
+              "id": "swift-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle make yon fonksyon ki ka pran tan (asenkron)?",
+              "choices": [
+                "A) await",
+                "B) async",
+                "C) task",
+                "D) sleep"
+              ],
+              "accepted": [
+                "b",
+                "async"
+              ],
+              "correct_ht": "B) async",
+              "explanation_ht": "async make fonksyon an; await se pou RELE l epi tann rezilta a."
+            },
+            {
+              "id": "swift-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete apèl la pou tann rezilta a: let non = ___ chajeNon()",
+              "accepted": [
+                "await"
+              ],
+              "correct_ht": "await",
+              "explanation_ht": "await sispann egzekisyon an san bloke thread la, jous done a rive."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n3-l09-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou, \\(non)!",
+                "\"bonjou, \\(non)!\""
+              ],
+              "correct_ht": "Bonjou, \\(non)!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou, \\(non)! »."
+            },
+            {
+              "id": "swift-n3-l09-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "chajenon"
+              ],
+              "correct_ht": "chajeNon",
+              "explanation_ht": "Fonksyon an rele « chajeNon » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "swift-n4-l10",
+          "title_ht": "Actors: sekirite kont aksè similtane",
+          "body_ht": "Lè plizyè travay asenkron touche menm done an menm tan, ou ka gen \"data race\": rezilta enprevizib, pinèz difisil pou jwenn. Swift rezoud sa ak actor. Yon actor se tankou yon class, men li pwoteje eta li: yon sèl travay ka antre ladann alafwa, lòt yo tann tou yo. Egzanp: actor Kont gen yon balans; de travay k ap depoze an menm tan pa ka koronpi balans lan paske actor a serialize aksè yo. Pou rele yon metòd actor depi deyò, ou dwe itilize await — menm si metòd la pa async — paske ou ka bezwen tann tou pa w. Konpilatè Swift 6 la menm verifye sa otomatikman (\"strict concurrency\"): li refize konpile kòd ki ka gen data race. Pou done senp ou ka itilize tou Sendable oswa @MainActor (pou kòd ki dwe kouri sou thread prensipal, tankou UI). Metrize actors, epi kòd konkiran ou a vin pwouve an sekirite depi konpilasyon. [[CHECK:swift-n4-l10-c1]] [[CHECK:swift-n4-l10-c2]]",
+          "code": "actor Kont {\n    var balans = 0\n    func depoze(_ montan: Int) {\n        balans += montan\n    }\n}\n\nlet kont = Kont()\nTask {\n    await kont.depoze(100)\n    print(await kont.balans)\n}",
+          "code_lang": "swift",
+          "expert_note_ht": "Mete @MainActor sou ViewModel/UI klas yo: tout aksè UI dwe sou main thread, epi anotasyon sa a fè konpilatè a verifye l pou ou.",
+          "exercises": [
+            {
+              "id": "swift-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki pwoblèm yon actor pwoteje w kont li?",
+              "choices": [
+                "A) Erè sentaks",
+                "B) Aksè similtane (data race) sou menm done",
+                "C) Mank memwa",
+                "D) Koneksyon rezo dousman"
+              ],
+              "accepted": [
+                "b",
+                "data race",
+                "akses similtane",
+                "aksè similtane"
+              ],
+              "correct_ht": "B) Aksè similtane (data race) sou menm done",
+              "explanation_ht": "Actor a pèmèt yon sèl travay alafwa, kidonk done pataje pa ka koronpi."
+            },
+            {
+              "id": "swift-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon an: ___ Kont { var balans = 0 }",
+              "accepted": [
+                "actor"
+              ],
+              "correct_ht": "actor",
+              "explanation_ht": "actor kreye yon tip ki serialize tout aksè sou eta li."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n4-l10-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "await kont.balans"
+              ],
+              "correct_ht": "await kont.balans",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « await kont.balans »."
+            },
+            {
+              "id": "swift-n4-l10-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "depoze"
+              ],
+              "correct_ht": "depoze",
+              "explanation_ht": "Fonksyon an rele « depoze » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "swift-n4-l11",
+          "title_ht": "SwiftUI avanse: jesyon eta",
+          "body_ht": "SwiftUI bati ekran ak deklarasyon: ou dekri KISA ekran an dwe montre, epi SwiftUI mete l ajou lè done chanje. Kle a se \"property wrappers\" pou eta. @State kenbe yon valè lokal yon view posede: @State private var kontè = 0 — lè kontè chanje, view a rebati otomatikman. @Binding pèmèt yon view timoun modifye eta paran an san posede l. Pou objè pataje (modèl done), gen @StateObject (view a kreye epi posede objè a) ak @ObservedObject / nouvo @Observable macro a. NavigationStack jere pil ekran yo ak chemen tip-ansekirite, epi .task lanse travay async lè view a parèt (ranplasan onAppear + Task). ViewModifier pèmèt ou anbale stil re-itilizab. Règ nò: eta a desann (paran → timoun), evènman yo monte (timoun → paran). Achitekti sa a fè app konplèks rete previzib. Pou pataje eta ant plizyè view, monte @State la nan paran ki pi wo a epi pase l desann ak @Binding — se modèl \"single source of truth\" la. [[CHECK:swift-n4-l11-c1]] [[CHECK:swift-n4-l11-c2]]",
+          "code": "struct KontèView: View {\n    @State private var kontè = 0\n    var body: some View {\n        VStack {\n            Text(\"Kontè: \\(kontè)\")\n            Button(\"Mete +1\") { kontè += 1 }\n        }\n    }\n}",
+          "code_lang": "swift",
+          "expert_note_ht": "Kenbe @State prive epi piti; tout eta pataje monte nan yon @Observable view-model — se separasyon ki anpeche view yo vin \"massive\".",
+          "exercises": [
+            {
+              "id": "swift-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki property wrapper ou itilize pou yon eta lokal yon view posede?",
+              "choices": [
+                "A) @Binding",
+                "B) @State",
+                "C) @Published",
+                "D) @Environment"
+              ],
+              "accepted": [
+                "b",
+                "@state",
+                "state"
+              ],
+              "correct_ht": "B) @State",
+              "explanation_ht": "@State kenbe eta prive view a; lè li chanje, SwiftUI rebati view a."
+            },
+            {
+              "id": "swift-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon eta a: @___ kontè = 0",
+              "accepted": [
+                "state"
+              ],
+              "correct_ht": "State",
+              "explanation_ht": "@State make varyab la yon sous verite reyaktif pou view a."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n4-l11-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — 'Eta' (state) yon app se:",
+              "accepted": [
+                "a",
+                "sa app lan sonje: kote itilizatè a ye, sa l te fè"
+              ],
+              "correct_ht": "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+              "explanation_ht": "Chanje eta a = re-desine ekran an.",
+              "choices": [
+                "A) Sa app lan sonje: kote itilizatè a ye, sa l te fè",
+                "B) Koulè telefòn nan",
+                "C) Non itilizatè sèlman",
+                "D) Lè a"
+              ]
+            },
+            {
+              "id": "swift-n4-l11-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon pil (stack) mache:",
+              "accepted": [
+                "a",
+                "dènye antre, premye sòti — tankou yon pil asyèt"
+              ],
+              "correct_ht": "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+              "explanation_ht": "Ou pran toujou asyèt ki anwo a.",
+              "choices": [
+                "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                "B) Premye antre, premye sòti",
+                "C) O aza",
+                "D) Pa lòd alfabetik"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "swift-n4-l12",
+          "title_ht": "Jesyon memwa: ARC, weak ak unowned",
+          "body_ht": "Swift jere memwa otomatikman ak ARC (Automatic Reference Counting): chak objè konte konbyen referans pwente sou li; lè konte a rive zewo, memwa a libere. Pwoblèm: \"retain cycle\" — lè de objè kenbe referans FÒ youn sou lòt, konte a pa janm rive zewo, epi memwa a koule pou tout tan. Ka klasik: yon view controller gen yon closure, epi closure a kaptire self (controller a) fòtman. Solisyon: \"capture list\" nan closure a. [weak self] fè referans lan FEB (li ka vin nil, kidonk self vin opsyonèl), [unowned self] fè l san pwopriyetè (pa janm nil, men danjere si objè a mouri anvan). Règ: itilize weak pa defo pou self nan closure; unowned sèlman lè ou SÈTEN sik lavi a. Nan SwiftUI, pwoblèm nan pi ra (struct yo se valè), men nan UIKit ak ViewModel, metrize weak se konpetans nivo ekspè ki separe app ki estab ak app ki koule memwa. [[CHECK:swift-n4-l12-c1]] [[CHECK:swift-n4-l12-c2]]",
+          "code": "class Sèvis {\n    var konplesyon: (() -> Void)?\n    func demare() {\n        konplesyon = { [weak self] in\n            self?.fini()\n        }\n    }\n    func fini() { print(\"Fini\") }\n}",
+          "code_lang": "swift",
+          "expert_note_ht": "Apre [weak self], toujou fè guard let self else { return } nan kòmansman closure a pou travay ak yon referans fò tanporè, an sekirite.",
+          "exercises": [
+            {
+              "id": "swift-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle nan yon capture list evite retain cycle lè yon closure kaptire self?",
+              "choices": [
+                "A) strong",
+                "B) weak",
+                "C) static",
+                "D) lazy"
+              ],
+              "accepted": [
+                "b",
+                "weak"
+              ],
+              "correct_ht": "B) weak",
+              "explanation_ht": "[weak self] fè referans lan feb: li pa ogmante konte a, kidonk sik la kase."
+            },
+            {
+              "id": "swift-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete capture list la: konplesyon = { [___ self] in self?.fini() }",
+              "accepted": [
+                "weak"
+              ],
+              "correct_ht": "weak",
+              "explanation_ht": "weak fè self vin opsyonèl andedan closure a — se poutèt sa nou ekri self?."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "swift-n4-l12-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « konplesyon » genyen? (ekri valè a)",
+              "accepted": [
+                "{ [weak self] in"
+              ],
+              "correct_ht": "{ [weak self] in",
+              "explanation_ht": "Nan egzanp lan, liy « konplesyon = { [weak self] in » mete valè « { [weak self] in » nan bwat « konplesyon » a."
+            },
+            {
+              "id": "swift-n4-l12-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "demare"
+              ],
+              "correct_ht": "demare",
+              "explanation_ht": "Fonksyon an rele « demare » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

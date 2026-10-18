@@ -1,0 +1,908 @@
+{
+  "category_ht": "Baz done",
+  "description_ht": "SQLite se baz done ki pi itilize nan mond lan — lejè, san sèvè, epi li deja andedan chak telefòn. Pafè pou aplikasyon mobil ak pwojè rapid.",
+  "id": "sqlite",
+  "levels": [
+    {
+      "id": "n1",
+      "lessons": [
+        {
+          "body_ht": "SQLite se yon baz done relasyonèl konplè ki viv andedan yon SÈL fichye sou disk la — pa gen sèvè pou enstale, pa gen konfigirasyon. Se pou sa chak telefòn Android ak iPhone gen li deja, epi aplikasyon tankou WhatsApp itilize li pou sere mesaj ou yo. Pou kòmanse, telechaje zouti sqlite3 oubyen itilize yon aplikasyon tankou DB Browser for SQLite ki grafik. Kòmand sqlite3 magazen.db kreye (oswa ouvri) yon fichye baz done ki rele magazen.db. Anndan baz la, done yo òganize an TAB: chak tab se tankou yon fèy Excel ak kolòn (non, pri, kantite) ak ranje (chak pwodwi). Kòmand .tables montre tab ou yo, .schema montre estrikti yo, epi .quit soti. Premye leson pratik: panse tab ou yo tankou tablo byen òganize anvan ou ekri okenn kòmand — yon bon estrikti fè tout rès la fasil. [[CHECK:sqlite-n1-l01-c1]] [[CHECK:sqlite-n1-l01-c2]]",
+          "code": "-- Kreye yon fichye baz done epi gade tab yo\n-- sqlite3 magazen.db\n.tables\n.schema",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon sel fichye sou disk la"
+              ],
+              "choices": [
+                "A) Yon sèvè sou entènèt",
+                "B) Yon sèl fichye sou disk la",
+                "C) Yon sèvis nwaj",
+                "D) Plizyè sèvè"
+              ],
+              "correct_ht": "B) Yon sèl fichye sou disk la",
+              "explanation_ht": "SQLite pa gen sèvè: tout baz done a (tab, done, indeks) viv nan yon sèl fichye. Ou ka kopye fichye a epi ou kopye tout baz la.",
+              "id": "sqlite-n1-l01-e1",
+              "prompt_ht": "Kijan yon baz done SQLite estoke fizikman?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                ".tables"
+              ],
+              "correct_ht": ".tables",
+              "explanation_ht": ".tables se kòmand dot sqlite3 ki liste tout tab nan baz aktyèl la.",
+              "id": "sqlite-n1-l01-e2",
+              "prompt_ht": "Ki kòmand sqlite3 ki montre tout tab nan baz la? _____",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Fichye SQLite a se tout baz la: backup se yon senp kopi fichye. Men pa janm kopye li pandan yon ekriti ap fèt — itilize .backup oswa VACUUM INTO pou kopi an sekirite.",
+          "id": "sqlite-n1-l01",
+          "title_ht": "Kisa SQLite ye?",
+          "checkpoints": [
+            {
+              "id": "sqlite-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            },
+            {
+              "id": "sqlite-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon tab se kote done yo rete. Ou kreye li ak CREATE TABLE, epi ou dwe di ki kolòn li genyen ak ki tip done chak kolòn ye. Tip done SQLite yo senp: INTEGER pou nonb antye, REAL pou desimal, TEXT pou tèks, BLOB pou done binè (imaj), ak NULL pou absans valè. Egzanp: CREATE TABLE pwodwi (id INTEGER PRIMARY KEY, non TEXT NOT NULL, pri REAL, kantite INTEGER DEFAULT 0);. PRIMARY KEY vle di kolòn id la idantifye chak ranje yon fason inik — pa ka gen de pwodwi ak menm id. NOT NULL entèdi valè vid nan kolòn nan, epi DEFAULT bay yon valè otomatik si ou pa presize youn. Lè ou fin kreye tab la, ou mete done ladan li ak INSERT INTO: INSERT INTO pwodwi (non, pri, kantite) VALUES ('Diri', 250.50, 100);. Ou ka mete plizyè ranje nan yon sèl fwa ak plizyè gwoup VALUES. Pou li done yo: SELECT * FROM pwodwi; — zetwal la vle di 'tout kolòn'. [[CHECK:sqlite-n1-l02-c1]] [[CHECK:sqlite-n1-l02-c2]]",
+          "code": "CREATE TABLE pwodwi (\n  id INTEGER PRIMARY KEY,\n  non TEXT NOT NULL,\n  pri REAL,\n  kantite INTEGER DEFAULT 0\n);\n\nINSERT INTO pwodwi (non, pri, kantite) VALUES\n  ('Diri 25lb', 250.50, 100),\n  ('Lwil 1L', 180.00, 50);\n\nSELECT * FROM pwodwi;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "primary key"
+              ],
+              "choices": [
+                "A) FOREIGN KEY",
+                "B) PRIMARY KEY",
+                "C) UNIQUE INDEX",
+                "D) DEFAULT"
+              ],
+              "correct_ht": "B) PRIMARY KEY",
+              "explanation_ht": "PRIMARY KEY garanti chak ranje gen yon idantifyan inik; baz la refize doublon epi li kreye yon indeks otomatik sou kolòn nan.",
+              "id": "sqlite-n1-l02-e1",
+              "prompt_ht": "Ki kontrent ki garanti chak ranje gen yon idantifyan inik?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "insert into"
+              ],
+              "correct_ht": "INSERT INTO",
+              "explanation_ht": "INSERT INTO tab (kolòn...) VALUES (...) se sentaks pou ajoute ranje nan yon tab.",
+              "id": "sqlite-n1-l02-e2",
+              "prompt_ht": "Konplete pou ajoute yon pwodwi: _____ pwodwi (non, pri) VALUES ('Savon', 45);",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "INTEGER PRIMARY KEY nan SQLite se yon alias pou rowid: li pa kreye yon indeks siplemantè, li itilize id entèn tab la dirèkteman — se fason pi rapid pou kle primè.",
+          "id": "sqlite-n1-l02",
+          "title_ht": "Kreye tab epi mete done",
+          "checkpoints": [
+            {
+              "id": "sqlite-n1-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "sqlite-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kle prensipal (PRIMARY KEY) dwe:",
+              "accepted": [
+                "a",
+                "inik pou chak ranje epi pa janm vid"
+              ],
+              "correct_ht": "A) Inik pou chak ranje epi pa janm vid",
+              "explanation_ht": "Se kat idantite chak ranje: inik, obligatwa.",
+              "choices": [
+                "A) Inik pou chak ranje epi pa janm vid",
+                "B) Kapab repete",
+                "C) Toujou yon foto",
+                "D) Chanje chak jou"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "SELECT se kòmand ou pral itilize pi plis. Fòm debaz la: SELECT kolòn1, kolòn2 FROM tab;. Olye zetwal *, presize kolòn ou bezwen yo — se pi rapid epi pi klè: SELECT non, pri FROM pwodwi;. Klòz WHERE filtre ranje yo: SELECT * FROM pwodwi WHERE pri > 100; montre sèlman pwodwi ki koute plis pase 100. Operatè itil nan WHERE: = , <>, >, <, BETWEEN 50 AND 200, IN ('Diri', 'Lwil'), LIKE 'D%' (kòmanse ak D. % vle di 'nenpòt tèks'), ak IS NULL pou valè vid. Ou konbine kondisyon ak AND / OR / NOT. ORDER BY klase rezilta yo: ORDER BY pri DESC (desandan, pi chè an premye) oswa ASC (asan dan, pa default). LIMIT limite kantite ranje: LIMIT 5 bay 5 premye yo. Konbinezon klasik: SELECT non, pri FROM pwodwi WHERE kantite > 0 ORDER BY pri DESC LIMIT 3; — '3 pwodwi ki pi chè ki an stok'. [[CHECK:sqlite-n1-l03-c1]] [[CHECK:sqlite-n1-l03-c2]]",
+          "code": "SELECT non, pri FROM pwodwi\nWHERE kantite > 0 AND pri BETWEEN 50 AND 300\nORDER BY pri DESC\nLIMIT 5;\n\nSELECT non FROM pwodwi WHERE non LIKE 'D%';",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "like"
+              ],
+              "choices": [
+                "A) BETWEEN",
+                "B) LIKE",
+                "C) IN",
+                "D) EXISTS"
+              ],
+              "correct_ht": "B) LIKE",
+              "explanation_ht": "LIKE fè rechèch modèl sou tèks: % ranplase nenpòt sekans karaktè, _ ranplase yon sèl karaktè.",
+              "id": "sqlite-n1-l03-e1",
+              "prompt_ht": "Ki operatè ou itilize pou chèche tèks ki kòmanse ak 'Ma'?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "where"
+              ],
+              "correct_ht": "WHERE",
+              "explanation_ht": "WHERE filtre ranje yo anvan SELECT retounen yo — san li, ou resevwa tout tab la.",
+              "id": "sqlite-n1-l03-e2",
+              "prompt_ht": "Konplete pou filtre sèlman pwodwi ki an stok: SELECT * FROM pwodwi _____ kantite > 0;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Evite SELECT * nan kòd pwodiksyon: presize kolòn yo pou rechèch yo itilize 'covering index' epi pou kòd ou a pa kraze lè yon moun ajoute yon kolòn nan tab la.",
+          "id": "sqlite-n1-l03",
+          "title_ht": "Li done: SELECT, WHERE, ORDER",
+          "checkpoints": [
+            {
+              "id": "sqlite-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Rekèt SELECT * FROM pwodwi; ap:",
+              "accepted": [
+                "a",
+                "pran tout kolòn ak tout ranje nan tab pwodwi a"
+              ],
+              "correct_ht": "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+              "explanation_ht": "SELECT = pran; * = tout kolòn; FROM = nan ki tab.",
+              "choices": [
+                "A) Pran tout kolòn ak tout ranje nan tab pwodwi a",
+                "B) Efase tab la",
+                "C) Kreye yon nouvo tab",
+                "D) Etenn bazdone a"
+              ]
+            },
+            {
+              "id": "sqlite-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kloz WHERE nan yon rekèt SQL sèvi pou:",
+              "accepted": [
+                "a",
+                "filtre: pran sèlman ranje ki satisfè kondisyon an"
+              ],
+              "correct_ht": "A) Filtre: pran sèlman ranje ki satisfè kondisyon an",
+              "explanation_ht": "WHERE = sèlman sa ki... Pa egzanp WHERE pri > 100.",
+              "choices": [
+                "A) Filtre: pran sèlman ranje ki satisfè kondisyon an",
+                "B) Triye pa koulè",
+                "C) Efase tout",
+                "D) Chanje non tab la"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 1 — Debitan"
+    },
+    {
+      "id": "n2",
+      "lessons": [
+        {
+          "body_ht": "Done chanje: pri monte, stok desann. Kòmand UPDATE modifye ranje ki egziste: UPDATE pwodwi SET pri = 275 WHERE non = 'Diri 25lb';. ATANSYON: si ou bliye WHERE, tout ranje nan tab la ap chanje! Se erè ki pi danjere nan SQL. Toujou ekri WHERE a an premye nan tèt ou, epi teste li ak yon SELECT anvan: SELECT * FROM pwodwi WHERE non = 'Diri 25lb'. — si SELECT la montre bon ranje yo, ou ka konvèti li an UPDATE an sekirite. Kòmand DELETE retire ranje: DELETE FROM pwodwi WHERE kantite = 0;. Menm règ la: san WHERE, tout tab la efase. Pou vide yon tab konplètman pi rapid, gen DELETE FROM pwodwi; san WHERE (li efase tout). Ou ka modifye plizyè kolòn nan yon sèl UPDATE: SET pri = 275, kantite = 90. Epi ou ka itilize valè aktyèl kolòn nan nan kalkil: SET kantite = kantite - 5 (vann 5 inite). [[CHECK:sqlite-n2-l01-c1]] [[CHECK:sqlite-n2-l01-c2]]",
+          "code": "-- Tcheke anvan w modifye!\nSELECT * FROM pwodwi WHERE id = 1;\n\nUPDATE pwodwi\nSET pri = 275, kantite = kantite - 5\nWHERE id = 1;\n\nDELETE FROM pwodwi WHERE kantite = 0;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "tout ranje nan tab la ap modifye"
+              ],
+              "choices": [
+                "A) Anyen pa chanje",
+                "B) Tout ranje nan tab la ap modifye",
+                "C) Premye ranje a sèlman",
+                "D) Baz la kraze"
+              ],
+              "correct_ht": "B) Tout ranje nan tab la ap modifye",
+              "explanation_ht": "San WHERE, UPDATE aplike sou CHAK ranje nan tab la. Se pou sa ou teste kondisyon an ak SELECT anvan.",
+              "id": "sqlite-n2-l01-e1",
+              "prompt_ht": "Kisa k ap pase si ou fè UPDATE pwodwi SET pri = 100; san WHERE?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "delete from"
+              ],
+              "correct_ht": "DELETE FROM",
+              "explanation_ht": "DELETE FROM tab WHERE kondisyon retire ranje ki satisfè kondisyon an.",
+              "id": "sqlite-n2-l01-e2",
+              "prompt_ht": "Konplete pou efase pwodwi ki fini nan stok: _____ pwodwi WHERE kantite = 0;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan aplikasyon reyèl, konsidere 'soft delete' (yon kolòn efase BOOLEAN) olye DELETE reyèl: ou kenbe istwa a, ou ka restore, epi rapò yo pa pèdi done.",
+          "id": "sqlite-n2-l01",
+          "title_ht": "Modifye ak efase: UPDATE, DELETE",
+          "checkpoints": [
+            {
+              "id": "sqlite-n2-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "sqlite-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon baz byen fèt gen plizyè tab ki lye: tab kliyan, tab kòmand. Kòmand lan gen yon kolòn kliyan_id ki refere ak id kliyan an — sa rele yon kle etranjè (FOREIGN KEY). JOIN pèmèt ou rakonte tab yo nan yon sèl rechèch. INNER JOIN retounen sèlman ranje ki gen korespondans nan toude tab: SELECT k.non, c.total FROM kliyan k INNER JOIN kòmand c ON c.kliyan_id = k.id;. LEFT JOIN retounen TOUT ranje tab agoch la, menm si pa gen korespondans adwat (valè yo vin NULL): itil pou 'tout kliyan, menm sa ki poko achte'. Alias (k pou kliyan) fè rechèch yo pi kout pou li. Ou ka jwenn plis pase 2 tab: ajoute yon lòt JOIN ak pwòp kondisyon ON li. Erè komen: bliye kondisyon ON — ou jwenn yon 'pwodwi katezyen' (chak ranje × chak ranje), ki ka bay milyon rezilta sou gwo tab. [[CHECK:sqlite-n2-l02-c1]] [[CHECK:sqlite-n2-l02-c2]]",
+          "code": "CREATE TABLE kòmand (\n  id INTEGER PRIMARY KEY,\n  kliyan_id INTEGER REFERENCES kliyan(id),\n  total REAL\n);\n\nSELECT k.non, c.total\nFROM kliyan k\nINNER JOIN kòmand c ON c.kliyan_id = k.id\nWHERE c.total > 1000;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "tout ranje tab agoch la, menm san korespondans"
+              ],
+              "choices": [
+                "A) Sèlman ranje ki matche",
+                "B) Tout ranje tab agoch la, menm san korespondans",
+                "C) Sèlman ranje tab adwat la",
+                "D) Okenn ranje"
+              ],
+              "correct_ht": "B) Tout ranje tab agoch la, menm san korespondans",
+              "explanation_ht": "LEFT JOIN kenbe tout ranje tab agoch la; kolòn tab adwat la vin NULL kote pa gen match. INNER JOIN ta retire ranje san match yo.",
+              "id": "sqlite-n2-l02-e1",
+              "prompt_ht": "Kisa LEFT JOIN retounen parapò ak INNER JOIN?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "on"
+              ],
+              "correct_ht": "ON",
+              "explanation_ht": "ON presize kondisyon lyezon ant de tab yo (anjeneral kle etranjè = kle primè). San li, JOIN fè yon pwodwi katezyen.",
+              "id": "sqlite-n2-l02-e2",
+              "prompt_ht": "Konplete lyezon an: SELECT * FROM kliyan k JOIN kòmand c _____ c.kliyan_id = k.id;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "SQLite sipòte kle etranjè men yo ETEINT pa default! Aktive yo ak PRAGMA foreign_keys = ON; nan chak koneksyon, sinon baz la ap aksepte kòmand ak kliyan_id ki pa egziste.",
+          "id": "sqlite-n2-l02",
+          "title_ht": "Lye tab yo: JOIN",
+          "checkpoints": [
+            {
+              "id": "sqlite-n2-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "sqlite-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JOIN konekte:",
+              "accepted": [
+                "a",
+                "plizyè tab ansanm grasa kle ki gen rapò"
+              ],
+              "correct_ht": "A) Plizyè tab ansanm grasa kle ki gen rapò",
+              "explanation_ht": "JOIN marye tab yo sou kle etranje a pou wè done yo ansanm.",
+              "choices": [
+                "A) Plizyè tab ansanm grasa kle ki gen rapò",
+                "B) De òdinatè",
+                "C) De sit entènèt",
+                "D) De imaj"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pafwa ou pa vle lis ranje yo — ou vle REZIME yo: konbyen kliyan? ki total lavant? ki pri mwayèn? Fonksyon agregasyon yo fè sa: COUNT(*) konte ranje, SUM(pri) adisyone, AVG(pri) fè mwayèn, MIN(pri) ak MAX(pri) bay ekstrem yo. GROUP BY divize ranje yo an gwoup epi kalkile yon agregasyon pou chak gwoup: SELECT kategori, COUNT(*), AVG(pri) FROM pwodwi GROUP BY kategori; bay estatistik pa kategori. Klòz HAVING filtre sou rezilta agregasyon yo (WHERE pa ka fè sa paske li kouri anvan gwoupman an): GROUP BY kategori HAVING COUNT(*) > 5 kenbe sèlman kategori ki gen plis pase 5 pwodwi. Lòd ekzekisyon lojik: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. Konprann lòd sa a eksplike poukisa ou pa ka itilize yon alias SELECT nan WHERE. Egzanp konplè: total lavant pa kliyan, sèlman kliyan ki depanse plis pase 5000. [[CHECK:sqlite-n2-l03-c1]] [[CHECK:sqlite-n2-l03-c2]]",
+          "code": "SELECT k.non, SUM(c.total) AS total_achte\nFROM kliyan k\nJOIN kòmand c ON c.kliyan_id = k.id\nGROUP BY k.non\nHAVING SUM(c.total) > 5000\nORDER BY total_achte DESC;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "having"
+              ],
+              "choices": [
+                "A) WHERE",
+                "B) HAVING",
+                "C) FILTER",
+                "D) GROUP"
+              ],
+              "correct_ht": "B) HAVING",
+              "explanation_ht": "WHERE filtre ranje AVAN gwoupman; HAVING filtre GWOUP yo apre agregasyon an. Ou pa ka mete SUM() nan WHERE.",
+              "id": "sqlite-n2-l03-e1",
+              "prompt_ht": "Ki klòz ki filtre rezilta apre GROUP BY ak fonksyon agregasyon?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "group by"
+              ],
+              "correct_ht": "GROUP BY",
+              "explanation_ht": "GROUP BY kategori rasanble ranje ki gen menm kategori pou COUNT(*) konte pa gwoup olye total jeneral.",
+              "id": "sqlite-n2-l03-e2",
+              "prompt_ht": "Konplete pou konte pwodwi pa kategori: SELECT kategori, COUNT(*) FROM pwodwi _____ kategori;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "COUNT(*) konte ranje, COUNT(kolòn) konte valè non-NULL sèlman — diferans sibtil ki chanje rezilta lè gen valè vid. Presize sa ou vle di.",
+          "id": "sqlite-n2-l03",
+          "title_ht": "Rezime done: agregasyon",
+          "checkpoints": [
+            {
+              "id": "sqlite-n2-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Fonksyon COUNT() ap:",
+              "accepted": [
+                "a",
+                "konte konbyen ranje ki genyen"
+              ],
+              "correct_ht": "A) Konte konbyen ranje ki genyen",
+              "explanation_ht": "Fonksyon agregasyon rezime anpil ranje an yon sèl chif.",
+              "choices": [
+                "A) Konte konbyen ranje ki genyen",
+                "B) Efase ranje yo",
+                "C) Triye ranje yo",
+                "D) Kache ranje yo"
+              ]
+            },
+            {
+              "id": "sqlite-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — ORDER BY pri DESC ap:",
+              "accepted": [
+                "a",
+                "triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache"
+              ],
+              "correct_ht": "A) Triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache",
+              "explanation_ht": "ORDER BY = mete nan lòd; DESC = desandan (gwo → piti).",
+              "choices": [
+                "A) Triye rezilta yo pa pri, soti nan pi chè rive nan pi bon mache",
+                "B) Efase pri yo",
+                "C) Kache pri yo",
+                "D) Melanje rezilta yo o aza"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 2 — Entèmedyè"
+    },
+    {
+      "id": "n3",
+      "lessons": [
+        {
+          "body_ht": "Yon sous-rekèt se yon rechèch andedan yon lòt rechèch — ou itilize rezilta yon SELECT kòm antre pou yon lòt. Ka klasik: jwenn pwodwi ki pi chè pase pri mwayèn lan: SELECT non, pri FROM pwodwi WHERE pri > (SELECT AVG(pri) FROM pwodwi);. Pati ant parantez la kalkile mwayèn nan an premye, epi rechèch deyò a konpare chak pri ak li. Sous-rekèt ka nan WHERE ak IN tou: SELECT non FROM kliyan WHERE id IN (SELECT kliyan_id FROM kòmand WHERE total > 1000); — 'kliyan ki gen omwen yon gwo kòmand'. Yon CTE (Common Table Expression, ak WITH) se yon fason pi pwòp pou ekri sous-rekèt konplèks: WITH gwo_kòmand AS (SELECT * FROM kòmand WHERE total > 1000) SELECT * FROM gwo_kòmand;. CTE a bay yon non tanporè a rezilta a, epi ou itilize non sa a tankou yon tab nan rès rechèch la. Rechèch ak CTE pi fasil pou li, pou debog, epi pou reitilize menm sous-rekèt la de fwa san repete li. [[CHECK:sqlite-n3-l01-c1]] [[CHECK:sqlite-n3-l01-c2]]",
+          "code": "WITH lavant_pa_kliyan AS (\n  SELECT kliyan_id, SUM(total) AS total\n  FROM kòmand\n  GROUP BY kliyan_id\n)\nSELECT k.non, v.total\nFROM kliyan k\nJOIN lavant_pa_kliyan v ON v.kliyan_id = k.id\nWHERE v.total > (SELECT AVG(total) FROM lavant_pa_kliyan);",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon rechet andedan yon lot rechet"
+              ],
+              "choices": [
+                "A) Yon tab tanporè sou disk",
+                "B) Yon rechèch andedan yon lòt rechèch",
+                "C) Yon backup baz la",
+                "D) Yon indeks espesyal"
+              ],
+              "correct_ht": "B) Yon rechèch andedan yon lòt rechèch",
+              "explanation_ht": "Sous-rekèt la (ant parantez) egzekite an premye epi rezilta li sèvi kòm valè oswa lis pou rechèch deyò a.",
+              "id": "sqlite-n3-l01-e1",
+              "prompt_ht": "Kisa yon sous-rekèt (subquery) ye?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "with"
+              ],
+              "correct_ht": "WITH",
+              "explanation_ht": "WITH non AS (SELECT...) kreye yon CTE — yon tab tanporè nome ou ka referanse nan rechèch prensipal la.",
+              "id": "sqlite-n3-l01-e2",
+              "prompt_ht": "Ki mo kle ki kòmanse yon CTE? _____ rezime AS (SELECT ...);",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Yon sous-rekèt korelè (ki refere ak tab deyò a) egzekite yon fwa PA RANJE — sou gwo tab li ka 1000× pi lan pase yon JOIN ekivalan. Prefere JOIN oswa CTE lè posib.",
+          "id": "sqlite-n3-l01",
+          "title_ht": "Sous-rekèt ak CTE",
+          "checkpoints": [
+            {
+              "id": "sqlite-n3-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "sqlite-n3-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Fonksyon COUNT() ap:",
+              "accepted": [
+                "a",
+                "konte konbyen ranje ki genyen"
+              ],
+              "correct_ht": "A) Konte konbyen ranje ki genyen",
+              "explanation_ht": "Fonksyon agregasyon rezime anpil ranje an yon sèl chif.",
+              "choices": [
+                "A) Konte konbyen ranje ki genyen",
+                "B) Efase ranje yo",
+                "C) Triye ranje yo",
+                "D) Kache ranje yo"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon indeks se tankou endis yon liv: olye li chak paj (full table scan), baz la konsilte endis la epi ale dirèk nan bon ranje yo. Ou kreye li ak: CREATE INDEX idx_pwodwi_pri ON pwodwi(pri);. Kounye a, WHERE pri > 100 ap itilize endis la epi kouri pi vit sou gwo tab. Endeks yo akselere SELECT, men yo gen yon pri: chak INSERT, UPDATE ak DELETE dwe mete endis la ajou tou, kidonk ekriti vin pi lan. Règ: mete indeks sou kolòn ou chèche souvan nan WHERE, JOIN (kle etranjè!) ak ORDER BY; pa mete sou ti tab oswa kolòn ou pa janm filtre. Yon indeks konpoze kouvri plizyè kolòn: CREATE INDEX idx ON kòmand(kliyan_id, dat); — lòd kolòn yo enpòtan (kolòn agoch la sèvi an premye). Pou verifye si rechèch ou a itilize endis la: EXPLAIN QUERY PLAN SELECT ...; — chèche 'USING INDEX' olye 'SCAN'. Si ou wè SCAN sou yon gwo tab, se siy ou bezwen yon indeks. [[CHECK:sqlite-n3-l02-c1]] [[CHECK:sqlite-n3-l02-c2]]",
+          "code": "CREATE INDEX idx_kòmand_kliyan ON kòmand(kliyan_id);\nCREATE INDEX idx_pwodwi_pri ON pwodwi(pri);\n\nEXPLAIN QUERY PLAN\nSELECT * FROM kòmand WHERE kliyan_id = 7;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li akselere lekti (select) men ralanti ekriti"
+              ],
+              "choices": [
+                "A) Li akselere tout bagay",
+                "B) Li akselere lekti (SELECT) men ralanti ekriti (INSERT/UPDATE/DELETE)",
+                "C) Li diminye gwosè baz la",
+                "D) Li ranplase kle primè"
+              ],
+              "correct_ht": "B) Li akselere lekti (SELECT) men ralanti ekriti (INSERT/UPDATE/DELETE)",
+              "explanation_ht": "Chak ekriti dwe mete endis la ajou anplis tab la. Se yon echanj: vitès lekti kont koute ekriti ak espas disk.",
+              "id": "sqlite-n3-l02-e1",
+              "prompt_ht": "Ki echanj (trade-off) yon indeks pote?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "explain query plan"
+              ],
+              "correct_ht": "EXPLAIN QUERY PLAN",
+              "explanation_ht": "EXPLAIN QUERY PLAN montre estrateji baz la: SCAN (li tout tab la, lan) vs SEARCH USING INDEX (itilize endis, rapid).",
+              "id": "sqlite-n3-l02-e2",
+              "prompt_ht": "Ki kòmand ki montre si rechèch ou a itilize yon indeks? _____ SELECT * FROM pwodwi WHERE pri > 100;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pa janm kreye indeks 'jis ka': mezire ak EXPLAIN QUERY PLAN sou done reyèl. Yon indeks ki pa janm sèvi se jis pwa mouri ki ralanti ekriti yo.",
+          "id": "sqlite-n3-l02",
+          "title_ht": "Indeks ak pèfòmans",
+          "checkpoints": [
+            {
+              "id": "sqlite-n3-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Notasyon Big O mezire:",
+              "accepted": [
+                "a",
+                "kijan tan yon algoritm grandi lè done yo grandi"
+              ],
+              "correct_ht": "A) Kijan tan yon algoritm grandi lè done yo grandi",
+              "explanation_ht": "O(n) = lineyè; O(n²) = bouk anndan bouk — evite!",
+              "choices": [
+                "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                "B) Gwosè ekran an",
+                "C) Pri òdinatè a",
+                "D) Kantite koulè"
+              ]
+            },
+            {
+              "id": "sqlite-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon tranzaksyon se yon gwoup operasyon ki dwe reyisi TOUT oswa echwe TOUT — pa gen mwatye. Egzanp klasik: transfè lajan. Ou dwe retire 500 nan kont A EPI ajoute 500 nan kont B. Si pwogram nan kraze ant de a, lajan an disparèt! Tranzaksyon garanti pwopriyete ACID: Atomicity (tout oswa anyen), Consistency (baz la rete valab), Isolation (tranzaksyon paralèl pa deranje youn lòt), Durability (yon fwa konfime, done yo siviv menm si kouran koupe). Nan SQLite: BEGIN; kòmanse, COMMIT; konfime tout chanjman, ROLLBACK; anile tout epi retounen jan li te ye a. Si yon erè rive nan mitan, fè ROLLBACK olye COMMIT. Nan aplikasyon, toujou mete operasyon ki dwe ale ansanm nan yon sèl tranzaksyon — espesyalman sa ki manyen lajan, stok, oswa konte. San tranzaksyon, de itilizatè ki achte dènye atik la an menm tan ka toude reyisi: se 'race condition' baz done. [[CHECK:sqlite-n3-l03-c1]] [[CHECK:sqlite-n3-l03-c2]]",
+          "code": "BEGIN;\nUPDATE kont SET balans = balans - 500 WHERE id = 1;\nUPDATE kont SET balans = balans + 500 WHERE id = 2;\n-- Si tout byen:\nCOMMIT;\n-- Si gen pwoblèm:\n-- ROLLBACK;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "tout operasyon yo reyisi oswa okenn pa aplike"
+              ],
+              "choices": [
+                "A) Operasyon yo kouri pi rapid",
+                "B) Tout operasyon yo reyisi oswa okenn pa aplike",
+                "C) Done yo chiffres",
+                "D) Baz la fèmen"
+              ],
+              "correct_ht": "B) Tout operasyon yo reyisi oswa okenn pa aplike",
+              "explanation_ht": "Atomicity: tranzaksyon an se endivizib. Yon echèk nan mitan anile tout chanjman ki te fèt ladann.",
+              "id": "sqlite-n3-l03-e1",
+              "prompt_ht": "Kisa pwopriyete 'atomicity' yon tranzaksyon garanti?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "rollback"
+              ],
+              "correct_ht": "ROLLBACK",
+              "explanation_ht": "ROLLBACK anile tout chanjman tranzaksyon aktyèl la epi retounen baz la nan eta anvan BEGIN.",
+              "id": "sqlite-n3-l03-e2",
+              "prompt_ht": "Ki kòmand ki anile tout chanjman yon tranzaksyon? _____;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan SQLite, yon tranzaksyon ekriti bloke tout baz la pou lòt ekriti. Kenbe tranzaksyon yo KOUT: pa mete apèl rezo oswa atant itilizatè andedan yon tranzaksyon.",
+          "id": "sqlite-n3-l03",
+          "title_ht": "Tranzaksyon ak ACID",
+          "checkpoints": [
+            {
+              "id": "sqlite-n3-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon tranzaksyon bazdone garanti:",
+              "accepted": [
+                "a",
+                "swa tout operasyon yo pase, swa okenn pa pase"
+              ],
+              "correct_ht": "A) Swa tout operasyon yo pase, swa okenn pa pase",
+              "explanation_ht": "Tankou yon echanj nan mache: tout oswa anyen — pa gen demi echanj.",
+              "choices": [
+                "A) Swa tout operasyon yo pase, swa okenn pa pase",
+                "B) Vitès sèlman",
+                "C) Bèl koulè",
+                "D) Mizik"
+              ]
+            },
+            {
+              "id": "sqlite-n3-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 3 — Avanse"
+    },
+    {
+      "id": "n4",
+      "lessons": [
+        {
+          "body_ht": "Pa default, SQLite ekri dirèkteman nan fichye baz la epi itilize yon jounal 'rollback' pou sekirite. Sa vle di: yon sèl ekriti an menm tan, epi lektè yo bloke pandan ekriti. Mòd WAL (Write-Ahead Logging) chanje achitekti a: ekriti yo ale nan yon fichye jounal apa (-wal), epi lektè yo kontinye li ansyen done yo san bloke. Rezilta: lekti ak ekriti an menm tan, pi gwo debi, mwens 'database is locked'. Ou aktive li ak: PRAGMA journal_mode = WAL;. Li se chwa estanda pou aplikasyon mobil ak sèvè ki gen anpil lektè. Konsekans pou konnen: baz la kounye a gen 2-3 fichye (db, -wal, -shm) — pou backup, fè yon checkpoint anvan (PRAGMA wal_checkpoint(TRUNCATE);) oswa itilize .backup. Sou sistèm fichye rezo, WAL ka pa mache — rete nan mòd delete klasik la. Epi sonje: WAL pa chanje règ tranzaksyon yo, li jis rann konkirans lan pi bon. [[CHECK:sqlite-n4-l01-c1]] [[CHECK:sqlite-n4-l01-c2]]",
+          "code": "PRAGMA journal_mode = WAL;\n-- Verifye:\nPRAGMA journal_mode;\n\n-- Checkpoint manyèl anvan backup:\nPRAGMA wal_checkpoint(TRUNCATE);",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "lektè yo pa bloke pandan yon ekriti ap fèt"
+              ],
+              "choices": [
+                "A) Baz la vin pi piti",
+                "B) Lektè yo pa bloke pandan yon ekriti ap fèt",
+                "C) Ektriti yo vin enstantane",
+                "D) Pa bezwen tranzaksyon ankò"
+              ],
+              "correct_ht": "B) Lektè yo pa bloke pandan yon ekriti ap fèt",
+              "explanation_ht": "Nan mòd WAL, ekriti yo ale nan fichye jounal apa pandan lektè yo li snapshot ansyen done yo — lekti ak ekriti konkiran san blokaj.",
+              "id": "sqlite-n4-l01-e1",
+              "prompt_ht": "Ki avantaj prensipal mòd WAL?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "wal"
+              ],
+              "correct_ht": "WAL",
+              "explanation_ht": "PRAGMA journal_mode = WAL; aktive Write-Ahead Logging sou baz la.",
+              "id": "sqlite-n4-l01-e2",
+              "prompt_ht": "Konplete pou aktive mòd jounal avanse a: PRAGMA journal_mode = _____;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "WAL + synchronous=NORMAL se konbinazon pèfòmans klasik pou aplikasyon mobil. Men pou done kritik (lajan), kenbe synchronous=FULL: yon kouran koupe nan move moman ka koute plis pase kèk milisegonn.",
+          "id": "sqlite-n4-l01",
+          "title_ht": "Mòd WAL: konkirans",
+          "checkpoints": [
+            {
+              "id": "sqlite-n4-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            },
+            {
+              "id": "sqlite-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon pil (stack) mache:",
+              "accepted": [
+                "a",
+                "dènye antre, premye sòti — tankou yon pil asyèt"
+              ],
+              "correct_ht": "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+              "explanation_ht": "Ou pran toujou asyèt ki anwo a.",
+              "choices": [
+                "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                "B) Premye antre, premye sòti",
+                "C) O aza",
+                "D) Pa lòd alfabetik"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Itilizatè yo atann rechèch tèks enstantane tankou Google: tape 'mang' epi jwenn 'mango'. LIKE '%mang%' pa ka fè sa rapid paske li li tout tab la. FTS5 (Full-Text Search) se motè rechèch entegre SQLite a: ou kreye yon tab vityèl espesyal: CREATE VIRTUAL TABLE pwodwi_fts USING fts5(non, deskripsyon);. FTS5 dekonpoze tèks an mo, bati yon endis envèse, epi rechèch vin prèske enstantane menm sou milyon dokiman. Ou chèche ak operatè MATCH: SELECT * FROM pwodwi_fts WHERE pwodwi_fts MATCH 'mango';. FTS5 sipòte rechèch fraz (\"diri blan\"), prefiks (mang*), ak operatè boolean (mango AND bannann, mango NOT mi). Pou kenbe tab FTS la senkronize ak tab reyèl la, itilize triggers (gade pwochen leson) oswa rekonstwi li detanzantan ak INSERT INTO pwodwi_fts(pwodwi_fts) VALUES('rebuild');. Fonksyon bm25() klase rezilta pa pertinans — pi bon match an premye. [[CHECK:sqlite-n4-l02-c1]] [[CHECK:sqlite-n4-l02-c2]]",
+          "code": "CREATE VIRTUAL TABLE atik_fts USING fts5(tit, kontni);\n\nINSERT INTO atik_fts (tit, kontni) VALUES\n  ('Resèt soup', 'Yon bon soup joumou ak vyann'),\n  ('Gid mango', 'Tout sou mango ak bannann');\n\nSELECT tit, bm25(atik_fts) AS skor\nFROM atik_fts\nWHERE atik_fts MATCH 'mango*'\nORDER BY skor;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "match"
+              ],
+              "choices": [
+                "A) LIKE",
+                "B) MATCH",
+                "C) SEARCH",
+                "D) FIND"
+              ],
+              "correct_ht": "B) MATCH",
+              "explanation_ht": "MATCH se operatè rechèch full-text FTS5 la. Li itilize endis envèse a olye li tout tab la tankou LIKE.",
+              "id": "sqlite-n4-l02-e1",
+              "prompt_ht": "Ki operatè ou itilize pou chèche nan yon tab FTS5?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "virtual table"
+              ],
+              "correct_ht": "VIRTUAL TABLE",
+              "explanation_ht": "CREATE VIRTUAL TABLE ... USING fts5(...) kreye yon tab rechèch full-text jere pa modil FTS5 la.",
+              "id": "sqlite-n4-l02-e2",
+              "prompt_ht": "Konplete pou kreye tab rechèch la: CREATE _____ atik_fts USING fts5(tit, kontni);",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "FTS5 gen tokenizer icu pou rechèch multilang pi entelijan. Epi sonje: FTS estoke yon kopi tèks la — sou gwo baz, se yon koute espas pou yon vitès rechèch 100×.",
+          "id": "sqlite-n4-l02",
+          "title_ht": "Rechèch full-text ak FTS5",
+          "checkpoints": [
+            {
+              "id": "sqlite-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            },
+            {
+              "id": "sqlite-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon trigger se yon règ otomatik: 'lè X rive sou tab la, fè Y'. Baz la egzekite li pou kont li, menm si aplikasyon an bliye. Sentaks: CREATE TRIGGER non AFTER INSERT ON tab BEGIN ... END;. Ka klasik 1: odit. Chak fwa pri yon pwodwi chanje, anrejistre ansyen pri a: CREATE TRIGGER odit_pri AFTER UPDATE OF pri ON pwodwi BEGIN INSERT INTO istwa_pri(pwodwi_id, ansyen_pri, dat) VALUES (OLD.id, OLD.pri, datetime('now')); END;. Mo kle OLD ak NEW refere ak ranje a anvan/apre chanjman an. Ka klasik 2: kenbe tab FTS senkronize: AFTER INSERT ON pwodwi → INSERT INTO pwodwi_fts(rowid, non) VALUES (NEW.rowid, NEW.non). Ka klasik 3: validasyon konplèks: BEFORE INSERT + RAISE(ABORT, 'mesaj') pou refize done ki vyole yon règ metye ke kontrent senp pa ka eksprime. Atansyon ekspè: triggers kache lojik metye nan baz la — dokimante yo byen, sinon pwochen devlopè a ap chèche poukisa done ap chanje 'pou kont yo'. [[CHECK:sqlite-n4-l03-c1]] [[CHECK:sqlite-n4-l03-c2]]",
+          "code": "CREATE TRIGGER odit_pri\nAFTER UPDATE OF pri ON pwodwi\nBEGIN\n  INSERT INTO istwa_pri(pwodwi_id, ansyen_pri, nouvo_pri, dat)\n  VALUES (OLD.id, OLD.pri, NEW.pri, datetime('now'));\nEND;\n\nCREATE TRIGGER kenbe_fts\nAFTER INSERT ON pwodwi\nBEGIN\n  INSERT INTO pwodwi_fts(rowid, non) VALUES (NEW.rowid, NEW.non);\nEND;",
+          "code_lang": "sql",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "old ak new"
+              ],
+              "choices": [
+                "A) before ak after",
+                "B) OLD ak NEW",
+                "C) prev ak next",
+                "D) in ak out"
+              ],
+              "correct_ht": "B) OLD ak NEW",
+              "explanation_ht": "OLD se ranje a jan li te ye anvan chanjman an, NEW se jan li ye apre. Nan yon INSERT, sèlman NEW egziste; nan yon DELETE, sèlman OLD.",
+              "id": "sqlite-n4-l03-e1",
+              "prompt_ht": "Ki mo kle ki refere ak valè ranje a anvan ak apre chanjman an nan yon trigger?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "trigger"
+              ],
+              "correct_ht": "TRIGGER",
+              "explanation_ht": "CREATE TRIGGER non AFTER INSERT ON tab BEGIN ... END; anrejistre yon règ otomatik nan baz la.",
+              "id": "sqlite-n4-l03-e2",
+              "prompt_ht": "Konplete pou kreye yon règ otomatik: CREATE _____ odit AFTER UPDATE ON pwodwi BEGIN ... END;",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Triggers AFTER yo kouri andedan menm tranzaksyon ak deklarasyon ki deklanche yo: si trigger la echwe, tout operasyon an fè ROLLBACK. Se pwisan — epi se pou sa ou teste yo tankou kòd kritik.",
+          "id": "sqlite-n4-l03",
+          "title_ht": "Triggers avanse",
+          "checkpoints": [
+            {
+              "id": "sqlite-n4-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Triye (sorting) done se tankou:",
+              "accepted": [
+                "a",
+                "ranje kat jwèt ou pa nimewo: mete lòd nan dezòd"
+              ],
+              "correct_ht": "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+              "explanation_ht": "Done nan lòd = rechèch rapid.",
+              "choices": [
+                "A) Ranje kat jwèt ou pa nimewo: mete lòd nan dezòd",
+                "B) Melanje kat yo",
+                "C) Jete kat yo",
+                "D) Kache kat yo"
+              ]
+            },
+            {
+              "id": "sqlite-n4-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bazdone se tankou:",
+              "accepted": [
+                "a",
+                "yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit"
+              ],
+              "correct_ht": "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+              "explanation_ht": "Tablo, ranje, kolòn: tout òganize pou rechèch rapid.",
+              "choices": [
+                "A) Yon bibliyotèk: enfòmasyon ranje byen pou jwenn yo vit",
+                "B) Yon sèl kaye",
+                "C) Yon jwèt",
+                "D) Yon radyo"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 4 — Ekspè"
+    }
+  ],
+  "name": "SQLite"
+}

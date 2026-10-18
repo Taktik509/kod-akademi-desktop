@@ -1,0 +1,856 @@
+{
+  "category_ht": "Web (devan)",
+  "description_ht": "JavaScript se langaj ki bay lavi a paj entènèt: bouton ki reponn, fòmilè ki verifye, done ki chaje san rechaje paj la. Se langaj entènèt la.",
+  "id": "javascript",
+  "levels": [
+    {
+      "id": "n1",
+      "lessons": [
+        {
+          "body_ht": "Yon jwèt video pa sèlman bèl — li reponn lè ou peze bouton. JavaScript se sa ki fè paj web yo vivan: ou klike, li reyaji.\n\n [[CHECK:js-n1-l01-c1]]\n\nJavaScript (yo rele l JS pou kout) se langaj pwogramasyon entènèt la. Pandan HTML bay estrikti epi CSS bay stil, JavaScript bay KONPÒTMAN: li fè bouton yo reponn lè w klike, li verifye fòmilè, li chaje nouvo kontni san rechaje paj la. Ou mete kòd JS andedan baliz <script> — swa dirèkteman nan paj HTML la, swa nan yon fichye .js apa ke w konekte ak <script src=\"app.js\"></script>. Fichye apa a se pi bon pratik la. Premye kòmand tout pwogramè aprann se console.log(): li afiche yon mesaj nan konsole navigatè a (ouvri ak F12, onglet Console). Konsole a se laboratwa w: w teste lide, w wè erè, w konprann sa kòd ou fè. JavaScript sansib ak majiskil/miniskil: console.log pa menm ak Console.Log. Chak enstriksyon fini ak pwen-virgil (;) — se bon abitid menm si navigatè a padone w pafwa. Kòmantè ekri ak // pou yon liy; yo pa egzekite, yo eksplike lide w pou lavni. [[CHECK:js-n1-l01-c2]]",
+          "code": "<script>\n  // Premye pwogram mwen\n  console.log(\"Bonjou, Kòd Akademi!\");\n  console.log(40 + 2);\n</script>",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "a",
+                "li afiche yon mesaj nan konsole navigatè a"
+              ],
+              "choices": [
+                "A) Li afiche yon mesaj nan konsole navigatè a",
+                "B) Li enprime sou papye",
+                "C) Li kreye yon bouton",
+                "D) Li sove yon fichye"
+              ],
+              "correct_ht": "A) Li afiche yon mesaj nan konsole navigatè a",
+              "explanation_ht": "console.log() voye tèks oswa valè nan konsole zouti devlopè a — zouti debogaj nimewo 1.",
+              "id": "js-n1-l01-e1",
+              "prompt_ht": "Kisa console.log() fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "console.log(\"bonjou\");",
+                "console.log('bonjou');",
+                "console.log(\"Bonjou\");"
+              ],
+              "correct_ht": "console.log(\"Bonjou\");",
+              "explanation_ht": "console.log(\"Bonjou\"); rele fonksyon log la ak tèks \"Bonjou\" ant parantez.",
+              "id": "js-n1-l01-e2",
+              "prompt_ht": "Ekri enstriksyon ki afiche \"Bonjou\" nan konsole a:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Toujou louvri konsole a (F12) anvan w teste — 90% erè debutan yo parèt la ak nimewo liy presi.",
+          "id": "js-n1-l01",
+          "title_ht": "Premye kòd JavaScript ou",
+          "checkpoints": [
+            {
+              "id": "js-n1-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou, kòd akademi!",
+                "\"bonjou, kòd akademi!\""
+              ],
+              "correct_ht": "Bonjou, Kòd Akademi!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou, Kòd Akademi! »."
+            },
+            {
+              "id": "js-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — JavaScript nan yon paj web sèvi pou:",
+              "accepted": [
+                "a",
+                "fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni"
+              ],
+              "correct_ht": "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+              "explanation_ht": "JS = sèvo/konpòtman paj la.",
+              "choices": [
+                "A) Fè paj la vivan: reponn klik, verifye fòmilè, chaje kontni",
+                "B) Ekri tèks la",
+                "C) Bay koulè yo",
+                "D) Sere modpas"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon varyab se yon bwat ki gen yon non kote w sere yon valè pou itilize pita. Nan JavaScript modèn, ou deklare ak let (valè a ka chanje: let laj = 25;) oswa const (valè a pa chanje: const peyi = \"Ayiti\";). Règ: itilize const pa default, let sèlman si valè a dwe chanje — sa anpeche erè. Twa kalite debaz: string (tèks ant gimè: \"Bonjou\"), number (chif: 42, 3.14 — pa gen diferans ant antye ak desimal), boolean (vre/fo: true/false). Ou ka konbine string ak + : \"Bonjou, \" + non. Kalite a enpòtan paske operasyon yo depann de li: 5 + 3 = 8 men \"5\" + \"3\" = \"53\" (kole tèks)! Fonksyon typeof di w kalite yon valè: typeof 42 bay \"number\". Non varyab yo sansib ak ka (non ≠ Non), pa ka kòmanse ak chif, epi pa itilize mo rezève tankou let oswa const kòm non. Chwazi non ki gen sans: priTotal pi bon pase x — nan 6 mwa w ap konprann kòd ou. [[CHECK:js-n1-l02-c1]] [[CHECK:js-n1-l02-c2]]",
+          "code": "const non = \"Mariz\";\nlet laj = 28;\nlaj = 29; // let pèmèt chanjman\nconst marye = false;\nconsole.log(\"Bonjou, \" + non);\nconsole.log(typeof laj); // \"number\"",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "c",
+                "const"
+              ],
+              "choices": [
+                "A) let",
+                "B) var",
+                "C) const",
+                "D) static"
+              ],
+              "correct_ht": "C) const",
+              "explanation_ht": "const deklare yon konstan: re-asignasyon entèdi, sa pwoteje w kont chanjman aksidantèl.",
+              "id": "js-n1-l02-e1",
+              "prompt_ht": "Kilès ou dwe itilize pou yon valè ki pa janm chanje?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "const peyi = \"ayiti\";",
+                "const peyi = 'ayiti';",
+                "const peyi=\"ayiti\";"
+              ],
+              "correct_ht": "const peyi = \"Ayiti\";",
+              "explanation_ht": "const peyi = \"Ayiti\"; kreye yon konstan tèks ki pa ka chanje.",
+              "id": "js-n1-l02-e2",
+              "prompt_ht": "Deklere yon konstan 'peyi' ak valè \"Ayiti\":",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "const pa vle di valè a 'friz' nèt: yon tablo const ka resevwa nouvo atik (push) — se re-asignasyon an ki entèdi.",
+          "id": "js-n1-l02",
+          "title_ht": "Varyab ak kalite done",
+          "checkpoints": [
+            {
+              "id": "js-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « laj » genyen? (ekri valè a)",
+              "accepted": [
+                "29; // let pèmèt chanjman"
+              ],
+              "correct_ht": "29; // let pèmèt chanjman",
+              "explanation_ht": "Nan egzanp lan, liy « laj = 29; // let pèmèt chanjman » mete valè « 29; // let pèmèt chanjman » nan bwat « laj » a."
+            },
+            {
+              "id": "js-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon varyab se tankou…",
+              "accepted": [
+                "a",
+                "yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "bwat"
+              ],
+              "correct_ht": "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+              "explanation_ht": "Varyab = bwat + etikèt (non). Ou mete yon valè andedan, epi ou repran l nenpòt ki lè ak non an.",
+              "choices": [
+                "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "B) Yon foto sou ekran an",
+                "C) Yon chante",
+                "D) Yon bouton ou peze"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pwogram yo vin entelijan lè yo ka pran desizyon: SI yon kondisyon vre, FÈ sa, SINON fè lòt bagay. Nan JavaScript, se enstriksyon if/else: if (laj >= 18) { console.log(\"Majo\"); } else { console.log(\"Mine\"); }. Kondisyon an andedan parantez yo dwe bay true oswa false. Operatè konparezon: === (egal, estrik — verifye valè AK kalite), !== (pa egal), > (pi gran), < (pi piti), >= (pi gran oswa egal), <= (pi piti oswa egal). Atansyon ak diferans == ak === : \"5\" == 5 se true (konvèsyon otomatik) men \"5\" === 5 se false — TOUJOU itilize === pou evite sipriz. Ou ka konbine kondisyon ak && (ET — tou de dwe vre), || (OSWA — youn sifi), ! (NON — ranvèse). else if pèmèt plizyè ka: if/else if/else. Egzanp: kalkile pri livrezon selon vil la, oswa montre yon mesaj diferan selon nòt elèv la. San kondisyon, pwogram nan ta fè menm bagay la pou tout moun — avè l, li adapte. [[CHECK:js-n1-l03-c1]] [[CHECK:js-n1-l03-c2]]",
+          "code": "const not = 85;\nif (not >= 90) {\n  console.log(\"Ekselan!\");\n} else if (not >= 70) {\n  console.log(\"Byen\");\n} else {\n  console.log(\"Fò w travay plis\");\n}\nconst kaKondwi = (laj >= 18) && genLisans;",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li verifye valè ak kalite, san konvèsyon sipriz"
+              ],
+              "choices": [
+                "A) Li pi vit pou ekri",
+                "B) Li verifye valè AK kalite, san konvèsyon sipriz",
+                "C) == pa egziste",
+                "D) Pa gen diferans"
+              ],
+              "correct_ht": "B) Li verifye valè AK kalite, san konvèsyon sipriz",
+              "explanation_ht": "== fè konvèsyon otomatik (\"5\" == 5 → true); === estrik epi previzib.",
+              "id": "js-n1-l03-e1",
+              "prompt_ht": "Poukisa yo rekòmande === olye == ?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "if (laj >= 18) {",
+                "if(laj>=18){",
+                "if (laj >= 18)",
+                "if (laj>=18) {"
+              ],
+              "correct_ht": "if (laj >= 18) {",
+              "explanation_ht": "if (laj >= 18) { ouvri blok ki egzekite sèlman si kondisyon an vre.",
+              "id": "js-n1-l03-e2",
+              "prompt_ht": "Ekri kondisyon ki teste si laj >= 18 (liy if la sèlman):",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Kondisyon konplèks yo vin lizib lè w mete yo nan varyab ki gen non klè: const seMajo = laj >= 18;",
+          "id": "js-n1-l03",
+          "title_ht": "Kondisyon: pran desizyon",
+          "checkpoints": [
+            {
+              "id": "js-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "ekselan!",
+                "\"ekselan!\""
+              ],
+              "correct_ht": "Ekselan!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Ekselan! »."
+            },
+            {
+              "id": "js-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 1 — Debitan"
+    },
+    {
+      "id": "n2",
+      "lessons": [
+        {
+          "body_ht": "Yon bouk repete yon blok kòd plizyè fwa — òdinatè pa janm fatige, se fòs yo. Bouk for se pi itilize a lè w konnen konbyen fwa: for (let i = 0. I < 5; i++) { console.log(i); } — twa pati nan parantez yo: inisyalizasyon (kòmanse i nan 0), kondisyon (kontinye pandan i < 5), mizajou (i++ ajoute 1 chak tou). Bouk while repete PANDAN yon kondisyon vre: let i = 0. While (i < 5) { console.log(i); i++; } — pafè lè w pa konnen davans konbyen tou (pa egzanp tann yon repons). DANJE: si kondisyon an pa janm vin fo, bouk la pa janm fini (bouk enfini) epi paj la bloke — toujou asire w gen yon mizajou! break soti nan bouk la touswit, continue sote nan pwochen tou a. Bouk yo sèvi pou travèse lis: pou chak elèv nan klas la, kalkile mwayèn ni; pou chak pwodwi, afiche pri l. Avèk bouk, 3 liy kòd fè travay 1000 liy. [[CHECK:js-n2-l01-c1]] [[CHECK:js-n2-l01-c2]]",
+          "code": "for (let i = 1; i <= 5; i++) {\n  console.log(\"Tou nimewo \" + i);\n}\nconst fwi = [\"mango\", \"bannann\", \"zaboka\"];\nfor (let i = 0; i < fwi.length; i++) {\n  console.log(fwi[i]);\n}",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "bouk enfini — paj la bloke"
+              ],
+              "choices": [
+                "A) Bouk la kanpe poukont li",
+                "B) Bouk enfini — paj la bloke",
+                "C) Li egzekite yon sèl fwa",
+                "D) Li bay yon erè dousman"
+              ],
+              "correct_ht": "B) Bouk enfini — paj la bloke",
+              "explanation_ht": "San yon mizajou ki fè kondisyon an vin fo, while la tounen tout tan epi navigatè a jele.",
+              "id": "js-n2-l01-e1",
+              "prompt_ht": "Kisa k ap pase si kondisyon yon while pa janm vin fo?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "for (let i = 0; i < 10; i++) {",
+                "for(let i=0;i<10;i++){",
+                "for (let i = 0; i < 10; i++)"
+              ],
+              "correct_ht": "for (let i = 0; i < 10; i++) {",
+              "explanation_ht": "Twa pati yo: inisyalizasyon; kondisyon; mizajou — se modèl bouk for la.",
+              "id": "js-n2-l01-e2",
+              "prompt_ht": "Ekri tèt yon bouk for ki konte i soti 0 jous i < 10:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pou tablo, for...of (for (const f of fwi)) pi lizib pase for klasik ak endèks — adopte l vit.",
+          "id": "js-n2-l01",
+          "title_ht": "Bouk: repete san fatige",
+          "checkpoints": [
+            {
+              "id": "js-n2-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "fwi[i]"
+              ],
+              "correct_ht": "fwi[i]",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « fwi[i] »."
+            },
+            {
+              "id": "js-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon fonksyon se yon blok kòd ki gen yon non epi ki fè yon travay presi — ou ekri l yon fwa, ou rele l otan w vle. Deklarasyon: function salye(non) { return \"Bonjou, \" + non. } — non ant parantez yo se paramèt (valè fonksyon an ap resevwa), return voye rezilta a bay moun ki rele l. Ou rele l ak salye(\"Mariz\"). Poukisa fonksyon? Twa rezon: evite repete kòd (DRY — Don't Repeat Yourself), òganize lide (chak fonksyon = yon travay), teste pi fasil. Paramèt yo ka gen valè default: function salye(non = \"zanmi\"). Fonksyon flèch (arrow) se fòm kout modèn lan: const double = (n) => n * 2; — san akolad, return enplisit. Yo itilize anpil kòm paramèt (pa egzanp nan map/filter). Yon fonksyon san return bay undefined. Konsèy: yon fonksyon dwe fè YON sèl bagay epi non l dwe di sa l fè (kalkileTotal, verifyeImel). Si non an gen \"ak\" ladan (fèSaAkSa), separe l an de fonksyon. [[CHECK:js-n2-l02-c1]] [[CHECK:js-n2-l02-c2]]",
+          "code": "function kalkilePri(pri, kantite) {\n  return pri * kantite;\n}\nconst total = kalkilePri(250, 4);\nconsole.log(total); // 1000\nconst kare = (n) => n * n;\nconsole.log(kare(5)); // 25",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li voye yon valè bay moun ki rele fonksyon an epi soti"
+              ],
+              "choices": [
+                "A) Li kanpe pwogram nan",
+                "B) Li voye yon valè bay moun ki rele fonksyon an epi soti",
+                "C) Li enprime nan konsole a",
+                "D) Li recomanse fonksyon an"
+              ],
+              "correct_ht": "B) Li voye yon valè bay moun ki rele fonksyon an epi soti",
+              "explanation_ht": "return bay rezilta a epi kite fonksyon an touswit — kòd apre return pa egzekite.",
+              "id": "js-n2-l02-e1",
+              "prompt_ht": "Kisa mo kle return fè nan yon fonksyon?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "const double = (n) => n * 2;",
+                "const double = n => n * 2;",
+                "(n) => n * 2"
+              ],
+              "correct_ht": "const double = (n) => n * 2;",
+              "explanation_ht": "Fonksyon flèch: (paramèt) => ekspresyon — return enplisit san akolad.",
+              "id": "js-n2-l02-e2",
+              "prompt_ht": "Ekri yon fonksyon flèch 'double' ki miltipliye n pa 2:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nonmen fonksyon yo ak vèb (kalkile, verifye, chache) — kòd ou vin li tankou fraz kreyòl.",
+          "id": "js-n2-l02",
+          "title_ht": "Fonksyon",
+          "checkpoints": [
+            {
+              "id": "js-n2-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "kalkilepri"
+              ],
+              "correct_ht": "kalkilePri",
+              "explanation_ht": "Fonksyon an rele « kalkilePri » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "js-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon tablo (array) se yon lis òdone valè: const fwi = [\"mango\", \"bannann\", \"zaboka\"];. Chak atik gen yon endèks ki kòmanse nan 0: fwi[0] se \"mango\". fwi.length bay kantite atik (3). Metòd esansyèl: push() ajoute nan fen, pop() retire dènye a, shift()/unshift() nan kòmansman. Men fòs JavaScript se metòd fonksyonèl yo: map() transfòme chak atik (pri.map(p => p * 2) double tout pri), filter() kenbe sèlman sa ki pase tès la (nòt.filter(n => n >= 70) kenbe sèlman admisyon yo), find() jwenn premye ki matche, includes() di si yon valè la. Yo pa chanje tablo orijinal la (yo retounen yon NOUVO tablo) — sa evite erè sibtil. forEach() egzekite yon aksyon sou chak atik san retounen anyen. Lè w konbine yo (filter apre map), w ekri pwosesis done konplèks an yon liy lizib. Tablo se estrikti done w ap itilize chak jou — metriz yo byen. Egzèsis: pran yon lis pri epi itilize filter pou kenbe sa ki anba 500, apre map pou ajoute taks 10%. [[CHECK:js-n2-l03-c1]] [[CHECK:js-n2-l03-c2]]",
+          "code": "const pri = [100, 250, 400, 150];\nconst chè = pri.filter(p => p > 200);\nconsole.log(chè); // [250, 400]\nconst akTaks = pri.map(p => p * 1.1);\nconsole.log(akTaks[0]); // 110\npri.push(500);\nconsole.log(pri.length); // 5",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon nouvo tablo ak sèlman pri > 200 yo"
+              ],
+              "choices": [
+                "A) Premye pri ki > 200",
+                "B) Yon nouvo tablo ak sèlman pri > 200 yo",
+                "C) Li chanje tablo pri a",
+                "D) Kantite pri > 200"
+              ],
+              "correct_ht": "B) Yon nouvo tablo ak sèlman pri > 200 yo",
+              "explanation_ht": "filter teste chak atik epi retounen yon NOUVO tablo ak sèlman sa ki pase tès la.",
+              "id": "js-n2-l03-e1",
+              "prompt_ht": "Kisa pri.filter(p => p > 200) retounen?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "fwi.push(\"kokoye\");",
+                "fwi.push('kokoye');",
+                "fwi.push(\"kokoye\")"
+              ],
+              "correct_ht": "fwi.push(\"kokoye\");",
+              "explanation_ht": "push() ajoute yon atik nan fen tablo a epi mete length ajou.",
+              "id": "js-n2-l03-e2",
+              "prompt_ht": "Ekri kòd ki ajoute \"kokoye\" nan fen tablo fwi a:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Chenn metòd yo li tankou fraz: done.filter(...).map(...) — se stil kòd modèn lan, aprann li byen.",
+          "id": "js-n2-l03",
+          "title_ht": "Travay ak tablo",
+          "checkpoints": [
+            {
+              "id": "js-n2-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "js-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 2 — Entèmedyè"
+    },
+    {
+      "id": "n3",
+      "lessons": [
+        {
+          "body_ht": "Yon objè gwoupe done ki gen rapò nan yon sèl bwat: const elèv = { non: \"Mariz\", laj: 28, vil: \"Pòtoprens\" };. Chak antre se yon pwopriyete (kle: valè). Ou li ak pwen (elèv.non) oswa ak kwòchè (elèv[\"non\"] — itil lè kle a nan yon varyab). Ou ajoute/modifye fasil: elèv.nòt = 85;. Yon metòd se yon fonksyon andedan yon objè: prezante() { return \"Mwen rele \" + this.non; } — mo kle this refere ak objè a li menm. Destruktiraj (destructuring) ekstrè pwopriyete yo an varyab nan yon liy: const { non, laj } = elèv;. Spread (...) kopi oswa fizyone: const kopi = { ...elèv, vil: \"Kap Ayisyen\" }; kreye yon NOUVO objè ak vil chanje — orijinal la pa touche. Sa enpòtan paske objè yo pase pa referans: const b = a; pa kopi, tou de montre menm objè a! Pou wè kle yo: Object.keys(elèv); pou valè yo: Object.values(elèv). Objè se baz JSON (fòma echanj done entènèt la) — tout API w ap konsome retounen objè. [[CHECK:js-n3-l01-c1]] [[CHECK:js-n3-l01-c2]]",
+          "code": "const elèv = {\n  non: \"Mariz\",\n  laj: 28,\n  prezante() {\n    return \"Mwen rele \" + this.non;\n  }\n};\nconsole.log(elèv.prezante());\nconst { non, laj } = elèv;\nconst elèv2 = { ...elèv, vil: \"Kap Ayisyen\" };",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "c",
+                "li refere ak objè ki gen metòd la"
+              ],
+              "choices": [
+                "A) Li refere ak fonksyon an",
+                "B) Li refere ak navigatè a",
+                "C) Li refere ak objè ki gen metòd la",
+                "D) Li pa vle di anyen"
+              ],
+              "correct_ht": "C) Li refere ak objè ki gen metòd la",
+              "explanation_ht": "Andedan yon metòd, this se objè a li menm — this.non li pwopriyete non objè a.",
+              "id": "js-n3-l01-e1",
+              "prompt_ht": "Kisa this vle di andedan yon metòd objè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "elèv.non",
+                "eleve.non",
+                "elèv[\"non\"]"
+              ],
+              "correct_ht": "elèv.non",
+              "explanation_ht": "Notasyon pwen (objè.pwopriyete) se fason ki pi kout pou li yon pwopriyete.",
+              "id": "js-n3-l01-e2",
+              "prompt_ht": "Ekri kòd ki li pwopriyete 'non' objè elèv la:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Toujou kreye NOUVO objè ak spread olye w modifye dirèkteman — se prensip imutabilite React la.",
+          "id": "js-n3-l01",
+          "title_ht": "Objè",
+          "checkpoints": [
+            {
+              "id": "js-n3-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "elèv.prezante()"
+              ],
+              "correct_ht": "elèv.prezante()",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « elèv.prezante() »."
+            },
+            {
+              "id": "js-n3-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Panse ak yon mwazi gato: mwazi a se plan an, epi chak gato ou fè ak li se yon egzanp. Nan pwogramasyon, yon klas se mwazi a, epi objè yo se gato yo.\n\n [[CHECK:js-n3-l02-c1]]\n\nDOM (Document Object Model) se reprezantasyon paj HTML la kòm objè JavaScript — pon ant kòd ou ak sa vizitè a wè. document.querySelector(\".bouton\") chwazi PREMYE eleman ki matche selektè CSS la; querySelectorAll pran tout (li retounen yon lis). Apre w fin chwazi yon eleman, ou ka li/chanje tèks li ak .textContent, chanje HTML andedan l ak .innerHTML (atansyon: pa mete done itilizatè la san netwaye. Risk XSS!), chanje stil ak .style.color = \"red\", oswa ajoute/retire klas ak .classList.add(\"aktif\"). Evènman se kè entèrak tivite a: bouton.addEventListener(\"click\", () => { ... }); egzekite fonksyon an chak fwa w klike. Evènman komen: click, input (chan chanje), submit (fòmilè voye), keydown. Ou ka kreye eleman nouvo ak document.createElement(\"p\") epi ajoute yo ak paran.appendChild(nouvo). Avèk DOM, paj ou sispann estatik: lis travay, kontè, fòmilè dinamik — tout se DOM. Pwochen defi w: yon bouton ki ajoute yon atik nan yon lis chak fwa w klike — w ap wè DOM ap viv. [[CHECK:js-n3-l02-c2]]",
+          "code": "const bouton = document.querySelector(\"#voye\");\nconst mesaj = document.querySelector(\".mesaj\");\nbouton.addEventListener(\"click\", () => {\n  mesaj.textContent = \"Mèsi! Fòmilè a voye.\";\n  mesaj.classList.add(\"siksè\");\n});",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "premye eleman ki matche selektè CSS la"
+              ],
+              "choices": [
+                "A) Tout eleman ki matche yo",
+                "B) Premye eleman ki matche selektè CSS la",
+                "C) Dènye eleman an",
+                "D) Paran eleman an"
+              ],
+              "correct_ht": "B) Premye eleman ki matche selektè CSS la",
+              "explanation_ht": "querySelector retounen premye match la; pou tout, itilize querySelectorAll.",
+              "id": "js-n3-l02-e1",
+              "prompt_ht": "Kisa document.querySelector(\".bouton\") retounen?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "bouton.addeventlistener(\"click\", () => {});",
+                "bouton.addeventlistener(\"click\", function() {});"
+              ],
+              "correct_ht": "bouton.addEventListener(\"click\", () => {});",
+              "explanation_ht": "addEventListener(\"click\", fonksyon) tache yon reyaksyon sou chak klik.",
+              "id": "js-n3-l02-e2",
+              "prompt_ht": "Ekri liy ki tache yon fonksyon flèch vid sou klik bouton an:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pa janm mete tèks itilizatè a nan innerHTML san netwaye — se pòtay atak XSS nimewo 1 sou entènèt la.",
+          "id": "js-n3-l02",
+          "title_ht": "Manipile paj la (DOM)",
+          "checkpoints": [
+            {
+              "id": "js-n3-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — DOM la se:",
+              "accepted": [
+                "a",
+                "paj web la kòm yon pyebwa objè javascript ka manyen"
+              ],
+              "correct_ht": "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+              "explanation_ht": "Chak baliz vin yon 'ne' ou ka li, chanje oswa efase ak JS.",
+              "choices": [
+                "A) Paj web la kòm yon pyebwa objè JavaScript ka manyen",
+                "B) Yon bazdone",
+                "C) Yon antivirus",
+                "D) Yon jwèt"
+              ]
+            },
+            {
+              "id": "js-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "JavaScript se yon sèl fil (single-thread): li fè yon bagay alafwa. Operasyon ki pran tan (chaje done sou entènèt) pa dwe bloke tout paj la — se pou sa asenkron egziste. setTimeout(() => { ... }, 2000); egzekite kòd la APRE 2000ms san bloke rès la. Yon Promise se yon pwomès valè lavni: li ka pending (ap tann), fulfilled (reyisi ak valè) oswa rejected (echwe ak erè). Ou konsome l ak .then(valè => ...) pou siksè ak .catch(erè => ...) pou echèk. async/await se fason modèn ki pi lizib: andedan yon fonksyon async, await tann yon Promise san .then: const repons = await fetch(url); const done = await repons.json();. fetch() se fonksyon natif pou rele API sou entènèt — baz tout aplikasyon modèn (chaje pwodwi, voye fòmilè). Règ: await mache sèlman andedan fonksyon async. Toujou jere erè: antoure ak try/catch sinon yon API ki tonbe kraze aplikasyon w. Konprann asenkron se divizyon ant debutan ak devlopè ki pwodui aplikasyon reyèl. [[CHECK:js-n3-l03-c1]] [[CHECK:js-n3-l03-c2]]",
+          "code": "async function chajeItilizatè() {\n  try {\n    const repons = await fetch(\"https://api.egzanp.com/itilizatè\");\n    const done = await repons.json();\n    console.log(done.non);\n  } catch (erè) {\n    console.log(\"Pwoblèm:\", erè);\n  }\n}\nchajeItilizatè();",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li tann Promise la san bloke, epi mache sèlman nan fonksyon async"
+              ],
+              "choices": [
+                "A) Li bloke tout paj la",
+                "B) Li tann Promise la san bloke, epi mache sèlman nan fonksyon async",
+                "C) Li ranplase return",
+                "D) Li fè bouk la pi vit"
+              ],
+              "correct_ht": "B) Li tann Promise la san bloke, epi mache sèlman nan fonksyon async",
+              "explanation_ht": "await poz Promise la epi reprann apre — kòd la li tankou senkron men paj la rete reyaktif.",
+              "id": "js-n3-l03-e1",
+              "prompt_ht": "Kisa mo kle await fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "await fetch(\"https://api.egzanp.com/done\");",
+                "await fetch('https://api.egzanp.com/done');"
+              ],
+              "correct_ht": "await fetch(\"https://api.egzanp.com/done\");",
+              "explanation_ht": "await fetch(url) voye demann lan epi tann repons lan — de baz aplikasyon modèn yo.",
+              "id": "js-n3-l03-e2",
+              "prompt_ht": "Ekri liy ki chaje done ak await fetch sou yon URL:",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Promise.all([p1, p2]) tann PLIZYÈ Promise ansanm — pi vit pase tann yo youn apre lòt.",
+          "id": "js-n3-l03",
+          "title_ht": "Kòd asenkron",
+          "checkpoints": [
+            {
+              "id": "js-n3-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "done.non"
+              ],
+              "correct_ht": "done.non",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « done.non »."
+            },
+            {
+              "id": "js-n3-l03-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "chajeitilizatè"
+              ],
+              "correct_ht": "chajeItilizatè",
+              "explanation_ht": "Fonksyon an rele « chajeItilizatè » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 3 — Avanse"
+    },
+    {
+      "id": "n4",
+      "lessons": [
+        {
+          "body_ht": "Yon resèt kwizin se yon lis etap ou swiv chak fwa ou vle fè diri kole. Yon fonksyon se yon resèt pou òdinatè a: ou ekri etap yo yon fwa, epi ou rele l chak fwa ou bezwen l.\n\n [[CHECK:js-n4-l01-c1]]\n\nYon klozi (closure) se yon fonksyon ki sonje varyab kote li te kreye a, menm apre fonksyon paran an fini. Egzanp: function kreyeKontè() { let konte = 0. Return () => ++konte; } — chak fwa w rele kontè a, li sonje epi ogmante konte, men okenn kòd deyò pa ka touche konte dirèkteman! Se tankou yon bwat fèmen ak yon sèl ti twou. Poukisa sa pwisan? Li kreye done PRIVE san klas: varyab la kache, sèlman fonksyon an ka manyen l. Sa sèvi pou fabrike fonksyon (kreyeSalye(\"Bonjou\") retounen yon fonksyon salye pèsonalize), pou callback evènman ki sonje kontèks yo, ak pou evite polye espas global la. Konprann klozi = konprann poukisa yon varyab bouk let mache byen nan setTimeout pandan var bay menm valè a toupatou (var pa gen scope blok!). Chak fwa yon fonksyon anndan yon lòt itilize varyab paran an, gen yon klozi. Se konsèp ki separe moun ki ekri JavaScript ak moun ki KONPRANN JavaScript. [[CHECK:js-n4-l01-c2]]",
+          "code": "function kreyeKontè() {\n  let konte = 0; // prive!\n  return () => {\n    konte++;\n    return konte;\n  };\n}\nconst kontèA = kreyeKontè();\nconsole.log(kontèA()); // 1\nconsole.log(kontèA()); // 2 — li sonje!",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon fonksyon ki sonje varyab kote li te kreye a menm apre paran an fini"
+              ],
+              "choices": [
+                "A) Yon fason pou fèmen paj la",
+                "B) Yon fonksyon ki sonje varyab kote li te kreye a menm apre paran an fini",
+                "C) Yon bouk ki pa janm fini",
+                "D) Yon erè sintaks"
+              ],
+              "correct_ht": "B) Yon fonksyon ki sonje varyab kote li te kreye a menm apre paran an fini",
+              "explanation_ht": "Klozi kenbe referans sou anviwònman nesans li — varyab prive san klas.",
+              "id": "js-n4-l01-e1",
+              "prompt_ht": "Kisa yon klozi (closure) ye?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "let konte = 0;",
+                "let konte=0;"
+              ],
+              "correct_ht": "let konte = 0;",
+              "explanation_ht": "konte andedan kreyeKontè a se varyab prive klozi a sonje ant apèl yo.",
+              "id": "js-n4-l01-e2",
+              "prompt_ht": "Ki liy ki kreye varyab prive klozi a nan egzanp lan?",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Klozi + IIFE te fason yo fè modil anvan ES6 — konprann yo eksplike anpil vye kòd w ap rankontre.",
+          "id": "js-n4-l01",
+          "title_ht": "Klozi (closures)",
+          "checkpoints": [
+            {
+              "id": "js-n4-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "kreyekontè"
+              ],
+              "correct_ht": "kreyeKontè",
+              "explanation_ht": "Fonksyon an rele « kreyeKontè » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "js-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon closure (klozi) se:",
+              "accepted": [
+                "a",
+                "yon fonksyon ki sonje varyab kote yo te kreye l"
+              ],
+              "correct_ht": "A) Yon fonksyon ki sonje varyab kote yo te kreye l",
+              "explanation_ht": "Fonksyon an pote 'sakado' li ak varyab vwazinaj li a.",
+              "choices": [
+                "A) Yon fonksyon ki sonje varyab kote yo te kreye l",
+                "B) Yon pòt fèmen",
+                "C) Yon bwat",
+                "D) Yon sak"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Klas yo se modèl pou kreye objè ki sanble: class Machin { constructor(mak) { this.mak = mak; } demare() { return this.mak + \" ap vrombi!\"; } }. constructor egzekite lè w kreye ak new Machin(\"Toyota\"); — this.mak sere done chak egzanplè. Metòd yo (demare) pataje ant tout egzanplè via pwototip la — se pou sa klas yo efikas an memwa. Eritaj ak extends: class MachinElek extends Machin { chaje() { ... } } — pitit la eritye tout metòd paran an epi ajoute pa l; super() rele constructor paran an. static kreye metòd klas (Machin.konte() san new). Chan prive ak # : #vitès pa aksesib deyò klas la — vre enkapsilasyon modèn. Anba kapo, klas se sik estetik sou pwototip (sistèm eritaj orijinal JS): chak objè gen yon lyen kache nan pwototip li. Konprann pwototip eksplike poukisa tout tablo gen .map: li sou Array.prototype! Itilize klas pou modèl metye (Itilizatè, Pwodwi, Kòmann) — kòd ou vin òganize tankou mond reyèl la. [[CHECK:js-n4-l02-c1]] [[CHECK:js-n4-l02-c2]]",
+          "code": "class Elèv {\n  constructor(non, nòt) {\n    this.non = non;\n    this.nòt = nòt;\n  }\n  admèt() {\n    return this.nòt >= 70;\n  }\n}\nclass ElèvBousye extends Elèv {\n  constructor(non, nòt, pousantaj) {\n    super(non, nòt);\n    this.pousantaj = pousantaj;\n  }\n}\nconst m = new Elèv(\"Mariz\", 85);\nconsole.log(m.admèt()); // true",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li egzekite otomatikman lè w kreye yon egzanplè ak new"
+              ],
+              "choices": [
+                "A) Li detwi objè a",
+                "B) Li egzekite otomatikman lè w kreye yon egzanplè ak new",
+                "C) Li kopi klas la",
+                "D) Li pa janm egzekite"
+              ],
+              "correct_ht": "B) Li egzekite otomatikman lè w kreye yon egzanplè ak new",
+              "explanation_ht": "constructor se inisyalizatè a: new Elèv(...) rele l pou mete pwopriyete chak egzanplè.",
+              "id": "js-n4-l02-e1",
+              "prompt_ht": "Kisa constructor a fè nan yon klas?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "class elèv extends elèv",
+                "class ElèvBousye extends Elèv {",
+                "extends"
+              ],
+              "correct_ht": "class ElèvBousye extends Elèv",
+              "explanation_ht": "extends kreye eritaj: pitit la gen tout metòd paran an plis pa l.",
+              "id": "js-n4-l02-e2",
+              "prompt_ht": "Ki mo kle ki fè yon klas eritye yon lòt?",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Prefere konpozisyon (yon objè gen yon lòt) pase eritaj pwofon — eritaj 3+ nivo vin yon labirent.",
+          "id": "js-n4-l02",
+          "title_ht": "Klas ak pwototip",
+          "checkpoints": [
+            {
+              "id": "js-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            },
+            {
+              "id": "js-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Lè aplikasyon an grandi, ou separe kòd la an fichye modil: chak fichye ekspòte sa l ofri epi enpòte sa l bezwen. Nan matematik.js: export function adisyone(a, b) { return a + b; } — nan app.js: import { adisyone } from \"./matematik.js\";. export default ekspòte valè prensipal fichye a: export default class Magazen {}. Enpòt yo dwe anwo fichye a, epi modil yo gen pwòp scope yo — pa gen polisyon global! Nan HTML, chaje ak <script type=\"module\" src=\"app.js\"></script>. Jesyon erè: try { kòdRisk(); } catch (erè) { console.log(erè.message); } — eseye, epi si l echwe, rekipere avèk gras olye pwogram nan kraze. finally egzekite TOUJOU (netwayaj). Ou ka lanse pwòp erè w ak throw new Error(\"Pri a pa valid\"); pou siyal pwoblèm. Bon pratik: valide antre itilizatè, antoure apèl rezo ak try/catch, epi pa janm kite yon Promise san .catch. Yon aplikasyon ekspè pa janm montre yon paj blanch bay itilizatè a — li prevwa echèk epi reponn avèk gras. [[CHECK:js-n4-l03-c1]] [[CHECK:js-n4-l03-c2]]",
+          "code": "// matematik.js\n  export function adisyone(a, b) {\n    return a + b;\n  }\n// app.js\nimport { adisyone } from \"./matematik.js\";\ntry {\n  console.log(adisyone(5, 3));\n} catch (erè) {\n  console.log(\"Erè:\", erè.message);\n}",
+          "code_lang": "javascript",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li rann yon valè/fonksyon disponib pou lòt fichye enpòte"
+              ],
+              "choices": [
+                "A) Li enprime yon valè",
+                "B) Li rann yon valè/fonksyon disponib pou lòt fichye enpòte",
+                "C) Li fèmen fichye a",
+                "D) Li sove sou disk"
+              ],
+              "correct_ht": "B) Li rann yon valè/fonksyon disponib pou lòt fichye enpòte",
+              "explanation_ht": "export pibliye; import achte — se sistèm modil ES6 la.",
+              "id": "js-n4-l03-e1",
+              "prompt_ht": "Kisa mo kle export fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "try {",
+                "try{",
+                "try"
+              ],
+              "correct_ht": "try {",
+              "explanation_ht": "try ouvri blok eseye a; catch resevwa erè a si genyen.",
+              "id": "js-n4-l03-e2",
+              "prompt_ht": "Ki mo kle ki kòmanse yon blok jesyon erè?",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Modil yo chaje ak CORS estrik: teste ak yon sèvè lokal (npx serve), pa ak file:// — sinon enpòt yo bloke.",
+          "id": "js-n4-l03",
+          "title_ht": "Modil ak jesyon erè",
+          "checkpoints": [
+            {
+              "id": "js-n4-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "adisyone(5, 3)"
+              ],
+              "correct_ht": "adisyone(5, 3)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « adisyone(5, 3) »."
+            },
+            {
+              "id": "js-n4-l03-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "adisyone"
+              ],
+              "correct_ht": "adisyone",
+              "explanation_ht": "Fonksyon an rele « adisyone » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 4 — Ekspè"
+    }
+  ],
+  "name": "JavaScript"
+}

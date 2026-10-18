@@ -1,1 +1,67 @@
-{"author":"Medya 360","build":{"appId":"com.kodakademi.desktop","directories":{"output":"dist"},"files":["main.js","preload.js","renderer/**/*","data/**/*"],"linux":{"category":"Education","target":[{"arch":["x64"],"target":"AppImage"}]},"mac":{"category":"public.app-category.education","target":[{"arch":["x64","arm64"],"target":"dmg"}]},"nsis":{"allowToChangeInstallationDirectory":true,"oneClick":false},"productName":"Kòd Akademi","win":{"target":[{"arch":["x64"],"target":"nsis"}]}},"description":"Kòd Akademi — aplikasyon desktop ayisyen pou aprann pwogramasyon an kreyòl (offline)","devDependencies":{"electron":"^38.0.0","electron-builder":"^25.0.0"},"license":"UNLICENSED","main":"main.js","name":"kod-akademi-desktop","scripts":{"dist":"electron-builder","start":"electron ."},"version":"1.0.0"}
+{
+  "author": "Medya 360",
+  "build": {
+    "appId": "com.kodakademi.desktop",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "data/**/*"
+    ],
+    "linux": {
+      "category": "Education",
+      "target": [
+        {
+          "arch": [
+            "x64"
+          ],
+          "target": "AppImage"
+        }
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.education",
+      "target": [
+        {
+          "arch": [
+            "x64",
+            "arm64"
+          ],
+          "target": "dmg"
+        }
+      ]
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    },
+    "productName": "Kòd Akademi",
+    "win": {
+      "target": [
+        {
+          "arch": [
+            "x64"
+          ],
+          "target": "nsis"
+        }
+      ],
+      "signAndEditExecutable": false
+    }
+  },
+  "description": "Kòd Akademi — aplikasyon desktop ayisyen pou aprann pwogramasyon an kreyòl (offline)",
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "name": "kod-akademi-desktop",
+  "scripts": {
+    "dist": "electron-builder",
+    "start": "electron ."
+  },
+  "version": "1.0.0"
+}

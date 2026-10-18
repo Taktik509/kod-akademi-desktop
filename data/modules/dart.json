@@ -1,0 +1,850 @@
+{
+  "category_ht": "Mobil",
+  "description_ht": "Dart se langaj Google kreye pou fè aplikasyon mobil rapid, espesyalman ak Flutter. Yon sèl kòd mache sou Android ak iPhone.",
+  "id": "dart",
+  "levels": [
+    {
+      "id": "n1",
+      "lessons": [
+        {
+          "body_ht": "Lè ou vle montre zanmi w yon foto, ou lonje telefòn ou ba li. Fonksyon print() se fason pwogram nan lonje yon mesaj ba ou sou ekran an.\n\n [[CHECK:dart-n1-l01-c1]]\n\nDart se yon langaj pwogramasyon modèn ke Google kreye an 2011. Li fèt espesyalman pou bati aplikasyon mobil rapid ak Flutter, men ou ka itilize li pou sèvè ak sit entènèt tou. Bèl nouvèl la: sentaks Dart sanble anpil ak Java, JavaScript ak C#, kidonk si ou konnen youn nan yo, ou ap santi ou lakay ou. Premye etap la se enstale Dart SDK la sou sit dart.dev, oubyen enstale Flutter ki pote Dart ladan li. Pou kòmanse, kreye yon fichye ki rele main.dart epi ekri kòd la la. Fonksyon main() se pòt antre tout pwogram Dart — se la òdinatè a kòmanse li kòd ou a. Fonksyon print() la montre tèks sou ekran an. Pou lanse pwogram nan, ouvri tèminal la epi tape: dart run main.dart. Ou pral wè tèks la parèt. Sa se baz tout bagay — chak gwo aplikasyon Flutter kòmanse ak yon senp main(). [[CHECK:dart-n1-l01-c2]]",
+          "code": "void main() {\n  print('Bonjou, Ayiti!');\n  print('Mwen ap aprann Dart.');\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "main"
+              ],
+              "choices": [
+                "A) print()",
+                "B) main()",
+                "C) run()",
+                "D) start()"
+              ],
+              "correct_ht": "B) main()",
+              "explanation_ht": "Fonksyon main() se pòt antre obligatwa tout pwogram Dart. Se la ekzekisyon an kòmanse toujou.",
+              "id": "dart-n1-l01-e1",
+              "prompt_ht": "Ki fonksyon òdinatè a chèche an premye lè li lanse yon pwogram Dart?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "print"
+              ],
+              "correct_ht": "print",
+              "explanation_ht": "Fonksyon print() la se sa ki montre tèks sou konsole a nan Dart.",
+              "id": "dart-n1-l01-e2",
+              "prompt_ht": "Konplete kòd la pou li montre 'Mwen pare' sou ekran an: void main() { _____('Mwen pare'); }",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Konpilezon Dart rapid anpil: li ka konpile an kòd machin natif (AOT) pou aplikasyon final, oswa itilize JIT pandan devlopman pou hot reload Flutter la mache an mwens pase yon segonn.",
+          "id": "dart-n1-l01",
+          "title_ht": "Premye pwogram ou an",
+          "checkpoints": [
+            {
+              "id": "dart-n1-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou, ayiti!",
+                "'bonjou, ayiti!'"
+              ],
+              "correct_ht": "Bonjou, Ayiti!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou, Ayiti! »."
+            },
+            {
+              "id": "dart-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon pil (stack) mache:",
+              "accepted": [
+                "a",
+                "dènye antre, premye sòti — tankou yon pil asyèt"
+              ],
+              "correct_ht": "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+              "explanation_ht": "Ou pran toujou asyèt ki anwo a.",
+              "choices": [
+                "A) Dènye antre, premye sòti — tankou yon pil asyèt",
+                "B) Premye antre, premye sòti",
+                "C) O aza",
+                "D) Pa lòd alfabetik"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon varyab se yon bwat ki kenbe yon valè pou ou. Nan Dart, ou ka deklare yon varyab ak mo kle tankou var, final, oswa tip done a dirèkteman. Tip done prensipal yo se: int pou nonb antye (tankou 5), double pou nonb desimal (tankou 3.14), String pou tèks (tankou 'Bonjou'), ak bool pou vre/fo (true/false). Lè ou ekri var non = 'Garry'; Dart devinen pou kont li ke se yon String — sa rele type inference. Si ou ekri final laj = 25;, valè a pa ka chanje apre sa; final vle di 'fini, pa manyen'. Tip done yo enpòtan paske Dart se yon langaj tipé: li tcheke erè tip yo anvan pwogram nan menm lanse, sa ki evite anpil pwoblèm. Egzanp: ou pa ka mete yon tèks nan yon varyab int san konvèti li. Pou konbine tèks ak varyab, itilize entèpolasyon: 'Bonjou $non' oswa 'Ou gen ${laj + 1} an lane pwochèn'. [[CHECK:dart-n1-l02-c1]] [[CHECK:dart-n1-l02-c2]]",
+          "code": "void main() {\n  var non = 'Garry';\n  int laj = 25;\n  double pri = 19.99;\n  bool etidyan = true;\n  final vil = 'Pòtoprens';\n  print('Bonjou $non, ou gen $laj an.');\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "double"
+              ],
+              "choices": [
+                "A) int",
+                "B) double",
+                "C) bool",
+                "D) String"
+              ],
+              "correct_ht": "B) double",
+              "explanation_ht": "double se tip pou nonb desimal. int pa aksepte pati desimal la, kidonk pri 2500.50 bezwen double.",
+              "id": "dart-n1-l02-e1",
+              "prompt_ht": "Ki tip done ou ta itilize pou kenbe pri yon pwodwi tankou 2500.50?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "final"
+              ],
+              "correct_ht": "final",
+              "explanation_ht": "final deklare yon varyab ki resevwa valè li yon sèl fwa epi ki pa ka chanje apre.",
+              "id": "dart-n1-l02-e2",
+              "prompt_ht": "Deklare yon varyab konstan (ki pa ka chanje) ki rele peyi ak valè 'Ayiti'. Ekri mo kle ki manke a: _____ peyi = 'Ayiti';",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Prefere final olye var chak fwa valè a pa bezwen chanje: li rann kòd la pi an sekirite, pi fasil pou li, epi konpilatè a ka optimize l pi byen.",
+          "id": "dart-n1-l02",
+          "title_ht": "Varyab ak tip done",
+          "checkpoints": [
+            {
+              "id": "dart-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou $non, ou gen $laj an.",
+                "'bonjou $non, ou gen $laj an.'"
+              ],
+              "correct_ht": "Bonjou $non, ou gen $laj an.",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou $non, ou gen $laj an. »."
+            },
+            {
+              "id": "dart-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pwogram entelijan pran desizyon. Nan Dart, estrikti if/else pèmèt ou egzekite kòd diferan selon kondisyon an. Ou ekri if (kondisyon) { ... } else { ... }. Kondisyon an se yon ekspresyon ki bay true oswa false. Operatè konparezon yo se: == (egal), != (pa egal), > (pi gran), < (pi piti), >= ak <=. Ou ka konbine kondisyon ak && (E) ak || (OSWA). Lè ou bezwen repete yon aksyon plizyè fwa, itilize bouk. Bouk for la pafè lè ou konnen konbyen fwa: for (int i = 0; i < 5; i++) repete 5 fwa, ak i ki konte 0,1,2,3,4. Bouk while la kontinye toutotan kondisyon an vre: while (dlo > 0) — fè atansyon pou kondisyon an vin fo yon lè, sinon pwogram nan ap tounen pou tout tan! Mo kle break sispann bouk la touswit, epi continue sote nan pwochen tou a. [[CHECK:dart-n1-l03-c1]] [[CHECK:dart-n1-l03-c2]]",
+          "code": "void main() {\n  int nòt = 85;\n  if (nòt >= 90) {\n    print('Ekselan!');\n  } else if (nòt >= 60) {\n    print('Ou pase.');\n  } else {\n    print('Echwe.');\n  }\n  for (int i = 1; i <= 3; i++) {\n    print('Tou nimewo $i');\n  }\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "4",
+                "4 fwa"
+              ],
+              "choices": [
+                "A) 3 fwa",
+                "B) 4 fwa",
+                "C) 5 fwa",
+                "D) 0 fwa"
+              ],
+              "correct_ht": "B) 4 fwa",
+              "explanation_ht": "i kòmanse nan 0 epi bouk la kontinye toutotan i < 4, kidonk i pran valè 0, 1, 2, 3 — sa fè 4 tou.",
+              "id": "dart-n1-l03-e1",
+              "prompt_ht": "Konbyen fwa bouk sa a repete? for (int i = 0; i < 4; i++) { print(i); }",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                ">=",
+                "pi gran oswa egal"
+              ],
+              "correct_ht": ">=",
+              "explanation_ht": "Operatè >= vle di 'pi gran pase oswa egal a', sa ki koresponn ak 'omwen 18'.",
+              "id": "dart-n1-l03-e2",
+              "prompt_ht": "Konplete kondisyon an pou tèks 'Granmoun' parèt lè laj omwen 18: if (laj _____ 18) { print('Granmoun'); }",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan Flutter, kondisyon yo tounen UI dirèkteman: if nan metòd build la deside ki widget parèt, epi bouk for jenere lis widget dinamikman — se menm lojik la, jis vizyèl.",
+          "id": "dart-n1-l03",
+          "title_ht": "Kondisyon ak bouk",
+          "checkpoints": [
+            {
+              "id": "dart-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "ekselan!",
+                "'ekselan!'"
+              ],
+              "correct_ht": "Ekselan!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Ekselan! »."
+            },
+            {
+              "id": "dart-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 1 — Debitan"
+    },
+    {
+      "id": "n2",
+      "lessons": [
+        {
+          "body_ht": "Yon fonksyon se yon blòk kòd ou bay yon non, pou ou ka rele li plizyè fwa san repete kòd la. Nan Dart, ou deklare yon fonksyon ak tip retou a, non an, epi paramèt yo: int adisyone(int a, int b) { return a + b; }. Mo kle return voye rezilta a bay moun ki rele fonksyon an. Si fonksyon an pa retounen anyen, tip retou a se void. Dart gen de tip paramèt espesyal: paramèt opsyonèl pozisyonèl ak [ ]. Void salye(String non, [String tit = ' zanmi']) — ak paramèt nome ak { } — void kreyeItilizatè({required String non, int laj = 18}). Paramèt nome yo rann apèl fonksyon yo pi klè: kreyeItilizatè(non: 'Ana', laj: 22). Yon fonksyon flèch (=>) se yon fòm kout pou fonksyon yon sèl liy: int kare(int n) => n * n;. Fonksyon yo se baz reutilizasyon kòd: chak fwa ou wè ou ap kopye-kole menm kòd la, se siy pou ou fè yon fonksyon. [[CHECK:dart-n2-l01-c1]] [[CHECK:dart-n2-l01-c2]]",
+          "code": "int adisyone(int a, int b) {\n  return a + b;\n}\n\nvoid salye({required String non, String lang = 'kreyòl'}) {\n  print('Bonjou $non! ($lang)');\n}\n\nvoid main() {\n  print(adisyone(3, 4));\n  salye(non: 'Mari');\n  salye(non: 'Jan', lang: 'franse');\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "void f({required string non})"
+              ],
+              "choices": [
+                "A) void f([String non])",
+                "B) void f({required String non})",
+                "C) void f(String non!)",
+                "D) void f(required non)"
+              ],
+              "correct_ht": "B) void f({required String non})",
+              "explanation_ht": "Akolad { } kreye paramèt nome, epi mo kle required fè li obligatwa nan apèl la.",
+              "id": "dart-n2-l01-e1",
+              "prompt_ht": "Ki sintaks kòrèk pou yon paramèt nome obligatwa?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "return"
+              ],
+              "correct_ht": "return",
+              "explanation_ht": "return sispann fonksyon an epi voye valè a bay kòd ki te rele li a.",
+              "id": "dart-n2-l01-e2",
+              "prompt_ht": "Ekri mo kle ki voye rezilta a bay moun ki rele fonksyon an: int doub(int n) { _____ n * 2; }",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Fonksyon se objè premye klas nan Dart: ou ka pase yo kòm paramèt, sere yo nan varyab, epi retounen yo — se baz tout callback ak widget Flutter yo.",
+          "id": "dart-n2-l01",
+          "title_ht": "Fonksyon",
+          "checkpoints": [
+            {
+              "id": "dart-n2-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou $non! ($lang)",
+                "'bonjou $non! ($lang)'"
+              ],
+              "correct_ht": "Bonjou $non! ($lang)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou $non! ($lang) »."
+            },
+            {
+              "id": "dart-n2-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pwogram reyèl travay ak koleksyon done. Lis (List) se yon sekans òdone: var fwi = ['mango', 'bannann', 'zaboka'];. Ou aksede eleman ak endis ki kòmanse nan 0: fwi[0] bay 'mango'. Metòd itil yo: add() pou ajoute, remove() pou retire, length pou konnen kantite, contains() pou tcheke prezans. Seri (Set) sanble ak lis men li pa aksepte doublon — pafè pou lis valè inik. Map se yon diksyonè kle-valè: var pri = {'mango': 50, 'bannann': 25}; epi pri['mango'] bay 50. Dart ofri operatè pwisan sou koleksyon: ... (spread) pou mete yon lis andedan yon lòt, epi if/for andedan literl koleksyon: var lis = [1, 2, if (aktif) 3];. Metòd tankou map(), where() ak forEach() pèmèt ou transfòme koleksyon san bouk manyèl: fwi.map((f) => f.toUpperCase()). Metrize koleksyon yo, epi w ap ekri kòd 3 fwa pi kout. [[CHECK:dart-n2-l02-c1]] [[CHECK:dart-n2-l02-c2]]",
+          "code": "void main() {\n  var fwi = ['mango', 'bannann'];\n  fwi.add('zaboka');\n  var majiskil = fwi.map((f) => f.toUpperCase()).toList();\n  print(majiskil);\n  var pri = {'mango': 50, 'bannann': 25};\n  print('Mango koute ${pri['mango']} goud.');\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "bannann"
+              ],
+              "choices": [
+                "A) mango",
+                "B) bannann",
+                "C) zaboka",
+                "D) erè"
+              ],
+              "correct_ht": "B) bannann",
+              "explanation_ht": "Endis yo kòmanse nan 0: fwi[0]='mango', fwi[1]='bannann', fwi[2]='zaboka'.",
+              "id": "dart-n2-l02-e1",
+              "prompt_ht": "Ki valè fwi[1] si var fwi = ['mango', 'bannann', 'zaboka']; ?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "add"
+              ],
+              "correct_ht": "add",
+              "explanation_ht": "Metòd add() ajoute yon eleman nan fen lis la.",
+              "id": "dart-n2-l02-e2",
+              "prompt_ht": "Konplete pou ajoute 'kenèp' nan lis la: fwi._____('kenèp');",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan Flutter, ListView.builder pran yon List epi jenere widget pou chak eleman; where() ak map() se fason pwòp pou filtre ak transfòme done UI san varyab tanporè.",
+          "id": "dart-n2-l02",
+          "title_ht": "Lis, seri ak map",
+          "checkpoints": [
+            {
+              "id": "dart-n2-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "majiskil"
+              ],
+              "correct_ht": "majiskil",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « majiskil »."
+            },
+            {
+              "id": "dart-n2-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Pwogramasyon oryante objè pèmèt ou modle bagay reyèl kòm objè ki gen done (pwopriyete) ak konpòtman (metòd). Yon klas se plan an, yon objè se reyalizasyon plan an. Egzanp: class Machin { String mak; int ane; Machin(this.mak, this.ane); void klaksone() { print('Pip pip!'); } }. Konstriktè a (Machin(this.mak, this.ane)) se fonksyon espesyal ki kreye objè a epi inisyalize pwopriyete yo. Ou kreye yon objè ak: var m = Machin('Toyota', 2020); epi ou rele metòd la ak m.klaksone(). Eritaj pèmèt yon klas eritye nan yon lòt ak extends: class MachinEletrik extends Machin ajoute batri san repete kòd mak ak ane. Mo kle this refere ak objè aktyèl la. Encapsulation vle di kache detay entèn yo: mete _ devan yon non fè li prive nan bibliyotèk la. Klas yo se zo bwa tout aplikasyon Flutter — chak widget se yon klas. [[CHECK:dart-n2-l03-c1]] [[CHECK:dart-n2-l03-c2]]",
+          "code": "class Elèv {\n  String non;\n  int nòt;\n  Elèv(this.non, this.nòt);\n  bool pase() => nòt >= 60;\n  void prezante() {\n    print('$non: ${pase() ? 'pase' : 'echwe'}');\n  }\n}\n\nvoid main() {\n  var e = Elèv('Lina', 78);\n  e.prezante();\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "extends"
+              ],
+              "choices": [
+                "A) implements",
+                "B) extends",
+                "C) with",
+                "D) inherits"
+              ],
+              "correct_ht": "B) extends",
+              "explanation_ht": "extends kreye yon relasyon eritaj: klas pitit la resevwa tout manm klas paran an epi ka ajoute pa li.",
+              "id": "dart-n2-l03-e1",
+              "prompt_ht": "Ki mo kle yon klas itilize pou eritye pwopriyete ak metòd yon lòt klas?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "elèv",
+                "elev"
+              ],
+              "correct_ht": "Elèv",
+              "explanation_ht": "Ou kreye yon objè lè ou rele konstriktè klas la tankou yon fonksyon: Elèv('Lina', 78).",
+              "id": "dart-n2-l03-e2",
+              "prompt_ht": "Konplete kreyasyon objè a: var e = ______('Lina', 78); (klas la rele Elèv)",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan Dart modèn, konstriktè const ak klas imyab (final fields) pèmèt konpilatè a kreye objè yo nan moman konpilasyon — Flutter itilize sa anpil pou widget yo pa rekonstwi pou granmesi.",
+          "id": "dart-n2-l03",
+          "title_ht": "Klas ak objè",
+          "checkpoints": [
+            {
+              "id": "dart-n2-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon klas se tankou:",
+              "accepted": [
+                "a",
+                "yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a"
+              ],
+              "correct_ht": "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+              "explanation_ht": "Klas = plan; objè = egzanp konkrè ki fèt ak plan an.",
+              "choices": [
+                "A) Yon mwazi gato: plan an — chak objè se yon gato fèt ak mwazi a",
+                "B) Yon sèl gato",
+                "C) Yon frijidè",
+                "D) Yon televizyon"
+              ]
+            },
+            {
+              "id": "dart-n2-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 2 — Entèmedyè"
+    },
+    {
+      "id": "n3",
+      "lessons": [
+        {
+          "body_ht": "Anvan Dart 2.12, erè ki pi komen nan aplikasyon yo te 'null reference' — eseye itilize yon varyab ki pa gen valè, epi pwogram nan kraze. Null safety rezoud pwoblèm sa a nan nivo langaj la: pa default, okenn varyab pa ka null. Si ou ekri String non;, ou DWE ba li yon valè anvan ou itilize li, sinon kòd la pa konpile. Lè null se yon valè lejitim, ou deklare tip la kòm nilab ak ?: String? surnon;. Men ou pa ka itilize yon varyab nilab dirèkteman — ou dwe tcheke li anvan: if (surnon != null) { print(surnon.length); }. Dart entelijan: apre tès null la, li 'pwomouvwa' varyab la an non-nilab andedan blòk la. Operatè ?. rele yon metòd sèlman si objè a pa null: surnon?.length bay null san kraze. Operatè ?? bay yon valè ranplasman: surnon ?? 'pa gen surnon'. Epi ! di konpilatè a 'mwen sèten li pa null' — itilize li ak prekosyon paske li ka kraze nan ekzekisyon si ou twonpe ou. [[CHECK:dart-n3-l01-c1]] [[CHECK:dart-n3-l01-c2]]",
+          "code": "void main() {\n  String non = 'Garry';\n  String? surnon;\n  print(surnon?.length ?? 'pa gen surnon');\n  surnon = 'Ti Garry';\n  if (surnon != null) {\n    print('Surnon an gen ${surnon.length} lèt.');\n  }\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "yon string ki ka null"
+              ],
+              "choices": [
+                "A) Yon String vid",
+                "B) Yon String ki ka null",
+                "C) Yon String konstan",
+                "D) Yon lis String"
+              ],
+              "correct_ht": "B) Yon String ki ka null",
+              "explanation_ht": "? apre tip la fè li nilab: varyab la ka kenbe yon String oswa null. San ?, null entèdi nan konpilasyon.",
+              "id": "dart-n3-l01-e1",
+              "prompt_ht": "Kisa String? vle di nan Dart?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "??"
+              ],
+              "correct_ht": "??",
+              "explanation_ht": "Operatè ?? (if-null) retounen valè agoch la si li pa null, sinon valè adwat la.",
+              "id": "dart-n3-l01-e2",
+              "prompt_ht": "Konplete pou bay 'Anonim' si non se null: var afiche = non _____ 'Anonim';",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Nan Flutter, null safety elimine 90% kraze aplikasyon an pwodiksyon. Règ lò: prefere tip non-nilab ak valè default olye ?, epi rezève ! pou ka kote ou ka pwouve valè a pa null.",
+          "id": "dart-n3-l01",
+          "title_ht": "Null safety",
+          "checkpoints": [
+            {
+              "id": "dart-n3-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « surnon » genyen? (ekri valè a)",
+              "accepted": [
+                "ti garry",
+                "'ti garry'"
+              ],
+              "correct_ht": "Ti Garry",
+              "explanation_ht": "Nan egzanp lan, liy « surnon = 'Ti Garry' » mete valè « Ti Garry » nan bwat « surnon » a."
+            },
+            {
+              "id": "dart-n3-l01-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "surnon?.length ?? 'pa gen surnon",
+                "surnon?.length ?? 'pa gen surnon'"
+              ],
+              "correct_ht": "surnon?.length ?? 'pa gen surnon",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « surnon?.length ?? 'pa gen surnon »."
+            }
+          ]
+        },
+        {
+          "body_ht": "Anpil operasyon pran tan: chaje done sou entènèt, li yon fichye, tann itilizatè a. Si pwogram nan ta rete tann, aplikasyon an ta jele. Dart rezoud sa ak pwogramasyon asenkron: yon Future se yon pwomès yon valè k ap vini pita — tankou yon resi restoran. Ou make yon fonksyon kòm async, epi andedan li ou itilize await pou tann yon Future san bloke rès pwogram nan: Future<String> chajeDone() async { var r = await http.get(url); return r.body; }. Pandan await ap tann, Dart fè lòt travay. Pou rele yon fonksyon async, ou menm dwe nan yon kontèks async, oswa itilize .then((valè) => ...). Jesyon erè fèt ak try/catch otou await la, menm jan ak kòd senkron. Future.wait() pèmèt ou lanse plizyè operasyon an menm tan epi tann yo tout: var rezilta = await Future.wait([f1(), f2()]);. Nan Flutter, FutureBuilder se widget ki konstwi UI diferan selon etap Future a: chajman, erè, oswa done pare. [[CHECK:dart-n3-l02-c1]] [[CHECK:dart-n3-l02-c2]]",
+          "code": "Future<String> pranNon() async {\n  await Future.delayed(Duration(seconds: 1));\n  return 'Garry';\n}\n\nvoid main() async {\n  print('Ap chaje...');\n  var non = await pranNon();\n  print('Bonjou $non!');\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "li tann yon future san bloke lot travay"
+              ],
+              "choices": [
+                "A) Li bloke tout pwogram nan",
+                "B) Li tann yon Future san bloke lòt travay",
+                "C) Li anile yon Future",
+                "D) Li kreye yon nouvo thread"
+              ],
+              "correct_ht": "B) Li tann yon Future san bloke lòt travay",
+              "explanation_ht": "await sispann fonksyon async aktyèl la jous Future a fini, men event loop Dart la kontinye trete lòt evènman — aplikasyon an pa jele.",
+              "id": "dart-n3-l02-e1",
+              "prompt_ht": "Kisa mo kle await fè?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "async"
+              ],
+              "correct_ht": "async",
+              "explanation_ht": "Yon fonksyon dwe make async pou ou ka itilize await andedan kò li.",
+              "id": "dart-n3-l02-e2",
+              "prompt_ht": "Konplete pou fonksyon an ka itilize await andedan li: _____ void chaje() { var d = await pranDone(); }",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Pa janm itilize await andedan yon bouk sere lè operasyon yo endepandan — rasanble Future yo nan yon lis epi fè yon sèl Future.wait() pou yo kouri an paralèl epi divize tan total la.",
+          "id": "dart-n3-l02",
+          "title_ht": "Future ak async/await",
+          "checkpoints": [
+            {
+              "id": "dart-n3-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "ap chaje...",
+                "'ap chaje...'"
+              ],
+              "correct_ht": "Ap chaje...",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Ap chaje... »."
+            },
+            {
+              "id": "dart-n3-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kòd asenkron (async/await) pèmèt pwogram nan:",
+              "accepted": [
+                "a",
+                "lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann"
+              ],
+              "correct_ht": "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+              "explanation_ht": "Tankou voye yon moun achte pen pandan ou kontinye kwit manje.",
+              "choices": [
+                "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+                "B) Dòmi pou tout tan",
+                "C) Etenn òdinatè a",
+                "D) Efase memwa a"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Si Future se yon pwomès yon sèl valè nan lavni, Stream se yon pwomès yon SERI valè ki ap vini youn apre lòt. Tankou yon tiyo dlo olye yon vè dlo. Streams pafè pou evènman kontinyèl: klik itilizatè, pozisyon GPS, mesaj chat, done capteur. Ou kreye yon stream ak yon fonksyon async* (note zetwal la) ki itilize yield olye return: Stream<int> konte() async* { for (var i = 1. I <= 3; i++) { await Future.delayed(Duration(seconds: 1)); yield i; } }. Chak yield voye yon valè bay moun k ap koute yo. Pou konsome yon stream, itilize await for: await for (var n in konte()) { print(n); }. Oswa abòne ak listen(): konte().listen((n) => print(n));. StreamController pèmèt ou kreye epi kontwole yon stream manyèlman ak .add() pou voye valè. Nan Flutter, StreamBuilder rebati UI a otomatikman chak fwa yon nouvo valè rive — se baz aplikasyon tan reyèl tankou chat. [[CHECK:dart-n3-l03-c1]] [[CHECK:dart-n3-l03-c2]]",
+          "code": "Stream<int> konte() async* {\n  for (var i = 1; i <= 3; i++) {\n    await Future.delayed(Duration(milliseconds: 500));\n    yield i;\n  }\n}\n\nvoid main() async {\n  await for (var n in konte()) {\n    print('Valè: $n');\n  }\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "future bay yon sel vale, stream bay plizye vale sou tan"
+              ],
+              "choices": [
+                "A) Future pi rapid",
+                "B) Future bay yon sèl valè, Stream bay plizyè valè sou tan",
+                "C) Stream pa ka gen erè",
+                "D) Pa gen diferans"
+              ],
+              "correct_ht": "B) Future bay yon sèl valè, Stream bay plizyè valè sou tan",
+              "explanation_ht": "Yon Future rezoud yon fwa ak yon sèl valè; yon Stream emèt yon sekans valè sou tan, ideyal pou evènman kontinyèl.",
+              "id": "dart-n3-l03-e1",
+              "prompt_ht": "Ki diferans prensipal ant Future ak Stream?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "async*"
+              ],
+              "correct_ht": "async*",
+              "explanation_ht": "async* (ak zetwal) fè yon fonksyon tounen yon Stream, epi yield voye chak valè bay koute yo.",
+              "id": "dart-n3-l03-e2",
+              "prompt_ht": "Konplete pou fonksyon an vin yon jeneratè stream: Stream<int> konte() _____ { yield 1; yield 2; }",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Sonje anile abònman stream yo (subscription.cancel()) lè ou pa bezwen yo ankò, sinon yo kontinye koute epi konsome memwa — se kòz nimewo 1 'memory leak' nan aplikasyon Flutter.",
+          "id": "dart-n3-l03",
+          "title_ht": "Streams",
+          "checkpoints": [
+            {
+              "id": "dart-n3-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "valè: $n",
+                "'valè: $n'"
+              ],
+              "correct_ht": "Valè: $n",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Valè: $n »."
+            },
+            {
+              "id": "dart-n3-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon stream (kouran done) se tankou:",
+              "accepted": [
+                "a",
+                "dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo"
+              ],
+              "correct_ht": "A) Dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo",
+              "explanation_ht": "Itil pou gwo fichye: ou trete pandan w ap li, san chaje tout nan memwa.",
+              "choices": [
+                "A) Dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo",
+                "B) Yon letan",
+                "C) Yon lanmè",
+                "D) Yon dlo ki kanpe"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 3 — Avanse"
+    },
+    {
+      "id": "n4",
+      "lessons": [
+        {
+          "body_ht": "Dart se single-threaded pa default: tout kòd ou a kouri sou yon sèl fil ak yon event loop. Sa bon pou UI, men yon kalkil lou (chifreman, tretman imaj, gwo JSON) ap bloke UI a epi fè aplikasyon an sote. Solisyon an se isolates: se vre travayè paralèl, chak ak pwòp memwa li — yo pa pataje anyen, kidonk pa gen pwoblèm 'race condition' klasik. Ou kreye yon isolate ak Isolate.spawn(fonksyon, mesaj): fonksyon an dwe top-level oswa estatik. Kominikasyon fèt pa mesaj atravè Port: isolate a resevwa yon SendPort pou voye rezilta tounen. Paske yo pa pataje memwa, mesaj yo kopye — pa voye gwo objè san reflechi. Pi fasil: fonksyon compute() nan Flutter fè tout travay la pou ou: var rezilta = await compute(kalkilLou, done);. Règ pratik: tout operasyon ki pran plis pase 16ms (yon frame) epi ki pa manyen UI dwe ale nan yon isolate. [[CHECK:dart-n4-l01-c1]] [[CHECK:dart-n4-l01-c2]]",
+          "code": "import 'dart:isolate';\n\nint sòmLou(int n) {\n  var total = 0;\n  for (var i = 1; i <= n; i++) total += i;\n  return total;\n}\n\nvoid main() async {\n  var port = ReceivePort();\n  await Isolate.spawn((SendPort p) {\n    p.send(sòmLou(1000000));\n  }, port.sendPort);\n  var rezilta = await port.first;\n  print('Rezilta: $rezilta');\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "chak isolate gen pwop memwa li, yo kominike selman pa mesaj"
+              ],
+              "choices": [
+                "A) Yo pi rapid",
+                "B) Chak isolate gen pwòp memwa li, yo kominike sèlman pa mesaj",
+                "C) Yo itilize plis CPU",
+                "D) Yo pa ka fè kalkil"
+              ],
+              "correct_ht": "B) Chak isolate gen pwòp memwa li, yo kominike sèlman pa mesaj",
+              "explanation_ht": "Isolates pa pataje memwa ditou — chak gen heap pa li. Kominikasyon fèt sèlman pa kopi mesaj atravè ports, kidonk de fil pa ka ekri menm varyab an menm tan.",
+              "id": "dart-n4-l01-e1",
+              "prompt_ht": "Poukisa isolates pa gen pwoblèm 'race condition' klasik?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "spawn"
+              ],
+              "correct_ht": "spawn",
+              "explanation_ht": "Isolate.spawn() kreye yon nouvo isolate epi lanse fonksyon ou ba li a ladan li.",
+              "id": "dart-n4-l01-e2",
+              "prompt_ht": "Konplete pou lanse fonksyon an nan yon isolate paralèl: await Isolate._____(travayLou, port.sendPort);",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Isolate pa bon mache pou kreye (kèk milisegonn): pou anpil ti travay repete, kenbe yon pool isolates ouvè olye ou kreye youn chak fwa, sinon ou pèdi benefis paralelis la.",
+          "id": "dart-n4-l01",
+          "title_ht": "Isolates: paralelis reyèl",
+          "checkpoints": [
+            {
+              "id": "dart-n4-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "rezilta: $rezilta",
+                "'rezilta: $rezilta'"
+              ],
+              "correct_ht": "Rezilta: $rezilta",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Rezilta: $rezilta »."
+            },
+            {
+              "id": "dart-n4-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon resèt kwizin se yon lis etap ou swiv chak fwa ou vle fè diri kole. Yon fonksyon se yon resèt pou òdinatè a: ou ekri etap yo yon fwa, epi ou rele l chak fwa ou bezwen l.\n\n [[CHECK:dart-n4-l02-c1]]\n\nPafwa ou bezwen pale ak kòd ki pa Dart: yon bibliyotèk C rapid, yon API sistèm, oswa reprezante yon tip done san koute yon objè konplè. De zouti ekspè pou sa: extension types ak FFI. Yon extension type se yon 'anvlòp' tip zéro-koute otou yon lòt tip: extension type Metre(double valè) { double get anPye => valè * 3.28084; }. Nan ekzekisyon, Metre se JIS yon double — pa gen objè siplemantè, pa gen koute memwa — men nan konpilasyon li anpeche ou melanje mèt ak pye pa erè. Se sekirite tip gratis. FFI (Foreign Function Interface, pakè dart:ffi) ale pi lwen: li pèmèt ou rele fonksyon C dirèkteman. Ou chaje bibliyotèk la ak DynamicLibrary.open(), ou deklare siyati fonksyon an, epi ou rele li tankou yon fonksyon Dart. Sa itil pou kripto, odyo/videyo, oswa SDK pyès ki sèlman egziste an C. Atansyon: FFI kraze sekirite memwa Dart la — yon erè pointeur ka kraze tout aplikasyon an, kidonk teste anpil. [[CHECK:dart-n4-l02-c2]]",
+          "code": "extension type Metre(double valè) {\n  double get anPye => valè * 3.28084;\n  Metre operator +(Metre lòt) => Metre(valè + lòt.valè);\n}\n\nvoid main() {\n  var d = Metre(2.0);\n  print('${d.valè} m = ${d.anPye} pye');\n  print('Total: ${(d + Metre(1.0)).valè} m');\n}",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "zewo koute nan ekzekisyon"
+              ],
+              "choices": [
+                "A) Li pi fasil pou ekri",
+                "B) Zewo koute nan ekzekisyon — se menm valè a, jis ak sekirite tip anplis",
+                "C) Li mache san Dart SDK",
+                "D) Li ranplase FFI"
+              ],
+              "correct_ht": "B) Zewo koute nan ekzekisyon — se menm valè a, jis ak sekirite tip anplis",
+              "explanation_ht": "Yon extension type disparèt nan konpilasyon: nan ekzekisyon se jis valè reprezantasyon an (double la). Ou gen sekirite tip san okenn objè siplemantè.",
+              "id": "dart-n4-l02-e1",
+              "prompt_ht": "Ki avantaj prensipal yon extension type parapò ak yon klas wrapper nòmal?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "dart:ffi"
+              ],
+              "correct_ht": "dart:ffi",
+              "explanation_ht": "Bibliyotèk dart:ffi se Foreign Function Interface Dart la — li pèmèt chaje bibliyotèk natif epi rele fonksyon C.",
+              "id": "dart-n4-l02-e2",
+              "prompt_ht": "Ki pakè Dart ou enpòte pou rele fonksyon C dirèkteman? import '_____'",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Extension types ranplase ansyen 'wrapper classes' yo: menm sekirite tip, zewo alokasyon. Pou FFI, toujou make fonksyon C yo ak @Native pou lyezon otomatik olye DynamicLibrary manyèl lè posib.",
+          "id": "dart-n4-l02",
+          "title_ht": "Extension types ak FFI",
+          "checkpoints": [
+            {
+              "id": "dart-n4-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            },
+            {
+              "id": "dart-n4-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon interface (kontra tip) di:",
+              "accepted": [
+                "a",
+                "ki fòm yon objè dwe genyen (ki pwopriyete)"
+              ],
+              "correct_ht": "A) Ki fòm yon objè dwe genyen (ki pwopriyete)",
+              "explanation_ht": "Kontra a garanti: objè sa a ap gen non, laj, elatriye.",
+              "choices": [
+                "A) Ki fòm yon objè dwe genyen (ki pwopriyete)",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki manje pou kwit"
+              ]
+            }
+          ]
+        },
+        {
+          "body_ht": "Yon ekspè pa sèlman ekri kòd ki mache — li livre aplikasyon rapid epi ki pa kraze. Premye règ pèfòmans Flutter: pa rebati widget pou granmesi. Itilize const devan widget estatik yo, separe gwo build() an ti widget, epi kenbe travay lou deyò metòd build la. Dezyèm: pwofil anvan optimize — DevTools montre w egzakteman ki frame depase 16ms. Twazyèm: jesyon memwa — fèmen StreamController, anile Timer ak AnimationController nan dispose(), epi evite kenbe referans sou BuildContext apre widget la mouri. Pou piblikasyon: flutter build appbundle pou Android (Play Store) ak flutter build ipa pou iOS. Siyati aplikasyon an ak kle ou, tcheke pèmisyon yo (pa mande aksè ou pa bezwen), epi teste sou aparèy reyèl — emilatè kache pwoblèm pèfòmans. Ajoute crash reporting (tankou Firebase Crashlytics) depi premye jou: ou pa ka korije kraze ou pa wè. Epi vèsyone byen: semantic versioning (1.2.3) di itilizatè yo egzakteman sa ki chanje. [[CHECK:dart-n4-l03-c1]] [[CHECK:dart-n4-l03-c2]]",
+          "code": "// Widget optimize: const + ti widget separe\nclass KatPwodwi extends StatelessWidget {\n  final String non;\n  final double pri;\n  const KatPwodwi({super.key, required this.non, required this.pri});\n\n  @override\n  Widget build(BuildContext context) {\n    return Card(\n      child: ListTile(title: Text(non), subtitle: Text('$pri G')),\n    );\n  }\n}\n",
+          "code_lang": "dart",
+          "exercises": [
+            {
+              "accepted": [
+                "b",
+                "pou konpilate a pa rekonstwi li le paran an rebati"
+              ],
+              "choices": [
+                "A) Pou fè li pi bèl",
+                "B) Pou konpilatè a pa rekonstwi li lè paran an rebati",
+                "C) Pou fè li klike",
+                "D) Pou chanje koulè li"
+              ],
+              "correct_ht": "B) Pou konpilatè a pa rekonstwi li lè paran an rebati",
+              "explanation_ht": "Yon widget const kreye yon sèl fwa nan konpilasyon epi reitilize — Flutter sote li nan rebati yo, sa ki ekonomize CPU sou chak frame.",
+              "id": "dart-n4-l03-e1",
+              "prompt_ht": "Poukisa ou mete const devan yon widget Flutter?",
+              "type": "qcm"
+            },
+            {
+              "accepted": [
+                "appbundle"
+              ],
+              "correct_ht": "appbundle",
+              "explanation_ht": "flutter build appbundle pwodui yon Android App Bundle (.aab), fòma Play Store egzije pou piblikasyon.",
+              "id": "dart-n4-l03-e2",
+              "prompt_ht": "Ki kòmand pou bati pakè Android pou Play Store? flutter build _____",
+              "type": "code"
+            }
+          ],
+          "expert_note_ht": "Kòmand flutter build apk --split-per-abi diminye gwosè APK a anpil pou chak achitekti. Epi aktive --obfuscate pou rann reverse-engineering kòd ou a pi difisil.",
+          "id": "dart-n4-l03",
+          "title_ht": "Pèfòmans ak piblikasyon",
+          "checkpoints": [
+            {
+              "id": "dart-n4-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Anvan ou pibliye yon app sou yon Store, ou dwe:",
+              "accepted": [
+                "a",
+                "teste l byen, siyen l, epi respekte règ boutik la"
+              ],
+              "correct_ht": "A) Teste l byen, siyen l, epi respekte règ boutik la",
+              "explanation_ht": "Chak Store gen pwosesis review: prepare w depi premye jou.",
+              "choices": [
+                "A) Teste l byen, siyen l, epi respekte règ boutik la",
+                "B) Efase kòd la",
+                "C) Vann telefòn ou",
+                "D) Chanje non w"
+              ]
+            },
+            {
+              "id": "dart-n4-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Notasyon Big O mezire:",
+              "accepted": [
+                "a",
+                "kijan tan yon algoritm grandi lè done yo grandi"
+              ],
+              "correct_ht": "A) Kijan tan yon algoritm grandi lè done yo grandi",
+              "explanation_ht": "O(n) = lineyè; O(n²) = bouk anndan bouk — evite!",
+              "choices": [
+                "A) Kijan tan yon algoritm grandi lè done yo grandi",
+                "B) Gwosè ekran an",
+                "C) Pri òdinatè a",
+                "D) Kantite koulè"
+              ]
+            }
+          ]
+        }
+      ],
+      "title_ht": "Nivo 4 — Ekspè"
+    }
+  ],
+  "name": "Dart"
+}

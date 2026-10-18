@@ -1,5 +1,5 @@
 // preload.js — pon solid ant main (Node) ak renderer (vanilla JS).
-// Li 4 fichye data/ yo ak fs (offline nèt) epi voye yo bay renderer
+// Li fichye data/ yo ak fs (offline nèt) epi voye yo bay renderer
 // atravè yon API ki san danje (contextBridge), pa gen nodeIntegration.
 const { contextBridge } = require('electron');
 const fs = require('fs');
@@ -15,11 +15,23 @@ function loadJson(file) {
   }
 }
 
+/** Chaje 16 modil langaj yo (data/modules/index.json + chak fichye). */
+function loadModules() {
+  const idx = loadJson('modules/index.json');
+  if (!Array.isArray(idx)) return [];
+  return idx
+    .map(e => (e && e.file ? loadJson('modules/' + e.file) : null))
+    .filter(Boolean);
+}
+
 const data = {
   lessons: loadJson('lessons.json') || [],
   exercises: loadJson('exercises.json') || [],
   ui: loadJson('ui.json') || { ht: {} },
-  languages: loadJson('languages.json') || []
+  languages: loadJson('languages.json') || [],
+  modules: loadModules(),
+  guide: loadJson('guide/guide.json') || null,
+  resources: loadJson('guide/resources.json') || null
 };
 
 contextBridge.exposeInMainWorld('kodapi', {

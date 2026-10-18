@@ -1,0 +1,900 @@
+{
+  "id": "php",
+  "name": "PHP",
+  "category_ht": "Web (dèyè)",
+  "description_ht": "PHP se langaj ki fè plis pase 70% sit wèb yo mache (WordPress, Facebook nan kòmansman). Ou aprann kreye sit dinamik ak fòm, sesyon, ak baz done.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "php-n1-l01",
+          "title_ht": "Ki sa PHP ye",
+          "body_ht": "PHP se yon langaj sèvè ki fèt espesyalman pou wèb la. Lè yon vizitè louvri yon paj PHP, sèvè a egzekite kòd la ANVAN li voye paj la bay navigatè a — vizitè a wè sèlman rezilta a, pa kòd la. Se konsa WordPress, ki fè plis pase 40% sit entènèt yo, mache. Kòd PHP toujou antre nan baliz <?php ak ?>, epi ou ka melanje l ak HTML nan menm fichye a. Fonksyon echo a afiche tèks: echo 'Bonjou Ayiti!';. Chak enstriksyon fini ak pwen-virgil ; — bliye l epi ou jwenn yon erè. Fichye yo gen ekstansyon .php epi yo dwe sou yon sèvè ki konprann PHP (XAMPP sou òdinatè ou, oswa yon ebèjè). Nan kou sa a ou pral aprann bati sit dinamik vre: fòm, koneksyon itilizatè, ak baz done. [[CHECK:php-n1-l01-c1]] [[CHECK:php-n1-l01-c2]]",
+          "code": "<?php\necho \"Bonjou Ayiti!\";\n$non = \"Marie\";\necho \"<p>Bonjou \" . $non . \"!</p>\";\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo pa janm melanje lojik ak HTML nan menm fichye nan gwo pwojè — yo itilize yon framework (Laravel) ak modèl MVC.",
+          "exercises": [
+            {
+              "id": "php-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki baliz ki ouvri yon blok kòd PHP?",
+              "choices": [
+                "A) <php>",
+                "B) <?php",
+                "C) <%php%>",
+                "D) <script php>"
+              ],
+              "accepted": [
+                "b",
+                "<?php"
+              ],
+              "correct_ht": "B) <?php",
+              "explanation_ht": "Kòd PHP kòmanse ak <?php epi fini ak ?>."
+            },
+            {
+              "id": "php-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou afiche tèks la: ____ \"Bonjou\";",
+              "accepted": [
+                "echo"
+              ],
+              "correct_ht": "echo",
+              "explanation_ht": "echo se fonksyon ki afiche tèks nan PHP."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n1-l01-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kisa print() fè?",
+              "accepted": [
+                "a",
+                "li montre yon mesaj sou ekran an"
+              ],
+              "correct_ht": "A) Li montre yon mesaj sou ekran an",
+              "explanation_ht": "print() se fason pwogram nan pale ak ou: li ekri tèks sou ekran an.",
+              "choices": [
+                "A) Li montre yon mesaj sou ekran an",
+                "B) Li etenn òdinatè a",
+                "C) Li efase yon fichye",
+                "D) Li fèmen pwogram nan"
+              ]
+            },
+            {
+              "id": "php-n1-l01-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — HTML sèvi pou:",
+              "accepted": [
+                "a",
+                "bay estrikti paj web la: tit, paragraf, lyen, imaj"
+              ],
+              "correct_ht": "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+              "explanation_ht": "HTML = zo bwa paj la; CSS = rad la; JS = sèvo a.",
+              "choices": [
+                "A) Bay estrikti paj web la: tit, paragraf, lyen, imaj",
+                "B) Bay koulè yo",
+                "C) Fè kalkil konplike",
+                "D) Jere bazdone"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n1-l02",
+          "title_ht": "Varyab ak tip done",
+          "body_ht": "Nan PHP tout varyab kòmanse ak siy dola $: $non = 'Marie';. Se siyati langaj la — pa janm bliye l. Tip done yo: string (tèks nan gimè), int (nonb antye), float (nonb desimal), bool (true/false). PHP se yon langaj ak tipaj dinamik: ou pa deklare tip la, PHP devine l pou ou. Pou kole de tèks ou itilize pwen .: $fraz = 'Bonjou ' . $non; — pa siy + ki se pou adisyon sèlman! Erè klasik debutan: ekri 'Bonjou ' + $non ki bay 0 olye tèks la. Ou ka mete varyab dirèkteman nan gimè doub: \"Bonjou $non!\" mache, men nan gimè senp 'Bonjou $non' pa mache. Fonksyon var_dump($x) montre tip ak valè yon varyab — zouti debogaj esansyèl. Metrize $ ak konkatene ak pwen, epi baz PHP ou a solid. [[CHECK:php-n1-l02-c1]] [[CHECK:php-n1-l02-c2]]",
+          "code": "<?php\n$non = \"Jean\";\n$laj = 25;\n$pri = 19.99;\necho \"Bonjou \" . $non . \", ou gen \" . $laj . \" an.\";\nvar_dump($laj);\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo itilize deklarasyon tip strik (declare(strict_types=1)) pou kenbe erè tip yo bonè.",
+          "exercises": [
+            {
+              "id": "php-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki operatè ki kole de tèks (strings) nan PHP?",
+              "choices": [
+                "A) +",
+                "B) .",
+                "C) &",
+                "D) ,"
+              ],
+              "accepted": [
+                "b",
+                "."
+              ],
+              "correct_ht": "B) .",
+              "explanation_ht": "Pwen . a konkatene strings nan PHP; + se pou adisyon nonb sèlman."
+            },
+            {
+              "id": "php-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon varyab la: ____non = \"Marie\";",
+              "accepted": [
+                "$"
+              ],
+              "correct_ht": "$",
+              "explanation_ht": "Tout varyab PHP kòmanse ak siy dola $."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n1-l02-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            },
+            {
+              "id": "php-n1-l02-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon varyab se tankou…",
+              "accepted": [
+                "a",
+                "yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "bwat"
+              ],
+              "correct_ht": "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+              "explanation_ht": "Varyab = bwat + etikèt (non). Ou mete yon valè andedan, epi ou repran l nenpòt ki lè ak non an.",
+              "choices": [
+                "A) Yon bwat ki gen yon non, kote ou sere yon valè pou itilize pita",
+                "B) Yon foto sou ekran an",
+                "C) Yon chante",
+                "D) Yon bouton ou peze"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n1-l03",
+          "title_ht": "Kondisyon ak bouk",
+          "body_ht": "PHP gen menm estrikti kontwòl ak lòt langaj yo. Kondisyon: if ($laj >= 18) { echo 'Majè'; } elseif ($laj >= 13) { echo 'Adolesan'; } else { echo 'Timoun'; }. Note elseif ekri kole nan PHP. Operatè yo: == (egal), != (pa egal), > < >= <=, epi === ki verifye tip la tou. Bouk for repete yon kantite fwa: for ($i = 0; $i < 5; $i++) { echo $i; } — $i++ ajoute 1. Bouk while kontinye pandan kondisyon an vre. Bouk foreach la se pi itil nan PHP: foreach ($fwi as $f) { echo $f; } pase sou chak eleman yon tableau. W ap itilize foreach chak jou: pou afiche lis pwodwi, atik blog, rezilta rechèch. Konbine kondisyon andedan bouk (if andedan foreach) epi ou ka filtre done: montre sèlman pwodwi ki an stok, pa egzanp. [[CHECK:php-n1-l03-c1]] [[CHECK:php-n1-l03-c2]]",
+          "code": "<?php\n$laj = 20;\nif ($laj >= 18) {\n    echo \"Ou majè\";\n} elseif ($laj >= 13) {\n    echo \"Ou adolesan\";\n} else {\n    echo \"Ou timoun\";\n}\n$fwi = [\"mango\", \"bannann\"];\nforeach ($fwi as $f) {\n    echo \"<li>$f</li>\";\n}\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo evite lojik konplèks nan modèl (templates) yo — bouk senp pou afichaj sèlman.",
+          "exercises": [
+            {
+              "id": "php-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki bouk ki pi pratik pou pase sou yon tableau nan PHP?",
+              "choices": [
+                "A) for",
+                "B) while",
+                "C) foreach",
+                "D) loop"
+              ],
+              "accepted": [
+                "c",
+                "foreach"
+              ],
+              "correct_ht": "C) foreach",
+              "explanation_ht": "foreach ($tab as $eleman) pase otomatikman sou chak eleman tableau a."
+            },
+            {
+              "id": "php-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kondisyon an: if ($laj ____ 18) { echo \"Majè\"; }",
+              "accepted": [
+                ">="
+              ],
+              "correct_ht": ">=",
+              "explanation_ht": ">= vle di pi gran pase oswa egal a 18."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n1-l03-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bouk (loop) sèvi pou:",
+              "accepted": [
+                "a",
+                "repete yon aksyon plizyè fwa san ekri l plizyè fwa"
+              ],
+              "correct_ht": "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+              "explanation_ht": "Bouk = repete. Ou ekri lòd la yon fwa, òdinatè a repete l otan ou vle.",
+              "choices": [
+                "A) Repete yon aksyon plizyè fwa san ekri l plizyè fwa",
+                "B) Etenn ekran an",
+                "C) Efase tout done",
+                "D) Fèmen òdinatè a"
+              ]
+            },
+            {
+              "id": "php-n1-l03-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "php-n2-l04",
+          "title_ht": "Fonksyon: reitilize kòd",
+          "body_ht": "Yon fonksyon anvlòp yon blok kòd ak yon non pou ou ka rele l nenpòt kote. Ou kreye l ak mo kle function: function salye($non) { return 'Bonjou ' . $non; }. Apre ou rele l: echo salye('Marie');. Paramèt yo se valè fonksyon an resevwa; return voye rezilta a tounen. Ou ka bay valè pa defo: function salye($non = 'zanmi'). Yon detay enpòtan nan PHP: varyab deyò fonksyon an pa vizib andedan l (scope). Si ou bezwen yon varyab global andedan, ou dwe deklare global $x; — men pi bon pratik se pase l kòm paramèt. Fonksyon yo pèmèt ou pa repete tèt ou (prensip DRY): ekri kalkil pri a yon fwa, rele l sou chak paj. Nan WordPress, tout sistèm hook (add_action, add_filter) baze sou fonksyon ou ekri epi WordPress rele pou ou. [[CHECK:php-n2-l04-c1]] [[CHECK:php-n2-l04-c2]]",
+          "code": "<?php\nfunction kalkilTotal($pri, $kantite) {\n    $soutotal = $pri * $kantite;\n    $taks = $soutotal * 0.10;\n    return $soutotal + $taks;\n}\necho kalkilTotal(100, 3);\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo bay fonksyon yo non klè ki di sa yo fè, epi yo kenbe yo kout (yon sèl responsablite).",
+          "exercises": [
+            {
+              "id": "php-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ki kreye yon fonksyon nan PHP?",
+              "choices": [
+                "A) def",
+                "B) func",
+                "C) function",
+                "D) fn"
+              ],
+              "accepted": [
+                "c",
+                "function"
+              ],
+              "correct_ht": "C) function",
+              "explanation_ht": "Se mo kle function ki kreye yon fonksyon: function non() { ... }."
+            },
+            {
+              "id": "php-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou voye rezilta a tounen: function double($n) { ____ $n * 2; }",
+              "accepted": [
+                "return"
+              ],
+              "correct_ht": "return",
+              "explanation_ht": "return voye valè a tounen bay moun ki rele fonksyon an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n2-l04-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "kalkiltotal"
+              ],
+              "correct_ht": "kalkilTotal",
+              "explanation_ht": "Fonksyon an rele « kalkilTotal » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "php-n2-l04-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n2-l05",
+          "title_ht": "Tableaux: lis done",
+          "body_ht": "Yon tableau (array) sere plizyè valè nan yon sèl varyab. Tableau endekse: $fwi = ['mango', 'bannann', 'zoranj']; — pozisyon yo kòmanse nan 0, kidonk $fwi[0] se 'mango'. Tableau asosyatif itilize kle tèks: $etidyan = ['non' => 'Marie', 'laj' => 22]; epi ou li ak $etidyan['non']. Note flech doub => pou asosyatif, pa = senp. Fonksyon itil: count($tab) bay kantite eleman, array_push($tab, $x) ajoute nan fen, in_array($x, $tab) verifye si yon valè egziste, array_merge($a, $b) konbine de tableau. Bouk foreach se patnè natirèl tableau: foreach ($etidyan as $kle => $vale) bay kle ak valè ansanm. Tableaux yo toupatou: rezilta baz done vini kòm tableau, konfigirasyon se tableau, fòm se tableau. Metrize yo epi ou metrize 80% travay PHP chak jou. [[CHECK:php-n2-l05-c1]] [[CHECK:php-n2-l05-c2]]",
+          "code": "<?php\n$etidyan = [\"non\" => \"Marie\", \"laj\" => 22];\necho $etidyan[\"non\"];\n$fwi = [\"mango\", \"bannann\"];\n$fwi[] = \"zoranj\";\necho count($fwi);\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo itilize fonksyon tankou array_map ak array_filter olye bouk manyèl lè sa posib.",
+          "exercises": [
+            {
+              "id": "php-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki sentaks ki kreye yon tableau asosyatif?",
+              "choices": [
+                "A) ['non' = 'Marie']",
+                "B) ['non' => 'Marie']",
+                "C) ['non' : 'Marie']",
+                "D) {non: 'Marie'}"
+              ],
+              "accepted": [
+                "b",
+                "['non' => 'marie']",
+                "=>"
+              ],
+              "correct_ht": "B) ['non' => 'Marie']",
+              "explanation_ht": "Flech doub => asosye yon kle ak yon valè nan tableau PHP."
+            },
+            {
+              "id": "php-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou jwenn kantite eleman: $n = _____($fwi);",
+              "accepted": [
+                "count"
+              ],
+              "correct_ht": "count",
+              "explanation_ht": "Fonksyon count() bay kantite eleman yon tableau."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n2-l05-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon lis (list/array) se tankou:",
+              "accepted": [
+                "a",
+                "yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye"
+              ],
+              "correct_ht": "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+              "explanation_ht": "Yon lis kenbe plizyè valè ansanm, nan lòd, aksesib pa pozisyon (0, 1, 2…).",
+              "choices": [
+                "A) Yon lis komisyon: plizyè bagay nan lòd sou yon sèl papye",
+                "B) Yon sèl bagay",
+                "C) Yon ekran",
+                "D) Yon bouton"
+              ]
+            },
+            {
+              "id": "php-n2-l05-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon kondisyon (if) se tankou:",
+              "accepted": [
+                "a",
+                "yon desizyon: si yon bagay vre, fè sa — sinon fè lòt bagay"
+              ],
+              "correct_ht": "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+              "explanation_ht": "if = pran desizyon. Pwogram nan tcheke si yon bagay vre, epi li chwazi ki chemen pou pran.",
+              "choices": [
+                "A) Yon desizyon: SI yon bagay vre, fè sa — SINON fè lòt bagay",
+                "B) Yon koulè",
+                "C) Yon chante",
+                "D) Yon jwèt"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n2-l06",
+          "title_ht": "Fòmilè: $_GET ak $_POST",
+          "body_ht": "Fòmilè HTML yo se pòt antre sit dinamik yo, epi PHP resevwa done yo ak de superglobals: $_GET ak $_POST. Si fòmilè a itilize method='get', done yo parèt nan URL a epi ou li yo ak $_GET['non']. Si se method='post', done yo kache nan kò demann lan epi ou li ak $_POST['non']. Règ: itilize GET pou rechèch (ou ka pataje URL a), POST pou aksyon ki chanje bagay (enskripsyon, koneksyon, peman). Toujou verifye done egziste anvan ou li l: if (isset($_POST['non'])) { ... } — sinon ou jwenn avètisman. Epi PA JANM fè konfyans done itilizatè: netwaye yo ak trim() (retire espas) epi htmlspecialchars() (netralize HTML danjere) anvan ou afiche yo. Sa pwoteje kont atak XSS kote yon moun eseye enjekte JavaScript move nan sit ou a. [[CHECK:php-n2-l06-c1]] [[CHECK:php-n2-l06-c2]]",
+          "code": "<?php\nif (isset($_POST[\"non\"])) {\n    $non = trim($_POST[\"non\"]);\n    $non_pwop = htmlspecialchars($non);\n    echo \"<p>Bonjou $non_pwop!</p>\";\n}\n?>\n<form method=\"post\">\n  <input type=\"text\" name=\"non\">\n  <button>Voye</button>\n</form>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo valide KALITE done yo tou (filter_var pou imèl) epi yo pa janm mete done brit nan rekèt SQL.",
+          "exercises": [
+            {
+              "id": "php-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki superglobal ki resevwa done yon fòmilè method='post'?",
+              "choices": [
+                "A) $_GET",
+                "B) $_POST",
+                "C) $_FORM",
+                "D) $_DATA"
+              ],
+              "accepted": [
+                "b",
+                "$_post"
+              ],
+              "correct_ht": "B) $_POST",
+              "explanation_ht": "Done fòmilè POST yo aksesib nan tableau $_POST la."
+            },
+            {
+              "id": "php-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou verifye done a egziste: if (_____( $_POST[\"non\"])) {",
+              "accepted": [
+                "isset"
+              ],
+              "correct_ht": "isset",
+              "explanation_ht": "isset() verifye si yon varyab egziste epi li pa nil anvan ou itilize l."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n2-l06-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Pou LI done nan yon API, ou itilize metòd:",
+              "accepted": [
+                "a",
+                "get"
+              ],
+              "correct_ht": "A) GET",
+              "explanation_ht": "GET = li; POST = kreye; PUT = modifye; DELETE = efase.",
+              "choices": [
+                "A) GET",
+                "B) POST",
+                "C) DELETE",
+                "D) PUT"
+              ]
+            },
+            {
+              "id": "php-n2-l06-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fòmilè web se tankou:",
+              "accepted": [
+                "a",
+                "yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l"
+              ],
+              "correct_ht": "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+              "explanation_ht": "Non, imèl, modpas: ou ranpli, ou soumèt.",
+              "choices": [
+                "A) Yon fèy enskripsyon: ou ranpli enfòmasyon epi ou voye l",
+                "B) Yon jwèt",
+                "C) Yon film",
+                "D) Yon chante"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "php-n3-l07",
+          "title_ht": "Sesyon ak kuki",
+          "body_ht": "Lè ou antre nan yon fèt, ou resevwa yon braslè pou gad yo rekonèt ou tout sware a. Sesyon ak cookie se braslè entènèt la: sit la sonje ou.\n\n [[CHECK:php-n3-l07-c1]]\n\nHTTP pa sonje anyen ant de paj: chak demann se nouvo. Sesyon yo rezoud sa — yo pèmèt sèvè a sonje itilizatè a pandan l ap navige. Ou kòmanse ak session_start(); nan tèt fichye a (anvan okenn echo!), apre ou sere done nan $_SESSION: $_SESSION['itilizate_id'] = 42;. Done sa yo rete sou sèvè a epi yo disponib sou tout paj jous itilizatè a dekonekte (session_destroy()). Kuki yo diferan: yo sere ti done sou navigatè itilizatè a ak setcookie('lang', 'ht', time() + 3600). — itil pou preferans (lang, tèm) men pa pou done sansib paske itilizatè a ka wè epi modifye yo. Konbinezon an fè sistèm koneksyon: apre modpas verifye, ou mete id itilizatè a nan sesyon. Sou chak paj ou verifye si $_SESSION['itilizate_id'] egziste, sinon ou voye l sou paj koneksyon an ak header('Location: konekte.php'). [[CHECK:php-n3-l07-c2]]",
+          "code": "<?php\nsession_start();\n$_SESSION[\"itilizate_id\"] = 42;\n$_SESSION[\"non\"] = \"Marie\";\n\nif (!isset($_SESSION[\"itilizate_id\"])) {\n    header(\"Location: konekte.php\");\n    exit;\n}\necho \"Byenveni \" . $_SESSION[\"non\"];\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo rejenere ID sesyon an apre koneksyon (session_regenerate_id) pou bloke vòl sesyon.",
+          "exercises": [
+            {
+              "id": "php-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon ki dwe rele anvan ou itilize $_SESSION?",
+              "choices": [
+                "A) start_session()",
+                "B) session_start()",
+                "C) begin_session()",
+                "D) open_session()"
+              ],
+              "accepted": [
+                "b",
+                "session_start()",
+                "session_start"
+              ],
+              "correct_ht": "B) session_start()",
+              "explanation_ht": "session_start() aktive sesyon an epi li dwe vini anvan okenn afichaj."
+            },
+            {
+              "id": "php-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou sere id itilizatè a: $_SESSION[____________] = 42;",
+              "accepted": [
+                "[\"itilizate_id\"]",
+                "['itilizate_id']"
+              ],
+              "correct_ht": "[\"itilizate_id\"]",
+              "explanation_ht": "Ou ekri $_SESSION['itilizate_id'] = 42 pou sere valè a nan sesyon an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n3-l07-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon sesyon web pèmèt sit la:",
+              "accepted": [
+                "a",
+                "sonje ou ant yon paj ak yon lòt (ou rete konekte)"
+              ],
+              "correct_ht": "A) Sonje ou ant yon paj ak yon lòt (ou rete konekte)",
+              "explanation_ht": "San sesyon, ou ta dwe re-konekte sou chak paj.",
+              "choices": [
+                "A) Sonje ou ant yon paj ak yon lòt (ou rete konekte)",
+                "B) Bliye ou touswit",
+                "C) Etenn òdinatè a",
+                "D) Chanje modpas ou"
+              ]
+            },
+            {
+              "id": "php-n3-l07-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon ke (queue) mache:",
+              "accepted": [
+                "a",
+                "premye antre, premye sòti — tankou liy labank"
+              ],
+              "correct_ht": "A) Premye antre, premye sòti — tankou liy labank",
+              "explanation_ht": "Premye moun ki vini se premye moun ki sèvi.",
+              "choices": [
+                "A) Premye antre, premye sòti — tankou liy labank",
+                "B) Dènye antre, premye sòti",
+                "C) O aza",
+                "D) Toujou dènye a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n3-l08",
+          "title_ht": "PDO: konekte baz done an sekirite",
+          "body_ht": "PDO (PHP Data Objects) se fason modèn epi an sekirite pou pale ak baz done nan PHP. Ou kreye koneksyon an: $pdo = new PDO('mysql:host=localhost;dbname=boutik', 'itilizate', 'modpas');. Kle sekirite a se prepared statements: ou ekri rekèt la ak plas vid (:non), apre ou bay valè yo separeman. $stmt = $pdo->prepare('SELECT * FROM itilizate WHERE imel = :imel'); $stmt->execute(['imel' => $imel]);. Poukisa? Paske baz done a trete valè yo kòm DONE, pa kòm kòd — yon atakè pa ka enjekte SQL move menm si li tape li nan fòm nan. Pou rekipere rezilta: $rezilta = $stmt->fetchAll(PDO::FETCH_ASSOC); bay yon tableau asosyatif. Pou ajoute: prepare('INSERT INTO pwodwi (non, pri) VALUES (:non, :pri)') epi execute ak valè yo. Toujou antoure koneksyon an nan try/catch (PDOException). Pa janm mete varyab dirèkteman nan rekèt SQL — se règ nimewo 1 sekirite PHP. [[CHECK:php-n3-l08-c1]] [[CHECK:php-n3-l08-c2]]",
+          "code": "<?php\n$pdo = new PDO(\"mysql:host=localhost;dbname=boutik\", \"root\", \"\");\n$stmt = $pdo->prepare(\"SELECT * FROM itilizate WHERE imel = :imel\");\n$stmt->execute([\"imel\" => $imel]);\n$itilizate = $stmt->fetch(PDO::FETCH_ASSOC);\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo mete PDO an mòd erè eksepsyon (ERRMODE_EXCEPTION) epi yo itilize tranzaksyon pou operasyon miltip.",
+          "exercises": [
+            {
+              "id": "php-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Poukisa prepared statements pi an sekirite?",
+              "choices": [
+                "A) Yo pi rapid",
+                "B) Valè yo trete kòm done, pa kòm kòd SQL",
+                "C) Yo kache modpas la",
+                "D) Yo chifre baz done a"
+              ],
+              "accepted": [
+                "b",
+                "vale yo trete kom done pa kom kod sql"
+              ],
+              "correct_ht": "B) Valè yo trete kòm done, pa kòm kòd SQL",
+              "explanation_ht": "Baz done a pa janm egzekite valè yo kòm kòd, sa bloke enjeksyon SQL."
+            },
+            {
+              "id": "php-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete preparasyon rekèt la: $stmt = $pdo->_______(\"SELECT * FROM itilizate\");",
+              "accepted": [
+                "prepare"
+              ],
+              "correct_ht": "prepare",
+              "explanation_ht": "$pdo->prepare() kreye yon prepared statement ak plas vid pou valè yo."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n3-l08-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — PDO nan PHP ede ou:",
+              "accepted": [
+                "a",
+                "pale ak bazdone an sekirite ak query paramèt"
+              ],
+              "correct_ht": "A) Pale ak bazdone an sekirite ak query paramèt",
+              "explanation_ht": "PDO = pon pwòp ant PHP ak bazdone.",
+              "choices": [
+                "A) Pale ak bazdone an sekirite ak query paramèt",
+                "B) Desine paj",
+                "C) Jwe mizik",
+                "D) Voye imèl"
+              ]
+            },
+            {
+              "id": "php-n3-l08-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n3-l09",
+          "title_ht": "Òganize pwojè: require ak fonksyon avanse",
+          "body_ht": "Lè pwojè a grandi, ou divize l an fichye: config.php (koneksyon), fonksyon.php (zouti), header.php / footer.php (modèl). Pou chaje yo ou itilize require: require 'config.php';. Diferans lan: include bay yon avètisman si fichye a manke epi kontinye; require sispann tout pwogram nan — pi bon pou fichye kritik tankou koneksyon baz done. require_once evite chaje menm fichye a de fwa (ki ta bay erè re-deklarasyon). Kote avanse: fonksyon anonim (closures) $kare = function($n) { return $n * $n; }; itil pou triye ak filtre. Fonksyon flèch fn($n) => $n * 2 se vèsyon kout la. Ou ka tip paramèt yo: function ajoute(int $a, int $b): int — PHP verifye tip yo pou ou. Òganizasyon sa a se premye pa nan direksyon framework tankou Laravel kote chak bagay gen plas li. [[CHECK:php-n3-l09-c1]] [[CHECK:php-n3-l09-c2]]",
+          "code": "<?php\nrequire_once \"config.php\";\nrequire \"fonksyon.php\";\n\n$double = fn($n) => $n * 2;\n$nonb = [1, 2, 3, 4];\n$double_tab = array_map($double, $nonb);\nprint_r($double_tab);\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo itilize autoloading (Composer) olye require manyèl nan gwo pwojè.",
+          "exercises": [
+            {
+              "id": "php-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki diferans ant require ak include?",
+              "choices": [
+                "A) Pa gen diferans",
+                "B) require sispann pwogram nan si fichye a manke",
+                "C) include pi rapid",
+                "D) require sèlman pou imaj"
+              ],
+              "accepted": [
+                "b",
+                "require sispann pwogram nan si fichye a manke"
+              ],
+              "correct_ht": "B) require sispann pwogram nan si fichye a manke",
+              "explanation_ht": "require pwodui yon erè fatal si fichye a pa egziste; include bay sèlman yon avètisman."
+            },
+            {
+              "id": "php-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou chaje fichye a yon sèl fwa: __________ \"config.php\";",
+              "accepted": [
+                "require_once",
+                "require once"
+              ],
+              "correct_ht": "require_once",
+              "explanation_ht": "require_once chaje fichye a yon sèl fwa menm si ou rele l plizyè fwa."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n3-l09-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon fonksyon se:",
+              "accepted": [
+                "a",
+                "yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l"
+              ],
+              "correct_ht": "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+              "explanation_ht": "Fonksyon = pake etap ki gen yon non. Olye ou re-ekri etap yo, ou rele non an.",
+              "choices": [
+                "A) Yon resèt etap ou ekri yon fwa epi ou rele chak fwa ou bezwen l",
+                "B) Yon imaj",
+                "C) Yon kab",
+                "D) Yon sourit"
+              ]
+            },
+            {
+              "id": "php-n3-l09-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "php-n4-l10",
+          "title_ht": "OOP avanse: interfaces ak traits",
+          "body_ht": "Nan nivo ekspè, klas yo vin kontra fòmèl. Yon interface defini SA yon klas dwe fè san di KI JAN: interface Peyab { public function peye($montan); }. Nenpòt klas ki aplike l (class MonCash implements Peyab) OBLIJE gen metòd peye() — sa garanti tout mwayen peman yo pale menm lang. Yon trait se yon pake metòd ou ka reitilize nan plizyè klas san eritaj: trait Logable { public function log($msg) { ... } } apre class Komand { use Logable; }. Sa rezoud limit eritaj senp PHP a (yon klas gen yon sèl paran). Namespaces òganize klas yo pou non yo pa konfli: namespace App\\Peman; epi ou enpòte ak use App\\Peman\\MonCash;. Abstract classes bay yon baz pasyèl ak metòd ki dwe aplike. Konsèp sa yo se fondasyon Laravel ak tout framework PHP modèn: ou ekri kòd ki fleksib, testab, epi fasil pou chanje mwayen peman san touche rès aplikasyon an. [[CHECK:php-n4-l10-c1]] [[CHECK:php-n4-l10-c2]]",
+          "code": "<?php\ninterface Peyab {\n    public function peye(float $montan): bool;\n}\n\ntrait Logable {\n    public function log(string $msg) {\n        echo \"[LOG] $msg\";\n    }\n}\n\nclass MonCash implements Peyab {\n    use Logable;\n    public function peye(float $montan): bool {\n        $this->log(\"Peman $montan Gdes\");\n        return true;\n    }\n}\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo pwograme kont interfaces (pa klas konkrè) pou kòd la rete fleksib epi fasil pou teste ak mock.",
+          "exercises": [
+            {
+              "id": "php-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ki fè yon klas respekte yon interface?",
+              "choices": [
+                "A) extends",
+                "B) implements",
+                "C) uses",
+                "D) inherits"
+              ],
+              "accepted": [
+                "b",
+                "implements"
+              ],
+              "correct_ht": "B) implements",
+              "explanation_ht": "class X implements Y vle di klas la dwe bay tout metòd interface Y a."
+            },
+            {
+              "id": "php-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou itilize trait la nan klas la: class K { ___ Logable; }",
+              "accepted": [
+                "use"
+              ],
+              "correct_ht": "use",
+              "explanation_ht": "Mo kle use andedan yon klas enpòte metòd trait la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n4-l10-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "peye"
+              ],
+              "correct_ht": "peye",
+              "explanation_ht": "Fonksyon an rele « peye » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "php-n4-l10-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon interface (kontra tip) di:",
+              "accepted": [
+                "a",
+                "ki fòm yon objè dwe genyen (ki pwopriyete)"
+              ],
+              "correct_ht": "A) Ki fòm yon objè dwe genyen (ki pwopriyete)",
+              "explanation_ht": "Kontra a garanti: objè sa a ap gen non, laj, elatriye.",
+              "choices": [
+                "A) Ki fòm yon objè dwe genyen (ki pwopriyete)",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki manje pou kwit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n4-l11",
+          "title_ht": "Composer: jerè pakè PHP",
+          "body_ht": "Composer se jerè depandans ofisyèl PHP a — ekivalan npm pou JavaScript. Ou enstale l sou getcomposer.org, apre nan pwojè ou a ou kreye fichye composer.json ki dekri depandans yo. Kòmand composer require monolog/monolog telechaje bibliyotèk la nan dosye vendor/ epi anrejistre l. Pi gwo benefis se autoloading: apre require 'vendor/autoload.php';, tout klas bibliyotèk yo (ak pa ou yo, si ou konfigire PSR-4) chaje otomatikman — fini ak dizèn require manyèl! Estanda PSR-4 asosye namespace ak dosye: namespace App\\; koresponn ak dosye src/. Packagist.org se depo a ak plis pase 300,000 pakè: pou voye imèl, jenere PDF, pale ak Stripe — gen yon pakè pou prèske tout bagay. Nan pwofesyon an, chak pwojè PHP modèn (Laravel, Symfony) bati sou Composer. Aprann li epi ou antre nan ekosistèm pwofesyonèl la. [[CHECK:php-n4-l11-c1]] [[CHECK:php-n4-l11-c2]]",
+          "code": "{\n    \"name\": \"mwen/boutik\",\n    \"require\": {\n        \"php\": \">=8.1\",\n        \"monolog/monolog\": \"^3.0\"\n    },\n    \"autoload\": {\n        \"psr-4\": { \"App\\\\\": \"src/\" }\n    }\n}",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo komèt composer.lock nan Git pou tout anviwònman enstale vèsyon egzak yo.",
+          "exercises": [
+            {
+              "id": "php-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fichye ki chaje tout klas yo otomatikman apre enstalasyon Composer?",
+              "choices": [
+                "A) vendor/load.php",
+                "B) vendor/autoload.php",
+                "C) composer/load.php",
+                "D) auto.php"
+              ],
+              "accepted": [
+                "b",
+                "vendor/autoload.php"
+              ],
+              "correct_ht": "B) vendor/autoload.php",
+              "explanation_ht": "require 'vendor/autoload.php' aktive autoloading tout pakè yo."
+            },
+            {
+              "id": "php-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete kòmand lan pou ajoute yon pakè: composer _______ monolog/monolog",
+              "accepted": [
+                "require"
+              ],
+              "correct_ht": "require",
+              "explanation_ht": "composer require non/pake telechaje epi anrejistre yon depandans."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n4-l11-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — npm/pip/composer sèvi pou:",
+              "accepted": [
+                "a",
+                "enstale pakè (kòd pare) lòt moun ekri pou ou itilize"
+              ],
+              "correct_ht": "A) Enstale pakè (kòd pare) lòt moun ekri pou ou itilize",
+              "explanation_ht": "Pa re-envante wou a: itilize travay kominote a.",
+              "choices": [
+                "A) Enstale pakè (kòd pare) lòt moun ekri pou ou itilize",
+                "B) Kwit manje",
+                "C) Lave rad",
+                "D) Kondwi"
+              ]
+            },
+            {
+              "id": "php-n4-l11-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Blòk try/except (eseye/trape) sèvi pou:",
+              "accepted": [
+                "a",
+                "prepare pwogram nan pou jere erè san kraze"
+              ],
+              "correct_ht": "A) Prepare pwogram nan pou jere erè san kraze",
+              "explanation_ht": "Olye pwogram nan tonbe, li trape erè a epi li kontinye pwòpman.",
+              "choices": [
+                "A) Prepare pwogram nan pou jere erè san kraze",
+                "B) Kache erè yo pou tout tan",
+                "C) Fè pwogram nan pi rapid",
+                "D) Efase fichye yo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "php-n4-l12",
+          "title_ht": "Sekirite: pwoteje aplikasyon ou",
+          "body_ht": "Ou pa kite pòt kay ou louvri lannwit. Sekirite enfòmatik se menm lide a pou pwogram: kadna (modpas), gad (antivirus), ak bon règleman.\n\n [[CHECK:php-n4-l12-c1]]\n\nYon sit san sekirite se yon pòt louvri. Kat atak ou dwe bloke: 1) Enjeksyon SQL — SOLISYON: prepared statements ak PDO (gade leson 8), pa janm mete done itilizatè dirèkteman nan rekèt. 2) XSS (script move enjekte) — SOLISYON: htmlspecialchars() sou tout done ou afiche, pou <script> vin tèks inofansif. 3) CSRF (fòmilè fo sou yon lòt sit ki aji sou non itilizatè ou). SOLISYON: yon token sekrè inik nan chak fòmilè, verifye sou sèvè a anvan ou egzekite aksyon an. 4) Modpas — SOLISYON: pa janm sere modpas an klè! Sèvi ak password_hash($modpas, PASSWORD_DEFAULT) pou sere, epi password_verify($tape, $sere) pou verifye koneksyon. Plis: valide tout antre (filter_var pou imèl), mete limit sou tantativ koneksyon, epi kenbe PHP ak bibliyotèk yo ajou. Sekirite pa yon opsyon — se devwa ou anvè itilizatè ou yo. [[CHECK:php-n4-l12-c2]]",
+          "code": "<?php\n// Sere modpas an sekirite\n$hash = password_hash($_POST[\"modpas\"], PASSWORD_DEFAULT);\n// ... sere $hash nan baz done\n\n// Verifye koneksyon\nif (password_verify($_POST[\"modpas\"], $hash_sere)) {\n    echo \"Koneksyon reyisi!\";\n}\n?>",
+          "code_lang": "php",
+          "expert_note_ht": "Ekspè yo ajoute headers sekirite (CSP, HSTS), 2FA pou kont sansib, epi yo fè odit sekirite regilye.",
+          "exercises": [
+            {
+              "id": "php-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon ki sere yon modpas an sekirite nan PHP?",
+              "choices": [
+                "A) md5($m)",
+                "B) encrypt($m)",
+                "C) password_hash($m, PASSWORD_DEFAULT)",
+                "D) hash1($m)"
+              ],
+              "accepted": [
+                "c",
+                "password_hash"
+              ],
+              "correct_ht": "C) password_hash($m, PASSWORD_DEFAULT)",
+              "explanation_ht": "password_hash kreye yon hash sale epi solid; md5 kase fasil."
+            },
+            {
+              "id": "php-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou verifye modpas la: if (______________($_POST[\"modpas\"], $hash_sere)) {",
+              "accepted": [
+                "password_verify",
+                "password_verify()"
+              ],
+              "correct_ht": "password_verify",
+              "explanation_ht": "password_verify() konpare modpas tape a ak hash ki sere a."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "php-n4-l12-c1",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon bon modpas se:",
+              "accepted": [
+                "a",
+                "long, inik pou chak kont, epi sere nan yon password manager"
+              ],
+              "correct_ht": "A) Long, inik pou chak kont, epi sere nan yon password manager",
+              "explanation_ht": "Inik pa kont: si youn koule, lòt yo an sekirite.",
+              "choices": [
+                "A) Long, inik pou chak kont, epi sere nan yon password manager",
+                "B) Non chen ou",
+                "C) 123456",
+                "D) Menm modpas toupatou"
+              ]
+            },
+            {
+              "id": "php-n4-l12-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kisa print() fè?",
+              "accepted": [
+                "a",
+                "li montre yon mesaj sou ekran an"
+              ],
+              "correct_ht": "A) Li montre yon mesaj sou ekran an",
+              "explanation_ht": "print() se fason pwogram nan pale ak ou: li ekri tèks sou ekran an.",
+              "choices": [
+                "A) Li montre yon mesaj sou ekran an",
+                "B) Li etenn òdinatè a",
+                "C) Li efase yon fichye",
+                "D) Li fèmen pwogram nan"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

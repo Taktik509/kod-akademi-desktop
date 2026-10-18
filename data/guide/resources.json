@@ -1,0 +1,116 @@
+{
+  "id": "resous-ofisyel",
+  "groups": [
+    {
+      "id": "lang",
+      "title_ht": "📖 Langaj ak Web",
+      "items": [
+        {
+          "name": "Python Tutorial",
+          "url": "https://docs.python.org/3/tutorial/",
+          "description_ht": "Fondasyon Python ak referans lang lan — sous ofisyèl la."
+        },
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/",
+          "description_ht": "Referans konplè HTML, CSS ak JavaScript (Mozilla)."
+        },
+        {
+          "name": "TypeScript Handbook",
+          "url": "https://www.typescriptlang.org/docs/",
+          "description_ht": "Gid ofisyèl TypeScript, soti nan baz rive nan tip avanse."
+        }
+      ]
+    },
+    {
+      "id": "zouti",
+      "title_ht": "🧰 Zouti",
+      "items": [
+        {
+          "name": "Git Book (Pro Git)",
+          "url": "https://git-scm.com/book/en/v2",
+          "description_ht": "Liv gratis konplè sou Git, soti nan baz rive nan workflow ekip."
+        }
+      ]
+    },
+    {
+      "id": "bdd",
+      "title_ht": "🗄️ Bazdone",
+      "items": [
+        {
+          "name": "PostgreSQL Documentation",
+          "url": "https://www.postgresql.org/docs/",
+          "description_ht": "SQL, administrasyon ak pèfòmans PostgreSQL."
+        }
+      ]
+    },
+    {
+      "id": "mobil",
+      "title_ht": "📱 Mobil ak Desktop",
+      "items": [
+        {
+          "name": "Android Developers",
+          "url": "https://developer.android.com/",
+          "description_ht": "Android, Kotlin, Jetpack ak piblikasyon sou Play Store."
+        },
+        {
+          "name": "Apple Developer",
+          "url": "https://developer.apple.com/documentation/",
+          "description_ht": "Swift, SwiftUI, iOS ak macOS — dokimantasyon ofisyèl Apple."
+        },
+        {
+          "name": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/",
+          "description_ht": "Windows, C#, .NET, Azure ak PowerShell."
+        }
+      ]
+    },
+    {
+      "id": "sistem",
+      "title_ht": "🖥️ Sistèm ak Rezo",
+      "items": [
+        {
+          "name": "The Linux Documentation Project",
+          "url": "https://tldp.org/",
+          "description_ht": "Gid Linux (HOWTO) — verifye dat dokiman yo."
+        },
+        {
+          "name": "Linux man-pages",
+          "url": "https://man7.org/linux/man-pages/",
+          "description_ht": "Referans ofisyèl kòmand ak API Linux."
+        }
+      ]
+    },
+    {
+      "id": "sekirite",
+      "title_ht": "🛡️ Sekirite",
+      "items": [
+        {
+          "name": "OWASP Top 10",
+          "url": "https://owasp.org/www-project-top-ten/",
+          "description_ht": "10 pi gwo risk sekirite aplikasyon web — lekti obligatwa."
+        },
+        {
+          "name": "OWASP Web Security Testing Guide",
+          "url": "https://owasp.org/www-project-web-security-testing-guide/",
+          "description_ht": "Metodoloji konplè pou teste sekirite aplikasyon web."
+        },
+        {
+          "name": "PortSwigger Web Security Academy",
+          "url": "https://portswigger.net/web-security",
+          "description_ht": "Kou gratis ak laboratwa legal pou aprann sekirite web."
+        },
+        {
+          "name": "NIST Cybersecurity Framework",
+          "url": "https://www.nist.gov/cyberframework",
+          "description_ht": "Kad pou òganize yon pwogram sekirite serye."
+        },
+        {
+          "name": "CISA Secure by Design",
+          "url": "https://www.cisa.gov/securebydesign",
+          "description_ht": "Prensip pou konsevwa lojisyèl an sekirite depi premye jou."
+        }
+      ]
+    }
+  ]
+}

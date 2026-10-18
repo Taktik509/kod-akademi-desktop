@@ -1,0 +1,776 @@
+{
+  "id": "kotlin",
+  "name": "Kotlin",
+  "category_ht": "Mobil",
+  "description_ht": "Kotlin se langaj ofisyèl pou devlopman Android — modèn, kout, epi an sekirite kont erè. Avèk li ou bati aplikasyon mobil, epi ou ka menm pataje kòd ant Android ak iOS.",
+  "levels": [
+    {
+      "id": "n1",
+      "title_ht": "Nivo 1 — Debitan",
+      "lessons": [
+        {
+          "id": "kotlin-n1-l01",
+          "title_ht": "Premye pwogram Kotlin ou",
+          "body_ht": "Lè ou vle montre zanmi w yon foto, ou lonje telefòn ou ba li. Fonksyon print() se fason pwogram nan lonje yon mesaj ba ou sou ekran an.\n\n [[CHECK:kotlin-n1-l01-c1]]\n\nKotlin se langaj pwogramasyon ofisyèl pou kreye aplikasyon Android. Google te adopte l paske li pi kout, pi modèn, epi pi an sekirite pase Java. Chak pwogram Kotlin kòmanse nan yon fonksyon espesyal ki rele main — se pòt antre pwogram nan. Lè ou lanse app lan, se kòd ki andedan main lan ki egzekite an premye. Pou afiche yon mesaj, ou itilize fonksyon println (\"print line\"): li ekri tèks la epi li desann sou liy apre. Gade egzanp lan: fun main() louvri fonksyon an, epi println(\"Bonjou, Ayiti!\") afiche mesaj la sou ekran an. Ou ka eseye sa san ou pa enstale anyen sou sit play.kotlinlang.org, oswa nan Android Studio pou pwojè reyèl. Yon fwa ou konprann main ak println, ou deja ka fè òdinatè a pale. Nan pwochen leson an, nou pral aprann kijan pou kenbe enfòmasyon nan varyab. Anplis, chak fwa ou kouri pwogram nan, ou wè rezilta a touswit nan konsòl la — se bouk fidbak rapid sa a ki fè aprantisaj pwogramasyon agreyab. Kenbe abitid teste ti moso kòd souvan olye ekri yon gwo pwogram anvan ou eseye l. [[CHECK:kotlin-n1-l01-c2]]",
+          "code": "fun main() {\n    println(\"Bonjou, Ayiti!\")\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Nan pwojè reyèl, fonksyon main lan raman gen lojik dirèkteman — li rele lòt fonksyon byen òganize pou kòd la rete pwòp epi fasil pou teste.",
+          "exercises": [
+            {
+              "id": "kotlin-n1-l01-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon ki sèvi kòm pwen depa chak pwogram Kotlin?",
+              "choices": [
+                "A) start()",
+                "B) main()",
+                "C) run()",
+                "D) begin()"
+              ],
+              "accepted": [
+                "b",
+                "main",
+                "fonksyon main"
+              ],
+              "correct_ht": "B) main()",
+              "explanation_ht": "Se fonksyon main lan sistèm nan chèche epi egzekite an premye lè pwogram nan lanse."
+            },
+            {
+              "id": "kotlin-n1-l01-e2",
+              "type": "code",
+              "prompt_ht": "Ekri non fonksyon ki manke a pou afiche mo Bonjou: _____(\"Bonjou\")",
+              "accepted": [
+                "println"
+              ],
+              "correct_ht": "println",
+              "explanation_ht": "println afiche tèks la sou ekran an epi li desann sou liy apre."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n1-l01-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "bonjou, ayiti!",
+                "\"bonjou, ayiti!\""
+              ],
+              "correct_ht": "Bonjou, Ayiti!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Bonjou, Ayiti! »."
+            },
+            {
+              "id": "kotlin-n1-l01-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "main"
+              ],
+              "correct_ht": "main",
+              "explanation_ht": "Fonksyon an rele « main » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n1-l02",
+          "title_ht": "Varyab: val ak var",
+          "body_ht": "Yon varyab se yon bwat ki kenbe yon enfòmasyon nan memwa òdinatè a. Nan Kotlin gen de kalite bwat: val ak var. val vle di \"value\" — yon fwa ou mete yon valè ladann, ou pa ka chanje l ankò. Se tankou ou ekri ak plim: li rete. var vle di \"variable\" — ou ka chanje valè a nenpòt ki lè, tankou ou ekri ak kreyon. Egzanp: val non = \"Garry\" pa ka chanje, men var laj = 25 ka vin 26 pita. Kotlin entelijan: li devine tip done a pou kont li (yo rele sa \"type inference\"). Si ou ekri val laj = 25, li konnen se yon Int (nonm antye). Si ou ekri val pri = 19.99, se yon Double (nonm ak desimal). Ou ka ekri tip la aklè tou: val non: String = \"Garry\". Règ an lò: itilize val toutotan ou kapab. Kòd ki gen plis val pi fasil pou konprann epi li gen mwens pinèz, paske valè yo pa chanje san ou pa atann. [[CHECK:kotlin-n1-l02-c1]] [[CHECK:kotlin-n1-l02-c2]]",
+          "code": "fun main() {\n    val non = \"Garry\"\n    var laj = 25\n    laj = 26\n    println(\"$non gen $laj an\")\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Devlopè ekspè yo prefere val pa defo (immutability) — sa rann kòd la pi an sekirite, sitou nan pwogram ki gen plizyè travay k ap kouri ansanm.",
+          "exercises": [
+            {
+              "id": "kotlin-n1-l02-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle ou itilize pou yon varyab ou pa vle chanje apre ou kreye l?",
+              "choices": [
+                "A) var",
+                "B) val",
+                "C) const",
+                "D) let"
+              ],
+              "accepted": [
+                "b",
+                "val"
+              ],
+              "correct_ht": "B) val",
+              "explanation_ht": "val kreye yon valè final: yon fwa ou mete l, ou pa ka re-afekte l ankò."
+            },
+            {
+              "id": "kotlin-n1-l02-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou deklare yon varyab laj ki KA chanje pita: ___ laj = 25",
+              "accepted": [
+                "var"
+              ],
+              "correct_ht": "var",
+              "explanation_ht": "var pèmèt ou chanje valè varyab la nenpòt ki lè apre ou kreye l."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n1-l02-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — nan egzanp kòd lan, ki valè « laj » genyen? (ekri valè a)",
+              "accepted": [
+                "26"
+              ],
+              "correct_ht": "26",
+              "explanation_ht": "Nan egzanp lan, liy « laj = 26 » mete valè « 26 » nan bwat « laj » a."
+            },
+            {
+              "id": "kotlin-n1-l02-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "$non gen $laj an",
+                "\"$non gen $laj an\""
+              ],
+              "correct_ht": "$non gen $laj an",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « $non gen $laj an »."
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n1-l03",
+          "title_ht": "Fonksyon: bati blok kòd",
+          "body_ht": "Yon fonksyon se yon blok kòd ou bay yon non, pou ou ka rele l plizyè fwa san ou pa re-ekri l. Nan Kotlin ou deklare l ak mo kle fun (\"function\"). Egzanp lan montre fun sòm(a: Int, b: Int): Int. Non an se sòm, li pran de paramèt a ak b ki se nonm antye, epi : Int apre parantèz la di ki tip done fonksyon an ap retoune. Mo kle return voye rezilta a bay kòd ki rele fonksyon an. Lè ou ekri sòm(3, 4), òdinatè a egzekite kòd la epi li ba ou 7. Fonksyon yo se fondasyon tout pwogram: yo koupe gwo pwoblèm an ti moso fasil pou jere, pou teste, epi pou re-itilize. Yon bon fonksyon fè YON sèl bagay byen epi li gen yon non klè ki di sa l fè, tankou kalkilePri oswa voyeImèl. Nan pwochen nivo a, nou pral mete fonksyon ansanm ak kondisyon pou pwogram nou yo ka pran desizyon pou kont yo. [[CHECK:kotlin-n1-l03-c1]] [[CHECK:kotlin-n1-l03-c2]]",
+          "code": "fun sòm(a: Int, b: Int): Int {\n    return a + b\n}\n\nfun main() {\n    println(sòm(3, 4))\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Yon fonksyon yon sèl ekspresyon ka ekri pi kout: fun sòm(a: Int, b: Int) = a + b — pa bezwen return ni aksan lè kò a se yon sèl liy.",
+          "exercises": [
+            {
+              "id": "kotlin-n1-l03-e1",
+              "type": "qcm",
+              "prompt_ht": "Kisa \": Int\" vle di nan \"fun sòm(a: Int, b: Int): Int\"?",
+              "choices": [
+                "A) Non premye paramèt la",
+                "B) Tip done fonksyon an ap retoune",
+                "C) Non fonksyon an",
+                "D) Kantite paramèt fonksyon an"
+              ],
+              "accepted": [
+                "b",
+                "tip retou",
+                "tip done retoune",
+                "tip done fonksyon an ap retoune"
+              ],
+              "correct_ht": "B) Tip done fonksyon an ap retoune",
+              "explanation_ht": ": Int apre parantèz la deklare tip valè mo kle return ap voye a."
+            },
+            {
+              "id": "kotlin-n1-l03-e2",
+              "type": "code",
+              "prompt_ht": "Konplete fonksyon ki retoune doub yon nonm: fun doub(n: Int): Int { ___ n * 2 }",
+              "accepted": [
+                "return"
+              ],
+              "correct_ht": "return",
+              "explanation_ht": "return voye rezilta kalkil n * 2 la bay kòd ki rele fonksyon an."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n1-l03-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "sòm(3, 4)"
+              ],
+              "correct_ht": "sòm(3, 4)",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « sòm(3, 4) »."
+            },
+            {
+              "id": "kotlin-n1-l03-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "sòm"
+              ],
+              "correct_ht": "sòm",
+              "explanation_ht": "Fonksyon an rele « sòm » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "title_ht": "Nivo 2 — Entèmedyè",
+      "lessons": [
+        {
+          "id": "kotlin-n2-l04",
+          "title_ht": "Pran desizyon: if ak when",
+          "body_ht": "Pwogram entelijan yo pran desizyon. Nan Kotlin, estrikti if la verifye yon kondisyon: si li vre, yon blok egzekite, sinon blok else la egzekite. Egzanp lan tcheke si laj >= 18 pou di \"Granmoun\" oswa \"Timoun\". Men zam sekrè Kotlin an se when — li ranplase gwo chenn if-else yo ak yon fòm pi pwòp. Ou bay when yon valè, epi chak branch di: pou ka sa a, fè sa a. Nan egzanp lan, when (nòt) gade valè nòt la: si li ant 90 ak 100 (ekri 90..100), rezilta a se \"A\". Si ant 80 ak 89, se \"B\"; sinon (else) se \"C\". Branch else la obligatwa lè when ap bay yon valè, pou tout ka kouvri. Avèk when, kòd ou a vin pi kout epi pi fasil pou li pase yon pil if-else. Nan aplikasyon reyèl ou pral itilize sa tout tan: pou nivo itilizatè, pou eta bouton, pou mesaj selon rezilta. [[CHECK:kotlin-n2-l04-c1]] [[CHECK:kotlin-n2-l04-c2]]",
+          "code": "fun main() {\n    val laj = 20\n    val estati = if (laj >= 18) \"Granmoun\" else \"Timoun\"\n    println(estati)\n\n    val nòt = 85\n    val lèt = when (nòt) {\n        in 90..100 -> \"A\"\n        in 80..89 -> \"B\"\n        else -> \"C\"\n    }\n    println(lèt)\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "when ka itilize kòm ekspresyon (bay yon valè) oswa kòm enstriksyon; ekspè yo prefere fòm ekspresyon an paske konpilatè a fòse w kouvri tout ka.",
+          "exercises": [
+            {
+              "id": "kotlin-n2-l04-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki estrikti Kotlin ki ranplase yon long chenn if-else sou menm valè a?",
+              "choices": [
+                "A) switch",
+                "B) when",
+                "C) case",
+                "D) select"
+              ],
+              "accepted": [
+                "b",
+                "when"
+              ],
+              "correct_ht": "B) when",
+              "explanation_ht": "when se estrikti Kotlin pou teste yon valè kont plizyè ka pwòpman; switch se pou Java."
+            },
+            {
+              "id": "kotlin-n2-l04-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou chwazi mesaj la selon kondisyon an: val m = ___ (laj >= 18) \"OK\" else \"Non\"",
+              "accepted": [
+                "if"
+              ],
+              "correct_ht": "if",
+              "explanation_ht": "if kòm ekspresyon bay \"OK\" lè kondisyon an vre, sinon li bay \"Non\"."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n2-l04-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "estati"
+              ],
+              "correct_ht": "estati",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « estati »."
+            },
+            {
+              "id": "kotlin-n2-l04-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "main"
+              ],
+              "correct_ht": "main",
+              "explanation_ht": "Fonksyon an rele « main » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n2-l05",
+          "title_ht": "Bouk: for ak while",
+          "body_ht": "Yon bouk repete yon aksyon plizyè fwa san ou pa re-ekri kòd la. Nan Kotlin, bouk for la itilize ak entèval: for (i in 1..5) repete 5 fwa ak i ki pran valè 1, 2, 3, 4, 5. Ou ka itilize l tou pou mache sou yon lis: for (non in lisNon). Bouk while la kontinye toutotan kondisyon an vre: while (kontè < 3) — men fòk ou chanje yon bagay andedan bouk la sinon li pa janm fini (bouk enfini!). Genyen tou do-while ki egzekite omwen yon fwa anvan li tcheke kondisyon an, ak fonksyon repeat(5) ki senp pou repete yon aksyon yon kantite fwa. Nan aplikasyon mobil, bouk yo sèvi pou montre lis atik, pou trete done, pou chaje paj. Chwazi for lè ou konnen konbyen fwa, while lè ou ap tann yon kondisyon chanje. Ou ka konbine bouk ak kondisyon: pou egzanp, andedan yon for ou mete yon if pou trete sèlman atik ki enterese w. Genyen tou mo kle break pou sòti nan yon bouk anvan li fini, ak continue pou sote yon tou epi pase nan pwochen an. [[CHECK:kotlin-n2-l05-c1]] [[CHECK:kotlin-n2-l05-c2]]",
+          "code": "fun main() {\n    for (i in 1..3) {\n        println(\"Tou $i\")\n    }\n    var kontè = 0\n    while (kontè < 3) {\n        println(\"Kontè: $kontè\")\n        kontè++\n    }\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Pou koleksyon yo, ekspè yo prefere fonksyon tankou forEach, map ak filter olye bouk for tradisyonèl — kòd la pi deklaratif epi pi kout.",
+          "exercises": [
+            {
+              "id": "kotlin-n2-l05-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki bouk ki repete ak i = 1, 2, 3, 4, 5?",
+              "choices": [
+                "A) for (i in 1..5)",
+                "B) for (i in 1..4)",
+                "C) while (i < 5)",
+                "D) repeat(i)"
+              ],
+              "accepted": [
+                "a",
+                "for (i in 1..5)"
+              ],
+              "correct_ht": "A) for (i in 1..5)",
+              "explanation_ht": "Entèval 1..5 enkli tou de bout yo, kidonk i pran valè 1 rive 5."
+            },
+            {
+              "id": "kotlin-n2-l05-e2",
+              "type": "code",
+              "prompt_ht": "Konplete bouk ki afiche 1, 2, 3: ___ (i in 1..3) { println(i) }",
+              "accepted": [
+                "for"
+              ],
+              "correct_ht": "for",
+              "explanation_ht": "for (i in 1..3) fè i mache sou chak nonm nan entèval la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n2-l05-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "tou $i",
+                "\"tou $i\""
+              ],
+              "correct_ht": "Tou $i",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Tou $i »."
+            },
+            {
+              "id": "kotlin-n2-l05-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "main"
+              ],
+              "correct_ht": "main",
+              "explanation_ht": "Fonksyon an rele « main » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n2-l06",
+          "title_ht": "Koleksyon: List ak Map",
+          "body_ht": "Pwogram yo raman travay ak yon sèl valè — yo jere lis bagay. Nan Kotlin, listOf kreye yon lis ki pa ka chanje (immutable): val fwi = listOf(\"mango\", \"bannann\", \"zoranji\"). Ou li yon eleman ak endèks li, ki kòmanse nan 0: fwi[0] se \"mango\", fwi[1] se \"bannann\". Si ou bezwen ajoute oswa retire eleman, itilize mutableListOf. Pou asosye kle ak valè (tankou yon diksyonè), gen mapOf: val pri = mapOf(\"mango\" to 50, \"bannann\" to 25), epi pri[\"mango\"] bay 50. Koleksyon yo gen fonksyon pwisan: .size bay kantite eleman, .contains tcheke si yon bagay ladan, epi nan pwochen nivo a n ap wè map ak filter. Nan yon app mobil, se koleksyon ki dèyè chak lis ou wè: kontak, pwodwi, mesaj. Sonje byen: lis ki pa chanje (listOf) pi an sekirite — itilize yo pa defo. Lè ou li yon lis pa endèks, toujou verifye endèks la egziste (pi piti pase size) sinon pwogram nan kraze. Pou mache sou tout eleman san danje, itilize for (fwi in fwiYo) olye konte endèks manyèlman. [[CHECK:kotlin-n2-l06-c1]] [[CHECK:kotlin-n2-l06-c2]]",
+          "code": "fun main() {\n    val fwi = listOf(\"mango\", \"bannann\", \"zoranji\")\n    println(fwi[1])\n    println(\"Kantite: ${fwi.size}\")\n    val pri = mapOf(\"mango\" to 50, \"bannann\" to 25)\n    println(pri[\"mango\"])\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Diferans listOf / mutableListOf se yon desizyon achitekti: koleksyon immutable anpeche modifikasyon aksidantèl epi yo pi an sekirite ant thread.",
+          "exercises": [
+            {
+              "id": "kotlin-n2-l06-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon kreye yon lis ou PA ka modifye apre?",
+              "choices": [
+                "A) mutableListOf()",
+                "B) listOf()",
+                "C) arrayListOf()",
+                "D) newList()"
+              ],
+              "accepted": [
+                "b",
+                "listof",
+                "listOf()"
+              ],
+              "correct_ht": "B) listOf()",
+              "explanation_ht": "listOf bay yon lis immutable; mutableListOf se pou lis ou bezwen chanje."
+            },
+            {
+              "id": "kotlin-n2-l06-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou afiche \"bannann\" (dezyèm eleman): println(fwi[___])",
+              "accepted": [
+                "1"
+              ],
+              "correct_ht": "1",
+              "explanation_ht": "Endèks yo kòmanse nan 0, kidonk dezyèm eleman an se endèks 1."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n2-l06-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "fwi[1]"
+              ],
+              "correct_ht": "fwi[1]",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « fwi[1] »."
+            },
+            {
+              "id": "kotlin-n2-l06-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "main"
+              ],
+              "correct_ht": "main",
+              "explanation_ht": "Fonksyon an rele « main » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "title_ht": "Nivo 3 — Avanse",
+      "lessons": [
+        {
+          "id": "kotlin-n3-l07",
+          "title_ht": "Klas ak objè",
+          "body_ht": "Pwogramasyon oryante objè (OOP) òganize kòd otou \"objè\" ki gen done ak konpòtman. Nan Kotlin ou kreye yon modèl ak mo kle class. Egzanp lan: class Machin(val mak: String) — Machin se klas la, epi val mak: String se yon pwopriyete chak machin genyen (yo rele sa konstrukteur prensipal). Andedan klas la ou ka mete fonksyon, yo rele yo metòd: fun klaksone() afiche yon mesaj. Pou itilize klas la, ou kreye yon objè (yon \"enstans\"): val m = Machin(\"Toyota\"), apre ou rele m.klaksone(). Kotlin gen yon bèl rakousi: data class. Lè ou ekri data class Itilizatè(val non: String, val laj: Int), konpilatè a jenere otomatikman fonksyon itil tankou toString, equals ak copy. Nan Android, tout ekran, tout bouton, tout done ou jere se objè. Konprann klas se konprann kijan gwo aplikasyon yo bati. Konstrukteur a ka gen valè pa defo: class Machin(val mak: String = \"Toyota\") pèmèt ou kreye Machin() san agiman. Epi ak mo kle open, yon klas ka sèvi baz pou lòt klas eritye — men nan Kotlin klas yo fèmen pa defo pou sekirite. [[CHECK:kotlin-n3-l07-c1]] [[CHECK:kotlin-n3-l07-c2]]",
+          "code": "class Machin(val mak: String) {\n    fun klaksone() {\n        println(\"$mak: Bip bip!\")\n    }\n}\n\ndata class Itilizatè(val non: String, val laj: Int)\n\nfun main() {\n    val m = Machin(\"Toyota\")\n    m.klaksone()\n    println(Itilizatè(\"Ana\", 22))\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Prefere konpozisyon olye eritay lè ou kapab, epi kenbe klas yo piti ak yon sèl responsablite (prensip SRP) pou yo rete fasil pou teste.",
+          "exercises": [
+            {
+              "id": "kotlin-n3-l07-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle kreye yon klas done ak toString/equals otomatik?",
+              "choices": [
+                "A) data class",
+                "B) object class",
+                "C) struct",
+                "D) record"
+              ],
+              "accepted": [
+                "a",
+                "data class"
+              ],
+              "correct_ht": "A) data class",
+              "explanation_ht": "data class fè konpilatè a jenere toString, equals, hashCode ak copy pou ou."
+            },
+            {
+              "id": "kotlin-n3-l07-e2",
+              "type": "code",
+              "prompt_ht": "Konplete metòd klas la: class Machin(val mak: String) { fun ___( ) { println(mak) } }",
+              "accepted": [
+                "demare",
+                "klaksone",
+                "kouri"
+              ],
+              "correct_ht": "demare (oswa nenpòt non metòd)",
+              "explanation_ht": "Yon metòd se yon fonksyon andedan yon klas; ou bay li yon non klè tankou demare."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n3-l07-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "$mak: bip bip!",
+                "\"$mak: bip bip!\""
+              ],
+              "correct_ht": "$mak: Bip bip!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « $mak: Bip bip! »."
+            },
+            {
+              "id": "kotlin-n3-l07-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "klaksone"
+              ],
+              "correct_ht": "klaksone",
+              "explanation_ht": "Fonksyon an rele « klaksone » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n3-l08",
+          "title_ht": "Lambda ak fonksyon lòd siperyè",
+          "body_ht": "Yon resèt kwizin se yon lis etap ou swiv chak fwa ou vle fè diri kole. Yon fonksyon se yon resèt pou òdinatè a: ou ekri etap yo yon fwa, epi ou rele l chak fwa ou bezwen l.\n\n [[CHECK:kotlin-n3-l08-c1]]\n\nYon lambda se yon ti fonksyon san non ou ka pase kòm valè — tankou yon resèt ou bay yon lòt moun pou li swiv. Sentaks la: { x -> x * 2 }, kote -> separe paramèt yo ak kò a. Fonksyon \"lòd siperyè\" yo se fonksyon ki pran yon lambda kòm paramèt. Twa pi itil yo sou koleksyon: map transfòme chak eleman (lis.map { it * it } fè kare chak nonm), filter kenbe sèlman eleman ki satisfè yon kondisyon (lis.filter { it > 2 }), epi forEach fè yon aksyon sou chak eleman. Mo kle espesyal it reprezante eleman aktyèl la lè gen yon sèl paramèt — ou pa bezwen nonmen l. Avèk lambda, ou ranplase bouk long ak yon sèl liy ekspresif. Se stil sa a ki domine nan Kotlin modèn, epi se li w ap wè nan tout kòd Android pwofesyonèl. Ou ka bay yon lambda yon non lè ou sere l nan yon varyab: val doub = { x: Int -> x * 2 }. Apre sa ou rele l tankou yon fonksyon: doub(5) bay 10. [[CHECK:kotlin-n3-l08-c2]]",
+          "code": "fun main() {\n    val nonb = listOf(1, 2, 3, 4)\n    val kare = nonb.map { it * it }\n    println(kare)\n    val gwo = nonb.filter { it > 2 }\n    println(gwo)\n    nonb.forEach { println(\"Nonm: $it\") }\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Lambda yo ka gen \"receiver\" (tankou apply/also/run) — se teknik sa a ki dèyè DSL pwisan Kotlin yo, tankou Jetpack Compose.",
+          "exercises": [
+            {
+              "id": "kotlin-n3-l08-e1",
+              "type": "qcm",
+              "prompt_ht": "Nan \"lis.map { it * 2 }\", kisa \"it\" reprezante?",
+              "choices": [
+                "A) Tout lis la",
+                "B) Chak eleman lis la, youn pa youn",
+                "C) Kantite eleman yo",
+                "D) Dènye eleman an"
+              ],
+              "accepted": [
+                "b",
+                "chak eleman",
+                "eleman aktyel la",
+                "eleman aktyèl la"
+              ],
+              "correct_ht": "B) Chak eleman lis la, youn pa youn",
+              "explanation_ht": "it se non enplisit pou sèl paramèt yon lambda — isit la, chak eleman map ap trete."
+            },
+            {
+              "id": "kotlin-n3-l08-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou double chak nonm: val doub = nonb.___ { it * 2 }",
+              "accepted": [
+                "map"
+              ],
+              "correct_ht": "map",
+              "explanation_ht": "map aplike lambda a sou chak eleman epi li retoune yon nouvo lis ak rezilta yo."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n3-l08-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "kare"
+              ],
+              "correct_ht": "kare",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « kare »."
+            },
+            {
+              "id": "kotlin-n3-l08-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "main"
+              ],
+              "correct_ht": "main",
+              "explanation_ht": "Fonksyon an rele « main » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n3-l09",
+          "title_ht": "Coroutines: pwogramasyon asenkron",
+          "body_ht": "Lè manman w voye w achte pen, ou pa kanpe devan fou a ap tann li kwit — ou fè lòt bagay epi ou tounen. Kòd asenkron fè menm jan: li lanse yon travay epi li kontinye.\n\n [[CHECK:kotlin-n3-l09-c1]]\n\nLè app ou a telechaje done sou entènèt, ou pa vle ekran an jele pandan li ap tann. Coroutines se solisyon Kotlin pou travay asenkron: yo pèmèt ou ekri kòd ki tann san bloke. Yon fonksyon suspend se yon fonksyon ki ka \"sispann\" pandan l ap tann (tankou delay(1000) ki tann 1 segonn) epi reprann apre, san bloke thread la. Kontrèman ak Thread.sleep ki jele tout bagay. Ou lanse yon coroutine ak launch andedan yon scope: runBlocking { launch { delay(500). Println(\"Fini\") } } — runBlocking se pon ant mond senkron ak mond coroutine, souvan itilize nan tès oswa fonksyon main. Pandan delay ap tann, rès pwogram nan kontinye kouri. Nan Android, ou lanse coroutines nan lifecycleScope oswa viewModelScope pou yo kanpe otomatikman lè ekran an fèmen. Sa evite \"leak\" memwa. Coroutines se baz tout rezo modèn nan Kotlin. Sonje: yon fonksyon suspend ka rele sèlman depi yon coroutine oswa yon lòt fonksyon suspend — se règ konpilatè a ki garanti ou pa bloke yon thread pa aksidan. [[CHECK:kotlin-n3-l09-c2]]",
+          "code": "import kotlinx.coroutines.*\n\nfun main() = runBlocking {\n    launch {\n        delay(500)\n        println(\"Travay fini!\")\n    }\n    println(\"Pwogram kontinye...\")\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Pa janm itilize GlobalScope nan app reyèl — san scope byen jere, coroutines yo ka siviv ekran an epi koule memwa; lifecycleScope/viewModelScope se bon pratik la.",
+          "exercises": [
+            {
+              "id": "kotlin-n3-l09-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle make yon fonksyon ki ka sispann pandan l ap tann?",
+              "choices": [
+                "A) async",
+                "B) suspend",
+                "C) await",
+                "D) pause"
+              ],
+              "accepted": [
+                "b",
+                "suspend"
+              ],
+              "correct_ht": "B) suspend",
+              "explanation_ht": "suspend make fonksyon an kapab sispann san bloke thread la, epi reprann pita."
+            },
+            {
+              "id": "kotlin-n3-l09-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou lanse yon travay asenkron: runBlocking { ___ { delay(500); println(\"OK\") } }",
+              "accepted": [
+                "launch"
+              ],
+              "correct_ht": "launch",
+              "explanation_ht": "launch demare yon coroutine ki kouri an paralèl san bloke rès kòd la."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n3-l09-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — dapre egzanp lan, kisa liy afichaj la ap montre sou ekran an? (ekri l)",
+              "accepted": [
+                "travay fini!",
+                "\"travay fini!\""
+              ],
+              "correct_ht": "Travay fini!",
+              "explanation_ht": "Fonksyon afichaj la montre sa ou bay li: « Travay fini! »."
+            },
+            {
+              "id": "kotlin-n3-l09-c2",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "main"
+              ],
+              "correct_ht": "main",
+              "explanation_ht": "Fonksyon an rele « main » — se non sa a ou itilize pou rele l pita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "title_ht": "Nivo 4 — Ekspè",
+      "lessons": [
+        {
+          "id": "kotlin-n4-l10",
+          "title_ht": "Coroutines avanse: Dispatchers ak async",
+          "body_ht": "Lè manman w voye w achte pen, ou pa kanpe devan fou a ap tann li kwit — ou fè lòt bagay epi ou tounen. Kòd asenkron fè menm jan: li lanse yon travay epi li kontinye.\n\n [[CHECK:kotlin-n4-l10-c1]]\n\nNan nivo ekspè, ou kontwole EGZAKTEMAN ki kote coroutines ou yo kouri. Dispatchers se \"pisin thread\" yo: Dispatchers.IO optimize pou travay rezo ak fichye (li gen anpil thread), Dispatchers.Default pou kalkil lou (CPU), epi Dispatchers.Main pou mete ekran Android ajou. Ou chanje kontèks ak withContext(Dispatchers.IO) { ... } — kòd andedan an kouri sou IO, epi rezilta a retoune. Pou lanse plizyè travay an paralèl epi tann tout rezilta yo, ou itilize async ki bay yon Deferred, apre ou rele .await() pou rekipere valè a: val a = async { chajeA() }, val b = async { chajeB() }, apre a.await() + b.await(). Prensip \"structured concurrency\" di: yon coroutine pa dwe siviv paran li — si paran an anile, tout pitit yo anile tou. Pou ka espesyal kote yon echèk pa dwe touye lòt travay yo, gen SupervisorJob. Metrize sa a, epi app ou yo ap rapid, an sekirite, san jele. [[CHECK:kotlin-n4-l10-c2]]",
+          "code": "import kotlinx.coroutines.*\n\nsuspend fun chajeDone(): String = withContext(Dispatchers.IO) {\n    delay(300)\n    \"Done sou rezo\"\n}\n\nfun main() = runBlocking {\n    val t1 = async { chajeDone() }\n    val t2 = async { chajeDone() }\n    println(t1.await() + \" + \" + t2.await())\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Règ nò: pa janm bloke Main thread; tout apèl rezo/fichye dwe pase pa Dispatchers.IO, epi mete UI ajou sèlman sou Main.",
+          "exercises": [
+            {
+              "id": "kotlin-n4-l10-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki Dispatcher ou dwe itilize pou yon apèl rezo (API)?",
+              "choices": [
+                "A) Dispatchers.Main",
+                "B) Dispatchers.IO",
+                "C) Dispatchers.Default",
+                "D) Dispatchers.Unconfined"
+              ],
+              "accepted": [
+                "b",
+                "dispatchers.io",
+                "io"
+              ],
+              "correct_ht": "B) Dispatchers.IO",
+              "explanation_ht": "Dispatchers.IO fèt pou operasyon antre/sòti (rezo, fichye) ki tann anpil san itilize CPU."
+            },
+            {
+              "id": "kotlin-n4-l10-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou egzekite sou thread rezo a: val d = withContext(___) { chaje() }",
+              "accepted": [
+                "dispatchers.io",
+                "dispatchers_io"
+              ],
+              "correct_ht": "Dispatchers.IO",
+              "explanation_ht": "withContext(Dispatchers.IO) deplase travay la sou pisin thread ki optimize pou rezo."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n4-l10-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "chajedone"
+              ],
+              "correct_ht": "chajeDone",
+              "explanation_ht": "Fonksyon an rele « chajeDone » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "kotlin-n4-l10-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Kòd asenkron (async/await) pèmèt pwogram nan:",
+              "accepted": [
+                "a",
+                "lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann"
+              ],
+              "correct_ht": "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+              "explanation_ht": "Tankou voye yon moun achte pen pandan ou kontinye kwit manje.",
+              "choices": [
+                "A) Lanse yon travay ki pran tan epi kontinye fè lòt bagay pandan l ap tann",
+                "B) Dòmi pou tout tan",
+                "C) Etenn òdinatè a",
+                "D) Efase memwa a"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n4-l11",
+          "title_ht": "Flow: kouran done reyaktif",
+          "body_ht": "Yon fonksyon suspend bay YON valè yon sèl fwa. Men kisa ou fè lè done ap vini kontinyèlman — tankou pozisyon GPS, mesaj chat, oswa pri aksyon? Se la Flow antre: se yon kouran (stream) valè asenkron. Ou kreye l ak flow { emit(1); emit(2) }, epi ou koute l ak collect { ... } ki resevwa chak valè. Kontrèman ak LiveData, Flow se \"cold\": li pa kòmanse pwodui valè toutotan pèsonn pa collect li — sa ekonomize resous. Operatè yo pwisan: .map transfòme, .filter chwazi, .debounce tann itilizatè a fini tape anvan chèche. Pou eta ekran an, gen StateFlow (toujou gen yon valè aktyèl, pafè pou UI) ak SharedFlow (pou evènman yon sèl fwa tankou mesaj \"siksè\"). Nan Android modèn, ViewModel ekspoze StateFlow, epi ekran an collect li — se achitekti ofisyèl Google rekòmande jodi a. Flow yo \"cold\" pa defo, men ou ka fè yo \"hot\" ak shareIn oswa stateIn pou pataje yon sèl kouran ant plizyè koute san re-egzekite travay la. [[CHECK:kotlin-n4-l11-c1]] [[CHECK:kotlin-n4-l11-c2]]",
+          "code": "import kotlinx.coroutines.*\nimport kotlinx.coroutines.flow.*\n\nfun konte(): Flow<Int> = flow {\n    for (i in 1..3) {\n        delay(200)\n        emit(i)\n    }\n}\n\nfun main() = runBlocking {\n    konte().map { it * 10 }.collect { println(it) }\n}",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Nan ViewModel, ekspoze StateFlow olye MutableStateFlow (kache mutabilite a), epi collect ak repeatOnLifecycle pou koute sèlman lè ekran an vizib.",
+          "exercises": [
+            {
+              "id": "kotlin-n4-l11-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki fonksyon ou rele pou resevwa chak valè yon Flow ap emèt?",
+              "choices": [
+                "A) await()",
+                "B) collect",
+                "C) subscribe",
+                "D) observe"
+              ],
+              "accepted": [
+                "b",
+                "collect"
+              ],
+              "correct_ht": "B) collect",
+              "explanation_ht": "collect se fonksyon suspend ki koute kouran an epi trete chak valè emit bay."
+            },
+            {
+              "id": "kotlin-n4-l11-e2",
+              "type": "code",
+              "prompt_ht": "Konplete pou koute kouran an: konte().___ { println(it) }",
+              "accepted": [
+                "collect"
+              ],
+              "correct_ht": "collect",
+              "explanation_ht": "collect demare kouran an epi egzekite lambda a pou chak valè ki vini."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n4-l11-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "konte"
+              ],
+              "correct_ht": "konte",
+              "explanation_ht": "Fonksyon an rele « konte » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "kotlin-n4-l11-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Yon stream (kouran done) se tankou:",
+              "accepted": [
+                "a",
+                "dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo"
+              ],
+              "correct_ht": "A) Dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo",
+              "explanation_ht": "Itil pou gwo fichye: ou trete pandan w ap li, san chaje tout nan memwa.",
+              "choices": [
+                "A) Dlo k ap koule nan tiyo: done yo vini piti piti pandan w ap trete yo",
+                "B) Yon letan",
+                "C) Yon lanmè",
+                "D) Yon dlo ki kanpe"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kotlin-n4-l12",
+          "title_ht": "Kotlin Multiplatform (KMP)",
+          "body_ht": "Nan lekòl gen elèv, pwofesè, liv — chak kategori gen règ pa yo. Tip done yo se kategori pou valè yo: tèks, nonb, vre/fo — chak ak règ pa yo.\n\n [[CHECK:kotlin-n4-l12-c1]]\n\nKotlin Multiplatform (KMP) se vizyon gran: ekri lojik biznis ou YON sèl fwa nan Kotlin, epi pataje l ant Android, iOS, web ak desktop. Se pa UI ki pataje (chak platfòm kenbe entèfas natif li), men tout sa ki anba a: apèl API, baz done, validasyon, kalkil. Pwojè a divize an \"source sets\": commonMain gen kòd pataje a, androidMain gen kòd sèlman Android, iosMain sèlman iOS. Pou fonksyon ki bezwen yon vèsyon diferan pa platfòm (tankou li non aparèy la), ou deklare l ak expect nan commonMain: expect fun jwennNonAparèy(): String — se yon pwomès. Apre, chak platfòm bay VRE aplikasyon an ak actual: actual fun jwennNonAparèy(): String = ... Bibliyotèk tankou Ktor (rezo) ak SQLDelight (baz done) deja multiplatform. KMP se avni pataj kòd mobil lan, epi konnen konsèp expect/actual mete w devan 95% devlopè yo. Pou kòmanse ak KMP, kreye pwojè a ak asistan Kotlin Multiplatform nan Android Studio — li jenere estrikti source sets yo pou ou otomatikman. [[CHECK:kotlin-n4-l12-c2]]",
+          "code": "// commonMain\n expect fun jwennNonAparèy(): String\n\nfun salitasyon() = \"Bonjou soti sou ${jwennNonAparèy()}\"\n\n// androidMain\n// actual fun jwennNonAparèy(): String = \"Android\"\n// iosMain\n// actual fun jwennNonAparèy(): String = \"iOS\"",
+          "code_lang": "kotlin",
+          "expert_note_ht": "Kòmanse pataje sèlman lojik pi (rezo, done); kite UI natif sou chak platfòm — se estrateji ki bay mwens doulè epi pi bon eksperyans itilizatè.",
+          "exercises": [
+            {
+              "id": "kotlin-n4-l12-e1",
+              "type": "qcm",
+              "prompt_ht": "Ki mo kle deklare yon fonksyon nan kòd pataje a (commonMain) ki ap gen yon aplikasyon diferan pa platfòm?",
+              "choices": [
+                "A) actual",
+                "B) expect",
+                "C) shared",
+                "D) common"
+              ],
+              "accepted": [
+                "b",
+                "expect"
+              ],
+              "correct_ht": "B) expect",
+              "explanation_ht": "expect deklare pwomès la nan kòd komen an; chak platfòm bay vèsyon pa l ak actual."
+            },
+            {
+              "id": "kotlin-n4-l12-e2",
+              "type": "code",
+              "prompt_ht": "Konplete deklarasyon nan commonMain: ___ fun jwennNonAparèy(): String",
+              "accepted": [
+                "expect"
+              ],
+              "correct_ht": "expect",
+              "explanation_ht": "expect di konpilatè a: fonksyon sa a ap gen yon aplikasyon actual sou chak platfòm."
+            }
+          ],
+          "checkpoints": [
+            {
+              "id": "kotlin-n4-l12-c1",
+              "type": "code",
+              "prompt_ht": "⚡ Kesyon rapid — ki non fonksyon ki kreye nan egzanp lan? (ekri non an)",
+              "accepted": [
+                "jwennnonaparèy"
+              ],
+              "correct_ht": "jwennNonAparèy",
+              "explanation_ht": "Fonksyon an rele « jwennNonAparèy » — se non sa a ou itilize pou rele l pita."
+            },
+            {
+              "id": "kotlin-n4-l12-c2",
+              "type": "qcm",
+              "prompt_ht": "⚡ Kesyon rapid — Tip done (string, int, bool) di òdinatè a:",
+              "accepted": [
+                "a",
+                "ki kalite valè yon varyab ka kenbe"
+              ],
+              "correct_ht": "A) Ki kalite valè yon varyab ka kenbe",
+              "explanation_ht": "Tèks, nonb, vre/fo: chak tip gen règ pa l.",
+              "choices": [
+                "A) Ki kalite valè yon varyab ka kenbe",
+                "B) Ki koulè pou itilize",
+                "C) Ki mizik pou jwe",
+                "D) Ki lang pou pale"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
