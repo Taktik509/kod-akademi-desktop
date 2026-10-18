@@ -9,7 +9,7 @@ function createWindow() {
     height: 750,
     minWidth: 800,
     minHeight: 600,
-    title: 'Kòd Akademi',
+    title: 'Kòd Akademi — TAKTIK MARKETING AGENCY LLC (KODE)',
     backgroundColor: '#0f172a',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

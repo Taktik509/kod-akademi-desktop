@@ -289,11 +289,14 @@
     if (!('speechSynthesis' in window)) { toast('Navigatè a pa sipòte vwa.'); return; }
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    // Kreyòl pale byen ak vwa fransè (fr) sou pifò sistèm
-    u.lang = 'fr-FR';
+    // Vwa nan lang itilizatè a chwazi a: kreyòl → fransè (pa gen vwa kreyòl sou pifò sistèm)
+    const langMap = { ht: 'fr-FR', fr: 'fr-FR', en: 'en-US', es: 'es-ES' };
+    const target = langMap[lang] || 'fr-FR';
+    u.lang = target;
     const voices = window.speechSynthesis.getVoices();
-    const fr = voices.find(v => v.lang && v.lang.toLowerCase().indexOf('fr') === 0);
-    if (fr) u.voice = fr;
+    const prefix = target.split('-')[0];
+    const v = voices.find(x => x.lang && x.lang.toLowerCase().indexOf(prefix) === 0);
+    if (v) u.voice = v;
     u.rate = 0.95;
     window.speechSynthesis.speak(u);
   }
@@ -948,6 +951,8 @@
       opts += '<option value="' + l + '"' + (l === lang ? ' selected' : '') + '>' + names[l] + '</option>';
     });
     view.innerHTML = '<h1>⚙️ ' + esc(t('tabSettings')) + '</h1>' +
+      '<div class="card"><strong>🏢 TAKTIK MARKETING AGENCY LLC (KODE)</strong><br>' +
+      '<span style="color:var(--text-dim)">📞 +509 34312727</span></div>' +
       '<div class="card"><div class="setting-row"><strong>🌍 ' + esc(t('chooseLanguage')) + '</strong>' +
       '<select id="lang-select">' + opts + '</select></div></div>' +
       '<div class="card"><div class="setting-row"><strong>🎨 Mòd</strong>' +
